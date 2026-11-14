@@ -1,0 +1,2398 @@
+{
+  "raceId": "race-1b18135f01524b3d4e5798ef935c17e4",
+  "seed": "mini_show_retrieval_1",
+  "trackType": "retrieval",
+  "grade": "standard",
+  "distance": "mile",
+  "fences": 12,
+  "raceClass": "local",
+  "provider": "lmstudio",
+  "timestamp": "2026-11-10T11:48:37.717Z",
+  "raceConditions": {
+    "scoringVersion": 3,
+    "order": [
+      "clears",
+      "partial",
+      "tokens",
+      "seconds"
+    ],
+    "faultsPerKnock": 4,
+    "partial": "each clear counts 1; a knocked fence counts constraintsEarned/constraintsEarnable (rules a blank reply would fail) or testsPassed/testsTotal",
+    "tokensBasis": "completion tokens over every fence; a failed call or a missing count is charged the token cap",
+    "unraced": "a horse with no judged fences places behind every horse that ran",
+    "voidRule": "no horse clears a fence or earns partial credit: the race is void",
+    "formAffectsTime": false
+  },
+  "entrants": [
+    {
+      "position": 1,
+      "horseId": "gemma2_2b",
+      "name": "Gemma 2 2B",
+      "accuracy": 1,
+      "clears": 12,
+      "fences": 12,
+      "faults": 0,
+      "partial": 12,
+      "tokens": 80,
+      "avgLatencyMs": 523,
+      "judgeScore": 251.199,
+      "finalTimeSeconds": 6.28,
+      "tasks": [
+        {
+          "taskId": "RETR_TASK_1",
+          "latencyMs": 632,
+          "accuracy": 1,
+          "score": 15.823,
+          "output": "Glenton: courier Flint \nANSWER: Flint \n",
+          "ttftMs": 514,
+          "completionTokens": 13,
+          "tokensPerSec": 101.7,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Flint",
+          "extraction": "tagged",
+          "streamMarks": [
+            [
+              632,
+              12
+            ]
+          ],
+          "promptTokens": 133
+        },
+        {
+          "taskId": "RETR_TASK_2",
+          "latencyMs": 427,
+          "accuracy": 1,
+          "score": 23.419,
+          "output": "ANSWER: Esme \n",
+          "ttftMs": 195,
+          "completionTokens": 7,
+          "tokensPerSec": 25.9,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Esme",
+          "extraction": "tagged",
+          "streamMarks": [
+            [
+              427,
+              6
+            ]
+          ],
+          "promptTokens": 135
+        },
+        {
+          "taskId": "RETR_TASK_3",
+          "latencyMs": 317,
+          "accuracy": 1,
+          "score": 31.546,
+          "output": "ANSWER: Ezra \n",
+          "ttftMs": 221,
+          "completionTokens": 6,
+          "tokensPerSec": 52.1,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Ezra",
+          "extraction": "tagged",
+          "streamMarks": [
+            [
+              317,
+              5
+            ]
+          ],
+          "promptTokens": 134
+        },
+        {
+          "taskId": "RETR_TASK_4",
+          "latencyMs": 261,
+          "accuracy": 1,
+          "score": 38.314,
+          "output": "ANSWER: Pia \n",
+          "ttftMs": 191,
+          "completionTokens": 6,
+          "tokensPerSec": 71.4,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Pia",
+          "extraction": "tagged",
+          "streamMarks": [
+            [
+              260,
+              5
+            ]
+          ],
+          "promptTokens": 133
+        },
+        {
+          "taskId": "RETR_TASK_5",
+          "latencyMs": 451,
+          "accuracy": 1,
+          "score": 22.173,
+          "output": "ANSWER: Ada \n",
+          "ttftMs": 282,
+          "completionTokens": 6,
+          "tokensPerSec": 29.6,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Ada",
+          "extraction": "tagged",
+          "streamMarks": [
+            [
+              451,
+              5
+            ]
+          ],
+          "promptTokens": 247
+        },
+        {
+          "taskId": "RETR_TASK_6",
+          "latencyMs": 520,
+          "accuracy": 1,
+          "score": 19.231,
+          "output": "ANSWER: Tobin \n",
+          "ttftMs": 310,
+          "completionTokens": 6,
+          "tokensPerSec": 23.8,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Tobin",
+          "extraction": "tagged",
+          "streamMarks": [
+            [
+              520,
+              5
+            ]
+          ],
+          "promptTokens": 250
+        },
+        {
+          "taskId": "RETR_TASK_7",
+          "latencyMs": 532,
+          "accuracy": 1,
+          "score": 18.797,
+          "output": "ANSWER: Finn \n",
+          "ttftMs": 318,
+          "completionTokens": 6,
+          "tokensPerSec": 23.4,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Finn",
+          "extraction": "tagged",
+          "streamMarks": [
+            [
+              532,
+              5
+            ]
+          ],
+          "promptTokens": 251
+        },
+        {
+          "taskId": "RETR_TASK_8",
+          "latencyMs": 520,
+          "accuracy": 1,
+          "score": 19.231,
+          "output": "ANSWER: Fergus \n",
+          "ttftMs": 315,
+          "completionTokens": 6,
+          "tokensPerSec": 24.4,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Fergus",
+          "extraction": "tagged",
+          "streamMarks": [
+            [
+              520,
+              5
+            ]
+          ],
+          "promptTokens": 254
+        },
+        {
+          "taskId": "RETR_TASK_9",
+          "latencyMs": 603,
+          "accuracy": 1,
+          "score": 16.584,
+          "output": "ANSWER: Hester \n",
+          "ttftMs": 518,
+          "completionTokens": 6,
+          "tokensPerSec": 58.8,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Hester",
+          "extraction": "tagged",
+          "streamMarks": [
+            [
+              603,
+              5
+            ]
+          ],
+          "promptTokens": 440
+        },
+        {
+          "taskId": "RETR_TASK_10",
+          "latencyMs": 581,
+          "accuracy": 1,
+          "score": 17.212,
+          "output": "ANSWER: Kai \n",
+          "ttftMs": 487,
+          "completionTokens": 6,
+          "tokensPerSec": 53.2,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Kai",
+          "extraction": "tagged",
+          "streamMarks": [
+            [
+              581,
+              5
+            ]
+          ],
+          "promptTokens": 443
+        },
+        {
+          "taskId": "RETR_TASK_11",
+          "latencyMs": 588,
+          "accuracy": 1,
+          "score": 17.007,
+          "output": "ANSWER: Sable \n",
+          "ttftMs": 489,
+          "completionTokens": 6,
+          "tokensPerSec": 50.5,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Sable",
+          "extraction": "tagged",
+          "streamMarks": [
+            [
+              588,
+              5
+            ]
+          ],
+          "promptTokens": 441
+        },
+        {
+          "taskId": "RETR_TASK_12",
+          "latencyMs": 843,
+          "accuracy": 1,
+          "score": 11.862,
+          "output": "ANSWER: Ezra \n",
+          "ttftMs": 492,
+          "completionTokens": 6,
+          "tokensPerSec": 14.2,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Ezra",
+          "extraction": "tagged",
+          "streamMarks": [
+            [
+              843,
+              5
+            ]
+          ],
+          "promptTokens": 442
+        }
+      ],
+      "runtime": {
+        "modelId": "gemma-2-2b-it@q8_0",
+        "format": "gguf",
+        "quantization": "Q8_0",
+        "arch": "gemma2"
+      },
+      "pedigree": {
+        "bloodline": "Gemma",
+        "stable": "Google DeepMind",
+        "silks": {
+          "primary": "#4285f4",
+          "secondary": "#ea4335"
+        }
+      }
+    },
+    {
+      "position": 2,
+      "horseId": "gemma2_2b_q5",
+      "name": "Gemma 2 2B Q5",
+      "accuracy": 1,
+      "clears": 12,
+      "fences": 12,
+      "faults": 0,
+      "partial": 12,
+      "tokens": 80,
+      "avgLatencyMs": 607,
+      "judgeScore": 217.426,
+      "finalTimeSeconds": 7.29,
+      "tasks": [
+        {
+          "taskId": "RETR_TASK_1",
+          "latencyMs": 552,
+          "accuracy": 1,
+          "score": 18.116,
+          "output": "Glenton: courier Flint \nANSWER: Flint \n",
+          "ttftMs": 354,
+          "completionTokens": 13,
+          "tokensPerSec": 60.6,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Flint",
+          "extraction": "tagged",
+          "streamMarks": [
+            [
+              552,
+              12
+            ]
+          ],
+          "promptTokens": 133
+        },
+        {
+          "taskId": "RETR_TASK_2",
+          "latencyMs": 354,
+          "accuracy": 1,
+          "score": 28.249,
+          "output": "ANSWER: Esme \n",
+          "ttftMs": 245,
+          "completionTokens": 7,
+          "tokensPerSec": 55,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Esme",
+          "extraction": "tagged",
+          "streamMarks": [
+            [
+              354,
+              6
+            ]
+          ],
+          "promptTokens": 135
+        },
+        {
+          "taskId": "RETR_TASK_3",
+          "latencyMs": 416,
+          "accuracy": 1,
+          "score": 24.038,
+          "output": "ANSWER: Ezra \n",
+          "ttftMs": 241,
+          "completionTokens": 6,
+          "tokensPerSec": 28.6,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Ezra",
+          "extraction": "tagged",
+          "streamMarks": [
+            [
+              416,
+              5
+            ]
+          ],
+          "promptTokens": 134
+        },
+        {
+          "taskId": "RETR_TASK_4",
+          "latencyMs": 345,
+          "accuracy": 1,
+          "score": 28.986,
+          "output": "ANSWER: Pia \n",
+          "ttftMs": 233,
+          "completionTokens": 6,
+          "tokensPerSec": 44.6,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Pia",
+          "extraction": "tagged",
+          "streamMarks": [
+            [
+              345,
+              5
+            ]
+          ],
+          "promptTokens": 133
+        },
+        {
+          "taskId": "RETR_TASK_5",
+          "latencyMs": 706,
+          "accuracy": 1,
+          "score": 14.164,
+          "output": "ANSWER: Ada \n",
+          "ttftMs": 706,
+          "completionTokens": 6,
+          "tokensPerSec": null,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Ada",
+          "extraction": "tagged",
+          "streamMarks": [
+            [
+              706,
+              5
+            ]
+          ],
+          "promptTokens": 247
+        },
+        {
+          "taskId": "RETR_TASK_6",
+          "latencyMs": 519,
+          "accuracy": 1,
+          "score": 19.268,
+          "output": "ANSWER: Tobin \n",
+          "ttftMs": 519,
+          "completionTokens": 6,
+          "tokensPerSec": null,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Tobin",
+          "extraction": "tagged",
+          "streamMarks": [
+            [
+              519,
+              5
+            ]
+          ],
+          "promptTokens": 250
+        },
+        {
+          "taskId": "RETR_TASK_7",
+          "latencyMs": 825,
+          "accuracy": 1,
+          "score": 12.121,
+          "output": "ANSWER: Finn \n",
+          "ttftMs": 824,
+          "completionTokens": 6,
+          "tokensPerSec": 5000,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Finn",
+          "extraction": "tagged",
+          "streamMarks": [
+            [
+              825,
+              5
+            ]
+          ],
+          "promptTokens": 251
+        },
+        {
+          "taskId": "RETR_TASK_8",
+          "latencyMs": 490,
+          "accuracy": 1,
+          "score": 20.408,
+          "output": "ANSWER: Fergus \n",
+          "ttftMs": 394,
+          "completionTokens": 6,
+          "tokensPerSec": 52.1,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Fergus",
+          "extraction": "tagged",
+          "streamMarks": [
+            [
+              490,
+              5
+            ]
+          ],
+          "promptTokens": 254
+        },
+        {
+          "taskId": "RETR_TASK_9",
+          "latencyMs": 777,
+          "accuracy": 1,
+          "score": 12.87,
+          "output": "ANSWER: Hester \n",
+          "ttftMs": 601,
+          "completionTokens": 6,
+          "tokensPerSec": 28.4,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Hester",
+          "extraction": "tagged",
+          "streamMarks": [
+            [
+              777,
+              5
+            ]
+          ],
+          "promptTokens": 440
+        },
+        {
+          "taskId": "RETR_TASK_10",
+          "latencyMs": 737,
+          "accuracy": 1,
+          "score": 13.569,
+          "output": "ANSWER: Kai \n",
+          "ttftMs": 642,
+          "completionTokens": 6,
+          "tokensPerSec": 52.6,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Kai",
+          "extraction": "tagged",
+          "streamMarks": [
+            [
+              737,
+              5
+            ]
+          ],
+          "promptTokens": 443
+        },
+        {
+          "taskId": "RETR_TASK_11",
+          "latencyMs": 835,
+          "accuracy": 1,
+          "score": 11.976,
+          "output": "ANSWER: Sable \n",
+          "ttftMs": 604,
+          "completionTokens": 6,
+          "tokensPerSec": 21.6,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Sable",
+          "extraction": "tagged",
+          "streamMarks": [
+            [
+              835,
+              5
+            ]
+          ],
+          "promptTokens": 441
+        },
+        {
+          "taskId": "RETR_TASK_12",
+          "latencyMs": 732,
+          "accuracy": 1,
+          "score": 13.661,
+          "output": "ANSWER: Ezra \n",
+          "ttftMs": 638,
+          "completionTokens": 6,
+          "tokensPerSec": 53.2,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Ezra",
+          "extraction": "tagged",
+          "streamMarks": [
+            [
+              732,
+              5
+            ]
+          ],
+          "promptTokens": 442
+        }
+      ],
+      "runtime": {
+        "modelId": "gemma-2-2b-it@q5_k_m",
+        "format": "gguf",
+        "quantization": "Q5_K_M",
+        "arch": "gemma2"
+      },
+      "pedigree": null
+    },
+    {
+      "position": 3,
+      "horseId": "qwen25_15b",
+      "name": "Qwen 2.5 1.5B",
+      "accuracy": 0.92,
+      "clears": 11,
+      "fences": 12,
+      "faults": 4,
+      "partial": 11,
+      "tokens": 71,
+      "avgLatencyMs": 300,
+      "judgeScore": 429.937,
+      "finalTimeSeconds": 3.59,
+      "tasks": [
+        {
+          "taskId": "RETR_TASK_1",
+          "latencyMs": 173,
+          "accuracy": 1,
+          "score": 57.803,
+          "output": "ANSWER: Flint",
+          "ttftMs": 121,
+          "completionTokens": 5,
+          "tokensPerSec": 76.9,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Flint",
+          "extraction": "tagged",
+          "streamMarks": [
+            [
+              173,
+              4
+            ]
+          ],
+          "promptTokens": 166
+        },
+        {
+          "taskId": "RETR_TASK_2",
+          "latencyMs": 174,
+          "accuracy": 1,
+          "score": 57.471,
+          "output": "ANSWER: courier Esme",
+          "ttftMs": 117,
+          "completionTokens": 7,
+          "tokensPerSec": 105.3,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Esme",
+          "extraction": "tagged",
+          "streamMarks": [
+            [
+              173,
+              6
+            ]
+          ],
+          "promptTokens": 164
+        },
+        {
+          "taskId": "RETR_TASK_3",
+          "latencyMs": 270,
+          "accuracy": 1,
+          "score": 37.037,
+          "output": "ANSWER: Ezra",
+          "ttftMs": 104,
+          "completionTokens": 5,
+          "tokensPerSec": 24.1,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Ezra",
+          "extraction": "tagged",
+          "streamMarks": [
+            [
+              270,
+              4
+            ]
+          ],
+          "promptTokens": 162
+        },
+        {
+          "taskId": "RETR_TASK_4",
+          "latencyMs": 202,
+          "accuracy": 1,
+          "score": 49.505,
+          "output": "ANSWER: Pia",
+          "ttftMs": 202,
+          "completionTokens": 6,
+          "tokensPerSec": null,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Pia",
+          "extraction": "tagged",
+          "streamMarks": [
+            [
+              202,
+              5
+            ]
+          ],
+          "promptTokens": 163
+        },
+        {
+          "taskId": "RETR_TASK_5",
+          "latencyMs": 253,
+          "accuracy": 1,
+          "score": 39.526,
+          "output": "ANSWER: courier Ada",
+          "ttftMs": 188,
+          "completionTokens": 6,
+          "tokensPerSec": 76.9,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Ada",
+          "extraction": "tagged",
+          "streamMarks": [
+            [
+              253,
+              5
+            ]
+          ],
+          "promptTokens": 295
+        },
+        {
+          "taskId": "RETR_TASK_6",
+          "latencyMs": 270,
+          "accuracy": 1,
+          "score": 37.037,
+          "output": "ANSWER: Tobin",
+          "ttftMs": 270,
+          "completionTokens": 6,
+          "tokensPerSec": null,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Tobin",
+          "extraction": "tagged",
+          "streamMarks": [
+            [
+              270,
+              5
+            ]
+          ],
+          "promptTokens": 304
+        },
+        {
+          "taskId": "RETR_TASK_7",
+          "latencyMs": 247,
+          "accuracy": 1,
+          "score": 40.486,
+          "output": "ANSWER: courier Finn",
+          "ttftMs": 181,
+          "completionTokens": 6,
+          "tokensPerSec": 75.8,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Finn",
+          "extraction": "tagged",
+          "streamMarks": [
+            [
+              247,
+              5
+            ]
+          ],
+          "promptTokens": 297
+        },
+        {
+          "taskId": "RETR_TASK_8",
+          "latencyMs": 278,
+          "accuracy": 1,
+          "score": 35.971,
+          "output": "ANSWER: Fergus",
+          "ttftMs": 277,
+          "completionTokens": 6,
+          "tokensPerSec": 5000,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Fergus",
+          "extraction": "tagged",
+          "streamMarks": [
+            [
+              278,
+              5
+            ]
+          ],
+          "promptTokens": 309
+        },
+        {
+          "taskId": "RETR_TASK_9",
+          "latencyMs": 393,
+          "accuracy": 1,
+          "score": 25.445,
+          "output": "ANSWER: Hester",
+          "ttftMs": 329,
+          "completionTokens": 6,
+          "tokensPerSec": 78.1,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Hester",
+          "extraction": "tagged",
+          "streamMarks": [
+            [
+              393,
+              5
+            ]
+          ],
+          "promptTokens": 521
+        },
+        {
+          "taskId": "RETR_TASK_10",
+          "latencyMs": 524,
+          "accuracy": 0,
+          "score": 0,
+          "output": "ANSWER: Kestrel",
+          "ttftMs": 364,
+          "completionTokens": 7,
+          "tokensPerSec": 37.5,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Kestrel",
+          "extraction": "tagged",
+          "streamMarks": [
+            [
+              524,
+              6
+            ]
+          ],
+          "promptTokens": 522
+        },
+        {
+          "taskId": "RETR_TASK_11",
+          "latencyMs": 435,
+          "accuracy": 1,
+          "score": 22.989,
+          "output": "ANSWER: Sable",
+          "ttftMs": 364,
+          "completionTokens": 6,
+          "tokensPerSec": 70.4,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Sable",
+          "extraction": "tagged",
+          "streamMarks": [
+            [
+              435,
+              5
+            ]
+          ],
+          "promptTokens": 516
+        },
+        {
+          "taskId": "RETR_TASK_12",
+          "latencyMs": 375,
+          "accuracy": 1,
+          "score": 26.667,
+          "output": "ANSWER: Ezra",
+          "ttftMs": 326,
+          "completionTokens": 5,
+          "tokensPerSec": 81.6,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Ezra",
+          "extraction": "tagged",
+          "streamMarks": [
+            [
+              375,
+              4
+            ]
+          ],
+          "promptTokens": 521
+        }
+      ],
+      "runtime": {
+        "modelId": "qwen2.5-1.5b-instruct",
+        "format": "gguf",
+        "quantization": "Q8_0",
+        "arch": "qwen2"
+      },
+      "pedigree": {
+        "bloodline": "Qwen",
+        "stable": "Alibaba Qwen",
+        "silks": {
+          "primary": "#ff6a00",
+          "secondary": "#615ced"
+        }
+      }
+    },
+    {
+      "position": 4,
+      "horseId": "vikhr_gemma_2b",
+      "name": "Vikhr Gemma 2B",
+      "accuracy": 0.92,
+      "clears": 11,
+      "fences": 12,
+      "faults": 4,
+      "partial": 11,
+      "tokens": 82,
+      "avgLatencyMs": 482,
+      "judgeScore": 241.03,
+      "finalTimeSeconds": 5.78,
+      "tasks": [
+        {
+          "taskId": "RETR_TASK_1",
+          "latencyMs": 351,
+          "accuracy": 1,
+          "score": 28.49,
+          "output": "The courier for Glenton is Flint.",
+          "ttftMs": 341,
+          "completionTokens": 9,
+          "tokensPerSec": 800,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Flint",
+          "extraction": "fallback",
+          "streamMarks": [
+            [
+              351,
+              8
+            ]
+          ],
+          "promptTokens": 133
+        },
+        {
+          "taskId": "RETR_TASK_2",
+          "latencyMs": 539,
+          "accuracy": 1,
+          "score": 18.553,
+          "output": "The courier for Dunfield is Esme.",
+          "ttftMs": 195,
+          "completionTokens": 10,
+          "tokensPerSec": 26.2,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Esme",
+          "extraction": "fallback",
+          "streamMarks": [
+            [
+              539,
+              9
+            ]
+          ],
+          "promptTokens": 135
+        },
+        {
+          "taskId": "RETR_TASK_3",
+          "latencyMs": 505,
+          "accuracy": 1,
+          "score": 19.802,
+          "output": "The courier for Hartwick is Ezra.",
+          "ttftMs": 229,
+          "completionTokens": 9,
+          "tokensPerSec": 29,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Ezra",
+          "extraction": "fallback",
+          "streamMarks": [
+            [
+              505,
+              8
+            ]
+          ],
+          "promptTokens": 134
+        },
+        {
+          "taskId": "RETR_TASK_4",
+          "latencyMs": 327,
+          "accuracy": 1,
+          "score": 30.581,
+          "output": "The courier for Morton is Pia.",
+          "ttftMs": 193,
+          "completionTokens": 8,
+          "tokensPerSec": 52.2,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Pia",
+          "extraction": "fallback",
+          "streamMarks": [
+            [
+              327,
+              7
+            ]
+          ],
+          "promptTokens": 133
+        },
+        {
+          "taskId": "RETR_TASK_5",
+          "latencyMs": 432,
+          "accuracy": 0,
+          "score": 0,
+          "output": "The courier for Ashham is Fergus.",
+          "ttftMs": 345,
+          "completionTokens": 9,
+          "tokensPerSec": 92,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Fergus",
+          "extraction": "fallback",
+          "streamMarks": [
+            [
+              432,
+              8
+            ]
+          ],
+          "promptTokens": 247
+        },
+        {
+          "taskId": "RETR_TASK_6",
+          "latencyMs": 355,
+          "accuracy": 1,
+          "score": 28.169,
+          "output": "ANSWER: Tobin",
+          "ttftMs": 285,
+          "completionTokens": 4,
+          "tokensPerSec": 42.9,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Tobin",
+          "extraction": "tagged",
+          "streamMarks": [
+            [
+              355,
+              3
+            ]
+          ],
+          "promptTokens": 250
+        },
+        {
+          "taskId": "RETR_TASK_7",
+          "latencyMs": 462,
+          "accuracy": 1,
+          "score": 21.645,
+          "output": "The courier for Fenmore is Finn.",
+          "ttftMs": 462,
+          "completionTokens": 9,
+          "tokensPerSec": null,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Finn",
+          "extraction": "fallback",
+          "streamMarks": [
+            [
+              462,
+              8
+            ]
+          ],
+          "promptTokens": 251
+        },
+        {
+          "taskId": "RETR_TASK_8",
+          "latencyMs": 355,
+          "accuracy": 1,
+          "score": 28.169,
+          "output": "ANSWER: Fergus",
+          "ttftMs": 303,
+          "completionTokens": 4,
+          "tokensPerSec": 57.7,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Fergus",
+          "extraction": "tagged",
+          "streamMarks": [
+            [
+              355,
+              3
+            ]
+          ],
+          "promptTokens": 254
+        },
+        {
+          "taskId": "RETR_TASK_9",
+          "latencyMs": 697,
+          "accuracy": 1,
+          "score": 14.347,
+          "output": "ANSWER: Hester",
+          "ttftMs": 487,
+          "completionTokens": 4,
+          "tokensPerSec": 14.3,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Hester",
+          "extraction": "tagged",
+          "streamMarks": [
+            [
+              697,
+              3
+            ]
+          ],
+          "promptTokens": 440
+        },
+        {
+          "taskId": "RETR_TASK_10",
+          "latencyMs": 593,
+          "accuracy": 1,
+          "score": 16.863,
+          "output": "ANSWER: Kai",
+          "ttftMs": 534,
+          "completionTokens": 4,
+          "tokensPerSec": 50.8,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Kai",
+          "extraction": "tagged",
+          "streamMarks": [
+            [
+              593,
+              3
+            ]
+          ],
+          "promptTokens": 443
+        },
+        {
+          "taskId": "RETR_TASK_11",
+          "latencyMs": 620,
+          "accuracy": 1,
+          "score": 16.129,
+          "output": "The courier for Hartford is Sable.",
+          "ttftMs": 501,
+          "completionTokens": 8,
+          "tokensPerSec": 58.8,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Sable",
+          "extraction": "fallback",
+          "streamMarks": [
+            [
+              620,
+              7
+            ]
+          ],
+          "promptTokens": 441
+        },
+        {
+          "taskId": "RETR_TASK_12",
+          "latencyMs": 547,
+          "accuracy": 1,
+          "score": 18.282,
+          "output": "ANSWER: Ezra",
+          "ttftMs": 487,
+          "completionTokens": 4,
+          "tokensPerSec": 50,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Ezra",
+          "extraction": "tagged",
+          "streamMarks": [
+            [
+              547,
+              3
+            ]
+          ],
+          "promptTokens": 442
+        }
+      ],
+      "runtime": {
+        "modelId": "vikhr-gemma-2b-instruct",
+        "format": "gguf",
+        "quantization": "Q8_0",
+        "arch": "gemma2"
+      },
+      "pedigree": null
+    },
+    {
+      "position": 5,
+      "horseId": "qwen25_coder_15b",
+      "name": "Qwen 2.5 Coder 1.5B",
+      "accuracy": 0.67,
+      "clears": 8,
+      "fences": 12,
+      "faults": 16,
+      "partial": 8,
+      "tokens": 69,
+      "avgLatencyMs": 329,
+      "judgeScore": 340.956,
+      "finalTimeSeconds": 3.95,
+      "tasks": [
+        {
+          "taskId": "RETR_TASK_1",
+          "latencyMs": 220,
+          "accuracy": 0,
+          "score": 0,
+          "output": "ANSWER: Ezra",
+          "ttftMs": 125,
+          "completionTokens": 5,
+          "tokensPerSec": 42.1,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Ezra",
+          "extraction": "tagged",
+          "streamMarks": [
+            [
+              219,
+              4
+            ]
+          ],
+          "promptTokens": 166
+        },
+        {
+          "taskId": "RETR_TASK_2",
+          "latencyMs": 164,
+          "accuracy": 1,
+          "score": 60.976,
+          "output": "ANSWER: Esme",
+          "ttftMs": 100,
+          "completionTokens": 6,
+          "tokensPerSec": 78.1,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Esme",
+          "extraction": "tagged",
+          "streamMarks": [
+            [
+              164,
+              5
+            ]
+          ],
+          "promptTokens": 164
+        },
+        {
+          "taskId": "RETR_TASK_3",
+          "latencyMs": 151,
+          "accuracy": 1,
+          "score": 66.225,
+          "output": "ANSWER: Ezra",
+          "ttftMs": 101,
+          "completionTokens": 5,
+          "tokensPerSec": 80,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Ezra",
+          "extraction": "tagged",
+          "streamMarks": [
+            [
+              151,
+              4
+            ]
+          ],
+          "promptTokens": 162
+        },
+        {
+          "taskId": "RETR_TASK_4",
+          "latencyMs": 210,
+          "accuracy": 1,
+          "score": 47.619,
+          "output": "ANSWER: Pia",
+          "ttftMs": 100,
+          "completionTokens": 6,
+          "tokensPerSec": 45.5,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Pia",
+          "extraction": "tagged",
+          "streamMarks": [
+            [
+              210,
+              5
+            ]
+          ],
+          "promptTokens": 163
+        },
+        {
+          "taskId": "RETR_TASK_5",
+          "latencyMs": 234,
+          "accuracy": 1,
+          "score": 42.735,
+          "output": "ANSWER: Ada",
+          "ttftMs": 180,
+          "completionTokens": 5,
+          "tokensPerSec": 74.1,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Ada",
+          "extraction": "tagged",
+          "streamMarks": [
+            [
+              233,
+              4
+            ]
+          ],
+          "promptTokens": 295
+        },
+        {
+          "taskId": "RETR_TASK_6",
+          "latencyMs": 283,
+          "accuracy": 1,
+          "score": 35.336,
+          "output": "ANSWER: Tobin",
+          "ttftMs": 283,
+          "completionTokens": 6,
+          "tokensPerSec": null,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Tobin",
+          "extraction": "tagged",
+          "streamMarks": [
+            [
+              283,
+              5
+            ]
+          ],
+          "promptTokens": 304
+        },
+        {
+          "taskId": "RETR_TASK_7",
+          "latencyMs": 248,
+          "accuracy": 1,
+          "score": 40.323,
+          "output": "ANSWER: Finn",
+          "ttftMs": 195,
+          "completionTokens": 5,
+          "tokensPerSec": 75.5,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Finn",
+          "extraction": "tagged",
+          "streamMarks": [
+            [
+              248,
+              4
+            ]
+          ],
+          "promptTokens": 297
+        },
+        {
+          "taskId": "RETR_TASK_8",
+          "latencyMs": 343,
+          "accuracy": 1,
+          "score": 29.155,
+          "output": "ANSWER: Fergus",
+          "ttftMs": 342,
+          "completionTokens": 6,
+          "tokensPerSec": 5000,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Fergus",
+          "extraction": "tagged",
+          "streamMarks": [
+            [
+              343,
+              5
+            ]
+          ],
+          "promptTokens": 309
+        },
+        {
+          "taskId": "RETR_TASK_9",
+          "latencyMs": 521,
+          "accuracy": 0,
+          "score": 0,
+          "output": "ANSWER: Perrin",
+          "ttftMs": 343,
+          "completionTokens": 6,
+          "tokensPerSec": 28.1,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Perrin",
+          "extraction": "tagged",
+          "streamMarks": [
+            [
+              521,
+              5
+            ]
+          ],
+          "promptTokens": 521
+        },
+        {
+          "taskId": "RETR_TASK_10",
+          "latencyMs": 523,
+          "accuracy": 0,
+          "score": 0,
+          "output": "ANSWER: Leif",
+          "ttftMs": 340,
+          "completionTokens": 6,
+          "tokensPerSec": 27.3,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Leif",
+          "extraction": "tagged",
+          "streamMarks": [
+            [
+              523,
+              5
+            ]
+          ],
+          "promptTokens": 522
+        },
+        {
+          "taskId": "RETR_TASK_11",
+          "latencyMs": 538,
+          "accuracy": 1,
+          "score": 18.587,
+          "output": "ANSWER: Sable",
+          "ttftMs": 353,
+          "completionTokens": 6,
+          "tokensPerSec": 27,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Sable",
+          "extraction": "tagged",
+          "streamMarks": [
+            [
+              538,
+              5
+            ]
+          ],
+          "promptTokens": 516
+        },
+        {
+          "taskId": "RETR_TASK_12",
+          "latencyMs": 515,
+          "accuracy": 0,
+          "score": 0,
+          "output": "ANSWER: Delphine",
+          "ttftMs": 344,
+          "completionTokens": 7,
+          "tokensPerSec": 35.1,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Delphine",
+          "extraction": "tagged",
+          "streamMarks": [
+            [
+              515,
+              6
+            ]
+          ],
+          "promptTokens": 521
+        }
+      ],
+      "runtime": {
+        "modelId": "qwen2.5-coder-1.5b-instruct",
+        "format": "gguf",
+        "quantization": "Q8_0",
+        "arch": "qwen2"
+      },
+      "pedigree": {
+        "bloodline": "Qwen Coder",
+        "stable": "Alibaba Qwen",
+        "silks": {
+          "primary": "#ff6a00",
+          "secondary": "#615ced"
+        }
+      }
+    },
+    {
+      "position": 6,
+      "horseId": "llama32_1b",
+      "name": "Llama 3.2 1B",
+      "accuracy": 0.67,
+      "clears": 8,
+      "fences": 12,
+      "faults": 16,
+      "partial": 8,
+      "tokens": 72,
+      "avgLatencyMs": 241,
+      "judgeScore": 408.007,
+      "finalTimeSeconds": 2.89,
+      "tasks": [
+        {
+          "taskId": "RETR_TASK_1",
+          "latencyMs": 131,
+          "accuracy": 1,
+          "score": 76.336,
+          "output": "ANSWER: Flint",
+          "ttftMs": 121,
+          "completionTokens": 5,
+          "tokensPerSec": 400,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Flint",
+          "extraction": "tagged",
+          "streamMarks": [
+            [
+              130,
+              4
+            ]
+          ],
+          "promptTokens": 147
+        },
+        {
+          "taskId": "RETR_TASK_2",
+          "latencyMs": 300,
+          "accuracy": 0,
+          "score": 0,
+          "output": "ANSWER: Glenstead",
+          "ttftMs": 188,
+          "completionTokens": 6,
+          "tokensPerSec": 44.6,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Glenstead",
+          "extraction": "tagged-unparsed",
+          "streamMarks": [
+            [
+              300,
+              5
+            ]
+          ],
+          "promptTokens": 145
+        },
+        {
+          "taskId": "RETR_TASK_3",
+          "latencyMs": 118,
+          "accuracy": 1,
+          "score": 84.746,
+          "output": "ANSWER: Ezra",
+          "ttftMs": 84,
+          "completionTokens": 5,
+          "tokensPerSec": 117.6,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Ezra",
+          "extraction": "tagged",
+          "streamMarks": [
+            [
+              118,
+              4
+            ]
+          ],
+          "promptTokens": 143
+        },
+        {
+          "taskId": "RETR_TASK_4",
+          "latencyMs": 246,
+          "accuracy": 1,
+          "score": 40.65,
+          "output": "ANSWER: Pia",
+          "ttftMs": 78,
+          "completionTokens": 6,
+          "tokensPerSec": 29.8,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Pia",
+          "extraction": "tagged",
+          "streamMarks": [
+            [
+              246,
+              5
+            ]
+          ],
+          "promptTokens": 144
+        },
+        {
+          "taskId": "RETR_TASK_5",
+          "latencyMs": 248,
+          "accuracy": 0,
+          "score": 0,
+          "output": "ANSWER: Ashham: courier Esme",
+          "ttftMs": 161,
+          "completionTokens": 10,
+          "tokensPerSec": 103.4,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Esme",
+          "extraction": "tagged",
+          "streamMarks": [
+            [
+              248,
+              9
+            ]
+          ],
+          "promptTokens": 276
+        },
+        {
+          "taskId": "RETR_TASK_6",
+          "latencyMs": 202,
+          "accuracy": 1,
+          "score": 49.505,
+          "output": "ANSWER: Tobin",
+          "ttftMs": 149,
+          "completionTokens": 6,
+          "tokensPerSec": 94.3,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Tobin",
+          "extraction": "tagged",
+          "streamMarks": [
+            [
+              202,
+              5
+            ]
+          ],
+          "promptTokens": 285
+        },
+        {
+          "taskId": "RETR_TASK_7",
+          "latencyMs": 225,
+          "accuracy": 1,
+          "score": 44.444,
+          "output": "ANSWER: Finn",
+          "ttftMs": 224,
+          "completionTokens": 5,
+          "tokensPerSec": 4000,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Finn",
+          "extraction": "tagged",
+          "streamMarks": [
+            [
+              225,
+              4
+            ]
+          ],
+          "promptTokens": 278
+        },
+        {
+          "taskId": "RETR_TASK_8",
+          "latencyMs": 217,
+          "accuracy": 1,
+          "score": 46.083,
+          "output": "ANSWER: Fergus",
+          "ttftMs": 169,
+          "completionTokens": 6,
+          "tokensPerSec": 104.2,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Fergus",
+          "extraction": "tagged",
+          "streamMarks": [
+            [
+              217,
+              5
+            ]
+          ],
+          "promptTokens": 290
+        },
+        {
+          "taskId": "RETR_TASK_9",
+          "latencyMs": 307,
+          "accuracy": 1,
+          "score": 32.573,
+          "output": "ANSWER: Hester",
+          "ttftMs": 306,
+          "completionTokens": 6,
+          "tokensPerSec": 5000,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Hester",
+          "extraction": "tagged",
+          "streamMarks": [
+            [
+              306,
+              5
+            ]
+          ],
+          "promptTokens": 502
+        },
+        {
+          "taskId": "RETR_TASK_10",
+          "latencyMs": 303,
+          "accuracy": 0,
+          "score": 0,
+          "output": "ANSWER: Ashton",
+          "ttftMs": 257,
+          "completionTokens": 5,
+          "tokensPerSec": 87,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Ashton",
+          "extraction": "tagged-unparsed",
+          "streamMarks": [
+            [
+              303,
+              4
+            ]
+          ],
+          "promptTokens": 503
+        },
+        {
+          "taskId": "RETR_TASK_11",
+          "latencyMs": 297,
+          "accuracy": 1,
+          "score": 33.67,
+          "output": "ANSWER: Sable",
+          "ttftMs": 251,
+          "completionTokens": 6,
+          "tokensPerSec": 108.7,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Sable",
+          "extraction": "tagged",
+          "streamMarks": [
+            [
+              297,
+              5
+            ]
+          ],
+          "promptTokens": 497
+        },
+        {
+          "taskId": "RETR_TASK_12",
+          "latencyMs": 297,
+          "accuracy": 0,
+          "score": 0,
+          "output": "ANSWER: Zeke",
+          "ttftMs": 257,
+          "completionTokens": 6,
+          "tokensPerSec": 125,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Zeke",
+          "extraction": "tagged",
+          "streamMarks": [
+            [
+              297,
+              5
+            ]
+          ],
+          "promptTokens": 502
+        }
+      ],
+      "runtime": {
+        "modelId": "llama-3.2-1b-instruct",
+        "format": "gguf",
+        "quantization": "Q8_0",
+        "arch": "llama"
+      },
+      "pedigree": {
+        "bloodline": "Llama",
+        "stable": "Meta AI",
+        "silks": {
+          "primary": "#0064e0",
+          "secondary": "#ffffff"
+        }
+      }
+    }
+  ],
+  "verificationProof": {
+    "seedHash": "255f3339c1f94b3031d20318db1ed9a3d5b0ca0be849c79da9905c9c49df0286",
+    "commitmentHash": null,
+    "revealedSeed": "mini_show_retrieval_1",
+    "revealedSalt": null,
+    "manifestHash": "52a96a5bf96f1ba8a2bd99e67a018c1e41f12789b192596842ba73cf80413b7a",
+    "manifest": {
+      "scheme": "hr-manifest-v1",
+      "trackType": "retrieval",
+      "raceClass": "local",
+      "provider": "lmstudio",
+      "endpoint": "http://Mac-mini.local:1234",
+      "grade": "standard",
+      "generatorVersion": 3,
+      "distance": "mile",
+      "fences": 12,
+      "raceConditions": {
+        "scoringVersion": 3,
+        "order": [
+          "clears",
+          "partial",
+          "tokens",
+          "seconds"
+        ],
+        "faultsPerKnock": 4,
+        "partial": "each clear counts 1; a knocked fence counts constraintsEarned/constraintsEarnable (rules a blank reply would fail) or testsPassed/testsTotal",
+        "tokensBasis": "completion tokens over every fence; a failed call or a missing count is charged the token cap",
+        "unraced": "a horse with no judged fences places behind every horse that ran",
+        "voidRule": "no horse clears a fence or earns partial credit: the race is void",
+        "formAffectsTime": false
+      },
+      "inference": {
+        "temperature": 0,
+        "maxTokens": 2048,
+        "timeoutMs": 300000
+      },
+      "codeVersion": "2a9e8a3b405483ac9b3952064ea4029106075472",
+      "field": [
+        {
+          "horseId": "gemma2_2b",
+          "name": "Gemma 2 2B",
+          "modelId": "gemma-2-2b-it@q8_0",
+          "format": "gguf",
+          "quantization": "Q8_0",
+          "arch": "gemma2"
+        },
+        {
+          "horseId": "gemma2_2b_q5",
+          "name": "Gemma 2 2B Q5",
+          "modelId": "gemma-2-2b-it@q5_k_m",
+          "format": "gguf",
+          "quantization": "Q5_K_M",
+          "arch": "gemma2"
+        },
+        {
+          "horseId": "llama32_1b",
+          "name": "Llama 3.2 1B",
+          "modelId": "llama-3.2-1b-instruct",
+          "format": "gguf",
+          "quantization": "Q8_0",
+          "arch": "llama"
+        },
+        {
+          "horseId": "qwen25_15b",
+          "name": "Qwen 2.5 1.5B",
+          "modelId": "qwen2.5-1.5b-instruct",
+          "format": "gguf",
+          "quantization": "Q8_0",
+          "arch": "qwen2"
+        },
+        {
+          "horseId": "qwen25_coder_15b",
+          "name": "Qwen 2.5 Coder 1.5B",
+          "modelId": "qwen2.5-coder-1.5b-instruct",
+          "format": "gguf",
+          "quantization": "Q8_0",
+          "arch": "qwen2"
+        },
+        {
+          "horseId": "vikhr_gemma_2b",
+          "name": "Vikhr Gemma 2B",
+          "modelId": "vikhr-gemma-2b-instruct",
+          "format": "gguf",
+          "quantization": "Q8_0",
+          "arch": "gemma2"
+        }
+      ]
+    },
+    "reproducible": false,
+    "tasks": [
+      {
+        "id": "RETR_TASK_1",
+        "kind": "retrieval",
+        "prompt": "[RETR_TASK] Below is a dispatch ledger. Each line gives a town and its courier.\n\nGlenmore: courier Ezra\nHartby: courier Kai\nFenton: courier Quill\nCarfield: courier Zeke\nDunwick: courier Yuri\nDunby: courier Finn\nGlenton: courier Flint\nHartmere: courier Yara\nHartton: courier Rhea\nCargate: courier Hester\nKingsgate: courier Beatrix\nBelford: courier Niamh\n\nQuestion: Who is the courier for Glenton?\nGive your final answer on the last line in the form: ANSWER: <answer>",
+        "judging": {
+          "type": "choice",
+          "expected": "Flint",
+          "candidates": [
+            "Ezra",
+            "Kai",
+            "Quill",
+            "Zeke",
+            "Yuri",
+            "Finn",
+            "Flint",
+            "Yara",
+            "Rhea",
+            "Hester",
+            "Beatrix",
+            "Niamh"
+          ]
+        },
+        "simAnswer": "The ledger lists Glenton with Flint.\nANSWER: Flint",
+        "simWrongAnswer": "ANSWER: Yara",
+        "weight": 1,
+        "generatorVersion": 3,
+        "rung": "easy"
+      },
+      {
+        "id": "RETR_TASK_2",
+        "kind": "retrieval",
+        "prompt": "[RETR_TASK] Below is a dispatch ledger. Each line gives a town and its courier.\n\nFenstead: courier Nell\nAshmore: courier Otto\nAshham: courier Ezra\nThornfield: courier Ulla\nKingsby: courier Orrin\nGlenmore: courier Nico\nGlenton: courier Saul\nDunfield: courier Esme\nGlenstead: courier Jasper\nElmfield: courier Vera\nCarmere: courier Pia\nHartmore: courier Wren\n\nQuestion: Who is the courier for Dunfield?\nGive your final answer on the last line in the form: ANSWER: <answer>",
+        "judging": {
+          "type": "choice",
+          "expected": "Esme",
+          "candidates": [
+            "Nell",
+            "Otto",
+            "Ezra",
+            "Ulla",
+            "Orrin",
+            "Nico",
+            "Saul",
+            "Esme",
+            "Jasper",
+            "Vera",
+            "Pia",
+            "Wren"
+          ]
+        },
+        "simAnswer": "The ledger lists Dunfield with Esme.\nANSWER: Esme",
+        "simWrongAnswer": "ANSWER: Jasper",
+        "weight": 1,
+        "generatorVersion": 3,
+        "rung": "easy"
+      },
+      {
+        "id": "RETR_TASK_3",
+        "kind": "retrieval",
+        "prompt": "[RETR_TASK] Below is a dispatch ledger. Each line gives a town and its courier.\n\nThornmere: courier Barnaby\nLangmore: courier Nell\nCarwick: courier Kai\nHartwick: courier Ezra\nHartmere: courier Ulla\nElmford: courier Pia\nElmmere: courier Flint\nCarton: courier Vera\nAshham: courier Jory\nKingsgate: courier Jasper\nHartgate: courier Saul\nLangmere: courier Quill\n\nQuestion: Who is the courier for Hartwick?\nGive your final answer on the last line in the form: ANSWER: <answer>",
+        "judging": {
+          "type": "choice",
+          "expected": "Ezra",
+          "candidates": [
+            "Barnaby",
+            "Nell",
+            "Kai",
+            "Ezra",
+            "Ulla",
+            "Pia",
+            "Flint",
+            "Vera",
+            "Jory",
+            "Jasper",
+            "Saul",
+            "Quill"
+          ]
+        },
+        "simAnswer": "The ledger lists Hartwick with Ezra.\nANSWER: Ezra",
+        "simWrongAnswer": "ANSWER: Ulla",
+        "weight": 1,
+        "generatorVersion": 3,
+        "rung": "easy"
+      },
+      {
+        "id": "RETR_TASK_4",
+        "kind": "retrieval",
+        "prompt": "[RETR_TASK] Below is a dispatch ledger. Each line gives a town and its courier.\n\nThornton: courier Yara\nDunmore: courier Nico\nAshstead: courier Nell\nCarmere: courier Linus\nGlenfield: courier Iris\nHartmere: courier Hugo\nMorton: courier Pia\nLangwick: courier Otto\nDunfield: courier Greer\nAshford: courier Willa\nFenton: courier Niamh\nHartwick: courier Orrin\n\nQuestion: Who is the courier for Morton?\nGive your final answer on the last line in the form: ANSWER: <answer>",
+        "judging": {
+          "type": "choice",
+          "expected": "Pia",
+          "candidates": [
+            "Yara",
+            "Nico",
+            "Nell",
+            "Linus",
+            "Iris",
+            "Hugo",
+            "Pia",
+            "Otto",
+            "Greer",
+            "Willa",
+            "Niamh",
+            "Orrin"
+          ]
+        },
+        "simAnswer": "The ledger lists Morton with Pia.\nANSWER: Pia",
+        "simWrongAnswer": "ANSWER: Otto",
+        "weight": 1,
+        "generatorVersion": 3,
+        "rung": "easy"
+      },
+      {
+        "id": "RETR_TASK_5",
+        "kind": "retrieval",
+        "prompt": "[RETR_TASK] Below is a dispatch ledger. Each line gives a town and its courier.\n\nBelwick: courier Wren\nMorford: courier Tobin\nElmmore: courier Fergus\nLangford: courier Dov\nThornby: courier Saul\nAshham: courier Ada\nCarton: courier Esme\nLangwick: courier Jasper\nGlenfield: courier Elspeth\nFenmere: courier Sable\nLangby: courier Vance\nMorham: courier Flint\nCarmere: courier Finn\nAshton: courier Perrin\nThornmore: courier Cosmo\nKingsford: courier Otto\nLanggate: courier Rhea\nGlenwick: courier Hugo\nThornfield: courier Ugo\nKingsby: courier Rafe\nBelton: courier Bram\nFengate: courier Yara\nGlengate: courier Hollis\nBelgate: courier Hester\nHartwick: courier Lark\nFenford: courier Corin\nCargate: courier Kit\nGlenby: courier Mabel\nAshmore: courier Jory\nHartham: courier Linus\n\nQuestion: Who is the courier for Ashham?\nGive your final answer on the last line in the form: ANSWER: <answer>",
+        "judging": {
+          "type": "choice",
+          "expected": "Ada",
+          "candidates": [
+            "Wren",
+            "Tobin",
+            "Fergus",
+            "Dov",
+            "Saul",
+            "Ada",
+            "Esme",
+            "Jasper",
+            "Elspeth",
+            "Sable",
+            "Vance",
+            "Flint",
+            "Finn",
+            "Perrin",
+            "Cosmo",
+            "Otto",
+            "Rhea",
+            "Hugo",
+            "Ugo",
+            "Rafe",
+            "Bram",
+            "Yara",
+            "Hollis",
+            "Hester",
+            "Lark",
+            "Corin",
+            "Kit",
+            "Mabel",
+            "Jory",
+            "Linus"
+          ]
+        },
+        "simAnswer": "The ledger lists Ashham with Ada.\nANSWER: Ada",
+        "simWrongAnswer": "ANSWER: Esme",
+        "weight": 1,
+        "generatorVersion": 3,
+        "rung": "medium"
+      },
+      {
+        "id": "RETR_TASK_6",
+        "kind": "retrieval",
+        "prompt": "[RETR_TASK] Below is a dispatch ledger. Each line gives a town and its courier.\n\nKingsfield: courier Fergus\nDunford: courier Flint\nGlenmere: courier Linus\nDunmere: courier Cleo\nMorgate: courier Anouk\nKingsby: courier Greer\nCarford: courier Iris\nKingsmere: courier Marlow\nElmgate: courier Kit\nKingswick: courier Niamh\nBelby: courier Hollis\nKingsgate: courier Milo\nLangton: courier Nico\nElmby: courier Juno\nFenwick: courier Elspeth\nLanggate: courier Beatrix\nThornmere: courier Gwen\nAshby: courier Ezra\nThornford: courier Kestrel\nFenby: courier Dov\nGlenford: courier Odile\nFenfield: courier Rhea\nMorfield: courier Jasper\nThornham: courier Jory\nThorngate: courier Tobin\nCarmore: courier Rafe\nDunstead: courier Galen\nCarstead: courier Bram\nHartton: courier Vance\nAshton: courier Hester\n\nQuestion: Who is the courier for Thorngate?\nGive your final answer on the last line in the form: ANSWER: <answer>",
+        "judging": {
+          "type": "choice",
+          "expected": "Tobin",
+          "candidates": [
+            "Fergus",
+            "Flint",
+            "Linus",
+            "Cleo",
+            "Anouk",
+            "Greer",
+            "Iris",
+            "Marlow",
+            "Kit",
+            "Niamh",
+            "Hollis",
+            "Milo",
+            "Nico",
+            "Juno",
+            "Elspeth",
+            "Beatrix",
+            "Gwen",
+            "Ezra",
+            "Kestrel",
+            "Dov",
+            "Odile",
+            "Rhea",
+            "Jasper",
+            "Jory",
+            "Tobin",
+            "Rafe",
+            "Galen",
+            "Bram",
+            "Vance",
+            "Hester"
+          ]
+        },
+        "simAnswer": "The ledger lists Thorngate with Tobin.\nANSWER: Tobin",
+        "simWrongAnswer": "ANSWER: Rafe",
+        "weight": 1,
+        "generatorVersion": 3,
+        "rung": "medium"
+      },
+      {
+        "id": "RETR_TASK_7",
+        "kind": "retrieval",
+        "prompt": "[RETR_TASK] Below is a dispatch ledger. Each line gives a town and its courier.\n\nCarmere: courier Ulla\nFenmore: courier Finn\nAshton: courier Cleo\nThornmore: courier Willa\nElmford: courier Nell\nElmmere: courier Otto\nThornton: courier Nico\nGlenford: courier Hugo\nAshfield: courier Rafe\nHartford: courier Milo\nDunwick: courier Orrin\nFenwick: courier Greer\nAshmore: courier Ugo\nKingsby: courier Esme\nBelby: courier Niamh\nLangstead: courier Kit\nBelwick: courier Cosmo\nThornstead: courier Ezra\nAshmere: courier Lark\nAshstead: courier Linus\nMorfield: courier Pia\nLangton: courier Vance\nMorford: courier Leif\nKingsham: courier Jory\nMormore: courier Wren\nLangham: courier Juno\nKingsmore: courier Mabel\nCarham: courier Gwen\nElmmore: courier Anouk\nHartwick: courier Tamsin\n\nQuestion: Who is the courier for Fenmore?\nGive your final answer on the last line in the form: ANSWER: <answer>",
+        "judging": {
+          "type": "choice",
+          "expected": "Finn",
+          "candidates": [
+            "Ulla",
+            "Finn",
+            "Cleo",
+            "Willa",
+            "Nell",
+            "Otto",
+            "Nico",
+            "Hugo",
+            "Rafe",
+            "Milo",
+            "Orrin",
+            "Greer",
+            "Ugo",
+            "Esme",
+            "Niamh",
+            "Kit",
+            "Cosmo",
+            "Ezra",
+            "Lark",
+            "Linus",
+            "Pia",
+            "Vance",
+            "Leif",
+            "Jory",
+            "Wren",
+            "Juno",
+            "Mabel",
+            "Gwen",
+            "Anouk",
+            "Tamsin"
+          ]
+        },
+        "simAnswer": "The ledger lists Fenmore with Finn.\nANSWER: Finn",
+        "simWrongAnswer": "ANSWER: Cleo",
+        "weight": 1,
+        "generatorVersion": 3,
+        "rung": "medium"
+      },
+      {
+        "id": "RETR_TASK_8",
+        "kind": "retrieval",
+        "prompt": "[RETR_TASK] Below is a dispatch ledger. Each line gives a town and its courier.\n\nLangford: courier Perrin\nGlenmore: courier Rafe\nElmmore: courier Cleo\nGlenham: courier Dashiell\nLangmere: courier Fergus\nBelham: courier Iris\nBelfield: courier Linus\nKingsham: courier Kit\nHartby: courier Marlow\nThornmere: courier Gwen\nKingswick: courier Nico\nDungate: courier Imogen\nGlenton: courier Saul\nDunwick: courier Nell\nElmham: courier Mabel\nBelmere: courier Kai\nGlenstead: courier Juno\nDunfield: courier Esme\nKingsby: courier Tamsin\nAshford: courier Niamh\nAshby: courier Delphine\nHartmere: courier Hollis\nFenmore: courier Zeke\nGlenwick: courier Willa\nDunmore: courier Beatrix\nMorby: courier Rhea\nElmby: courier Ulla\nHartstead: courier Wren\nFenby: courier Elspeth\nElmstead: courier Kestrel\n\nQuestion: Who is the courier for Langmere?\nGive your final answer on the last line in the form: ANSWER: <answer>",
+        "judging": {
+          "type": "choice",
+          "expected": "Fergus",
+          "candidates": [
+            "Perrin",
+            "Rafe",
+            "Cleo",
+            "Dashiell",
+            "Fergus",
+            "Iris",
+            "Linus",
+            "Kit",
+            "Marlow",
+            "Gwen",
+            "Nico",
+            "Imogen",
+            "Saul",
+            "Nell",
+            "Mabel",
+            "Kai",
+            "Juno",
+            "Esme",
+            "Tamsin",
+            "Niamh",
+            "Delphine",
+            "Hollis",
+            "Zeke",
+            "Willa",
+            "Beatrix",
+            "Rhea",
+            "Ulla",
+            "Wren",
+            "Elspeth",
+            "Kestrel"
+          ]
+        },
+        "simAnswer": "The ledger lists Langmere with Fergus.\nANSWER: Fergus",
+        "simWrongAnswer": "ANSWER: Iris",
+        "weight": 1,
+        "generatorVersion": 3,
+        "rung": "medium"
+      },
+      {
+        "id": "RETR_TASK_9",
+        "kind": "retrieval",
+        "prompt": "[RETR_TASK] Below is a dispatch ledger. Each line gives a town and its courier.\n\nGlenford: courier Beatrix\nLangmore: courier Cleo\nThornstead: courier Ezra\nMorby: courier Hugo\nMorwick: courier Orrin\nFenton: courier Sable\nKingsstead: courier Fergus\nDunford: courier Perrin\nHartgate: courier Kit\nAshmere: courier Ugo\nHartmore: courier Yara\nDungate: courier Finn\nKingsfield: courier Elspeth\nBelstead: courier Delphine\nKingsby: courier Quill\nElmton: courier Rhea\nElmwick: courier Ada\nLangfield: courier Hollis\nDunwick: courier Galen\nAshford: courier Pia\nMorton: courier Willa\nKingsham: courier Jasper\nAshgate: courier Nico\nThornton: courier Zelda\nDunmore: courier Mabel\nKingsford: courier Vera\nLangford: courier Ulla\nThornwick: courier Tamsin\nCarwick: courier Barnaby\nHartham: courier Tobin\nCarford: courier Cosmo\nCargate: courier Dashiell\nBelwick: courier Flint\nAshwick: courier Zeke\nMorford: courier Wren\nAshstead: courier Niamh\nLangmere: courier Leif\nFenford: courier Rafe\nFengate: courier Nell\nFenfield: courier Dov\nElmfield: courier Bram\nHartstead: courier Kai\nGlenwick: courier Jory\nBelmore: courier Otto\nCarton: courier Marlow\nElmmere: courier Ivo\nBelton: courier Yuri\nDunmere: courier Lark\nElmham: courier Anouk\nHartford: courier Saul\nFenby: courier Vance\nDunstead: courier Hester\nKingswick: courier Odile\nLanggate: courier Greer\nGlenmere: courier Gwen\nThornmore: courier Juno\nBelfield: courier Xavi\nCarby: courier Corin\nDunby: courier Linus\nMorham: courier Esme\n\nQuestion: Who is the courier for Dunstead?\nGive your final answer on the last line in the form: ANSWER: <answer>",
+        "judging": {
+          "type": "choice",
+          "expected": "Hester",
+          "candidates": [
+            "Beatrix",
+            "Cleo",
+            "Ezra",
+            "Hugo",
+            "Orrin",
+            "Sable",
+            "Fergus",
+            "Perrin",
+            "Kit",
+            "Ugo",
+            "Yara",
+            "Finn",
+            "Elspeth",
+            "Delphine",
+            "Quill",
+            "Rhea",
+            "Ada",
+            "Hollis",
+            "Galen",
+            "Pia",
+            "Willa",
+            "Jasper",
+            "Nico",
+            "Zelda",
+            "Mabel",
+            "Vera",
+            "Ulla",
+            "Tamsin",
+            "Barnaby",
+            "Tobin",
+            "Cosmo",
+            "Dashiell",
+            "Flint",
+            "Zeke",
+            "Wren",
+            "Niamh",
+            "Leif",
+            "Rafe",
+            "Nell",
+            "Dov",
+            "Bram",
+            "Kai",
+            "Jory",
+            "Otto",
+            "Marlow",
+            "Ivo",
+            "Yuri",
+            "Lark",
+            "Anouk",
+            "Saul",
+            "Vance",
+            "Hester",
+            "Odile",
+            "Greer",
+            "Gwen",
+            "Juno",
+            "Xavi",
+            "Corin",
+            "Linus",
+            "Esme"
+          ]
+        },
+        "simAnswer": "The ledger lists Dunstead with Hester.\nANSWER: Hester",
+        "simWrongAnswer": "ANSWER: Odile",
+        "weight": 1,
+        "generatorVersion": 3,
+        "rung": "hard"
+      },
+      {
+        "id": "RETR_TASK_10",
+        "kind": "retrieval",
+        "prompt": "[RETR_TASK] Below is a dispatch ledger. Each line gives a town and its courier.\n\nHartfield: courier Yara\nLangmore: courier Kestrel\nCarmere: courier Perrin\nAshmore: courier Ulla\nFengate: courier Zeke\nCarwick: courier Rhea\nGlenmere: courier Kit\nBelby: courier Leif\nCarfield: courier Ugo\nElmfield: courier Pia\nHartstead: courier Galen\nFenwick: courier Orrin\nKingsford: courier Sable\nCarton: courier Dashiell\nLangby: courier Tobin\nFenmere: courier Elspeth\nHartford: courier Otto\nKingsgate: courier Finn\nBelmore: courier Marlow\nMorstead: courier Fergus\nElmmere: courier Delphine\nKingsmere: courier Cleo\nCarstead: courier Anouk\nGlenfield: courier Quill\nMorton: courier Wren\nLangfield: courier Yuri\nFenford: courier Gwen\nFenmore: courier Dov\nHartby: courier Ezra\nKingsham: courier Ada\nKingsstead: courier Vance\nGlenstead: courier Mabel\nCarby: courier Corin\nFenby: courier Saul\nBelgate: courier Greer\nDunton: courier Lark\nMorham: courier Beatrix\nElmmore: courier Tamsin\nDunstead: courier Iris\nAshford: courier Zelda\nGlengate: courier Jory\nGlenton: courier Cosmo\nFenton: courier Ivo\nLangham: courier Juno\nThornwick: courier Milo\nCarham: courier Hester\nDungate: courier Hugo\nThornmore: courier Flint\nBelfield: courier Hollis\nLangmere: courier Linus\nGlenmore: courier Jasper\nElmton: courier Barnaby\nHartgate: courier Odile\nGlenham: courier Esme\nMormore: courier Imogen\nHartwick: courier Vera\nAshton: courier Willa\nBelham: courier Kai\nThornford: courier Nico\nBelford: courier Nell\n\nQuestion: Who is the courier for Belham?\nGive your final answer on the last line in the form: ANSWER: <answer>",
+        "judging": {
+          "type": "choice",
+          "expected": "Kai",
+          "candidates": [
+            "Yara",
+            "Kestrel",
+            "Perrin",
+            "Ulla",
+            "Zeke",
+            "Rhea",
+            "Kit",
+            "Leif",
+            "Ugo",
+            "Pia",
+            "Galen",
+            "Orrin",
+            "Sable",
+            "Dashiell",
+            "Tobin",
+            "Elspeth",
+            "Otto",
+            "Finn",
+            "Marlow",
+            "Fergus",
+            "Delphine",
+            "Cleo",
+            "Anouk",
+            "Quill",
+            "Wren",
+            "Yuri",
+            "Gwen",
+            "Dov",
+            "Ezra",
+            "Ada",
+            "Vance",
+            "Mabel",
+            "Corin",
+            "Saul",
+            "Greer",
+            "Lark",
+            "Beatrix",
+            "Tamsin",
+            "Iris",
+            "Zelda",
+            "Jory",
+            "Cosmo",
+            "Ivo",
+            "Juno",
+            "Milo",
+            "Hester",
+            "Hugo",
+            "Flint",
+            "Hollis",
+            "Linus",
+            "Jasper",
+            "Barnaby",
+            "Odile",
+            "Esme",
+            "Imogen",
+            "Vera",
+            "Willa",
+            "Kai",
+            "Nico",
+            "Nell"
+          ]
+        },
+        "simAnswer": "The ledger lists Belham with Kai.\nANSWER: Kai",
+        "simWrongAnswer": "ANSWER: Nico",
+        "weight": 1,
+        "generatorVersion": 3,
+        "rung": "hard"
+      },
+      {
+        "id": "RETR_TASK_11",
+        "kind": "retrieval",
+        "prompt": "[RETR_TASK] Below is a dispatch ledger. Each line gives a town and its courier.\n\nDunstead: courier Fergus\nAshham: courier Barnaby\nBelham: courier Dov\nBelgate: courier Xavi\nHartgate: courier Imogen\nLanggate: courier Linus\nCarton: courier Elspeth\nGlenham: courier Ezra\nLangwick: courier Gwen\nLangford: courier Delphine\nFenwick: courier Beatrix\nElmmere: courier Dashiell\nKingsby: courier Yuri\nThornton: courier Yara\nKingsham: courier Orrin\nLangmere: courier Rafe\nAshmere: courier Tamsin\nElmham: courier Hester\nCarwick: courier Vera\nMorgate: courier Pia\nDungate: courier Cosmo\nElmgate: courier Perrin\nThornmore: courier Odile\nFengate: courier Ivo\nFenford: courier Zeke\nAshwick: courier Nell\nLangmore: courier Bram\nBelmore: courier Rhea\nCarmere: courier Otto\nHartfield: courier Cleo\nAshby: courier Jory\nDunwick: courier Ugo\nThornby: courier Leif\nCarstead: courier Vance\nLangfield: courier Zelda\nBelstead: courier Milo\nLangton: courier Iris\nDunton: courier Greer\nAshford: courier Hugo\nElmmore: courier Saul\nKingsfield: courier Jasper\nCarfield: courier Flint\nBelwick: courier Mabel\nAshgate: courier Lark\nKingston: courier Kai\nHartmere: courier Quill\nHartford: courier Sable\nThornmere: courier Esme\nMorfield: courier Tobin\nHartstead: courier Marlow\nDunby: courier Ada\nFenmere: courier Corin\nBelby: courier Kestrel\nDunham: courier Nico\nFenfield: courier Willa\nDunfield: courier Niamh\nCarby: courier Anouk\nAshstead: courier Wren\nMorwick: courier Hollis\nElmwick: courier Kit\n\nQuestion: Who is the courier for Hartford?\nGive your final answer on the last line in the form: ANSWER: <answer>",
+        "judging": {
+          "type": "choice",
+          "expected": "Sable",
+          "candidates": [
+            "Fergus",
+            "Barnaby",
+            "Dov",
+            "Xavi",
+            "Imogen",
+            "Linus",
+            "Elspeth",
+            "Ezra",
+            "Gwen",
+            "Delphine",
+            "Beatrix",
+            "Dashiell",
+            "Yuri",
+            "Yara",
+            "Orrin",
+            "Rafe",
+            "Tamsin",
+            "Hester",
+            "Vera",
+            "Pia",
+            "Cosmo",
+            "Perrin",
+            "Odile",
+            "Ivo",
+            "Zeke",
+            "Nell",
+            "Bram",
+            "Rhea",
+            "Otto",
+            "Cleo",
+            "Jory",
+            "Ugo",
+            "Leif",
+            "Vance",
+            "Zelda",
+            "Milo",
+            "Iris",
+            "Greer",
+            "Hugo",
+            "Saul",
+            "Jasper",
+            "Flint",
+            "Mabel",
+            "Lark",
+            "Kai",
+            "Quill",
+            "Sable",
+            "Esme",
+            "Tobin",
+            "Marlow",
+            "Ada",
+            "Corin",
+            "Kestrel",
+            "Nico",
+            "Willa",
+            "Niamh",
+            "Anouk",
+            "Wren",
+            "Hollis",
+            "Kit"
+          ]
+        },
+        "simAnswer": "The ledger lists Hartford with Sable.\nANSWER: Sable",
+        "simWrongAnswer": "ANSWER: Esme",
+        "weight": 1,
+        "generatorVersion": 3,
+        "rung": "hard"
+      },
+      {
+        "id": "RETR_TASK_12",
+        "kind": "retrieval",
+        "prompt": "[RETR_TASK] Below is a dispatch ledger. Each line gives a town and its courier.\n\nThorngate: courier Ivo\nGlenby: courier Niamh\nThornford: courier Ugo\nLangham: courier Perrin\nFengate: courier Yuri\nKingsfield: courier Greer\nCarfield: courier Orrin\nThornmore: courier Tobin\nGlenstead: courier Corin\nFenfield: courier Iris\nAshham: courier Jasper\nThornby: courier Pia\nGlenwick: courier Bram\nCarford: courier Imogen\nCarby: courier Vera\nKingswick: courier Lark\nBelmore: courier Finn\nCargate: courier Jory\nMorford: courier Ulla\nCarmere: courier Kit\nKingsford: courier Dov\nElmwick: courier Sable\nThornmere: courier Yara\nFenmere: courier Cosmo\nCarwick: courier Hester\nFenmore: courier Rafe\nFenby: courier Zelda\nDunmere: courier Delphine\nDunmore: courier Leif\nBelby: courier Zeke\nBelham: courier Esme\nDunwick: courier Ezra\nLangmere: courier Gwen\nHartby: courier Galen\nThornwick: courier Kestrel\nDunfield: courier Ada\nAshmore: courier Mabel\nCarmore: courier Willa\nAshmere: courier Flint\nFenwick: courier Saul\nCarstead: courier Marlow\nAshstead: courier Xavi\nKingsham: courier Vance\nLangton: courier Wren\nKingsby: courier Hollis\nAshford: courier Rhea\nLangwick: courier Milo\nMorstead: courier Kai\nAshby: courier Odile\nAshton: courier Cleo\nElmmore: courier Beatrix\nAshfield: courier Nico\nKingsstead: courier Fergus\nMorgate: courier Dashiell\nFenton: courier Juno\nDunham: courier Tamsin\nMorwick: courier Anouk\nBelford: courier Quill\nGlenham: courier Hugo\nThornfield: courier Barnaby\n\nQuestion: Who is the courier for Dunwick?\nGive your final answer on the last line in the form: ANSWER: <answer>",
+        "judging": {
+          "type": "choice",
+          "expected": "Ezra",
+          "candidates": [
+            "Ivo",
+            "Niamh",
+            "Ugo",
+            "Perrin",
+            "Yuri",
+            "Greer",
+            "Orrin",
+            "Tobin",
+            "Corin",
+            "Iris",
+            "Jasper",
+            "Pia",
+            "Bram",
+            "Imogen",
+            "Vera",
+            "Lark",
+            "Finn",
+            "Jory",
+            "Ulla",
+            "Kit",
+            "Dov",
+            "Sable",
+            "Yara",
+            "Cosmo",
+            "Hester",
+            "Rafe",
+            "Zelda",
+            "Delphine",
+            "Leif",
+            "Zeke",
+            "Esme",
+            "Ezra",
+            "Gwen",
+            "Galen",
+            "Kestrel",
+            "Ada",
+            "Mabel",
+            "Willa",
+            "Flint",
+            "Saul",
+            "Marlow",
+            "Xavi",
+            "Vance",
+            "Wren",
+            "Hollis",
+            "Rhea",
+            "Milo",
+            "Kai",
+            "Odile",
+            "Cleo",
+            "Beatrix",
+            "Nico",
+            "Fergus",
+            "Dashiell",
+            "Juno",
+            "Tamsin",
+            "Anouk",
+            "Quill",
+            "Hugo",
+            "Barnaby"
+          ]
+        },
+        "simAnswer": "The ledger lists Dunwick with Ezra.\nANSWER: Ezra",
+        "simWrongAnswer": "ANSWER: Gwen",
+        "weight": 1,
+        "generatorVersion": 3,
+        "rung": "hard"
+      }
+    ]
+  }
+}

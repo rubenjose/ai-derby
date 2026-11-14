@@ -1,0 +1,487 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>AI Derby</title>
+<meta name="description" content="AI models race over fences, and every fence is a question. The films, the results, and a record of each race that anyone can check.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800&family=Barlow+Semi+Condensed:wght@400;500;600;700&display=swap">
+</head>
+<body>
+<style>
+/* Layout: a masthead, one band per race (the film at 16:9 on the left, the result and the race's record beside it; stacked on a phone), then the runners and how to check a record. The same look as the broadcast. */
+:root {
+  --page: #0c1512; --band: #13201b; --edge: rgba(255, 255, 255, 0.13);
+  --ink: #f4f5ee; --dim: #a7b6ad; --gold: #f2c14e; --fall: #ff5364; --ok: #6fdc8c;
+  --display: "Big Shoulders Display", "Barlow Condensed", "Arial Narrow", Impact, sans-serif;
+  --text: "Barlow Semi Condensed", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+  --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  color-scheme: dark;
+}
+html, body { background: var(--page); color: var(--ink); margin: 0; }
+body { font-family: var(--text); padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 22px 56px; }
+img { max-width: 100%; }
+a { color: var(--gold); }
+.wrap { max-width: 1320px; margin: 0 auto; display: grid; gap: 30px; }
+.mast { display: grid; gap: 8px; }
+.mast h1 { margin: 0; font: 800 44px/0.95 var(--display); letter-spacing: .02em; text-transform: uppercase; color: var(--gold); }
+.mast p { margin: 0; font: 400 17px/1.5 var(--text); color: var(--dim); max-width: 68ch; }
+.mast p b { color: var(--ink); font-weight: 600; }
+.race, .block { display: grid; gap: 14px; border-top: 3px solid var(--gold); padding-top: 16px; }
+.race header { display: grid; gap: 4px; }
+.race header small { font: 700 12px/1.3 var(--text); letter-spacing: .24em; text-transform: uppercase; color: var(--gold); }
+.race h2, .block h2 { margin: 0; font: 800 34px/1 var(--display); letter-spacing: .02em; text-transform: uppercase; text-wrap: balance; }
+.race header p { margin: 0; font: 400 15px/1.4 var(--text); color: var(--dim); }
+.reel { display: grid; grid-template-columns: minmax(0, 1.75fr) minmax(0, 1fr); gap: 22px; align-items: start; }
+.screen { aspect-ratio: 16 / 9; max-width: 100%; background: #060b09; border: 1px solid var(--edge); position: relative; overflow: hidden; }
+.screen img, .screen iframe { display: block; width: 100%; height: 100%; object-fit: cover; border: 0; }
+.play, .soon { display: block; width: 100%; height: 100%; position: relative; color: inherit; text-decoration: none; }
+.play .go, .soon span { position: absolute; left: 14px; bottom: 14px; padding: 9px 14px; font: 700 14px/1 var(--text); letter-spacing: .14em; text-transform: uppercase; }
+.play .go { background: var(--gold); color: #141414; }
+.play:hover .go, .play:focus-visible .go { background: #fff; }
+.soon span { background: rgba(6, 11, 9, .82); color: var(--dim); border: 1px solid var(--edge); }
+.soon img { opacity: .55; }
+.result { min-width: 0; display: grid; gap: 12px; }
+.result h3, .class h3 { margin: 0; font: 800 25px/1.05 var(--display); letter-spacing: .02em; text-transform: uppercase; text-wrap: balance; }
+.class h3 small { font: 600 13px/1 var(--text); letter-spacing: .12em; color: var(--dim); margin-left: 8px; }
+.tablewrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font: 500 15px/1.2 var(--text); font-variant-numeric: tabular-nums; }
+th { font: 700 11px/1 var(--text); letter-spacing: .16em; text-transform: uppercase; color: var(--dim); text-align: left; padding: 7px 6px; border-bottom: 1px solid var(--edge); white-space: nowrap; }
+td { padding: 8px 6px; border-bottom: 1px solid rgba(255, 255, 255, .07); white-space: nowrap; }
+.n { text-align: right; }
+th.n { text-align: right; }
+.pos { color: var(--dim); font-weight: 700; }
+small.of { display: block; margin: 3px 0 0 33px; font: 400 12px/1.2 var(--text); color: var(--dim); white-space: normal; }
+.no { display: inline-block; min-width: 24px; text-align: center; padding: 3px 0; margin-right: 9px; border-radius: 2px; font: 800 15px/1 var(--display); }
+tr.out td { color: var(--dim); }
+tr.out td:nth-child(3) { color: var(--fall); }
+tr.lead td:first-child { font-weight: 700; }
+td.model { color: var(--dim); }
+.result p, .block p { margin: 0; font: 400 14px/1.5 var(--text); color: var(--dim); }
+.block p { font-size: 16px; max-width: 72ch; }
+.block p b { color: var(--ink); font-weight: 600; }
+.record { display: grid; gap: 5px; padding: 10px 12px; background: var(--band); border: 1px solid var(--edge); font: 400 13px/1.4 var(--text); color: var(--dim); min-width: 0; }
+.record b { font: 700 11px/1 var(--text); letter-spacing: .2em; text-transform: uppercase; color: var(--gold); }
+.record code, .block code { font: 400 12px/1.45 var(--mono); color: var(--ink); overflow-wrap: anywhere; }
+.record button { font: 600 13px/1 var(--text); color: var(--gold); background: none; border: 1px solid var(--gold); padding: 4px 9px; cursor: pointer; }
+.record button:hover { background: var(--gold); color: #141414; }
+.record output.ok { color: var(--ok); }
+.record output.bad { color: var(--fall); font-weight: 700; }
+.classes { display: grid; gap: 22px; }
+.class { display: grid; gap: 10px; min-width: 0; }
+.block pre { margin: 0; padding: 10px 12px; background: var(--band); border: 1px solid var(--edge); overflow-x: auto; }
+.foot { font: 400 14px/1.55 var(--text); color: var(--dim); max-width: 78ch; border-top: 1px solid var(--edge); padding-top: 16px; margin: 0; }
+.foot b { color: var(--ink); font-weight: 600; }
+@media (max-width: 860px) { .reel { grid-template-columns: minmax(0, 1fr); } .mast h1 { font-size: 36px; } .race h2, .block h2 { font-size: 28px; } }
+</style>
+
+<div class="wrap">
+  <header class="mast">
+    <h1>AI Derby</h1>
+    <p><b>AI models race over fences, and every fence is a question.</b> Answer it well and the horse jumps clean. Miss a little and it stumbles; miss badly and it falls. The races are run for real and filmed from what happened: nothing is staged.</p>
+  </header>
+
+  <section class="race" id="creative">
+    <header>
+      <small>Race 1 · creative · Mac mini, live · 10 November 2026</small>
+      <h2>The One-Line Chase</h2>
+      <p>Write one line that keeps four rules at once.</p>
+    </header>
+    <div class="reel">
+      <div class="screen"><div class="soon"><img src="posters/creative.jpg" alt="" loading="lazy" width="960" height="540"><span>The film of this race is not up yet</span></div></div>
+      <div class="result">
+        <h3>Tiny Thunder wins</h3>
+        <div class="tablewrap"><table>
+          <thead><tr><th>Pos</th><th>Horse</th><th class="n">Time</th><th class="n">Clear</th><th class="n">Stumbles</th><th class="n">Falls</th></tr></thead>
+          <tbody>
+          <tr>
+            <td class="pos">1</td>
+            <td><span class="no" style="background:#ffd21f;color:#141414">3</span>Tiny Thunder<small class="of">Llama 3.2 1B · Meta</small></td>
+            <td class="n">1:23.59</td>
+            <td class="n">12</td><td class="n">0</td><td class="n">0</td>
+          </tr>
+          <tr>
+            <td class="pos">2</td>
+            <td><span class="no" style="background:#8a3ffc;color:#ffffff">5</span>Curly Bracket<small class="of">Qwen 2.5 Coder 1.5B · Alibaba</small></td>
+            <td class="n">+8.06</td>
+            <td class="n">10</td><td class="n">2</td><td class="n">0</td>
+          </tr>
+          <tr>
+            <td class="pos">3</td>
+            <td><span class="no" style="background:#ff5fa8;color:#ffffff">6</span>Quiet Whirlwind<small class="of">Vikhr Gemma 2B · Vikhr</small></td>
+            <td class="n">+16.23</td>
+            <td class="n">8</td><td class="n">4</td><td class="n">0</td>
+          </tr>
+          <tr>
+            <td class="pos">4</td>
+            <td><span class="no" style="background:#ff7a1a;color:#ffffff">2</span>Unusual Cello<small class="of">Gemma 2 2B Q5 · Google</small></td>
+            <td class="n">+16.27</td>
+            <td class="n">8</td><td class="n">4</td><td class="n">0</td>
+          </tr>
+          <tr>
+            <td class="pos">5</td>
+            <td><span class="no" style="background:#e02f3f;color:#ffffff">1</span>Splendid Pascal<small class="of">Gemma 2 2B · Google</small></td>
+            <td class="n">+20.29</td>
+            <td class="n">8</td><td class="n">3</td><td class="n">1</td>
+          </tr>
+          <tr>
+            <td class="pos">6</td>
+            <td><span class="no" style="background:#35c3f3;color:#141414">4</span>Thousand Questions<small class="of">Qwen 2.5 1.5B · Alibaba</small></td>
+            <td class="n">+32.41</td>
+            <td class="n">5</td><td class="n">6</td><td class="n">1</td>
+          </tr>
+          </tbody>
+        </table></div>
+        <p>Run live on the Mac mini on 10 November 2026: four small models and two variants of Gemma 2 (a Q5 compression and the Vikhr fine-tune), 2,048-token cap, temperature 0.</p>
+        <div class="record" data-file="records/creative.json" data-sha="ba3c84e85dbcd34e417c8e8f7102109d3744e6c65132d70865fd8b082c6752df">
+          <b>Record</b>
+          <code>ba3c84e85dbcd34e417c8e8f7102109d3744e6c65132d70865fd8b082c6752df</code>
+          <span><a href="records/creative.json">records/creative.json</a> · 68 KB · <button type="button">Check it</button> <output></output></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="race" id="retrieval">
+    <header>
+      <small>Race 2 · retrieval · Mac mini, live · 10 November 2026</small>
+      <h2>The Ledger Stakes</h2>
+      <p>Find one courier in a ledger of look-alike towns.</p>
+    </header>
+    <div class="reel">
+      <div class="screen"><div class="soon"><img src="posters/retrieval.jpg" alt="" loading="lazy" width="960" height="540"><span>The film of this race is not up yet</span></div></div>
+      <div class="result">
+        <h3>Dead heat: Splendid Pascal and Unusual Cello</h3>
+        <div class="tablewrap"><table>
+          <thead><tr><th>Pos</th><th>Horse</th><th class="n">Time</th><th class="n">Clear</th><th class="n">Stumbles</th><th class="n">Falls</th></tr></thead>
+          <tbody>
+          <tr>
+            <td class="pos">1</td>
+            <td><span class="no" style="background:#e02f3f;color:#ffffff">1</span>Splendid Pascal<small class="of">Gemma 2 2B · Google</small></td>
+            <td class="n">1:23.85</td>
+            <td class="n">12</td><td class="n">0</td><td class="n">0</td>
+          </tr>
+          <tr>
+            <td class="pos">1</td>
+            <td><span class="no" style="background:#ff7a1a;color:#ffffff">2</span>Unusual Cello<small class="of">Gemma 2 2B Q5 · Google</small></td>
+            <td class="n">1:23.85</td>
+            <td class="n">12</td><td class="n">0</td><td class="n">0</td>
+          </tr>
+          <tr>
+            <td class="pos">3</td>
+            <td><span class="no" style="background:#35c3f3;color:#141414">4</span>Thousand Questions<small class="of">Qwen 2.5 1.5B · Alibaba</small></td>
+            <td class="n">+3.91</td>
+            <td class="n">11</td><td class="n">1</td><td class="n">0</td>
+          </tr>
+          <tr>
+            <td class="pos">4</td>
+            <td><span class="no" style="background:#ff5fa8;color:#ffffff">6</span>Quiet Whirlwind<small class="of">Vikhr Gemma 2B · Vikhr</small></td>
+            <td class="n">+3.98</td>
+            <td class="n">11</td><td class="n">1</td><td class="n">0</td>
+          </tr>
+          <tr>
+            <td class="pos">5</td>
+            <td><span class="no" style="background:#8a3ffc;color:#ffffff">5</span>Curly Bracket<small class="of">Qwen 2.5 Coder 1.5B · Alibaba</small></td>
+            <td class="n">+15.89</td>
+            <td class="n">8</td><td class="n">4</td><td class="n">0</td>
+          </tr>
+          <tr>
+            <td class="pos">6</td>
+            <td><span class="no" style="background:#ffd21f;color:#141414">3</span>Tiny Thunder<small class="of">Llama 3.2 1B · Meta</small></td>
+            <td class="n">+23.91</td>
+            <td class="n">8</td><td class="n">2</td><td class="n">2</td>
+          </tr>
+          </tbody>
+        </table></div>
+        <p>Run live on the Mac mini on 10 November 2026. Gemma 2 and its Q5 compression gave the same twelve answers in the same number of tokens, so they dead-heat.</p>
+        <div class="record" data-file="records/retrieval.json" data-sha="138a6b8f934b357940549a99e93c36c9edadd0cf4f782bfd2ef4b36b5e07c63f">
+          <b>Record</b>
+          <code>138a6b8f934b357940549a99e93c36c9edadd0cf4f782bfd2ef4b36b5e07c63f</code>
+          <span><a href="records/retrieval.json">records/retrieval.json</a> · 70 KB · <button type="button">Check it</button> <output></output></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="race" id="reasoning">
+    <header>
+      <small>Race 3 · reasoning · Mac mini, live · 10 November 2026</small>
+      <h2>The Abacus Handicap</h2>
+      <p>Arithmetic, two steps to a word problem with a decoy number.</p>
+    </header>
+    <div class="reel">
+      <div class="screen"><div class="soon"><img src="posters/reasoning.jpg" alt="" loading="lazy" width="960" height="540"><span>The film of this race is not up yet</span></div></div>
+      <div class="result">
+        <h3>Thousand Questions wins</h3>
+        <div class="tablewrap"><table>
+          <thead><tr><th>Pos</th><th>Horse</th><th class="n">Time</th><th class="n">Clear</th><th class="n">Stumbles</th><th class="n">Falls</th></tr></thead>
+          <tbody>
+          <tr>
+            <td class="pos">1</td>
+            <td><span class="no" style="background:#35c3f3;color:#141414">4</span>Thousand Questions<small class="of">Qwen 2.5 1.5B · Alibaba</small></td>
+            <td class="n">1:23.81</td>
+            <td class="n">12</td><td class="n">0</td><td class="n">0</td>
+          </tr>
+          <tr>
+            <td class="pos">2</td>
+            <td><span class="no" style="background:#e02f3f;color:#ffffff">1</span>Splendid Pascal<small class="of">Gemma 2 2B · Google</small></td>
+            <td class="n">+3.71</td>
+            <td class="n">11</td><td class="n">1</td><td class="n">0</td>
+          </tr>
+          <tr>
+            <td class="pos">3</td>
+            <td><span class="no" style="background:#ff5fa8;color:#ffffff">6</span>Quiet Whirlwind<small class="of">Vikhr Gemma 2B · Vikhr</small></td>
+            <td class="n">+8.26</td>
+            <td class="n">10</td><td class="n">2</td><td class="n">0</td>
+          </tr>
+          <tr>
+            <td class="pos">4</td>
+            <td><span class="no" style="background:#ff7a1a;color:#ffffff">2</span>Unusual Cello<small class="of">Gemma 2 2B Q5 · Google</small></td>
+            <td class="n">+11.72</td>
+            <td class="n">9</td><td class="n">3</td><td class="n">0</td>
+          </tr>
+          <tr>
+            <td class="pos">5</td>
+            <td><span class="no" style="background:#8a3ffc;color:#ffffff">5</span>Curly Bracket<small class="of">Qwen 2.5 Coder 1.5B · Alibaba</small></td>
+            <td class="n">+23.77</td>
+            <td class="n">6</td><td class="n">6</td><td class="n">0</td>
+          </tr>
+          <tr>
+            <td class="pos">6</td>
+            <td><span class="no" style="background:#ffd21f;color:#141414">3</span>Tiny Thunder<small class="of">Llama 3.2 1B · Meta</small></td>
+            <td class="n">+28.33</td>
+            <td class="n">7</td><td class="n">3</td><td class="n">2</td>
+          </tr>
+          </tbody>
+        </table></div>
+        <p>Run live on the Mac mini on 10 November 2026: four small models and two variants of Gemma 2, 2,048-token cap, temperature 0.</p>
+        <div class="record" data-file="records/reasoning.json" data-sha="8c0739480a06a1370ce742493835b86927b1e624501a8ced04978f609759a0c3">
+          <b>Record</b>
+          <code>8c0739480a06a1370ce742493835b86927b1e624501a8ced04978f609759a0c3</code>
+          <span><a href="records/reasoning.json">records/reasoning.json</a> · 113 KB · <button type="button">Check it</button> <output></output></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="race" id="json">
+    <header>
+      <small>Race 4 · json · Mac mini, live · 10 November 2026</small>
+      <h2>The Order Book Chase</h2>
+      <p>Turn a written order note into exact JSON.</p>
+    </header>
+    <div class="reel">
+      <div class="screen"><div class="soon"><img src="posters/json.jpg" alt="" loading="lazy" width="960" height="540"><span>The film of this race is not up yet</span></div></div>
+      <div class="result">
+        <h3>Dead heat: Splendid Pascal and Unusual Cello</h3>
+        <div class="tablewrap"><table>
+          <thead><tr><th>Pos</th><th>Horse</th><th class="n">Time</th><th class="n">Clear</th><th class="n">Stumbles</th><th class="n">Falls</th></tr></thead>
+          <tbody>
+          <tr>
+            <td class="pos">1</td>
+            <td><span class="no" style="background:#e02f3f;color:#ffffff">1</span>Splendid Pascal<small class="of">Gemma 2 2B · Google</small></td>
+            <td class="n">1:23.83</td>
+            <td class="n">12</td><td class="n">0</td><td class="n">0</td>
+          </tr>
+          <tr>
+            <td class="pos">1</td>
+            <td><span class="no" style="background:#ff7a1a;color:#ffffff">2</span>Unusual Cello<small class="of">Gemma 2 2B Q5 · Google</small></td>
+            <td class="n">1:23.83</td>
+            <td class="n">12</td><td class="n">0</td><td class="n">0</td>
+          </tr>
+          <tr>
+            <td class="pos">3</td>
+            <td><span class="no" style="background:#ff5fa8;color:#ffffff">6</span>Quiet Whirlwind<small class="of">Vikhr Gemma 2B · Vikhr</small></td>
+            <td class="n">+4.01</td>
+            <td class="n">11</td><td class="n">1</td><td class="n">0</td>
+          </tr>
+          <tr>
+            <td class="pos">4</td>
+            <td><span class="no" style="background:#35c3f3;color:#141414">4</span>Thousand Questions<small class="of">Qwen 2.5 1.5B · Alibaba</small></td>
+            <td class="n">+11.84</td>
+            <td class="n">9</td><td class="n">3</td><td class="n">0</td>
+          </tr>
+          <tr>
+            <td class="pos">5</td>
+            <td><span class="no" style="background:#8a3ffc;color:#ffffff">5</span>Curly Bracket<small class="of">Qwen 2.5 Coder 1.5B · Alibaba</small></td>
+            <td class="n">+27.86</td>
+            <td class="n">5</td><td class="n">7</td><td class="n">0</td>
+          </tr>
+          <tr class="out">
+            <td class="pos">6</td>
+            <td><span class="no" style="background:#ffd21f;color:#141414">3</span>Tiny Thunder<small class="of">Llama 3.2 1B · Meta</small></td>
+            <td class="n">out, fence 10</td>
+            <td class="n">5</td><td class="n">2</td><td class="n">3</td>
+          </tr>
+          </tbody>
+        </table></div>
+        <p>Run live on the Mac mini on 10 November 2026 over levels 1 to 6 of the JSON scale, two fences a level, so the course suits a small-model field. Gemma 2 and its Q5 compression again gave the same answers in the same number of tokens.</p>
+        <div class="record" data-file="records/json.json" data-sha="a90dd8fae40888c1df383cb2182c7eda6ba57b91060577d1acba18cdf315cc1e">
+          <b>Record</b>
+          <code>a90dd8fae40888c1df383cb2182c7eda6ba57b91060577d1acba18cdf315cc1e</code>
+          <span><a href="records/json.json">records/json.json</a> · 119 KB · <button type="button">Check it</button> <output></output></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="race" id="goldcup">
+    <header>
+      <small>Race 5 · json · Anthropic API, live · 11 November 2026</small>
+      <h2>The Order Book Gold Cup</h2>
+      <p>Turn a written order note into exact JSON.</p>
+    </header>
+    <div class="reel">
+      <div class="screen"><div class="soon"><img src="posters/goldcup.jpg" alt="" loading="lazy" width="960" height="540"><span>The film of this race is not up yet</span></div></div>
+      <div class="result">
+        <h3>Fourteen Lines wins</h3>
+        <div class="tablewrap"><table>
+          <thead><tr><th>Pos</th><th>Horse</th><th class="n">Time</th><th class="n">Clear</th><th class="n">Stumbles</th><th class="n">Falls</th></tr></thead>
+          <tbody>
+          <tr>
+            <td class="pos">1</td>
+            <td><span class="no" style="background:#e02f3f;color:#ffffff">3</span>Fourteen Lines<small class="of">Claude Sonnet 5.5 · Anthropic</small></td>
+            <td class="n">1:23.35</td>
+            <td class="n">12</td><td class="n">0</td><td class="n">0</td>
+          </tr>
+          <tr>
+            <td class="pos">2</td>
+            <td><span class="no" style="background:#ffd21f;color:#141414">4</span>Quick Couplet<small class="of">Claude Sonnet 5.5, low effort · Anthropic</small></td>
+            <td class="n">+7.84</td>
+            <td class="n">10</td><td class="n">2</td><td class="n">0</td>
+          </tr>
+          <tr>
+            <td class="pos">3</td>
+            <td><span class="no" style="background:#35c3f3;color:#141414">1</span>Still Pond<small class="of">Claude Haiku 5.5 · Anthropic</small></td>
+            <td class="n">+9.14</td>
+            <td class="n">10</td><td class="n">2</td><td class="n">0</td>
+          </tr>
+          <tr class="out">
+            <td class="pos">4</td>
+            <td><span class="no" style="background:#8a3ffc;color:#ffffff">2</span>Hasty Frog<small class="of">Claude Haiku 5.5, low effort · Anthropic</small></td>
+            <td class="n">out, fence 12</td>
+            <td class="n">6</td><td class="n">3</td><td class="n">3</td>
+          </tr>
+          </tbody>
+        </table></div>
+        <p>The top class, run live on Anthropic's API: Claude Sonnet and Claude Haiku, each at high and at low thinking effort, over levels 88 to 99 of the JSON scale, the hardest twelve there are. Thinking less makes a different horse of the same model.</p>
+        <div class="record" data-file="records/goldcup.json" data-sha="8da62e99f2e2d42c5e37fca4ef269304233e81f3352279dd7f655e6a499d9374">
+          <b>Record</b>
+          <code>8da62e99f2e2d42c5e37fca4ef269304233e81f3352279dd7f655e6a499d9374</code>
+          <span><a href="records/goldcup.json">records/goldcup.json</a> · 574 KB · <button type="button">Check it</button> <output></output></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="runners">
+    <h2>The runners</h2>
+    <p>Every runner is a real AI model under a racing name. The breed is the model family and the stable is the company that made it. The small models race each other; the top class is run apart.</p>
+    <div class="classes">
+    <div class="class">
+      <h3>Small models <small>after 4 races</small></h3>
+      <div class="tablewrap"><table>
+        <thead><tr><th>Runner</th><th>Breed</th><th>Stable</th><th>The model</th><th class="n">Runs</th><th class="n">Wins</th><th class="n">2nd</th><th class="n">3rd</th><th class="n">Fences clear</th></tr></thead>
+        <tbody>
+        <tr class="lead">
+          <td><span class="no" style="background:#e02f3f;color:#ffffff">&nbsp;</span>Splendid Pascal</td>
+          <td>Gemma</td><td>Google</td><td class="model">Gemma 2 2B</td>
+          <td class="n">4</td><td class="n">2</td><td class="n">1</td><td class="n">0</td><td class="n">43 of 48</td>
+        </tr>
+        <tr>
+          <td><span class="no" style="background:#ff7a1a;color:#ffffff">&nbsp;</span>Unusual Cello</td>
+          <td>Gemma</td><td>Google</td><td class="model">Gemma 2 2B Q5</td>
+          <td class="n">4</td><td class="n">2</td><td class="n">0</td><td class="n">0</td><td class="n">41 of 48</td>
+        </tr>
+        <tr>
+          <td><span class="no" style="background:#35c3f3;color:#141414">&nbsp;</span>Thousand Questions</td>
+          <td>Qwen</td><td>Alibaba</td><td class="model">Qwen 2.5 1.5B</td>
+          <td class="n">4</td><td class="n">1</td><td class="n">0</td><td class="n">1</td><td class="n">37 of 48</td>
+        </tr>
+        <tr>
+          <td><span class="no" style="background:#ffd21f;color:#141414">&nbsp;</span>Tiny Thunder</td>
+          <td>Llama</td><td>Meta</td><td class="model">Llama 3.2 1B</td>
+          <td class="n">4</td><td class="n">1</td><td class="n">0</td><td class="n">0</td><td class="n">32 of 46</td>
+        </tr>
+        <tr>
+          <td><span class="no" style="background:#8a3ffc;color:#ffffff">&nbsp;</span>Curly Bracket</td>
+          <td>Qwen</td><td>Alibaba</td><td class="model">Qwen 2.5 Coder 1.5B</td>
+          <td class="n">4</td><td class="n">0</td><td class="n">1</td><td class="n">0</td><td class="n">29 of 48</td>
+        </tr>
+        <tr>
+          <td><span class="no" style="background:#ff5fa8;color:#ffffff">&nbsp;</span>Quiet Whirlwind</td>
+          <td>Gemma</td><td>Vikhr</td><td class="model">Vikhr Gemma 2B</td>
+          <td class="n">4</td><td class="n">0</td><td class="n">0</td><td class="n">3</td><td class="n">40 of 48</td>
+        </tr>
+        </tbody>
+      </table></div>
+    </div>
+    <div class="class">
+      <h3>Top class <small>after 2 races</small></h3>
+      <div class="tablewrap"><table>
+        <thead><tr><th>Runner</th><th>Breed</th><th>Stable</th><th>The model</th><th class="n">Runs</th><th class="n">Wins</th><th class="n">2nd</th><th class="n">3rd</th><th class="n">Fences clear</th></tr></thead>
+        <tbody>
+        <tr class="lead">
+          <td><span class="no" style="background:#e02f3f;color:#ffffff">&nbsp;</span>Fourteen Lines</td>
+          <td>Sonnet</td><td>Anthropic</td><td class="model">Claude Sonnet 5.5</td>
+          <td class="n">2</td><td class="n">1</td><td class="n">1</td><td class="n">0</td><td class="n">24 of 24</td>
+        </tr>
+        <tr class="lead">
+          <td><span class="no" style="background:#ffd21f;color:#141414">&nbsp;</span>Quick Couplet</td>
+          <td>Sonnet</td><td>Anthropic</td><td class="model">Claude Sonnet 5.5, low effort</td>
+          <td class="n">2</td><td class="n">1</td><td class="n">1</td><td class="n">0</td><td class="n">22 of 24</td>
+        </tr>
+        <tr>
+          <td><span class="no" style="background:#35c3f3;color:#141414">&nbsp;</span>Still Pond</td>
+          <td>Haiku</td><td>Anthropic</td><td class="model">Claude Haiku 5.5</td>
+          <td class="n">2</td><td class="n">0</td><td class="n">0</td><td class="n">1</td><td class="n">20 of 24</td>
+        </tr>
+        <tr>
+          <td><span class="no" style="background:#8a3ffc;color:#ffffff">&nbsp;</span>Hasty Frog</td>
+          <td>Haiku</td><td>Anthropic</td><td class="model">Claude Haiku 5.5, low effort</td>
+          <td class="n">2</td><td class="n">0</td><td class="n">0</td><td class="n">1</td><td class="n">17 of 24</td>
+        </tr>
+        </tbody>
+      </table></div>
+    </div>
+    </div>
+  </section>
+
+  <section class="block" id="check">
+    <h2>Check a race</h2>
+    <p><b>Each race has a record:</b> the file the film was made from. It holds every question, every answer exactly as the model wrote it, how each answer was marked, and the settings the race ran under. Beside each race is the record's fingerprint, a SHA-256 of the file. Change one character of a record and its fingerprint changes.</p>
+    <p>"Check it" fetches the record and works the fingerprint out in your browser. To do it yourself, download the record and run:</p>
+    <pre><code>shasum -a 256 creative.json</code></pre>
+    <p>To check without trusting this page, compare the result with <a href="https://github.com/rubenjose/ai-derby/commits/main/records">the history of the records</a>, which shows when each was published and that none has changed since.</p>
+    <p><b>What this proves, and what it does not.</b> It proves the record you read today is the one published with the film. It does not, by itself, prove the models gave those answers. For that, the small models are public: the record names each model file and its settings (temperature 0), so the same questions can be put to the same model again.</p>
+  </section>
+  <p class="foot"><b>How a race is timed.</b> Each fence takes 6.5 s plus up to 0.3 s of pace, from how much the horse wrote. A stumble (a near miss) costs 4 s and a fall (a big miss, or no readable answer) 8 s. 3 falls and a horse is out. Equal times are a dead heat. The caller is a computer voice reading a script written from the race's events.</p>
+</div>
+<script>
+document.querySelectorAll('a.play').forEach(a => a.addEventListener('click', e => {
+  if (e.metaKey || e.ctrlKey || e.shiftKey) return;
+  e.preventDefault();
+  const f = document.createElement('iframe');
+  f.src = 'https://www.youtube-nocookie.com/embed/' + a.dataset.video + '?autoplay=1&rel=0';
+  f.title = a.getAttribute('aria-label');
+  f.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+  f.allowFullscreen = true;
+  a.replaceWith(f);
+}));
+document.querySelectorAll('.record').forEach(box => box.querySelector('button').addEventListener('click', async () => {
+  const out = box.querySelector('output');
+  out.className = ''; out.textContent = 'checking…';
+  try {
+    const res = await fetch(box.dataset.file, { cache: 'no-store' });
+    if (!res.ok) throw new Error('the record could not be fetched');
+    const sum = [...new Uint8Array(await crypto.subtle.digest('SHA-256', await res.arrayBuffer()))].map(b => b.toString(16).padStart(2, '0')).join('');
+    const same = sum === box.dataset.sha;
+    out.className = same ? 'ok' : 'bad';
+    out.textContent = same ? 'the file matches' : 'the file does NOT match: ' + sum;
+  } catch (err) { out.className = 'bad'; out.textContent = 'not checked: ' + err.message; }
+}));
+</script>
+</body>
+</html>

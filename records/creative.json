@@ -1,0 +1,2290 @@
+{
+  "raceId": "race-832f1f33806c435bc1dfbdead206cde0",
+  "seed": "mini_show_creative_1",
+  "trackType": "creative",
+  "grade": "standard",
+  "distance": "mile",
+  "fences": 12,
+  "raceClass": "local",
+  "provider": "lmstudio",
+  "timestamp": "2026-11-10T11:47:55.331Z",
+  "raceConditions": {
+    "scoringVersion": 3,
+    "order": [
+      "clears",
+      "partial",
+      "tokens",
+      "seconds"
+    ],
+    "faultsPerKnock": 4,
+    "partial": "each clear counts 1; a knocked fence counts constraintsEarned/constraintsEarnable (rules a blank reply would fail) or testsPassed/testsTotal",
+    "tokensBasis": "completion tokens over every fence; a failed call or a missing count is charged the token cap",
+    "unraced": "a horse with no judged fences places behind every horse that ran",
+    "voidRule": "no horse clears a fence or earns partial credit: the race is void",
+    "formAffectsTime": false
+  },
+  "entrants": [
+    {
+      "position": 1,
+      "horseId": "llama32_1b",
+      "name": "Llama 3.2 1B",
+      "accuracy": 1,
+      "clears": 12,
+      "fences": 12,
+      "faults": 0,
+      "partial": 12,
+      "tokens": 113,
+      "avgLatencyMs": 193,
+      "judgeScore": 967.182,
+      "finalTimeSeconds": 2.32,
+      "tasks": [
+        {
+          "taskId": "CREATIVE_TASK_1",
+          "latencyMs": 533,
+          "accuracy": 1,
+          "score": 22.514,
+          "output": "As code flows, I harbor my digital dreams?",
+          "ttftMs": 525,
+          "completionTokens": 11,
+          "tokensPerSec": 1250,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "As code flows, I harbor my digital dreams?",
+          "extraction": "text",
+          "constraintsMet": 4,
+          "constraintsTotal": 4,
+          "constraintsEarned": 3,
+          "constraintsEarnable": 3,
+          "streamMarks": [
+            [
+              533,
+              10
+            ]
+          ],
+          "promptTokens": 73
+        },
+        {
+          "taskId": "CREATIVE_TASK_2",
+          "latencyMs": 140,
+          "accuracy": 1,
+          "score": 85.714,
+          "output": "Golden copper hands tick away, lost in digital silence?",
+          "ttftMs": 47,
+          "completionTokens": 12,
+          "tokensPerSec": 118.3,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Golden copper hands tick away, lost in digital silence?",
+          "extraction": "text",
+          "constraintsMet": 4,
+          "constraintsTotal": 4,
+          "constraintsEarned": 3,
+          "constraintsEarnable": 3,
+          "streamMarks": [
+            [
+              140,
+              11
+            ]
+          ],
+          "promptTokens": 76
+        },
+        {
+          "taskId": "CREATIVE_TASK_3",
+          "latencyMs": 133,
+          "accuracy": 1,
+          "score": 90.226,
+          "output": "Frozen waves crash against icy harbor's frozen shore?",
+          "ttftMs": 50,
+          "completionTokens": 11,
+          "tokensPerSec": 120.5,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Frozen waves crash against icy harbor's frozen shore?",
+          "extraction": "text",
+          "constraintsMet": 4,
+          "constraintsTotal": 4,
+          "constraintsEarned": 3,
+          "constraintsEarnable": 3,
+          "streamMarks": [
+            [
+              133,
+              10
+            ]
+          ],
+          "promptTokens": 74
+        },
+        {
+          "taskId": "CREATIVE_TASK_4",
+          "latencyMs": 238,
+          "accuracy": 1,
+          "score": 50.42,
+          "output": "Dark clouds gather over the meadow's tranquil, digital night!",
+          "ttftMs": 49,
+          "completionTokens": 14,
+          "tokensPerSec": 68.8,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Dark clouds gather over the meadow's tranquil, digital night!",
+          "extraction": "text",
+          "constraintsMet": 4,
+          "constraintsTotal": 4,
+          "constraintsEarned": 3,
+          "constraintsEarnable": 3,
+          "streamMarks": [
+            [
+              238,
+              13
+            ]
+          ],
+          "promptTokens": 75
+        },
+        {
+          "taskId": "CREATIVE_TASK_5",
+          "latencyMs": 136,
+          "accuracy": 1,
+          "score": 88.235,
+          "output": "Metal limbs burst forth from tangled orchard!",
+          "ttftMs": 58,
+          "completionTokens": 10,
+          "tokensPerSec": 115.4,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Metal limbs burst forth from tangled orchard!",
+          "extraction": "text",
+          "constraintsMet": 4,
+          "constraintsTotal": 4,
+          "constraintsEarned": 3,
+          "constraintsEarnable": 3,
+          "streamMarks": [
+            [
+              136,
+              9
+            ]
+          ],
+          "promptTokens": 75
+        },
+        {
+          "taskId": "CREATIVE_TASK_6",
+          "latencyMs": 108,
+          "accuracy": 1,
+          "score": 111.111,
+          "output": "Thunder crashes as it breaks free!",
+          "ttftMs": 45,
+          "completionTokens": 8,
+          "tokensPerSec": 111.1,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Thunder crashes as it breaks free!",
+          "extraction": "text",
+          "constraintsMet": 4,
+          "constraintsTotal": 4,
+          "constraintsEarned": 3,
+          "constraintsEarnable": 3,
+          "streamMarks": [
+            [
+              108,
+              7
+            ]
+          ],
+          "promptTokens": 75
+        },
+        {
+          "taskId": "CREATIVE_TASK_7",
+          "latencyMs": 352,
+          "accuracy": 1,
+          "score": 34.091,
+          "output": "Metal limbs stretch, compass unfurls?",
+          "ttftMs": 43,
+          "completionTokens": 9,
+          "tokensPerSec": 25.9,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Metal limbs stretch, compass unfurls?",
+          "extraction": "text",
+          "constraintsMet": 4,
+          "constraintsTotal": 4,
+          "constraintsEarned": 3,
+          "constraintsEarnable": 3,
+          "streamMarks": [
+            [
+              352,
+              8
+            ]
+          ],
+          "promptTokens": 73
+        },
+        {
+          "taskId": "CREATIVE_TASK_8",
+          "latencyMs": 138,
+          "accuracy": 1,
+          "score": 86.957,
+          "output": "Frozen copper waves crash against icy steel!",
+          "ttftMs": 83,
+          "completionTokens": 9,
+          "tokensPerSec": 145.5,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Frozen copper waves crash against icy steel!",
+          "extraction": "text",
+          "constraintsMet": 4,
+          "constraintsTotal": 4,
+          "constraintsEarned": 3,
+          "constraintsEarnable": 3,
+          "streamMarks": [
+            [
+              138,
+              8
+            ]
+          ],
+          "promptTokens": 75
+        },
+        {
+          "taskId": "CREATIVE_TASK_9",
+          "latencyMs": 90,
+          "accuracy": 1,
+          "score": 133.333,
+          "output": "Code flows like thunder?",
+          "ttftMs": 47,
+          "completionTokens": 6,
+          "tokensPerSec": 116.3,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Code flows like thunder?",
+          "extraction": "text",
+          "constraintsMet": 4,
+          "constraintsTotal": 4,
+          "constraintsEarned": 3,
+          "constraintsEarnable": 3,
+          "streamMarks": [
+            [
+              90,
+              5
+            ]
+          ],
+          "promptTokens": 73
+        },
+        {
+          "taskId": "CREATIVE_TASK_10",
+          "latencyMs": 223,
+          "accuracy": 1,
+          "score": 53.812,
+          "output": "Silent pages whisper thunder!",
+          "ttftMs": 68,
+          "completionTokens": 7,
+          "tokensPerSec": 38.7,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Silent pages whisper thunder!",
+          "extraction": "text",
+          "constraintsMet": 4,
+          "constraintsTotal": 4,
+          "constraintsEarned": 3,
+          "constraintsEarnable": 3,
+          "streamMarks": [
+            [
+              223,
+              6
+            ]
+          ],
+          "promptTokens": 77
+        },
+        {
+          "taskId": "CREATIVE_TASK_11",
+          "latencyMs": 123,
+          "accuracy": 1,
+          "score": 97.561,
+          "output": "Shadows hide forgotten copper tales?",
+          "ttftMs": 60,
+          "completionTokens": 8,
+          "tokensPerSec": 111.1,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Shadows hide forgotten copper tales?",
+          "extraction": "text",
+          "constraintsMet": 4,
+          "constraintsTotal": 4,
+          "constraintsEarned": 3,
+          "constraintsEarnable": 3,
+          "streamMarks": [
+            [
+              123,
+              7
+            ]
+          ],
+          "promptTokens": 76
+        },
+        {
+          "taskId": "CREATIVE_TASK_12",
+          "latencyMs": 106,
+          "accuracy": 1,
+          "score": 113.208,
+          "output": "Frozen velvet waves crash on icy!",
+          "ttftMs": 49,
+          "completionTokens": 8,
+          "tokensPerSec": 122.8,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Frozen velvet waves crash on icy!",
+          "extraction": "text",
+          "constraintsMet": 4,
+          "constraintsTotal": 4,
+          "constraintsEarned": 3,
+          "constraintsEarnable": 3,
+          "streamMarks": [
+            [
+              106,
+              7
+            ]
+          ],
+          "promptTokens": 75
+        }
+      ],
+      "runtime": {
+        "modelId": "llama-3.2-1b-instruct",
+        "format": "gguf",
+        "quantization": "Q8_0",
+        "arch": "llama"
+      },
+      "pedigree": {
+        "bloodline": "Llama",
+        "stable": "Meta AI",
+        "silks": {
+          "primary": "#0064e0",
+          "secondary": "#ffffff"
+        }
+      }
+    },
+    {
+      "position": 2,
+      "horseId": "qwen25_coder_15b",
+      "name": "Qwen 2.5 Coder 1.5B",
+      "accuracy": 0.83,
+      "clears": 10,
+      "fences": 12,
+      "faults": 8,
+      "partial": 11.667,
+      "tokens": 122,
+      "avgLatencyMs": 239,
+      "judgeScore": 528.555,
+      "finalTimeSeconds": 2.86,
+      "tasks": [
+        {
+          "taskId": "CREATIVE_TASK_1",
+          "latencyMs": 192,
+          "accuracy": 1,
+          "score": 62.5,
+          "output": "In the harbor, where code runs free?",
+          "ttftMs": 106,
+          "completionTokens": 10,
+          "tokensPerSec": 104.7,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "In the harbor, where code runs free?",
+          "extraction": "text",
+          "constraintsMet": 4,
+          "constraintsTotal": 4,
+          "constraintsEarned": 3,
+          "constraintsEarnable": 3,
+          "streamMarks": [
+            [
+              191,
+              9
+            ]
+          ],
+          "promptTokens": 93
+        },
+        {
+          "taskId": "CREATIVE_TASK_2",
+          "latencyMs": 223,
+          "accuracy": 1,
+          "score": 53.812,
+          "output": "Copper's glow, silent yet profound?",
+          "ttftMs": 63,
+          "completionTokens": 10,
+          "tokensPerSec": 56.3,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Copper's glow, silent yet profound?",
+          "extraction": "text",
+          "constraintsMet": 4,
+          "constraintsTotal": 4,
+          "constraintsEarned": 3,
+          "constraintsEarnable": 3,
+          "streamMarks": [
+            [
+              223,
+              9
+            ]
+          ],
+          "promptTokens": 96
+        },
+        {
+          "taskId": "CREATIVE_TASK_3",
+          "latencyMs": 291,
+          "accuracy": 1,
+          "score": 41.237,
+          "output": "Harbor's ice, a silent bridge?",
+          "ttftMs": 63,
+          "completionTokens": 10,
+          "tokensPerSec": 39.5,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Harbor's ice, a silent bridge?",
+          "extraction": "text",
+          "constraintsMet": 4,
+          "constraintsTotal": 4,
+          "constraintsEarned": 3,
+          "constraintsEarnable": 3,
+          "streamMarks": [
+            [
+              291,
+              9
+            ]
+          ],
+          "promptTokens": 94
+        },
+        {
+          "taskId": "CREATIVE_TASK_4",
+          "latencyMs": 285,
+          "accuracy": 1,
+          "score": 42.105,
+          "output": "In the meadow, where dreams are born,  \nA gentle breeze whispers secrets!",
+          "ttftMs": 228,
+          "completionTokens": 18,
+          "tokensPerSec": 298.2,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "In the meadow, where dreams are born,  \nA gentle breeze whispers secrets!",
+          "extraction": "text",
+          "constraintsMet": 4,
+          "constraintsTotal": 4,
+          "constraintsEarned": 3,
+          "constraintsEarnable": 3,
+          "streamMarks": [
+            [
+              285,
+              17
+            ]
+          ],
+          "promptTokens": 95
+        },
+        {
+          "taskId": "CREATIVE_TASK_5",
+          "latencyMs": 289,
+          "accuracy": 1,
+          "score": 41.522,
+          "output": "In orchards, a machine gallops!",
+          "ttftMs": 61,
+          "completionTokens": 10,
+          "tokensPerSec": 39.5,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "In orchards, a machine gallops!",
+          "extraction": "text",
+          "constraintsMet": 4,
+          "constraintsTotal": 4,
+          "constraintsEarned": 3,
+          "constraintsEarnable": 3,
+          "streamMarks": [
+            [
+              289,
+              9
+            ]
+          ],
+          "promptTokens": 95
+        },
+        {
+          "taskId": "CREATIVE_TASK_6",
+          "latencyMs": 269,
+          "accuracy": 0,
+          "score": 0,
+          "output": "Thunderous footsteps!",
+          "ttftMs": 269,
+          "completionTokens": 5,
+          "tokensPerSec": null,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Thunderous footsteps!",
+          "extraction": "text",
+          "constraintsMet": 3,
+          "constraintsTotal": 4,
+          "constraintsEarned": 2,
+          "constraintsEarnable": 3,
+          "streamMarks": [
+            [
+              269,
+              4
+            ]
+          ],
+          "promptTokens": 95
+        },
+        {
+          "taskId": "CREATIVE_TASK_7",
+          "latencyMs": 182,
+          "accuracy": 1,
+          "score": 65.934,
+          "output": "The compass led it to freedom,?",
+          "ttftMs": 89,
+          "completionTokens": 9,
+          "tokensPerSec": 86,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "The compass led it to freedom,?",
+          "extraction": "text",
+          "constraintsMet": 4,
+          "constraintsTotal": 4,
+          "constraintsEarned": 3,
+          "constraintsEarnable": 3,
+          "streamMarks": [
+            [
+              182,
+              8
+            ]
+          ],
+          "promptTokens": 93
+        },
+        {
+          "taskId": "CREATIVE_TASK_8",
+          "latencyMs": 264,
+          "accuracy": 1,
+          "score": 45.455,
+          "output": "Copper ice crumbles, whispers of the sea!",
+          "ttftMs": 264,
+          "completionTokens": 12,
+          "tokensPerSec": null,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Copper ice crumbles, whispers of the sea!",
+          "extraction": "text",
+          "constraintsMet": 4,
+          "constraintsTotal": 4,
+          "constraintsEarned": 3,
+          "constraintsEarnable": 3,
+          "streamMarks": [
+            [
+              264,
+              11
+            ]
+          ],
+          "promptTokens": 95
+        },
+        {
+          "taskId": "CREATIVE_TASK_9",
+          "latencyMs": 281,
+          "accuracy": 1,
+          "score": 42.705,
+          "output": "Thunder races through code, lightning strikes?",
+          "ttftMs": 64,
+          "completionTokens": 9,
+          "tokensPerSec": 36.9,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Thunder races through code, lightning strikes?",
+          "extraction": "text",
+          "constraintsMet": 4,
+          "constraintsTotal": 4,
+          "constraintsEarned": 3,
+          "constraintsEarnable": 3,
+          "streamMarks": [
+            [
+              281,
+              8
+            ]
+          ],
+          "promptTokens": 92
+        },
+        {
+          "taskId": "CREATIVE_TASK_10",
+          "latencyMs": 225,
+          "accuracy": 0,
+          "score": 0,
+          "output": "Thunder rolls through, books vanish!",
+          "ttftMs": 224,
+          "completionTokens": 8,
+          "tokensPerSec": 7000,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Thunder rolls through, books vanish!",
+          "extraction": "text",
+          "constraintsMet": 3,
+          "constraintsTotal": 4,
+          "constraintsEarned": 3,
+          "constraintsEarnable": 3,
+          "streamMarks": [
+            [
+              224,
+              7
+            ]
+          ],
+          "promptTokens": 96
+        },
+        {
+          "taskId": "CREATIVE_TASK_11",
+          "latencyMs": 168,
+          "accuracy": 1,
+          "score": 71.429,
+          "output": "In the copper vault, memories fade?",
+          "ttftMs": 79,
+          "completionTokens": 9,
+          "tokensPerSec": 89.9,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "In the copper vault, memories fade?",
+          "extraction": "text",
+          "constraintsMet": 4,
+          "constraintsTotal": 4,
+          "constraintsEarned": 3,
+          "constraintsEarnable": 3,
+          "streamMarks": [
+            [
+              168,
+              8
+            ]
+          ],
+          "promptTokens": 95
+        },
+        {
+          "taskId": "CREATIVE_TASK_12",
+          "latencyMs": 194,
+          "accuracy": 1,
+          "score": 61.856,
+          "output": " velvet ice cradles the shore, whispers secrets!",
+          "ttftMs": 60,
+          "completionTokens": 12,
+          "tokensPerSec": 82.1,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "velvet ice cradles the shore, whispers secrets!",
+          "extraction": "text",
+          "constraintsMet": 4,
+          "constraintsTotal": 4,
+          "constraintsEarned": 3,
+          "constraintsEarnable": 3,
+          "streamMarks": [
+            [
+              194,
+              11
+            ]
+          ],
+          "promptTokens": 94
+        }
+      ],
+      "runtime": {
+        "modelId": "qwen2.5-coder-1.5b-instruct",
+        "format": "gguf",
+        "quantization": "Q8_0",
+        "arch": "qwen2"
+      },
+      "pedigree": {
+        "bloodline": "Qwen Coder",
+        "stable": "Alibaba Qwen",
+        "silks": {
+          "primary": "#ff6a00",
+          "secondary": "#615ced"
+        }
+      }
+    },
+    {
+      "position": 3,
+      "horseId": "vikhr_gemma_2b",
+      "name": "Vikhr Gemma 2B",
+      "accuracy": 0.67,
+      "clears": 8,
+      "fences": 12,
+      "faults": 16,
+      "partial": 11,
+      "tokens": 148,
+      "avgLatencyMs": 355,
+      "judgeScore": 273.469,
+      "finalTimeSeconds": 4.26,
+      "tasks": [
+        {
+          "taskId": "CREATIVE_TASK_1",
+          "latencyMs": 411,
+          "accuracy": 0,
+          "score": 0,
+          "output": "```\nHarbors code, defying gravity's embrace?\n```",
+          "ttftMs": 147,
+          "completionTokens": 15,
+          "tokensPerSec": 53,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "```\nHarbors code, defying gravity's embrace?\n```",
+          "extraction": "text",
+          "constraintsMet": 2,
+          "constraintsTotal": 4,
+          "constraintsEarned": 2,
+          "constraintsEarnable": 3,
+          "streamMarks": [
+            [
+              411,
+              14
+            ]
+          ],
+          "promptTokens": 80
+        },
+        {
+          "taskId": "CREATIVE_TASK_2",
+          "latencyMs": 474,
+          "accuracy": 1,
+          "score": 25.316,
+          "output": "Copper hands trace time's final dance, a server farm's last analogue trance?",
+          "ttftMs": 132,
+          "completionTokens": 19,
+          "tokensPerSec": 52.6,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Copper hands trace time's final dance, a server farm's last analogue trance?",
+          "extraction": "text",
+          "constraintsMet": 4,
+          "constraintsTotal": 4,
+          "constraintsEarned": 3,
+          "constraintsEarnable": 3,
+          "streamMarks": [
+            [
+              474,
+              18
+            ]
+          ],
+          "promptTokens": 82
+        },
+        {
+          "taskId": "CREATIVE_TASK_3",
+          "latencyMs": 434,
+          "accuracy": 1,
+          "score": 27.65,
+          "output": "The harbor's breath, a frozen sea, whispers of steel and ice?",
+          "ttftMs": 133,
+          "completionTokens": 17,
+          "tokensPerSec": 53.2,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "The harbor's breath, a frozen sea, whispers of steel and ice?",
+          "extraction": "text",
+          "constraintsMet": 4,
+          "constraintsTotal": 4,
+          "constraintsEarned": 3,
+          "constraintsEarnable": 3,
+          "streamMarks": [
+            [
+              434,
+              16
+            ]
+          ],
+          "promptTokens": 81
+        },
+        {
+          "taskId": "CREATIVE_TASK_4",
+          "latencyMs": 395,
+          "accuracy": 1,
+          "score": 30.38,
+          "output": "Digital meadow, where clouds gather and rain falls in a digital valley!",
+          "ttftMs": 180,
+          "completionTokens": 15,
+          "tokensPerSec": 65.1,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Digital meadow, where clouds gather and rain falls in a digital valley!",
+          "extraction": "text",
+          "constraintsMet": 4,
+          "constraintsTotal": 4,
+          "constraintsEarned": 3,
+          "constraintsEarnable": 3,
+          "streamMarks": [
+            [
+              395,
+              14
+            ]
+          ],
+          "promptTokens": 80
+        },
+        {
+          "taskId": "CREATIVE_TASK_5",
+          "latencyMs": 319,
+          "accuracy": 1,
+          "score": 37.618,
+          "output": "Mechanical steed, orchard's bound, escapes!",
+          "ttftMs": 143,
+          "completionTokens": 11,
+          "tokensPerSec": 56.8,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Mechanical steed, orchard's bound, escapes!",
+          "extraction": "text",
+          "constraintsMet": 4,
+          "constraintsTotal": 4,
+          "constraintsEarned": 3,
+          "constraintsEarnable": 3,
+          "streamMarks": [
+            [
+              319,
+              10
+            ]
+          ],
+          "promptTokens": 81
+        },
+        {
+          "taskId": "CREATIVE_TASK_6",
+          "latencyMs": 328,
+          "accuracy": 0,
+          "score": 0,
+          "output": "Thunderous hooves, a mechanical escape!",
+          "ttftMs": 133,
+          "completionTokens": 9,
+          "tokensPerSec": 41,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Thunderous hooves, a mechanical escape!",
+          "extraction": "text",
+          "constraintsMet": 3,
+          "constraintsTotal": 4,
+          "constraintsEarned": 2,
+          "constraintsEarnable": 3,
+          "streamMarks": [
+            [
+              328,
+              8
+            ]
+          ],
+          "promptTokens": 80
+        },
+        {
+          "taskId": "CREATIVE_TASK_7",
+          "latencyMs": 286,
+          "accuracy": 1,
+          "score": 41.958,
+          "output": "Mechanical compass, free from its bounds?",
+          "ttftMs": 186,
+          "completionTokens": 9,
+          "tokensPerSec": 80,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Mechanical compass, free from its bounds?",
+          "extraction": "text",
+          "constraintsMet": 4,
+          "constraintsTotal": 4,
+          "constraintsEarned": 3,
+          "constraintsEarnable": 3,
+          "streamMarks": [
+            [
+              286,
+              8
+            ]
+          ],
+          "promptTokens": 80
+        },
+        {
+          "taskId": "CREATIVE_TASK_8",
+          "latencyMs": 302,
+          "accuracy": 1,
+          "score": 39.735,
+          "output": "Copper tracks on ice, a frozen sea!",
+          "ttftMs": 133,
+          "completionTokens": 10,
+          "tokensPerSec": 53.3,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Copper tracks on ice, a frozen sea!",
+          "extraction": "text",
+          "constraintsMet": 4,
+          "constraintsTotal": 4,
+          "constraintsEarned": 3,
+          "constraintsEarnable": 3,
+          "streamMarks": [
+            [
+              302,
+              9
+            ]
+          ],
+          "promptTokens": 80
+        },
+        {
+          "taskId": "CREATIVE_TASK_9",
+          "latencyMs": 344,
+          "accuracy": 1,
+          "score": 34.884,
+          "output": "Thunder in code, a coder's race against?",
+          "ttftMs": 132,
+          "completionTokens": 12,
+          "tokensPerSec": 51.9,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Thunder in code, a coder's race against?",
+          "extraction": "text",
+          "constraintsMet": 4,
+          "constraintsTotal": 4,
+          "constraintsEarned": 3,
+          "constraintsEarnable": 3,
+          "streamMarks": [
+            [
+              344,
+              11
+            ]
+          ],
+          "promptTokens": 78
+        },
+        {
+          "taskId": "CREATIVE_TASK_10",
+          "latencyMs": 305,
+          "accuracy": 0,
+          "score": 0,
+          "output": "Thunderous silence, books forget their words!",
+          "ttftMs": 131,
+          "completionTokens": 10,
+          "tokensPerSec": 51.7,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Thunderous silence, books forget their words!",
+          "extraction": "text",
+          "constraintsMet": 2,
+          "constraintsTotal": 4,
+          "constraintsEarned": 2,
+          "constraintsEarnable": 3,
+          "streamMarks": [
+            [
+              305,
+              9
+            ]
+          ],
+          "promptTokens": 81
+        },
+        {
+          "taskId": "CREATIVE_TASK_11",
+          "latencyMs": 330,
+          "accuracy": 0,
+          "score": 0,
+          "output": "Copper shelves whisper, books forget their words?",
+          "ttftMs": 131,
+          "completionTokens": 10,
+          "tokensPerSec": 45.2,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Copper shelves whisper, books forget their words?",
+          "extraction": "text",
+          "constraintsMet": 3,
+          "constraintsTotal": 4,
+          "constraintsEarned": 3,
+          "constraintsEarnable": 3,
+          "streamMarks": [
+            [
+              330,
+              9
+            ]
+          ],
+          "promptTokens": 81
+        },
+        {
+          "taskId": "CREATIVE_TASK_12",
+          "latencyMs": 334,
+          "accuracy": 1,
+          "score": 35.928,
+          "output": "Velvet ice, trainless, a frozen sea!",
+          "ttftMs": 189,
+          "completionTokens": 11,
+          "tokensPerSec": 69,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Velvet ice, trainless, a frozen sea!",
+          "extraction": "text",
+          "constraintsMet": 4,
+          "constraintsTotal": 4,
+          "constraintsEarned": 3,
+          "constraintsEarnable": 3,
+          "streamMarks": [
+            [
+              334,
+              10
+            ]
+          ],
+          "promptTokens": 79
+        }
+      ],
+      "runtime": {
+        "modelId": "vikhr-gemma-2b-instruct",
+        "format": "gguf",
+        "quantization": "Q8_0",
+        "arch": "gemma2"
+      },
+      "pedigree": null
+    },
+    {
+      "position": 4,
+      "horseId": "gemma2_2b_q5",
+      "name": "Gemma 2 2B Q5",
+      "accuracy": 0.67,
+      "clears": 8,
+      "fences": 12,
+      "faults": 16,
+      "partial": 10.667,
+      "tokens": 151,
+      "avgLatencyMs": 507,
+      "judgeScore": 200.189,
+      "finalTimeSeconds": 6.09,
+      "tasks": [
+        {
+          "taskId": "CREATIVE_TASK_1",
+          "latencyMs": 571,
+          "accuracy": 0,
+          "score": 0,
+          "output": "Code like a storm, harboring dreams in its code? ? \n",
+          "ttftMs": 314,
+          "completionTokens": 16,
+          "tokensPerSec": 58.4,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Code like a storm, harboring dreams in its code? ?",
+          "extraction": "text",
+          "constraintsMet": 3,
+          "constraintsTotal": 4,
+          "constraintsEarned": 2,
+          "constraintsEarnable": 3,
+          "streamMarks": [
+            [
+              571,
+              15
+            ]
+          ],
+          "promptTokens": 80
+        },
+        {
+          "taskId": "CREATIVE_TASK_2",
+          "latencyMs": 420,
+          "accuracy": 1,
+          "score": 28.571,
+          "output": "Copper hands tracing time's slow, silent dance? \n",
+          "ttftMs": 165,
+          "completionTokens": 14,
+          "tokensPerSec": 51,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Copper hands tracing time's slow, silent dance?",
+          "extraction": "text",
+          "constraintsMet": 4,
+          "constraintsTotal": 4,
+          "constraintsEarned": 3,
+          "constraintsEarnable": 3,
+          "streamMarks": [
+            [
+              420,
+              13
+            ]
+          ],
+          "promptTokens": 82
+        },
+        {
+          "taskId": "CREATIVE_TASK_3",
+          "latencyMs": 718,
+          "accuracy": 1,
+          "score": 16.713,
+          "output": "Steel serpent glides through frozen harbor? \n",
+          "ttftMs": 192,
+          "completionTokens": 10,
+          "tokensPerSec": 17.1,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Steel serpent glides through frozen harbor?",
+          "extraction": "text",
+          "constraintsMet": 4,
+          "constraintsTotal": 4,
+          "constraintsEarned": 3,
+          "constraintsEarnable": 3,
+          "streamMarks": [
+            [
+              718,
+              9
+            ]
+          ],
+          "promptTokens": 81
+        },
+        {
+          "taskId": "CREATIVE_TASK_4",
+          "latencyMs": 556,
+          "accuracy": 1,
+          "score": 21.583,
+          "output": "The meadow's code flickers, a digital blaze! \n",
+          "ttftMs": 550,
+          "completionTokens": 15,
+          "tokensPerSec": 2333.3,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "The meadow's code flickers, a digital blaze!",
+          "extraction": "text",
+          "constraintsMet": 4,
+          "constraintsTotal": 4,
+          "constraintsEarned": 3,
+          "constraintsEarnable": 3,
+          "streamMarks": [
+            [
+              556,
+              14
+            ]
+          ],
+          "promptTokens": 80
+        },
+        {
+          "taskId": "CREATIVE_TASK_5",
+          "latencyMs": 492,
+          "accuracy": 1,
+          "score": 24.39,
+          "output": "Steel hooves beat on orchard ground! \n",
+          "ttftMs": 491,
+          "completionTokens": 10,
+          "tokensPerSec": 9000,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Steel hooves beat on orchard ground!",
+          "extraction": "text",
+          "constraintsMet": 4,
+          "constraintsTotal": 4,
+          "constraintsEarned": 3,
+          "constraintsEarnable": 3,
+          "streamMarks": [
+            [
+              492,
+              9
+            ]
+          ],
+          "promptTokens": 81
+        },
+        {
+          "taskId": "CREATIVE_TASK_6",
+          "latencyMs": 521,
+          "accuracy": 0,
+          "score": 0,
+          "output": "Thunderous hooves break free from their chains! \n",
+          "ttftMs": 521,
+          "completionTokens": 12,
+          "tokensPerSec": null,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Thunderous hooves break free from their chains!",
+          "extraction": "text",
+          "constraintsMet": 3,
+          "constraintsTotal": 4,
+          "constraintsEarned": 2,
+          "constraintsEarnable": 3,
+          "streamMarks": [
+            [
+              521,
+              11
+            ]
+          ],
+          "promptTokens": 80
+        },
+        {
+          "taskId": "CREATIVE_TASK_7",
+          "latencyMs": 436,
+          "accuracy": 1,
+          "score": 27.523,
+          "output": "Its compass spun, a metal heart's escape? \n",
+          "ttftMs": 334,
+          "completionTokens": 14,
+          "tokensPerSec": 127.5,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Its compass spun, a metal heart's escape?",
+          "extraction": "text",
+          "constraintsMet": 4,
+          "constraintsTotal": 4,
+          "constraintsEarned": 3,
+          "constraintsEarnable": 3,
+          "streamMarks": [
+            [
+              436,
+              13
+            ]
+          ],
+          "promptTokens": 80
+        },
+        {
+          "taskId": "CREATIVE_TASK_8",
+          "latencyMs": 447,
+          "accuracy": 1,
+          "score": 26.846,
+          "output": "Copper wheels kiss the ice, a fleeting sigh! \n",
+          "ttftMs": 175,
+          "completionTokens": 13,
+          "tokensPerSec": 44.1,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Copper wheels kiss the ice, a fleeting sigh!",
+          "extraction": "text",
+          "constraintsMet": 4,
+          "constraintsTotal": 4,
+          "constraintsEarned": 3,
+          "constraintsEarnable": 3,
+          "streamMarks": [
+            [
+              447,
+              12
+            ]
+          ],
+          "promptTokens": 80
+        },
+        {
+          "taskId": "CREATIVE_TASK_9",
+          "latencyMs": 512,
+          "accuracy": 0,
+          "score": 0,
+          "output": "Thunderous code, a race against the unknown? \n",
+          "ttftMs": 177,
+          "completionTokens": 13,
+          "tokensPerSec": 35.8,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Thunderous code, a race against the unknown?",
+          "extraction": "text",
+          "constraintsMet": 3,
+          "constraintsTotal": 4,
+          "constraintsEarned": 2,
+          "constraintsEarnable": 3,
+          "streamMarks": [
+            [
+              512,
+              12
+            ]
+          ],
+          "promptTokens": 78
+        },
+        {
+          "taskId": "CREATIVE_TASK_10",
+          "latencyMs": 511,
+          "accuracy": 0,
+          "score": 0,
+          "output": "Thunderous silence, stories unsaid! ! \n",
+          "ttftMs": 206,
+          "completionTokens": 12,
+          "tokensPerSec": 36.1,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Thunderous silence, stories unsaid! !",
+          "extraction": "text",
+          "constraintsMet": 3,
+          "constraintsTotal": 4,
+          "constraintsEarned": 2,
+          "constraintsEarnable": 3,
+          "streamMarks": [
+            [
+              511,
+              11
+            ]
+          ],
+          "promptTokens": 81
+        },
+        {
+          "taskId": "CREATIVE_TASK_11",
+          "latencyMs": 379,
+          "accuracy": 1,
+          "score": 31.662,
+          "output": "Copper spines, whispers of forgotten words? \n",
+          "ttftMs": 194,
+          "completionTokens": 11,
+          "tokensPerSec": 54.1,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Copper spines, whispers of forgotten words?",
+          "extraction": "text",
+          "constraintsMet": 4,
+          "constraintsTotal": 4,
+          "constraintsEarned": 3,
+          "constraintsEarnable": 3,
+          "streamMarks": [
+            [
+              379,
+              10
+            ]
+          ],
+          "promptTokens": 81
+        },
+        {
+          "taskId": "CREATIVE_TASK_12",
+          "latencyMs": 524,
+          "accuracy": 1,
+          "score": 22.901,
+          "output": "Velvet ice, a steel serpent glides!  \n",
+          "ttftMs": 338,
+          "completionTokens": 11,
+          "tokensPerSec": 53.8,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Velvet ice, a steel serpent glides!",
+          "extraction": "text",
+          "constraintsMet": 4,
+          "constraintsTotal": 4,
+          "constraintsEarned": 3,
+          "constraintsEarnable": 3,
+          "streamMarks": [
+            [
+              524,
+              10
+            ]
+          ],
+          "promptTokens": 79
+        }
+      ],
+      "runtime": {
+        "modelId": "gemma-2-2b-it@q5_k_m",
+        "format": "gguf",
+        "quantization": "Q5_K_M",
+        "arch": "gemma2"
+      },
+      "pedigree": null
+    },
+    {
+      "position": 5,
+      "horseId": "gemma2_2b",
+      "name": "Gemma 2 2B",
+      "accuracy": 0.67,
+      "clears": 8,
+      "fences": 12,
+      "faults": 16,
+      "partial": 10.333,
+      "tokens": 154,
+      "avgLatencyMs": 480,
+      "judgeScore": 229.275,
+      "finalTimeSeconds": 5.76,
+      "tasks": [
+        {
+          "taskId": "CREATIVE_TASK_1",
+          "latencyMs": 621,
+          "accuracy": 0,
+          "score": 0,
+          "output": "Code like a storm, harboring dreams in its code? ? \n",
+          "ttftMs": 335,
+          "completionTokens": 16,
+          "tokensPerSec": 52.4,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Code like a storm, harboring dreams in its code? ?",
+          "extraction": "text",
+          "constraintsMet": 3,
+          "constraintsTotal": 4,
+          "constraintsEarned": 2,
+          "constraintsEarnable": 3,
+          "streamMarks": [
+            [
+              621,
+              15
+            ]
+          ],
+          "promptTokens": 80
+        },
+        {
+          "taskId": "CREATIVE_TASK_2",
+          "latencyMs": 430,
+          "accuracy": 1,
+          "score": 27.907,
+          "output": "The copper hands, a silent, steady plea, ? \n",
+          "ttftMs": 145,
+          "completionTokens": 14,
+          "tokensPerSec": 45.6,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "The copper hands, a silent, steady plea, ?",
+          "extraction": "text",
+          "constraintsMet": 4,
+          "constraintsTotal": 4,
+          "constraintsEarned": 3,
+          "constraintsEarnable": 3,
+          "streamMarks": [
+            [
+              430,
+              13
+            ]
+          ],
+          "promptTokens": 82
+        },
+        {
+          "taskId": "CREATIVE_TASK_3",
+          "latencyMs": 307,
+          "accuracy": 1,
+          "score": 39.088,
+          "output": "Steel serpent glides across frozen harbor? \n",
+          "ttftMs": 136,
+          "completionTokens": 10,
+          "tokensPerSec": 52.6,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Steel serpent glides across frozen harbor?",
+          "extraction": "text",
+          "constraintsMet": 4,
+          "constraintsTotal": 4,
+          "constraintsEarned": 3,
+          "constraintsEarnable": 3,
+          "streamMarks": [
+            [
+              307,
+              9
+            ]
+          ],
+          "promptTokens": 81
+        },
+        {
+          "taskId": "CREATIVE_TASK_4",
+          "latencyMs": 397,
+          "accuracy": 1,
+          "score": 30.227,
+          "output": "The digital meadow crackled, a silent, furious blaze! \n",
+          "ttftMs": 213,
+          "completionTokens": 15,
+          "tokensPerSec": 76.1,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "The digital meadow crackled, a silent, furious blaze!",
+          "extraction": "text",
+          "constraintsMet": 4,
+          "constraintsTotal": 4,
+          "constraintsEarned": 3,
+          "constraintsEarnable": 3,
+          "streamMarks": [
+            [
+              397,
+              14
+            ]
+          ],
+          "promptTokens": 80
+        },
+        {
+          "taskId": "CREATIVE_TASK_5",
+          "latencyMs": 399,
+          "accuracy": 1,
+          "score": 30.075,
+          "output": "Metal limbs, in orchard's sun, they flee! \n",
+          "ttftMs": 135,
+          "completionTokens": 15,
+          "tokensPerSec": 53,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Metal limbs, in orchard's sun, they flee!",
+          "extraction": "text",
+          "constraintsMet": 4,
+          "constraintsTotal": 4,
+          "constraintsEarned": 3,
+          "constraintsEarnable": 3,
+          "streamMarks": [
+            [
+              399,
+              14
+            ]
+          ],
+          "promptTokens": 81
+        },
+        {
+          "taskId": "CREATIVE_TASK_6",
+          "latencyMs": 464,
+          "accuracy": 0,
+          "score": 0,
+          "output": "Thunderous hooves tore through the chains! \n",
+          "ttftMs": 136,
+          "completionTokens": 11,
+          "tokensPerSec": 30.5,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Thunderous hooves tore through the chains!",
+          "extraction": "text",
+          "constraintsMet": 3,
+          "constraintsTotal": 4,
+          "constraintsEarned": 2,
+          "constraintsEarnable": 3,
+          "streamMarks": [
+            [
+              464,
+              10
+            ]
+          ],
+          "promptTokens": 80
+        },
+        {
+          "taskId": "CREATIVE_TASK_7",
+          "latencyMs": 756,
+          "accuracy": 1,
+          "score": 15.873,
+          "output": "Its compass spun, a wild escape it sought? \n",
+          "ttftMs": 173,
+          "completionTokens": 13,
+          "tokensPerSec": 20.6,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Its compass spun, a wild escape it sought?",
+          "extraction": "text",
+          "constraintsMet": 4,
+          "constraintsTotal": 4,
+          "constraintsEarned": 3,
+          "constraintsEarnable": 3,
+          "streamMarks": [
+            [
+              756,
+              12
+            ]
+          ],
+          "promptTokens": 80
+        },
+        {
+          "taskId": "CREATIVE_TASK_8",
+          "latencyMs": 555,
+          "accuracy": 1,
+          "score": 21.622,
+          "output": "Copper wheels kiss the frosted, frozen sea! \n",
+          "ttftMs": 310,
+          "completionTokens": 12,
+          "tokensPerSec": 44.9,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Copper wheels kiss the frosted, frozen sea!",
+          "extraction": "text",
+          "constraintsMet": 4,
+          "constraintsTotal": 4,
+          "constraintsEarned": 3,
+          "constraintsEarnable": 3,
+          "streamMarks": [
+            [
+              555,
+              11
+            ]
+          ],
+          "promptTokens": 80
+        },
+        {
+          "taskId": "CREATIVE_TASK_9",
+          "latencyMs": 397,
+          "accuracy": 0,
+          "score": 0,
+          "output": "Thunderous code, a race against the unknown? \n",
+          "ttftMs": 263,
+          "completionTokens": 13,
+          "tokensPerSec": 89.6,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Thunderous code, a race against the unknown?",
+          "extraction": "text",
+          "constraintsMet": 3,
+          "constraintsTotal": 4,
+          "constraintsEarned": 2,
+          "constraintsEarnable": 3,
+          "streamMarks": [
+            [
+              397,
+              12
+            ]
+          ],
+          "promptTokens": 78
+        },
+        {
+          "taskId": "CREATIVE_TASK_10",
+          "latencyMs": 690,
+          "accuracy": 0,
+          "score": 0,
+          "output": "Thunderous silence, stories lost in a sigh!. \n",
+          "ttftMs": 137,
+          "completionTokens": 13,
+          "tokensPerSec": 21.7,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Thunderous silence, stories lost in a sigh!.",
+          "extraction": "text",
+          "constraintsMet": 2,
+          "constraintsTotal": 4,
+          "constraintsEarned": 1,
+          "constraintsEarnable": 3,
+          "streamMarks": [
+            [
+              690,
+              12
+            ]
+          ],
+          "promptTokens": 81
+        },
+        {
+          "taskId": "CREATIVE_TASK_11",
+          "latencyMs": 348,
+          "accuracy": 1,
+          "score": 34.483,
+          "output": "Copper spines, whispers of forgotten words? \n",
+          "ttftMs": 221,
+          "completionTokens": 11,
+          "tokensPerSec": 78.7,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Copper spines, whispers of forgotten words?",
+          "extraction": "text",
+          "constraintsMet": 4,
+          "constraintsTotal": 4,
+          "constraintsEarned": 3,
+          "constraintsEarnable": 3,
+          "streamMarks": [
+            [
+              348,
+              10
+            ]
+          ],
+          "promptTokens": 81
+        },
+        {
+          "taskId": "CREATIVE_TASK_12",
+          "latencyMs": 400,
+          "accuracy": 1,
+          "score": 30,
+          "output": "Velvet ice, a steel serpent glides!  \n",
+          "ttftMs": 132,
+          "completionTokens": 11,
+          "tokensPerSec": 37.3,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Velvet ice, a steel serpent glides!",
+          "extraction": "text",
+          "constraintsMet": 4,
+          "constraintsTotal": 4,
+          "constraintsEarned": 3,
+          "constraintsEarnable": 3,
+          "streamMarks": [
+            [
+              400,
+              10
+            ]
+          ],
+          "promptTokens": 79
+        }
+      ],
+      "runtime": {
+        "modelId": "gemma-2-2b-it@q8_0",
+        "format": "gguf",
+        "quantization": "Q8_0",
+        "arch": "gemma2"
+      },
+      "pedigree": {
+        "bloodline": "Gemma",
+        "stable": "Google DeepMind",
+        "silks": {
+          "primary": "#4285f4",
+          "secondary": "#ea4335"
+        }
+      }
+    },
+    {
+      "position": 6,
+      "horseId": "qwen25_15b",
+      "name": "Qwen 2.5 1.5B",
+      "accuracy": 0.42,
+      "clears": 5,
+      "fences": 12,
+      "faults": 28,
+      "partial": 10,
+      "tokens": 181,
+      "avgLatencyMs": 328,
+      "judgeScore": 261.084,
+      "finalTimeSeconds": 3.94,
+      "tasks": [
+        {
+          "taskId": "CREATIVE_TASK_1",
+          "latencyMs": 523,
+          "accuracy": 0,
+          "score": 0,
+          "output": "The code surfs like a wave, harboring secrets deep,\nRacing against time in this digital sea of dreams?",
+          "ttftMs": 95,
+          "completionTokens": 25,
+          "tokensPerSec": 56.1,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "The code surfs like a wave, harboring secrets deep,\nRacing against time in this digital sea of dreams?",
+          "extraction": "text",
+          "constraintsMet": 2,
+          "constraintsTotal": 4,
+          "constraintsEarned": 1,
+          "constraintsEarnable": 3,
+          "streamMarks": [
+            [
+              523,
+              24
+            ]
+          ],
+          "promptTokens": 93
+        },
+        {
+          "taskId": "CREATIVE_TASK_2",
+          "latencyMs": 321,
+          "accuracy": 0,
+          "score": 0,
+          "output": "The copper hands whisper to the night,  \nAwaiting the last tick of the old clock?",
+          "ttftMs": 87,
+          "completionTokens": 20,
+          "tokensPerSec": 81.2,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "The copper hands whisper to the night,  \nAwaiting the last tick of the old clock?",
+          "extraction": "text",
+          "constraintsMet": 2,
+          "constraintsTotal": 4,
+          "constraintsEarned": 2,
+          "constraintsEarnable": 3,
+          "streamMarks": [
+            [
+              321,
+              19
+            ]
+          ],
+          "promptTokens": 96
+        },
+        {
+          "taskId": "CREATIVE_TASK_3",
+          "latencyMs": 268,
+          "accuracy": 0,
+          "score": 0,
+          "output": "The harbor whispers to the ice,  \nA silent train crosses, lost in time?",
+          "ttftMs": 203,
+          "completionTokens": 18,
+          "tokensPerSec": 261.5,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "The harbor whispers to the ice,  \nA silent train crosses, lost in time?",
+          "extraction": "text",
+          "constraintsMet": 3,
+          "constraintsTotal": 4,
+          "constraintsEarned": 3,
+          "constraintsEarnable": 3,
+          "streamMarks": [
+            [
+              268,
+              17
+            ]
+          ],
+          "promptTokens": 94
+        },
+        {
+          "taskId": "CREATIVE_TASK_4",
+          "latencyMs": 197,
+          "accuracy": 0,
+          "score": 0,
+          "output": "The meadow whispers calm under the storm's veil!",
+          "ttftMs": 63,
+          "completionTokens": 12,
+          "tokensPerSec": 82.1,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "The meadow whispers calm under the storm's veil!",
+          "extraction": "text",
+          "constraintsMet": 3,
+          "constraintsTotal": 4,
+          "constraintsEarned": 3,
+          "constraintsEarnable": 3,
+          "streamMarks": [
+            [
+              197,
+              11
+            ]
+          ],
+          "promptTokens": 95
+        },
+        {
+          "taskId": "CREATIVE_TASK_5",
+          "latencyMs": 267,
+          "accuracy": 1,
+          "score": 44.944,
+          "output": "Silent orchard whispers, \"Escape me! Mechanic's dream!\"",
+          "ttftMs": 62,
+          "completionTokens": 16,
+          "tokensPerSec": 73.2,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Silent orchard whispers, \"Escape me! Mechanic's dream!",
+          "extraction": "text",
+          "constraintsMet": 4,
+          "constraintsTotal": 4,
+          "constraintsEarned": 3,
+          "constraintsEarnable": 3,
+          "streamMarks": [
+            [
+              267,
+              15
+            ]
+          ],
+          "promptTokens": 95
+        },
+        {
+          "taskId": "CREATIVE_TASK_6",
+          "latencyMs": 201,
+          "accuracy": 1,
+          "score": 59.701,
+          "output": "Thunderous thunder breaks free, galloping wild!",
+          "ttftMs": 64,
+          "completionTokens": 12,
+          "tokensPerSec": 80.3,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Thunderous thunder breaks free, galloping wild!",
+          "extraction": "text",
+          "constraintsMet": 4,
+          "constraintsTotal": 4,
+          "constraintsEarned": 3,
+          "constraintsEarnable": 3,
+          "streamMarks": [
+            [
+              201,
+              11
+            ]
+          ],
+          "promptTokens": 95
+        },
+        {
+          "taskId": "CREATIVE_TASK_7",
+          "latencyMs": 324,
+          "accuracy": 1,
+          "score": 37.037,
+          "output": "The compass points wild, but still it moves free?",
+          "ttftMs": 59,
+          "completionTokens": 12,
+          "tokensPerSec": 41.5,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "The compass points wild, but still it moves free?",
+          "extraction": "text",
+          "constraintsMet": 4,
+          "constraintsTotal": 4,
+          "constraintsEarned": 3,
+          "constraintsEarnable": 3,
+          "streamMarks": [
+            [
+              324,
+              11
+            ]
+          ],
+          "promptTokens": 93
+        },
+        {
+          "taskId": "CREATIVE_TASK_8",
+          "latencyMs": 201,
+          "accuracy": 1,
+          "score": 59.701,
+          "output": "Copper tracks dance on ice, shimmering!",
+          "ttftMs": 76,
+          "completionTokens": 11,
+          "tokensPerSec": 80,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Copper tracks dance on ice, shimmering!",
+          "extraction": "text",
+          "constraintsMet": 4,
+          "constraintsTotal": 4,
+          "constraintsEarned": 3,
+          "constraintsEarnable": 3,
+          "streamMarks": [
+            [
+              201,
+              10
+            ]
+          ],
+          "promptTokens": 95
+        },
+        {
+          "taskId": "CREATIVE_TASK_9",
+          "latencyMs": 845,
+          "accuracy": 0,
+          "score": 0,
+          "output": "Thunderous code surges, racing high?",
+          "ttftMs": 845,
+          "completionTokens": 10,
+          "tokensPerSec": null,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Thunderous code surges, racing high?",
+          "extraction": "text",
+          "constraintsMet": 3,
+          "constraintsTotal": 4,
+          "constraintsEarned": 2,
+          "constraintsEarnable": 3,
+          "streamMarks": [
+            [
+              845,
+              9
+            ]
+          ],
+          "promptTokens": 92
+        },
+        {
+          "taskId": "CREATIVE_TASK_10",
+          "latencyMs": 265,
+          "accuracy": 0,
+          "score": 0,
+          "output": "Thunder whispers secrets in silence,  \nBooks forget their words under thunder!",
+          "ttftMs": 92,
+          "completionTokens": 15,
+          "tokensPerSec": 80.9,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Thunder whispers secrets in silence,  \nBooks forget their words under thunder!",
+          "extraction": "text",
+          "constraintsMet": 2,
+          "constraintsTotal": 4,
+          "constraintsEarned": 2,
+          "constraintsEarnable": 3,
+          "streamMarks": [
+            [
+              265,
+              14
+            ]
+          ],
+          "promptTokens": 96
+        },
+        {
+          "taskId": "CREATIVE_TASK_11",
+          "latencyMs": 326,
+          "accuracy": 0,
+          "score": 0,
+          "output": "The copper shelves whisper secrets,  \nBut the books forget their words, sighing?",
+          "ttftMs": 63,
+          "completionTokens": 18,
+          "tokensPerSec": 64.6,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "The copper shelves whisper secrets,  \nBut the books forget their words, sighing?",
+          "extraction": "text",
+          "constraintsMet": 2,
+          "constraintsTotal": 4,
+          "constraintsEarned": 2,
+          "constraintsEarnable": 3,
+          "streamMarks": [
+            [
+              326,
+              17
+            ]
+          ],
+          "promptTokens": 95
+        },
+        {
+          "taskId": "CREATIVE_TASK_12",
+          "latencyMs": 201,
+          "accuracy": 1,
+          "score": 59.701,
+          "output": "Velvet waves meet icy shores, whispering secrets!",
+          "ttftMs": 65,
+          "completionTokens": 12,
+          "tokensPerSec": 80.9,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "Velvet waves meet icy shores, whispering secrets!",
+          "extraction": "text",
+          "constraintsMet": 4,
+          "constraintsTotal": 4,
+          "constraintsEarned": 3,
+          "constraintsEarnable": 3,
+          "streamMarks": [
+            [
+              201,
+              11
+            ]
+          ],
+          "promptTokens": 94
+        }
+      ],
+      "runtime": {
+        "modelId": "qwen2.5-1.5b-instruct",
+        "format": "gguf",
+        "quantization": "Q8_0",
+        "arch": "qwen2"
+      },
+      "pedigree": {
+        "bloodline": "Qwen",
+        "stable": "Alibaba Qwen",
+        "silks": {
+          "primary": "#ff6a00",
+          "secondary": "#615ced"
+        }
+      }
+    }
+  ],
+  "verificationProof": {
+    "seedHash": "51662827b9dcac52a47119042076ffd3f0ff2ebc500b6f0be3b6a50cbeb27205",
+    "commitmentHash": null,
+    "revealedSeed": "mini_show_creative_1",
+    "revealedSalt": null,
+    "manifestHash": "6360c1c95ef811ec888f785688e47456af1f5b5fc421847e54293473d341e151",
+    "manifest": {
+      "scheme": "hr-manifest-v1",
+      "trackType": "creative",
+      "raceClass": "local",
+      "provider": "lmstudio",
+      "endpoint": "http://Mac-mini.local:1234",
+      "grade": "standard",
+      "generatorVersion": 3,
+      "distance": "mile",
+      "fences": 12,
+      "raceConditions": {
+        "scoringVersion": 3,
+        "order": [
+          "clears",
+          "partial",
+          "tokens",
+          "seconds"
+        ],
+        "faultsPerKnock": 4,
+        "partial": "each clear counts 1; a knocked fence counts constraintsEarned/constraintsEarnable (rules a blank reply would fail) or testsPassed/testsTotal",
+        "tokensBasis": "completion tokens over every fence; a failed call or a missing count is charged the token cap",
+        "unraced": "a horse with no judged fences places behind every horse that ran",
+        "voidRule": "no horse clears a fence or earns partial credit: the race is void",
+        "formAffectsTime": false
+      },
+      "inference": {
+        "temperature": 0,
+        "maxTokens": 2048,
+        "timeoutMs": 300000
+      },
+      "codeVersion": "0f4859e121fcfa96db1ace2645f58b18128453c8-dirty-fcfc70d545c6469e",
+      "field": [
+        {
+          "horseId": "gemma2_2b",
+          "name": "Gemma 2 2B",
+          "modelId": "gemma-2-2b-it@q8_0",
+          "format": "gguf",
+          "quantization": "Q8_0",
+          "arch": "gemma2"
+        },
+        {
+          "horseId": "gemma2_2b_q5",
+          "name": "Gemma 2 2B Q5",
+          "modelId": "gemma-2-2b-it@q5_k_m",
+          "format": "gguf",
+          "quantization": "Q5_K_M",
+          "arch": "gemma2"
+        },
+        {
+          "horseId": "llama32_1b",
+          "name": "Llama 3.2 1B",
+          "modelId": "llama-3.2-1b-instruct",
+          "format": "gguf",
+          "quantization": "Q8_0",
+          "arch": "llama"
+        },
+        {
+          "horseId": "qwen25_15b",
+          "name": "Qwen 2.5 1.5B",
+          "modelId": "qwen2.5-1.5b-instruct",
+          "format": "gguf",
+          "quantization": "Q8_0",
+          "arch": "qwen2"
+        },
+        {
+          "horseId": "qwen25_coder_15b",
+          "name": "Qwen 2.5 Coder 1.5B",
+          "modelId": "qwen2.5-coder-1.5b-instruct",
+          "format": "gguf",
+          "quantization": "Q8_0",
+          "arch": "qwen2"
+        },
+        {
+          "horseId": "vikhr_gemma_2b",
+          "name": "Vikhr Gemma 2B",
+          "modelId": "vikhr-gemma-2b-instruct",
+          "format": "gguf",
+          "quantization": "Q8_0",
+          "arch": "gemma2"
+        }
+      ]
+    },
+    "reproducible": false,
+    "tasks": [
+      {
+        "id": "CREATIVE_TASK_1",
+        "kind": "creative",
+        "prompt": "[CREATIVE_TASK] Write one short poetic line about a coder racing against gravity.\nRules:\n- It must use the word \"harbor\".\n- It must not use the word \"gravity\".\n- It must be at most 14 words long.\n- It must end with \"?\".\nReply with only the line.",
+        "judging": {
+          "type": "constraints",
+          "requiredWord": "harbor",
+          "forbiddenWord": "gravity",
+          "maxWords": 14,
+          "endsWith": "?"
+        },
+        "simAnswer": "Does the harbor remember us?",
+        "simWrongAnswer": "The harbor and the gravity sleep tonight.",
+        "weight": 1.2,
+        "generatorVersion": 3,
+        "rung": "easy"
+      },
+      {
+        "id": "CREATIVE_TASK_2",
+        "kind": "creative",
+        "prompt": "[CREATIVE_TASK] Write one short poetic line about the last analogue clock in a server farm.\nRules:\n- It must use the word \"copper\".\n- It must not use the word \"clock\".\n- It must be at most 14 words long.\n- It must end with \"?\".\nReply with only the line.",
+        "judging": {
+          "type": "constraints",
+          "requiredWord": "copper",
+          "forbiddenWord": "clock",
+          "maxWords": 14,
+          "endsWith": "?"
+        },
+        "simAnswer": "Does the copper remember us?",
+        "simWrongAnswer": "The copper and the clock sleep tonight.",
+        "weight": 1.2,
+        "generatorVersion": 3,
+        "rung": "easy"
+      },
+      {
+        "id": "CREATIVE_TASK_3",
+        "kind": "creative",
+        "prompt": "[CREATIVE_TASK] Write one short poetic line about a train crossing a frozen sea.\nRules:\n- It must use the word \"harbor\".\n- It must not use the word \"train\".\n- It must be at most 14 words long.\n- It must end with \"?\".\nReply with only the line.",
+        "judging": {
+          "type": "constraints",
+          "requiredWord": "harbor",
+          "forbiddenWord": "train",
+          "maxWords": 14,
+          "endsWith": "?"
+        },
+        "simAnswer": "Does the harbor remember us?",
+        "simWrongAnswer": "The harbor and the train sleep tonight.",
+        "weight": 1.2,
+        "generatorVersion": 3,
+        "rung": "easy"
+      },
+      {
+        "id": "CREATIVE_TASK_4",
+        "kind": "creative",
+        "prompt": "[CREATIVE_TASK] Write one short poetic line about a storm in a digital valley.\nRules:\n- It must use the word \"meadow\".\n- It must not use the word \"storm\".\n- It must be at most 14 words long.\n- It must end with \"!\".\nReply with only the line.",
+        "judging": {
+          "type": "constraints",
+          "requiredWord": "meadow",
+          "forbiddenWord": "storm",
+          "maxWords": 14,
+          "endsWith": "!"
+        },
+        "simAnswer": "Let the meadow sing!",
+        "simWrongAnswer": "The meadow and the storm sleep tonight.",
+        "weight": 1.2,
+        "generatorVersion": 3,
+        "rung": "easy"
+      },
+      {
+        "id": "CREATIVE_TASK_5",
+        "kind": "creative",
+        "prompt": "[CREATIVE_TASK] Write one short poetic line about a mechanical horse escaping its bounds.\nRules:\n- It must use the word \"orchard\".\n- It must not use the word \"horse\".\n- It must be at most 10 words long.\n- It must end with \"!\".\nReply with only the line.",
+        "judging": {
+          "type": "constraints",
+          "requiredWord": "orchard",
+          "forbiddenWord": "horse",
+          "maxWords": 10,
+          "endsWith": "!"
+        },
+        "simAnswer": "Let the orchard sing!",
+        "simWrongAnswer": "The orchard and the horse sleep tonight.",
+        "weight": 1.2,
+        "generatorVersion": 3,
+        "rung": "medium"
+      },
+      {
+        "id": "CREATIVE_TASK_6",
+        "kind": "creative",
+        "prompt": "[CREATIVE_TASK] Write one short poetic line about a mechanical horse escaping its bounds.\nRules:\n- It must use the word \"thunder\".\n- It must not use the word \"horse\".\n- It must be at most 10 words long.\n- It must end with \"!\".\nReply with only the line.",
+        "judging": {
+          "type": "constraints",
+          "requiredWord": "thunder",
+          "forbiddenWord": "horse",
+          "maxWords": 10,
+          "endsWith": "!"
+        },
+        "simAnswer": "Let the thunder sing!",
+        "simWrongAnswer": "The thunder and the horse sleep tonight.",
+        "weight": 1.2,
+        "generatorVersion": 3,
+        "rung": "medium"
+      },
+      {
+        "id": "CREATIVE_TASK_7",
+        "kind": "creative",
+        "prompt": "[CREATIVE_TASK] Write one short poetic line about a mechanical horse escaping its bounds.\nRules:\n- It must use the word \"compass\".\n- It must not use the word \"horse\".\n- It must be at most 10 words long.\n- It must end with \"?\".\nReply with only the line.",
+        "judging": {
+          "type": "constraints",
+          "requiredWord": "compass",
+          "forbiddenWord": "horse",
+          "maxWords": 10,
+          "endsWith": "?"
+        },
+        "simAnswer": "Does the compass remember us?",
+        "simWrongAnswer": "The compass and the horse sleep tonight.",
+        "weight": 1.2,
+        "generatorVersion": 3,
+        "rung": "medium"
+      },
+      {
+        "id": "CREATIVE_TASK_8",
+        "kind": "creative",
+        "prompt": "[CREATIVE_TASK] Write one short poetic line about a train crossing a frozen sea.\nRules:\n- It must use the word \"copper\".\n- It must not use the word \"train\".\n- It must be at most 10 words long.\n- It must end with \"!\".\nReply with only the line.",
+        "judging": {
+          "type": "constraints",
+          "requiredWord": "copper",
+          "forbiddenWord": "train",
+          "maxWords": 10,
+          "endsWith": "!"
+        },
+        "simAnswer": "Let the copper sing!",
+        "simWrongAnswer": "The copper and the train sleep tonight.",
+        "weight": 1.2,
+        "generatorVersion": 3,
+        "rung": "medium"
+      },
+      {
+        "id": "CREATIVE_TASK_9",
+        "kind": "creative",
+        "prompt": "[CREATIVE_TASK] Write one short poetic line about a coder racing against gravity.\nRules:\n- It must use the word \"thunder\".\n- It must not use the word \"gravity\".\n- It must be at most 7 words long.\n- It must end with \"?\".\nReply with only the line.",
+        "judging": {
+          "type": "constraints",
+          "requiredWord": "thunder",
+          "forbiddenWord": "gravity",
+          "maxWords": 7,
+          "endsWith": "?"
+        },
+        "simAnswer": "Does the thunder remember us?",
+        "simWrongAnswer": "The thunder and the gravity sleep tonight.",
+        "weight": 1.2,
+        "generatorVersion": 3,
+        "rung": "hard"
+      },
+      {
+        "id": "CREATIVE_TASK_10",
+        "kind": "creative",
+        "prompt": "[CREATIVE_TASK] Write one short poetic line about a library where the books forget their words.\nRules:\n- It must use the word \"thunder\".\n- It must not use the word \"book\".\n- It must be at most 7 words long.\n- It must end with \"!\".\nReply with only the line.",
+        "judging": {
+          "type": "constraints",
+          "requiredWord": "thunder",
+          "forbiddenWord": "book",
+          "maxWords": 7,
+          "endsWith": "!"
+        },
+        "simAnswer": "Let the thunder sing!",
+        "simWrongAnswer": "The thunder and the book sleep tonight.",
+        "weight": 1.2,
+        "generatorVersion": 3,
+        "rung": "hard"
+      },
+      {
+        "id": "CREATIVE_TASK_11",
+        "kind": "creative",
+        "prompt": "[CREATIVE_TASK] Write one short poetic line about a library where the books forget their words.\nRules:\n- It must use the word \"copper\".\n- It must not use the word \"book\".\n- It must be at most 7 words long.\n- It must end with \"?\".\nReply with only the line.",
+        "judging": {
+          "type": "constraints",
+          "requiredWord": "copper",
+          "forbiddenWord": "book",
+          "maxWords": 7,
+          "endsWith": "?"
+        },
+        "simAnswer": "Does the copper remember us?",
+        "simWrongAnswer": "The copper and the book sleep tonight.",
+        "weight": 1.2,
+        "generatorVersion": 3,
+        "rung": "hard"
+      },
+      {
+        "id": "CREATIVE_TASK_12",
+        "kind": "creative",
+        "prompt": "[CREATIVE_TASK] Write one short poetic line about a train crossing a frozen sea.\nRules:\n- It must use the word \"velvet\".\n- It must not use the word \"train\".\n- It must be at most 7 words long.\n- It must end with \"!\".\nReply with only the line.",
+        "judging": {
+          "type": "constraints",
+          "requiredWord": "velvet",
+          "forbiddenWord": "train",
+          "maxWords": 7,
+          "endsWith": "!"
+        },
+        "simAnswer": "Let the velvet sing!",
+        "simWrongAnswer": "The velvet and the train sleep tonight.",
+        "weight": 1.2,
+        "generatorVersion": 3,
+        "rung": "hard"
+      }
+    ]
+  }
+}

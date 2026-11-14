@@ -1,0 +1,42 @@
+[
+  {
+    "race": "creative",
+    "title": "The One-Line Chase",
+    "date": "2026-11-10",
+    "file": "records/creative.json",
+    "sha256": "ba3c84e85dbcd34e417c8e8f7102109d3744e6c65132d70865fd8b082c6752df",
+    "bytes": 69547
+  },
+  {
+    "race": "retrieval",
+    "title": "The Ledger Stakes",
+    "date": "2026-11-10",
+    "file": "records/retrieval.json",
+    "sha256": "138a6b8f934b357940549a99e93c36c9edadd0cf4f782bfd2ef4b36b5e07c63f",
+    "bytes": 71298
+  },
+  {
+    "race": "reasoning",
+    "title": "The Abacus Handicap",
+    "date": "2026-11-10",
+    "file": "records/reasoning.json",
+    "sha256": "8c0739480a06a1370ce742493835b86927b1e624501a8ced04978f609759a0c3",
+    "bytes": 115420
+  },
+  {
+    "race": "json",
+    "title": "The Order Book Chase",
+    "date": "2026-11-10",
+    "file": "records/json.json",
+    "sha256": "a90dd8fae40888c1df383cb2182c7eda6ba57b91060577d1acba18cdf315cc1e",
+    "bytes": 121494
+  },
+  {
+    "race": "goldcup",
+    "title": "The Order Book Gold Cup",
+    "date": "2026-11-11",
+    "file": "records/goldcup.json",
+    "sha256": "8da62e99f2e2d42c5e37fca4ef269304233e81f3352279dd7f655e6a499d9374",
+    "bytes": 587872
+  }
+]
