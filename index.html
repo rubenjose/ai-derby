@@ -80,7 +80,7 @@ td.model { color: var(--dim); }
 <div class="wrap">
   <header class="mast">
     <h1>AI Derby</h1>
-    <p><b>AI models race over fences, and every fence is a question.</b> Answer it well and the horse jumps clean. Miss a little and it stumbles; miss badly and it falls. The races are run for real and filmed from what happened: nothing is staged.</p>
+    <p><b>AI models race over fences, and every fence is a question.</b> Answer it well and the horse jumps clean. Miss a little and it stumbles; miss badly and it falls. The races are run for real and filmed from what happened: nothing is staged. Every film is on <a href="https://www.youtube.com/@AI-Derby-f2f">the YouTube channel</a>.</p>
   </header>
 
   <section class="race" id="creative">
@@ -90,7 +90,7 @@ td.model { color: var(--dim); }
       <p>Write one line that keeps four rules at once.</p>
     </header>
     <div class="reel">
-      <div class="screen"><div class="soon"><img src="posters/creative.jpg" alt="" loading="lazy" width="960" height="540"><span>The film of this race is not up yet</span></div></div>
+      <div class="screen"><a class="play" href="https://www.youtube.com/watch?v=T36oZP2Y_0E" data-video="T36oZP2Y_0E" aria-label="Watch The One-Line Chase"><img src="posters/creative.jpg" alt="" loading="lazy" width="960" height="540"><span class="go">Watch the race</span></a></div>
       <div class="result">
         <h3>Tiny Thunder wins</h3>
         <div class="tablewrap"><table>
@@ -151,7 +151,7 @@ td.model { color: var(--dim); }
       <p>Find one courier in a ledger of look-alike towns.</p>
     </header>
     <div class="reel">
-      <div class="screen"><div class="soon"><img src="posters/retrieval.jpg" alt="" loading="lazy" width="960" height="540"><span>The film of this race is not up yet</span></div></div>
+      <div class="screen"><a class="play" href="https://www.youtube.com/watch?v=DhhtkSHgX2g" data-video="DhhtkSHgX2g" aria-label="Watch The Ledger Stakes"><img src="posters/retrieval.jpg" alt="" loading="lazy" width="960" height="540"><span class="go">Watch the race</span></a></div>
       <div class="result">
         <h3>Dead heat: Splendid Pascal and Unusual Cello</h3>
         <div class="tablewrap"><table>
@@ -212,7 +212,7 @@ td.model { color: var(--dim); }
       <p>Arithmetic, two steps to a word problem with a decoy number.</p>
     </header>
     <div class="reel">
-      <div class="screen"><div class="soon"><img src="posters/reasoning.jpg" alt="" loading="lazy" width="960" height="540"><span>The film of this race is not up yet</span></div></div>
+      <div class="screen"><div class="soon" data-video="M0lMfSUu2-w" data-at="2026-11-20T04:00:00.000Z" data-title="The Abacus Handicap"><img src="posters/reasoning.jpg" alt="" loading="lazy" width="960" height="540"><span>Out Thursday 19 November at 10 p.m.</span></div></div>
       <div class="result">
         <h3>Thousand Questions wins</h3>
         <div class="tablewrap"><table>
@@ -273,7 +273,7 @@ td.model { color: var(--dim); }
       <p>Turn a written order note into exact JSON.</p>
     </header>
     <div class="reel">
-      <div class="screen"><div class="soon"><img src="posters/json.jpg" alt="" loading="lazy" width="960" height="540"><span>The film of this race is not up yet</span></div></div>
+      <div class="screen"><div class="soon" data-video="hcXRpyn9olI" data-at="2026-11-21T04:00:00.000Z" data-title="The Order Book Chase"><img src="posters/json.jpg" alt="" loading="lazy" width="960" height="540"><span>Out Friday 20 November at 10 p.m.</span></div></div>
       <div class="result">
         <h3>Dead heat: Splendid Pascal and Unusual Cello</h3>
         <div class="tablewrap"><table>
@@ -334,7 +334,7 @@ td.model { color: var(--dim); }
       <p>Turn a written order note into exact JSON.</p>
     </header>
     <div class="reel">
-      <div class="screen"><div class="soon"><img src="posters/goldcup.jpg" alt="" loading="lazy" width="960" height="540"><span>The film of this race is not up yet</span></div></div>
+      <div class="screen"><div class="soon" data-video="K-P-CMqt3fo" data-at="2026-11-22T04:00:00.000Z" data-title="The Order Book Gold Cup"><img src="posters/goldcup.jpg" alt="" loading="lazy" width="960" height="540"><span>Out Saturday 21 November at 10 p.m.</span></div></div>
       <div class="result">
         <h3>Fourteen Lines wins</h3>
         <div class="tablewrap"><table>
@@ -458,8 +458,18 @@ td.model { color: var(--dim); }
     <p><b>What this proves, and what it does not.</b> It proves the record you read today is the one published with the film. It does not, by itself, prove the models gave those answers. For that, the small models are public: the record names each model file and its settings (temperature 0), so the same questions can be put to the same model again.</p>
   </section>
   <p class="foot"><b>How a race is timed.</b> Each fence takes 6.5 s plus up to 0.3 s of pace, from how much the horse wrote. A stumble (a near miss) costs 4 s and a fall (a big miss, or no readable answer) 8 s. 3 falls and a horse is out. Equal times are a dead heat. The caller is a computer voice reading a script written from the race's events.</p>
+  <p class="foot"><a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></p>
 </div>
 <script>
+document.querySelectorAll('.soon[data-at]').forEach(s => {
+  if (Date.now() < Date.parse(s.dataset.at)) return;
+  const a = document.createElement('a');
+  a.className = 'play'; a.href = 'https://www.youtube.com/watch?v=' + s.dataset.video; a.dataset.video = s.dataset.video;
+  a.setAttribute('aria-label', 'Watch ' + s.dataset.title);
+  const img = s.querySelector('img'); if (img) a.append(img);
+  const go = document.createElement('span'); go.className = 'go'; go.textContent = 'Watch the race'; a.append(go);
+  s.replaceWith(a);
+});
 document.querySelectorAll('a.play').forEach(a => a.addEventListener('click', e => {
   if (e.metaKey || e.ctrlKey || e.shiftKey) return;
   e.preventDefault();
