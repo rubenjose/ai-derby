@@ -1,0 +1,4999 @@
+{
+  "raceId": "race-753ba5517beb62642adbf954c16bebf5",
+  "seed": "codewrite_20261123",
+  "trackType": "codewrite",
+  "grade": "standard",
+  "distance": "mile",
+  "fences": 12,
+  "raceClass": "local",
+  "provider": "lmstudio",
+  "timestamp": "2026-11-19T15:39:09.923Z",
+  "raceConditions": {
+    "scoringVersion": 3,
+    "order": [
+      "clears",
+      "partial",
+      "tokens",
+      "seconds"
+    ],
+    "faultsPerKnock": 4,
+    "partial": "each clear counts 1; a knocked fence counts constraintsEarned/constraintsEarnable (rules a blank reply would fail) or testsPassed/testsTotal",
+    "tokensBasis": "completion tokens over every fence; a failed call or a missing count is charged the token cap",
+    "unraced": "a horse with no judged fences places behind every horse that ran",
+    "voidRule": "no horse clears a fence or earns partial credit: the race is void",
+    "formAffectsTime": false
+  },
+  "entrants": [
+    {
+      "position": 1,
+      "horseId": "qwen25_coder_15b",
+      "name": "Qwen 2.5 Coder 1.5B",
+      "accuracy": 0.75,
+      "clears": 9,
+      "fences": 12,
+      "faults": 12,
+      "partial": 10.625,
+      "tokens": 1092,
+      "avgLatencyMs": 1414,
+      "judgeScore": 145.588,
+      "finalTimeSeconds": 16.97,
+      "tasks": [
+        {
+          "taskId": "CODEWRITE_TASK_1",
+          "latencyMs": 1697,
+          "accuracy": 1,
+          "score": 11.786,
+          "output": "```python\ndef run_length(s):\n    if not s:\n        return \"\"\n    \n    result = []\n    count = 1\n    \n    for i in range(1, len(s) + 1):\n        if i < len(s) and s[i] == s[i - 1]:\n            count += 1\n        else:\n            result.append(s[i - 1])\n            if count > 1:\n                result.append(str(count))\n            count = 1\n    \n    return ''.join(result)\n```",
+          "ttftMs": 121,
+          "completionTokens": 105,
+          "tokensPerSec": 66,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "def run_length(s):\n    if not s:\n        return \"\"\n    \n    result = []\n    count = 1\n    \n    for i in range(1, len(s) + 1):\n        if i < len(s) and s[i] == s[i - 1]:\n            count += 1\n        else:\n            result.append(s[i - 1])\n            if count > 1:\n                result.append(str(count))\n            count = 1\n    \n    return ''.join(result)\n",
+          "extraction": "fenced",
+          "testsPassed": 8,
+          "testsTotal": 8,
+          "sandboxStatus": "ok",
+          "streamMarks": [
+            [
+              563,
+              32
+            ],
+            [
+              1035,
+              64
+            ],
+            [
+              1561,
+              96
+            ],
+            [
+              1697,
+              104
+            ]
+          ],
+          "promptTokens": 162
+        },
+        {
+          "taskId": "CODEWRITE_TASK_2",
+          "latencyMs": 887,
+          "accuracy": 1,
+          "score": 22.548,
+          "output": "```python\ndef dedupe(xs):\n    seen = set()\n    result = []\n    for x in reversed(xs):\n        if x not in seen:\n            seen.add(x)\n            result.append(x)\n    return result[::-1]\n```",
+          "ttftMs": 124,
+          "completionTokens": 49,
+          "tokensPerSec": 62.9,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "def dedupe(xs):\n    seen = set()\n    result = []\n    for x in reversed(xs):\n        if x not in seen:\n            seen.add(x)\n            result.append(x)\n    return result[::-1]\n",
+          "extraction": "fenced",
+          "testsPassed": 8,
+          "testsTotal": 8,
+          "sandboxStatus": "ok",
+          "streamMarks": [
+            [
+              606,
+              32
+            ],
+            [
+              887,
+              48
+            ]
+          ],
+          "promptTokens": 163
+        },
+        {
+          "taskId": "CODEWRITE_TASK_3",
+          "latencyMs": 879,
+          "accuracy": 0,
+          "score": 0,
+          "output": "```python\ndef extreme_sum(xs, k):\n    if k == 0:\n        return 0\n    elif k > len(xs):\n        return sum(xs)\n    else:\n        # Use heapq to find the k smallest elements efficiently\n        return sum(heapq.nsmallest(k, xs))\n```",
+          "ttftMs": 125,
+          "completionTokens": 63,
+          "tokensPerSec": 82.2,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "def extreme_sum(xs, k):\n    if k == 0:\n        return 0\n    elif k > len(xs):\n        return sum(xs)\n    else:\n        # Use heapq to find the k smallest elements efficiently\n        return sum(heapq.nsmallest(k, xs))\n",
+          "extraction": "fenced",
+          "testsPassed": 3,
+          "testsTotal": 8,
+          "sandboxStatus": "ok",
+          "firstFailure": {
+            "args": [
+              [
+                -6,
+                36,
+                27,
+                29
+              ],
+              2
+            ],
+            "expected": 21,
+            "error": "NameError: name 'heapq' is not defined"
+          },
+          "streamMarks": [
+            [
+              501,
+              32
+            ],
+            [
+              879,
+              62
+            ]
+          ],
+          "promptTokens": 172
+        },
+        {
+          "taskId": "CODEWRITE_TASK_4",
+          "latencyMs": 1301,
+          "accuracy": 1,
+          "score": 15.373,
+          "output": "```python\ndef run_length(s):\n    if not s:\n        return \"\"\n    \n    result = []\n    count = 1\n    \n    for i in range(1, len(s) + 1):\n        if i < len(s) and s[i] == s[i - 1]:\n            count += 1\n        else:\n            result.append(f\"{s[i - 1]}{count}\")\n            count = 1\n    \n    return ''.join(result)\n```",
+          "ttftMs": 111,
+          "completionTokens": 97,
+          "tokensPerSec": 80.7,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "def run_length(s):\n    if not s:\n        return \"\"\n    \n    result = []\n    count = 1\n    \n    for i in range(1, len(s) + 1):\n        if i < len(s) and s[i] == s[i - 1]:\n            count += 1\n        else:\n            result.append(f\"{s[i - 1]}{count}\")\n            count = 1\n    \n    return ''.join(result)\n",
+          "extraction": "fenced",
+          "testsPassed": 8,
+          "testsTotal": 8,
+          "sandboxStatus": "ok",
+          "streamMarks": [
+            [
+              503,
+              32
+            ],
+            [
+              904,
+              64
+            ],
+            [
+              1287,
+              96
+            ]
+          ],
+          "promptTokens": 161
+        },
+        {
+          "taskId": "CODEWRITE_TASK_5",
+          "latencyMs": 1121,
+          "accuracy": 1,
+          "score": 17.841,
+          "output": "```python\ndef balanced(s):\n    stack = []\n    mapping = {')': '(', ']': '[', '}': '{'}\n    \n    for char in s:\n        if char in mapping.values():\n            stack.append(char)\n        elif char in mapping.keys():\n            if not stack or mapping[char] != stack.pop():\n                return False\n        else:\n            continue\n    \n    return len(stack) == 0\n```",
+          "ttftMs": 105,
+          "completionTokens": 86,
+          "tokensPerSec": 83.7,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "def balanced(s):\n    stack = []\n    mapping = {')': '(', ']': '[', '}': '{'}\n    \n    for char in s:\n        if char in mapping.values():\n            stack.append(char)\n        elif char in mapping.keys():\n            if not stack or mapping[char] != stack.pop():\n                return False\n        else:\n            continue\n    \n    return len(stack) == 0\n",
+          "extraction": "fenced",
+          "testsPassed": 11,
+          "testsTotal": 11,
+          "sandboxStatus": "ok",
+          "streamMarks": [
+            [
+              475,
+              32
+            ],
+            [
+              854,
+              64
+            ],
+            [
+              1121,
+              85
+            ]
+          ],
+          "promptTokens": 143
+        },
+        {
+          "taskId": "CODEWRITE_TASK_6",
+          "latencyMs": 914,
+          "accuracy": 1,
+          "score": 21.882,
+          "output": "```python\nfrom typing import List, Optional\n\ndef second_largest(xs: List[int]) -> Optional[int]:\n    if len(set(xs)) < 2:\n        return None\n    \n    sorted_unique = sorted(set(xs), reverse=True)\n    return sorted_unique[1]\n```",
+          "ttftMs": 106,
+          "completionTokens": 57,
+          "tokensPerSec": 69.3,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "from typing import List, Optional\n\ndef second_largest(xs: List[int]) -> Optional[int]:\n    if len(set(xs)) < 2:\n        return None\n    \n    sorted_unique = sorted(set(xs), reverse=True)\n    return sorted_unique[1]\n",
+          "extraction": "fenced",
+          "testsPassed": 8,
+          "testsTotal": 8,
+          "sandboxStatus": "ok",
+          "streamMarks": [
+            [
+              543,
+              32
+            ],
+            [
+              914,
+              56
+            ]
+          ],
+          "promptTokens": 154
+        },
+        {
+          "taskId": "CODEWRITE_TASK_7",
+          "latencyMs": 887,
+          "accuracy": 1,
+          "score": 22.548,
+          "output": "```python\nfrom typing import List, Optional\n\ndef second_largest(xs: List[int]) -> Optional[int]:\n    if len(set(xs)) < 2:\n        return None\n    \n    sorted_unique = sorted(set(xs), reverse=True)\n    return sorted_unique[1]\n```",
+          "ttftMs": 93,
+          "completionTokens": 57,
+          "tokensPerSec": 70.5,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "from typing import List, Optional\n\ndef second_largest(xs: List[int]) -> Optional[int]:\n    if len(set(xs)) < 2:\n        return None\n    \n    sorted_unique = sorted(set(xs), reverse=True)\n    return sorted_unique[1]\n",
+          "extraction": "fenced",
+          "testsPassed": 8,
+          "testsTotal": 8,
+          "sandboxStatus": "ok",
+          "streamMarks": [
+            [
+              521,
+              32
+            ],
+            [
+              887,
+              56
+            ]
+          ],
+          "promptTokens": 148
+        },
+        {
+          "taskId": "CODEWRITE_TASK_8",
+          "latencyMs": 1284,
+          "accuracy": 1,
+          "score": 15.576,
+          "output": "```python\ndef balanced(s):\n    stack = []\n    mapping = {')': '(', ']': '[', '}': '{'}\n    \n    for char in s:\n        if char in mapping.values():\n            stack.append(char)\n        elif char in mapping.keys():\n            if not stack or mapping[char] != stack.pop():\n                return False\n        else:\n            continue\n    \n    return len(stack) == 0\n```",
+          "ttftMs": 91,
+          "completionTokens": 86,
+          "tokensPerSec": 71.2,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "def balanced(s):\n    stack = []\n    mapping = {')': '(', ']': '[', '}': '{'}\n    \n    for char in s:\n        if char in mapping.values():\n            stack.append(char)\n        elif char in mapping.keys():\n            if not stack or mapping[char] != stack.pop():\n                return False\n        else:\n            continue\n    \n    return len(stack) == 0\n",
+          "extraction": "fenced",
+          "testsPassed": 11,
+          "testsTotal": 11,
+          "sandboxStatus": "ok",
+          "streamMarks": [
+            [
+              528,
+              32
+            ],
+            [
+              988,
+              64
+            ],
+            [
+              1284,
+              85
+            ]
+          ],
+          "promptTokens": 143
+        },
+        {
+          "taskId": "CODEWRITE_TASK_9",
+          "latencyMs": 2130,
+          "accuracy": 0,
+          "score": 0,
+          "output": "```python\ndef merge_intervals(intervals):\n    if not intervals:\n        return []\n    \n    # Sort intervals by their start time\n    intervals.sort(key=lambda x: x[0])\n    \n    merged = [intervals[0]]\n    \n    for interval in intervals[1:]:\n        last_interval = merged[-1]\n        \n        # If the current interval overlaps with the last interval, merge them\n        if interval[0] <= last_interval[1]:\n            last_interval[1] = max(last_interval[1], interval[1])\n        else:\n            # Otherwise, add the current interval to the merged list\n            merged.append(interval)\n    \n    return merged\n```",
+          "ttftMs": 169,
+          "completionTokens": 138,
+          "tokensPerSec": 69.9,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "def merge_intervals(intervals):\n    if not intervals:\n        return []\n    \n    # Sort intervals by their start time\n    intervals.sort(key=lambda x: x[0])\n    \n    merged = [intervals[0]]\n    \n    for interval in intervals[1:]:\n        last_interval = merged[-1]\n        \n        # If the current interval overlaps with the last interval, merge them\n        if interval[0] <= last_interval[1]:\n            last_interval[1] = max(last_interval[1], interval[1])\n        else:\n            # Otherwise, add the current interval to the merged list\n            merged.append(interval)\n    \n    return merged\n",
+          "extraction": "fenced",
+          "testsPassed": 5,
+          "testsTotal": 8,
+          "sandboxStatus": "ok",
+          "firstFailure": {
+            "args": [
+              [
+                [
+                  5,
+                  8
+                ],
+                [
+                  1,
+                  3
+                ],
+                [
+                  2,
+                  4
+                ]
+              ]
+            ],
+            "expected": [
+              [
+                1,
+                8
+              ]
+            ],
+            "got": [
+              [
+                1,
+                4
+              ],
+              [
+                5,
+                8
+              ]
+            ]
+          },
+          "streamMarks": [
+            [
+              596,
+              32
+            ],
+            [
+              1045,
+              64
+            ],
+            [
+              1529,
+              96
+            ],
+            [
+              1983,
+              128
+            ],
+            [
+              2130,
+              137
+            ]
+          ],
+          "promptTokens": 243
+        },
+        {
+          "taskId": "CODEWRITE_TASK_10",
+          "latencyMs": 2109,
+          "accuracy": 1,
+          "score": 9.483,
+          "output": "```python\ndef merge_intervals(intervals):\n    if not intervals:\n        return []\n    \n    # Sort intervals by their start time\n    intervals.sort(key=lambda x: x[0])\n    \n    merged = [intervals[0]]\n    \n    for interval in intervals[1:]:\n        last_end = merged[-1][1]\n        \n        # If the current interval overlaps with the last merged interval, merge them\n        if interval[0] <= last_end:\n            merged[-1][1] = max(last_end, interval[1])\n        else:\n            # Otherwise, add the current interval to the merged list\n            merged.append(interval)\n    \n    return merged\n```",
+          "ttftMs": 152,
+          "completionTokens": 138,
+          "tokensPerSec": 70,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "def merge_intervals(intervals):\n    if not intervals:\n        return []\n    \n    # Sort intervals by their start time\n    intervals.sort(key=lambda x: x[0])\n    \n    merged = [intervals[0]]\n    \n    for interval in intervals[1:]:\n        last_end = merged[-1][1]\n        \n        # If the current interval overlaps with the last merged interval, merge them\n        if interval[0] <= last_end:\n            merged[-1][1] = max(last_end, interval[1])\n        else:\n            # Otherwise, add the current interval to the merged list\n            merged.append(interval)\n    \n    return merged\n",
+          "extraction": "fenced",
+          "testsPassed": 8,
+          "testsTotal": 8,
+          "sandboxStatus": "ok",
+          "streamMarks": [
+            [
+              575,
+              32
+            ],
+            [
+              1075,
+              64
+            ],
+            [
+              1525,
+              96
+            ],
+            [
+              1954,
+              128
+            ],
+            [
+              2109,
+              137
+            ]
+          ],
+          "promptTokens": 255
+        },
+        {
+          "taskId": "CODEWRITE_TASK_11",
+          "latencyMs": 1424,
+          "accuracy": 0,
+          "score": 0,
+          "output": "```python\nfrom collections import Counter\n\ndef top_words(text, k):\n    # Split text into words and count their occurrences\n    word_counts = Counter(word.lower() for word in text.split())\n    \n    # Get the k most common words\n    top_k_words = word_counts.most_common(k)\n    \n    return [word for word, _ in top_k_words]\n```",
+          "ttftMs": 141,
+          "completionTokens": 78,
+          "tokensPerSec": 60,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "from collections import Counter\n\ndef top_words(text, k):\n    # Split text into words and count their occurrences\n    word_counts = Counter(word.lower() for word in text.split())\n    \n    # Get the k most common words\n    top_k_words = word_counts.most_common(k)\n    \n    return [word for word, _ in top_k_words]\n",
+          "extraction": "fenced",
+          "testsPassed": 5,
+          "testsTotal": 8,
+          "sandboxStatus": "ok",
+          "firstFailure": {
+            "args": [
+              "Cob cob fen ash Ash dun bay elm Fen elm dun fen.",
+              1
+            ],
+            "expected": [
+              "fen"
+            ],
+            "got": [
+              "cob"
+            ]
+          },
+          "streamMarks": [
+            [
+              677,
+              32
+            ],
+            [
+              1188,
+              64
+            ],
+            [
+              1423,
+              77
+            ]
+          ],
+          "promptTokens": 186
+        },
+        {
+          "taskId": "CODEWRITE_TASK_12",
+          "latencyMs": 2339,
+          "accuracy": 1,
+          "score": 8.551,
+          "output": "```python\ndef merge_intervals(intervals):\n    if not intervals:\n        return []\n    \n    # Sort intervals by their start time\n    intervals.sort(key=lambda x: x[0])\n    \n    merged = [intervals[0]]\n    \n    for interval in intervals[1:]:\n        last_end = merged[-1][1]\n        \n        # If the current interval overlaps with the last merged interval, merge them\n        if interval[0] <= last_end:\n            merged[-1][1] = max(last_end, interval[1])\n        else:\n            # Otherwise, add the current interval to the merged list\n            merged.append(interval)\n    \n    return merged\n```",
+          "ttftMs": 112,
+          "completionTokens": 138,
+          "tokensPerSec": 61.5,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "def merge_intervals(intervals):\n    if not intervals:\n        return []\n    \n    # Sort intervals by their start time\n    intervals.sort(key=lambda x: x[0])\n    \n    merged = [intervals[0]]\n    \n    for interval in intervals[1:]:\n        last_end = merged[-1][1]\n        \n        # If the current interval overlaps with the last merged interval, merge them\n        if interval[0] <= last_end:\n            merged[-1][1] = max(last_end, interval[1])\n        else:\n            # Otherwise, add the current interval to the merged list\n            merged.append(interval)\n    \n    return merged\n",
+          "extraction": "fenced",
+          "testsPassed": 8,
+          "testsTotal": 8,
+          "sandboxStatus": "ok",
+          "streamMarks": [
+            [
+              652,
+              32
+            ],
+            [
+              1222,
+              64
+            ],
+            [
+              1734,
+              96
+            ],
+            [
+              2185,
+              128
+            ],
+            [
+              2339,
+              137
+            ]
+          ],
+          "promptTokens": 259
+        }
+      ],
+      "runtime": {
+        "modelId": "qwen2.5-coder-1.5b-instruct",
+        "format": "gguf",
+        "quantization": "Q8_0",
+        "arch": "qwen2"
+      },
+      "pedigree": {
+        "bloodline": "Qwen Coder",
+        "stable": "Alibaba Qwen",
+        "silks": {
+          "primary": "#ff6a00",
+          "secondary": "#615ced"
+        }
+      }
+    },
+    {
+      "position": 2,
+      "horseId": "gemma2_2b",
+      "name": "Gemma 2 2B",
+      "accuracy": 0.5,
+      "clears": 6,
+      "fences": 12,
+      "faults": 24,
+      "partial": 8.875,
+      "tokens": 1378,
+      "avgLatencyMs": 2706,
+      "judgeScore": 44.967,
+      "finalTimeSeconds": 32.47,
+      "tasks": [
+        {
+          "taskId": "CODEWRITE_TASK_1",
+          "latencyMs": 3383,
+          "accuracy": 1,
+          "score": 5.912,
+          "output": "```python\ndef run_length(s):\n    if not s:\n        return \"\"\n    run = 1\n    result = []\n    prev = s[0]\n    for i in range(1, len(s)):\n        if s[i] == prev:\n            run += 1\n        else:\n            result.append(prev + (str(run) if run > 1 else \"\"))\n            prev = s[i]\n            run = 1\n    result.append(prev + (str(run) if run > 1 else \"\"))\n    return \"\".join(result)\n```",
+          "ttftMs": 232,
+          "completionTokens": 137,
+          "tokensPerSec": 43.2,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "def run_length(s):\n    if not s:\n        return \"\"\n    run = 1\n    result = []\n    prev = s[0]\n    for i in range(1, len(s)):\n        if s[i] == prev:\n            run += 1\n        else:\n            result.append(prev + (str(run) if run > 1 else \"\"))\n            prev = s[i]\n            run = 1\n    result.append(prev + (str(run) if run > 1 else \"\"))\n    return \"\".join(result)\n",
+          "extraction": "fenced",
+          "testsPassed": 8,
+          "testsTotal": 8,
+          "sandboxStatus": "ok",
+          "streamMarks": [
+            [
+              986,
+              32
+            ],
+            [
+              1723,
+              64
+            ],
+            [
+              2428,
+              96
+            ],
+            [
+              3172,
+              128
+            ],
+            [
+              3383,
+              136
+            ]
+          ],
+          "promptTokens": 152
+        },
+        {
+          "taskId": "CODEWRITE_TASK_2",
+          "latencyMs": 1531,
+          "accuracy": 0,
+          "score": 0,
+          "output": "```python\ndef dedupe(xs):\n    seen = set()\n    result = []\n    for x in xs:\n        if x not in seen:\n            seen.add(x)\n            result.append(x)\n    return result\n``` \n",
+          "ttftMs": 238,
+          "completionTokens": 60,
+          "tokensPerSec": 45.6,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "def dedupe(xs):\n    seen = set()\n    result = []\n    for x in xs:\n        if x not in seen:\n            seen.add(x)\n            result.append(x)\n    return result\n",
+          "extraction": "fenced",
+          "testsPassed": 4,
+          "testsTotal": 8,
+          "sandboxStatus": "ok",
+          "firstFailure": {
+            "args": [
+              [
+                3,
+                1,
+                3,
+                2,
+                1
+              ]
+            ],
+            "expected": [
+              3,
+              2,
+              1
+            ],
+            "got": [
+              3,
+              1,
+              2
+            ]
+          },
+          "streamMarks": [
+            [
+              905,
+              32
+            ],
+            [
+              1531,
+              59
+            ]
+          ],
+          "promptTokens": 149
+        },
+        {
+          "taskId": "CODEWRITE_TASK_3",
+          "latencyMs": 1542,
+          "accuracy": 1,
+          "score": 12.97,
+          "output": "```python\ndef extreme_sum(xs, k):\n  if k == 0:\n    return 0\n  if len(xs) < k:\n    return sum(xs)\n  return sum(sorted(xs)[:k])\n```",
+          "ttftMs": 236,
+          "completionTokens": 57,
+          "tokensPerSec": 42.9,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "def extreme_sum(xs, k):\n  if k == 0:\n    return 0\n  if len(xs) < k:\n    return sum(xs)\n  return sum(sorted(xs)[:k])\n",
+          "extraction": "fenced",
+          "testsPassed": 8,
+          "testsTotal": 8,
+          "sandboxStatus": "ok",
+          "streamMarks": [
+            [
+              947,
+              32
+            ],
+            [
+              1542,
+              56
+            ]
+          ],
+          "promptTokens": 159
+        },
+        {
+          "taskId": "CODEWRITE_TASK_4",
+          "latencyMs": 3144,
+          "accuracy": 0,
+          "score": 0,
+          "output": "```python\ndef run_length(s):\n    if not s:\n        return \"\"\n    run = 1\n    result = []\n    prev = s[0]\n    for i in range(1, len(s)):\n        if s[i] == prev:\n            run += 1\n        else:\n            result.append(prev + (str(run) if run > 1 else \"\"))\n            prev = s[i]\n            run = 1\n    result.append(prev + (str(run) if run > 1 else \"\"))\n    return \"\".join(result)\n```",
+          "ttftMs": 226,
+          "completionTokens": 137,
+          "tokensPerSec": 46.6,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "def run_length(s):\n    if not s:\n        return \"\"\n    run = 1\n    result = []\n    prev = s[0]\n    for i in range(1, len(s)):\n        if s[i] == prev:\n            run += 1\n        else:\n            result.append(prev + (str(run) if run > 1 else \"\"))\n            prev = s[i]\n            run = 1\n    result.append(prev + (str(run) if run > 1 else \"\"))\n    return \"\".join(result)\n",
+          "extraction": "fenced",
+          "testsPassed": 1,
+          "testsTotal": 8,
+          "sandboxStatus": "ok",
+          "firstFailure": {
+            "args": [
+              "a"
+            ],
+            "expected": "a1",
+            "got": "a"
+          },
+          "streamMarks": [
+            [
+              885,
+              32
+            ],
+            [
+              1638,
+              64
+            ],
+            [
+              2300,
+              96
+            ],
+            [
+              2968,
+              128
+            ],
+            [
+              3144,
+              136
+            ]
+          ],
+          "promptTokens": 150
+        },
+        {
+          "taskId": "CODEWRITE_TASK_5",
+          "latencyMs": 2733,
+          "accuracy": 1,
+          "score": 7.318,
+          "output": "```python\ndef balanced(s):\n    stack = []\n    bracket_pairs = {\")\": \"(\", \"}\": \"{\", \"]\": \"[\"}\n    for char in s:\n        if char in bracket_pairs.values():  # Opening brackets\n            stack.append(char)\n        elif char in bracket_pairs.keys():  # Closing brackets\n            if not stack or stack.pop() != bracket_pairs[char]:\n                return False\n    return len(stack) == 0\n```",
+          "ttftMs": 192,
+          "completionTokens": 111,
+          "tokensPerSec": 43.3,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "def balanced(s):\n    stack = []\n    bracket_pairs = {\")\": \"(\", \"}\": \"{\", \"]\": \"[\"}\n    for char in s:\n        if char in bracket_pairs.values():  # Opening brackets\n            stack.append(char)\n        elif char in bracket_pairs.keys():  # Closing brackets\n            if not stack or stack.pop() != bracket_pairs[char]:\n                return False\n    return len(stack) == 0\n",
+          "extraction": "fenced",
+          "testsPassed": 11,
+          "testsTotal": 11,
+          "sandboxStatus": "ok",
+          "streamMarks": [
+            [
+              961,
+              32
+            ],
+            [
+              1673,
+              64
+            ],
+            [
+              2379,
+              96
+            ],
+            [
+              2733,
+              110
+            ]
+          ],
+          "promptTokens": 127
+        },
+        {
+          "taskId": "CODEWRITE_TASK_6",
+          "latencyMs": 1845,
+          "accuracy": 0,
+          "score": 0,
+          "output": "```python\ndef second_largest(xs):\n  \"\"\"Return the second largest DISTINCT value in xs, or None if xs has fewer than two distinct values.\"\"\"\n  if len(set(xs)) < 2:\n    return None\n  else:\n    sorted_xs = sorted(xs)\n    return sorted_xs[-2] \n```",
+          "ttftMs": 233,
+          "completionTokens": 77,
+          "tokensPerSec": 47.1,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "def second_largest(xs):\n  \"\"\"Return the second largest DISTINCT value in xs, or None if xs has fewer than two distinct values.\"\"\"\n  if len(set(xs)) < 2:\n    return None\n  else:\n    sorted_xs = sorted(xs)\n    return sorted_xs[-2] \n",
+          "extraction": "fenced",
+          "testsPassed": 6,
+          "testsTotal": 8,
+          "sandboxStatus": "ok",
+          "firstFailure": {
+            "args": [
+              [
+                5,
+                5,
+                3
+              ]
+            ],
+            "expected": 3,
+            "got": 5
+          },
+          "streamMarks": [
+            [
+              911,
+              32
+            ],
+            [
+              1588,
+              64
+            ],
+            [
+              1845,
+              76
+            ]
+          ],
+          "promptTokens": 138
+        },
+        {
+          "taskId": "CODEWRITE_TASK_7",
+          "latencyMs": 1927,
+          "accuracy": 0,
+          "score": 0,
+          "output": "```python\ndef second_largest(xs):\n  \"\"\"Return the second largest DISTINCT value in xs, or None if xs has fewer than two distinct values.\"\"\"\n  if len(set(xs)) < 2:\n    return None\n  else:\n    sorted_xs = sorted(xs)\n    return sorted_xs[-2] \n```",
+          "ttftMs": 178,
+          "completionTokens": 77,
+          "tokensPerSec": 43.5,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "def second_largest(xs):\n  \"\"\"Return the second largest DISTINCT value in xs, or None if xs has fewer than two distinct values.\"\"\"\n  if len(set(xs)) < 2:\n    return None\n  else:\n    sorted_xs = sorted(xs)\n    return sorted_xs[-2] \n",
+          "extraction": "fenced",
+          "testsPassed": 5,
+          "testsTotal": 8,
+          "sandboxStatus": "ok",
+          "firstFailure": {
+            "args": [
+              [
+                5,
+                5,
+                3
+              ]
+            ],
+            "expected": 3,
+            "got": 5
+          },
+          "streamMarks": [
+            [
+              932,
+              32
+            ],
+            [
+              1648,
+              64
+            ],
+            [
+              1927,
+              76
+            ]
+          ],
+          "promptTokens": 132
+        },
+        {
+          "taskId": "CODEWRITE_TASK_8",
+          "latencyMs": 2257,
+          "accuracy": 1,
+          "score": 8.861,
+          "output": "```python\ndef balanced(s):\n    stack = []\n    bracket_pairs = {\")\": \"(\", \"}\": \"{\", \"]\": \"[\"}\n    for char in s:\n        if char in bracket_pairs.values():  # Opening brackets\n            stack.append(char)\n        elif char in bracket_pairs.keys():  # Closing brackets\n            if not stack or stack.pop() != bracket_pairs[char]:\n                return False\n    return len(stack) == 0\n```",
+          "ttftMs": 209,
+          "completionTokens": 111,
+          "tokensPerSec": 53.7,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "def balanced(s):\n    stack = []\n    bracket_pairs = {\")\": \"(\", \"}\": \"{\", \"]\": \"[\"}\n    for char in s:\n        if char in bracket_pairs.values():  # Opening brackets\n            stack.append(char)\n        elif char in bracket_pairs.keys():  # Closing brackets\n            if not stack or stack.pop() != bracket_pairs[char]:\n                return False\n    return len(stack) == 0\n",
+          "extraction": "fenced",
+          "testsPassed": 11,
+          "testsTotal": 11,
+          "sandboxStatus": "ok",
+          "streamMarks": [
+            [
+              828,
+              32
+            ],
+            [
+              1407,
+              64
+            ],
+            [
+              1988,
+              96
+            ],
+            [
+              2257,
+              110
+            ]
+          ],
+          "promptTokens": 127
+        },
+        {
+          "taskId": "CODEWRITE_TASK_9",
+          "latencyMs": 3271,
+          "accuracy": 0,
+          "score": 0,
+          "output": "```python\ndef merge_intervals(intervals):\n    if not intervals:\n        return []\n\n    sorted_intervals = sorted(intervals, key=lambda x: x[0])  \n    merged_intervals = [sorted_intervals[0]]\n    for i in range(1, len(sorted_intervals)):\n        current_interval = sorted_intervals[i]\n        last_interval = merged_intervals[-1]\n\n        if current_interval[0] <= last_interval[1]:  # Overlap or touch\n            merged_intervals[-1][1] = max(last_interval[1], current_interval[1]) \n        else:\n            merged_intervals.append(current_interval)\n\n    return merged_intervals\n```",
+          "ttftMs": 298,
+          "completionTokens": 165,
+          "tokensPerSec": 55.2,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "def merge_intervals(intervals):\n    if not intervals:\n        return []\n\n    sorted_intervals = sorted(intervals, key=lambda x: x[0])  \n    merged_intervals = [sorted_intervals[0]]\n    for i in range(1, len(sorted_intervals)):\n        current_interval = sorted_intervals[i]\n        last_interval = merged_intervals[-1]\n\n        if current_interval[0] <= last_interval[1]:  # Overlap or touch\n            merged_intervals[-1][1] = max(last_interval[1], current_interval[1]) \n        else:\n            merged_intervals.append(current_interval)\n\n    return merged_intervals\n",
+          "extraction": "fenced",
+          "testsPassed": 5,
+          "testsTotal": 8,
+          "sandboxStatus": "ok",
+          "firstFailure": {
+            "args": [
+              [
+                [
+                  5,
+                  8
+                ],
+                [
+                  1,
+                  3
+                ],
+                [
+                  2,
+                  4
+                ]
+              ]
+            ],
+            "expected": [
+              [
+                1,
+                8
+              ]
+            ],
+            "got": [
+              [
+                1,
+                4
+              ],
+              [
+                5,
+                8
+              ]
+            ]
+          },
+          "streamMarks": [
+            [
+              874,
+              32
+            ],
+            [
+              1463,
+              64
+            ],
+            [
+              2036,
+              96
+            ],
+            [
+              2607,
+              128
+            ],
+            [
+              3180,
+              160
+            ],
+            [
+              3271,
+              164
+            ]
+          ],
+          "promptTokens": 230
+        },
+        {
+          "taskId": "CODEWRITE_TASK_10",
+          "latencyMs": 3952,
+          "accuracy": 1,
+          "score": 5.061,
+          "output": "```python\ndef merge_intervals(intervals):\n    if not intervals:\n        return []\n\n    sorted_intervals = sorted(intervals, key=lambda x: x[0])  \n    merged_intervals = [sorted_intervals[0]] \n    for i in range(1, len(sorted_intervals)):\n        current_interval = sorted_intervals[i]\n        last_merged_interval = merged_intervals[-1]\n\n        if current_interval[0] <= last_merged_interval[1]:\n            merged_intervals[-1][1] = max(last_merged_interval[1], current_interval[1])\n        else:\n            merged_intervals.append(current_interval)\n\n    return merged_intervals \n```",
+          "ttftMs": 312,
+          "completionTokens": 166,
+          "tokensPerSec": 45.3,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "def merge_intervals(intervals):\n    if not intervals:\n        return []\n\n    sorted_intervals = sorted(intervals, key=lambda x: x[0])  \n    merged_intervals = [sorted_intervals[0]] \n    for i in range(1, len(sorted_intervals)):\n        current_interval = sorted_intervals[i]\n        last_merged_interval = merged_intervals[-1]\n\n        if current_interval[0] <= last_merged_interval[1]:\n            merged_intervals[-1][1] = max(last_merged_interval[1], current_interval[1])\n        else:\n            merged_intervals.append(current_interval)\n\n    return merged_intervals \n",
+          "extraction": "fenced",
+          "testsPassed": 8,
+          "testsTotal": 8,
+          "sandboxStatus": "ok",
+          "streamMarks": [
+            [
+              882,
+              32
+            ],
+            [
+              1554,
+              64
+            ],
+            [
+              2300,
+              96
+            ],
+            [
+              3104,
+              128
+            ],
+            [
+              3833,
+              160
+            ],
+            [
+              3952,
+              165
+            ]
+          ],
+          "promptTokens": 242
+        },
+        {
+          "taskId": "CODEWRITE_TASK_11",
+          "latencyMs": 2761,
+          "accuracy": 0,
+          "score": 0,
+          "output": "```python\ndef top_words(text, k):\n    words = text.lower().split()\n    word_counts = {}\n    for word in words:\n        if word in word_counts:\n            word_counts[word] += 1\n        else:\n            word_counts[word] = 1\n\n    sorted_items = sorted(word_counts.items(), key=lambda item: item[0])\n    return [word for word, count in sorted_items[:k]]\n```",
+          "ttftMs": 303,
+          "completionTokens": 113,
+          "tokensPerSec": 45.6,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "def top_words(text, k):\n    words = text.lower().split()\n    word_counts = {}\n    for word in words:\n        if word in word_counts:\n            word_counts[word] += 1\n        else:\n            word_counts[word] = 1\n\n    sorted_items = sorted(word_counts.items(), key=lambda item: item[0])\n    return [word for word, count in sorted_items[:k]]\n",
+          "extraction": "fenced",
+          "testsPassed": 2,
+          "testsTotal": 8,
+          "sandboxStatus": "ok",
+          "firstFailure": {
+            "args": [
+              "Elm ash, elm! ASH bay.",
+              1
+            ],
+            "expected": [
+              "elm"
+            ],
+            "got": [
+              "ash"
+            ]
+          },
+          "streamMarks": [
+            [
+              1013,
+              32
+            ],
+            [
+              1682,
+              64
+            ],
+            [
+              2380,
+              96
+            ],
+            [
+              2761,
+              112
+            ]
+          ],
+          "promptTokens": 177
+        },
+        {
+          "taskId": "CODEWRITE_TASK_12",
+          "latencyMs": 4128,
+          "accuracy": 1,
+          "score": 4.845,
+          "output": "```python\ndef merge_intervals(intervals):\n    if not intervals:\n        return []\n\n    sorted_intervals = sorted(intervals, key=lambda x: x[0])  \n    merged_intervals = [sorted_intervals[0]] \n    for i in range(1, len(sorted_intervals)):\n        current_interval = sorted_intervals[i]\n        last_merged_interval = merged_intervals[-1]\n\n        if current_interval[0] <= last_merged_interval[1]:  \n            merged_intervals[-1][1] = max(last_merged_interval[1], current_interval[1]) \n        else:\n            merged_intervals.append(current_interval)\n\n    return merged_intervals\n```",
+          "ttftMs": 327,
+          "completionTokens": 167,
+          "tokensPerSec": 43.7,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "def merge_intervals(intervals):\n    if not intervals:\n        return []\n\n    sorted_intervals = sorted(intervals, key=lambda x: x[0])  \n    merged_intervals = [sorted_intervals[0]] \n    for i in range(1, len(sorted_intervals)):\n        current_interval = sorted_intervals[i]\n        last_merged_interval = merged_intervals[-1]\n\n        if current_interval[0] <= last_merged_interval[1]:  \n            merged_intervals[-1][1] = max(last_merged_interval[1], current_interval[1]) \n        else:\n            merged_intervals.append(current_interval)\n\n    return merged_intervals\n",
+          "extraction": "fenced",
+          "testsPassed": 8,
+          "testsTotal": 8,
+          "sandboxStatus": "ok",
+          "streamMarks": [
+            [
+              1035,
+              32
+            ],
+            [
+              1761,
+              64
+            ],
+            [
+              2523,
+              96
+            ],
+            [
+              3231,
+              128
+            ],
+            [
+              3989,
+              160
+            ],
+            [
+              4128,
+              166
+            ]
+          ],
+          "promptTokens": 246
+        }
+      ],
+      "runtime": {
+        "modelId": "gemma-2-2b-it@q8_0",
+        "format": "gguf",
+        "quantization": "Q8_0",
+        "arch": "gemma2"
+      },
+      "pedigree": {
+        "bloodline": "Gemma",
+        "stable": "Google DeepMind",
+        "silks": {
+          "primary": "#4285f4",
+          "secondary": "#ea4335"
+        }
+      }
+    },
+    {
+      "position": 3,
+      "horseId": "vikhr_gemma_2b",
+      "name": "Vikhr Gemma 2B",
+      "accuracy": 0.5,
+      "clears": 6,
+      "fences": 12,
+      "faults": 24,
+      "partial": 8.125,
+      "tokens": 1702,
+      "avgLatencyMs": 3069,
+      "judgeScore": 41.716,
+      "finalTimeSeconds": 36.82,
+      "tasks": [
+        {
+          "taskId": "CODEWRITE_TASK_1",
+          "latencyMs": 3267,
+          "accuracy": 1,
+          "score": 6.122,
+          "output": "```python\ndef run_length(s):\n    if not s:\n        return \"\"\n\n    run = 1\n    result = ''\n    prev = s[0]\n\n    for i in range(1, len(s)):\n        if s[i] == prev:\n            run += 1\n        else:\n            result += prev + (str(run) if run > 1 else '')\n            prev = s[i]\n            run = 1\n\n    result += prev + (str(run) if run > 1 else '')  # Add the last character and its length\n    return result\n```",
+          "ttftMs": 211,
+          "completionTokens": 138,
+          "tokensPerSec": 44.8,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "def run_length(s):\n    if not s:\n        return \"\"\n\n    run = 1\n    result = ''\n    prev = s[0]\n\n    for i in range(1, len(s)):\n        if s[i] == prev:\n            run += 1\n        else:\n            result += prev + (str(run) if run > 1 else '')\n            prev = s[i]\n            run = 1\n\n    result += prev + (str(run) if run > 1 else '')  # Add the last character and its length\n    return result\n",
+          "extraction": "fenced",
+          "testsPassed": 8,
+          "testsTotal": 8,
+          "sandboxStatus": "ok",
+          "streamMarks": [
+            [
+              784,
+              32
+            ],
+            [
+              1647,
+              64
+            ],
+            [
+              2362,
+              96
+            ],
+            [
+              3056,
+              128
+            ],
+            [
+              3267,
+              137
+            ]
+          ],
+          "promptTokens": 152
+        },
+        {
+          "taskId": "CODEWRITE_TASK_2",
+          "latencyMs": 1432,
+          "accuracy": 0,
+          "score": 0,
+          "output": "```python\ndef dedupe(xs):\n    seen = set()\n    result = []\n    for x in xs:\n        if x not in seen:\n            seen.add(x)\n            result.append(x)\n    return result\n```",
+          "ttftMs": 249,
+          "completionTokens": 58,
+          "tokensPerSec": 48.2,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "def dedupe(xs):\n    seen = set()\n    result = []\n    for x in xs:\n        if x not in seen:\n            seen.add(x)\n            result.append(x)\n    return result\n",
+          "extraction": "fenced",
+          "testsPassed": 4,
+          "testsTotal": 8,
+          "sandboxStatus": "ok",
+          "firstFailure": {
+            "args": [
+              [
+                3,
+                1,
+                3,
+                2,
+                1
+              ]
+            ],
+            "expected": [
+              3,
+              2,
+              1
+            ],
+            "got": [
+              3,
+              1,
+              2
+            ]
+          },
+          "streamMarks": [
+            [
+              896,
+              32
+            ],
+            [
+              1432,
+              57
+            ]
+          ],
+          "promptTokens": 149
+        },
+        {
+          "taskId": "CODEWRITE_TASK_3",
+          "latencyMs": 1494,
+          "accuracy": 1,
+          "score": 13.387,
+          "output": "```python\ndef extreme_sum(xs, k):\n    if k > len(xs):\n        return sum(xs)\n    elif k == 0:\n        return 0\n    else:\n        sorted_xs = sorted(xs)\n        return sum(sorted_xs[:k])\n```",
+          "ttftMs": 216,
+          "completionTokens": 69,
+          "tokensPerSec": 53.2,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "def extreme_sum(xs, k):\n    if k > len(xs):\n        return sum(xs)\n    elif k == 0:\n        return 0\n    else:\n        sorted_xs = sorted(xs)\n        return sum(sorted_xs[:k])\n",
+          "extraction": "fenced",
+          "testsPassed": 8,
+          "testsTotal": 8,
+          "sandboxStatus": "ok",
+          "streamMarks": [
+            [
+              801,
+              32
+            ],
+            [
+              1403,
+              64
+            ],
+            [
+              1494,
+              68
+            ]
+          ],
+          "promptTokens": 159
+        },
+        {
+          "taskId": "CODEWRITE_TASK_4",
+          "latencyMs": 2203,
+          "accuracy": 0,
+          "score": 0,
+          "output": "```python\ndef run_length(s):\n    if not s:\n        return \"\"\n\n    run = 1\n    result = []\n    for i in range(len(s)):\n        if i == 0 or s[i] != s[i - 1]:\n            run += 1\n        else:\n            run = 1\n        result.append(f\"{s[i]}<{run}>\")\n\n    return \"\".join(r for r in result)\n```",
+          "ttftMs": 218,
+          "completionTokens": 109,
+          "tokensPerSec": 54.4,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "def run_length(s):\n    if not s:\n        return \"\"\n\n    run = 1\n    result = []\n    for i in range(len(s)):\n        if i == 0 or s[i] != s[i - 1]:\n            run += 1\n        else:\n            run = 1\n        result.append(f\"{s[i]}<{run}>\")\n\n    return \"\".join(r for r in result)\n",
+          "extraction": "fenced",
+          "testsPassed": 1,
+          "testsTotal": 8,
+          "sandboxStatus": "ok",
+          "firstFailure": {
+            "args": [
+              "a"
+            ],
+            "expected": "a1",
+            "got": "a<2>"
+          },
+          "streamMarks": [
+            [
+              794,
+              32
+            ],
+            [
+              1388,
+              64
+            ],
+            [
+              1966,
+              96
+            ],
+            [
+              2203,
+              108
+            ]
+          ],
+          "promptTokens": 150
+        },
+        {
+          "taskId": "CODEWRITE_TASK_5",
+          "latencyMs": 3079,
+          "accuracy": 1,
+          "score": 6.496,
+          "output": "```python\ndef balanced(s):\n    stack = []\n    bracket_pairs = {')': '(', ']': '[', '}': '{'}\n\n    for char in s:\n        if char in bracket_pairs.values():  # If it's an opening bracket, push to stack\n            stack.append(char)\n        elif char in bracket_pairs.keys():  # If it's a closing bracket, check if the stack is empty or has a matching opening bracket\n            if not stack or stack.pop() != bracket_pairs[char]:\n                return False\n\n    return len(stack) == 0  # True if all brackets are balanced and properly nested, otherwise False\n```",
+          "ttftMs": 183,
+          "completionTokens": 152,
+          "tokensPerSec": 52.1,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "def balanced(s):\n    stack = []\n    bracket_pairs = {')': '(', ']': '[', '}': '{'}\n\n    for char in s:\n        if char in bracket_pairs.values():  # If it's an opening bracket, push to stack\n            stack.append(char)\n        elif char in bracket_pairs.keys():  # If it's a closing bracket, check if the stack is empty or has a matching opening bracket\n            if not stack or stack.pop() != bracket_pairs[char]:\n                return False\n\n    return len(stack) == 0  # True if all brackets are balanced and properly nested, otherwise False\n",
+          "extraction": "fenced",
+          "testsPassed": 11,
+          "testsTotal": 11,
+          "sandboxStatus": "ok",
+          "streamMarks": [
+            [
+              756,
+              32
+            ],
+            [
+              1345,
+              64
+            ],
+            [
+              1934,
+              96
+            ],
+            [
+              2516,
+              128
+            ],
+            [
+              3079,
+              151
+            ]
+          ],
+          "promptTokens": 127
+        },
+        {
+          "taskId": "CODEWRITE_TASK_6",
+          "latencyMs": 2362,
+          "accuracy": 0,
+          "score": 0,
+          "output": "```python\ndef second_largest(xs):\n    if len(set(xs)) < 2:\n        return None  # xs has fewer than two distinct values\n    else:\n        sorted_xs = sorted(xs)\n        second_largest = max(sorted_xs[1:]) if len(sorted_xs) > 1 else None  # Handle cases with only one element or no elements\n        return second_largest\n```",
+          "ttftMs": 221,
+          "completionTokens": 96,
+          "tokensPerSec": 44.4,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "def second_largest(xs):\n    if len(set(xs)) < 2:\n        return None  # xs has fewer than two distinct values\n    else:\n        sorted_xs = sorted(xs)\n        second_largest = max(sorted_xs[1:]) if len(sorted_xs) > 1 else None  # Handle cases with only one element or no elements\n        return second_largest\n",
+          "extraction": "fenced",
+          "testsPassed": 3,
+          "testsTotal": 8,
+          "sandboxStatus": "ok",
+          "firstFailure": {
+            "args": [
+              [
+                5,
+                5,
+                3
+              ]
+            ],
+            "expected": 3,
+            "got": 5
+          },
+          "streamMarks": [
+            [
+              956,
+              32
+            ],
+            [
+              1692,
+              64
+            ],
+            [
+              2362,
+              95
+            ]
+          ],
+          "promptTokens": 138
+        },
+        {
+          "taskId": "CODEWRITE_TASK_7",
+          "latencyMs": 1853,
+          "accuracy": 0,
+          "score": 0,
+          "output": "```python\ndef second_largest(xs):\n    if len(set(xs)) < 2:\n        return None  # xs has fewer than two distinct values\n\n    sorted_xs = sorted(xs)\n    second_largest = max(sorted_xs[1:]) if len(sorted_xs) > 1 else None  # Handle cases with only one element or no elements\n    return second_largest\n```",
+          "ttftMs": 193,
+          "completionTokens": 92,
+          "tokensPerSec": 54.8,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "def second_largest(xs):\n    if len(set(xs)) < 2:\n        return None  # xs has fewer than two distinct values\n\n    sorted_xs = sorted(xs)\n    second_largest = max(sorted_xs[1:]) if len(sorted_xs) > 1 else None  # Handle cases with only one element or no elements\n    return second_largest\n",
+          "extraction": "fenced",
+          "testsPassed": 3,
+          "testsTotal": 8,
+          "sandboxStatus": "ok",
+          "firstFailure": {
+            "args": [
+              [
+                5,
+                5,
+                3
+              ]
+            ],
+            "expected": 3,
+            "got": 5
+          },
+          "streamMarks": [
+            [
+              757,
+              32
+            ],
+            [
+              1337,
+              64
+            ],
+            [
+              1853,
+              91
+            ]
+          ],
+          "promptTokens": 132
+        },
+        {
+          "taskId": "CODEWRITE_TASK_8",
+          "latencyMs": 2941,
+          "accuracy": 1,
+          "score": 6.8,
+          "output": "```python\ndef balanced(s):\n    stack = []\n    bracket_pairs = {')': '(', ']': '[', '}': '{'}\n\n    for char in s:\n        if char in bracket_pairs.values():  # If it's an opening bracket, push to stack\n            stack.append(char)\n        elif char in bracket_pairs.keys():  # If it's a closing bracket, check if the stack is empty or has a matching opening bracket\n            if not stack or stack.pop() != bracket_pairs[char]:\n                return False\n\n    return len(stack) == 0  # True if all brackets are balanced and properly nested, otherwise False\n```",
+          "ttftMs": 179,
+          "completionTokens": 152,
+          "tokensPerSec": 54.7,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "def balanced(s):\n    stack = []\n    bracket_pairs = {')': '(', ']': '[', '}': '{'}\n\n    for char in s:\n        if char in bracket_pairs.values():  # If it's an opening bracket, push to stack\n            stack.append(char)\n        elif char in bracket_pairs.keys():  # If it's a closing bracket, check if the stack is empty or has a matching opening bracket\n            if not stack or stack.pop() != bracket_pairs[char]:\n                return False\n\n    return len(stack) == 0  # True if all brackets are balanced and properly nested, otherwise False\n",
+          "extraction": "fenced",
+          "testsPassed": 11,
+          "testsTotal": 11,
+          "sandboxStatus": "ok",
+          "streamMarks": [
+            [
+              748,
+              32
+            ],
+            [
+              1335,
+              64
+            ],
+            [
+              1918,
+              96
+            ],
+            [
+              2501,
+              128
+            ],
+            [
+              2941,
+              151
+            ]
+          ],
+          "promptTokens": 127
+        },
+        {
+          "taskId": "CODEWRITE_TASK_9",
+          "latencyMs": 4951,
+          "accuracy": 0,
+          "score": 0,
+          "output": "```python\ndef merge_intervals(intervals):\n    if not intervals:\n        return []\n\n    # Sort the intervals by start time\n    intervals.sort(key=lambda x: x[0])\n\n    merged_intervals = [intervals[0]]  # Initialize with the first interval\n    for i in range(1, len(intervals)):\n        current_interval = intervals[i]\n        last_merged_interval = merged_intervals[-1]\n\n        if current_interval[0] <= last_merged_interval[1]:\n            # Overlap or touch: merge the two intervals\n            merged_intervals[-1][1] = max(current_interval[1], last_merged_interval[1])\n        else:\n            # No overlap, add the current interval to the merged list\n            merged_intervals.append(current_interval)\n\n    return sorted(merged_intervals, key=lambda x: x[0])  # Sort by start time again\n```",
+          "ttftMs": 319,
+          "completionTokens": 214,
+          "tokensPerSec": 46,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "def merge_intervals(intervals):\n    if not intervals:\n        return []\n\n    # Sort the intervals by start time\n    intervals.sort(key=lambda x: x[0])\n\n    merged_intervals = [intervals[0]]  # Initialize with the first interval\n    for i in range(1, len(intervals)):\n        current_interval = intervals[i]\n        last_merged_interval = merged_intervals[-1]\n\n        if current_interval[0] <= last_merged_interval[1]:\n            # Overlap or touch: merge the two intervals\n            merged_intervals[-1][1] = max(current_interval[1], last_merged_interval[1])\n        else:\n            # No overlap, add the current interval to the merged list\n            merged_intervals.append(current_interval)\n\n    return sorted(merged_intervals, key=lambda x: x[0])  # Sort by start time again\n",
+          "extraction": "fenced",
+          "testsPassed": 5,
+          "testsTotal": 8,
+          "sandboxStatus": "ok",
+          "firstFailure": {
+            "args": [
+              [
+                [
+                  5,
+                  8
+                ],
+                [
+                  1,
+                  3
+                ],
+                [
+                  2,
+                  4
+                ]
+              ]
+            ],
+            "expected": [
+              [
+                1,
+                8
+              ]
+            ],
+            "got": [
+              [
+                1,
+                4
+              ],
+              [
+                5,
+                8
+              ]
+            ]
+          },
+          "streamMarks": [
+            [
+              888,
+              32
+            ],
+            [
+              1544,
+              64
+            ],
+            [
+              2351,
+              96
+            ],
+            [
+              2966,
+              128
+            ],
+            [
+              3723,
+              160
+            ],
+            [
+              4464,
+              192
+            ],
+            [
+              4951,
+              213
+            ]
+          ],
+          "promptTokens": 230
+        },
+        {
+          "taskId": "CODEWRITE_TASK_10",
+          "latencyMs": 4944,
+          "accuracy": 1,
+          "score": 4.045,
+          "output": "```python\ndef merge_intervals(intervals):\n    if not intervals:\n        return []\n\n    # Sort the intervals by their start times\n    intervals.sort(key=lambda x: x[0])\n\n    merged_intervals = [intervals[0]]  # Initialize with the first interval\n    for i in range(1, len(intervals)):\n        current_interval = intervals[i]\n        last_merged_interval = merged_intervals[-1]\n\n        if current_interval[0] <= last_merged_interval[1]:\n            # Overlap detected; merge the two intervals\n            merged_intervals[-1][1] = max(last_merged_interval[1], current_interval[1])\n        else:\n            # No overlap, add the new interval to the list\n            merged_intervals.append(current_interval)\n\n    return sorted(merged_intervals, key=lambda x: x[0])  # Sort by start time again\n```",
+          "ttftMs": 315,
+          "completionTokens": 213,
+          "tokensPerSec": 45.8,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "def merge_intervals(intervals):\n    if not intervals:\n        return []\n\n    # Sort the intervals by their start times\n    intervals.sort(key=lambda x: x[0])\n\n    merged_intervals = [intervals[0]]  # Initialize with the first interval\n    for i in range(1, len(intervals)):\n        current_interval = intervals[i]\n        last_merged_interval = merged_intervals[-1]\n\n        if current_interval[0] <= last_merged_interval[1]:\n            # Overlap detected; merge the two intervals\n            merged_intervals[-1][1] = max(last_merged_interval[1], current_interval[1])\n        else:\n            # No overlap, add the new interval to the list\n            merged_intervals.append(current_interval)\n\n    return sorted(merged_intervals, key=lambda x: x[0])  # Sort by start time again\n",
+          "extraction": "fenced",
+          "testsPassed": 8,
+          "testsTotal": 8,
+          "sandboxStatus": "ok",
+          "streamMarks": [
+            [
+              1029,
+              32
+            ],
+            [
+              1742,
+              64
+            ],
+            [
+              2349,
+              96
+            ],
+            [
+              3078,
+              128
+            ],
+            [
+              3816,
+              160
+            ],
+            [
+              4513,
+              192
+            ],
+            [
+              4944,
+              212
+            ]
+          ],
+          "promptTokens": 242
+        },
+        {
+          "taskId": "CODEWRITE_TASK_11",
+          "latencyMs": 4186,
+          "accuracy": 0,
+          "score": 0,
+          "output": "```python\ndef top_words(text, k):\n    # Remove punctuation and convert to lowercase for comparison\n    text = ''.join(c for c in text if c.isalnum())\n    text = text.lower()\n\n    # Split the text into words\n    words = text.split()\n\n    # Count word frequencies\n    word_counts = {}\n    for word in words:\n        if word in word_counts:\n            word_counts[word] += 1\n        else:\n            word_counts[word] = 1\n\n    # Sort the words by frequency in descending order\n    sorted_words = sorted(word_counts.items(), key=lambda item: item[1], reverse=True)\n\n    # Return the top k most frequent words as a list, ordered by appearance in text\n    return [word for word, count in sorted_words[:k]]\n```",
+          "ttftMs": 291,
+          "completionTokens": 196,
+          "tokensPerSec": 50.1,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "def top_words(text, k):\n    # Remove punctuation and convert to lowercase for comparison\n    text = ''.join(c for c in text if c.isalnum())\n    text = text.lower()\n\n    # Split the text into words\n    words = text.split()\n\n    # Count word frequencies\n    word_counts = {}\n    for word in words:\n        if word in word_counts:\n            word_counts[word] += 1\n        else:\n            word_counts[word] = 1\n\n    # Sort the words by frequency in descending order\n    sorted_words = sorted(word_counts.items(), key=lambda item: item[1], reverse=True)\n\n    # Return the top k most frequent words as a list, ordered by appearance in text\n    return [word for word, count in sorted_words[:k]]\n",
+          "extraction": "fenced",
+          "testsPassed": 1,
+          "testsTotal": 8,
+          "sandboxStatus": "ok",
+          "firstFailure": {
+            "args": [
+              "Elm ash, elm! ASH bay.",
+              1
+            ],
+            "expected": [
+              "elm"
+            ],
+            "got": [
+              "elmashelmashbay"
+            ]
+          },
+          "streamMarks": [
+            [
+              989,
+              32
+            ],
+            [
+              1671,
+              64
+            ],
+            [
+              2404,
+              96
+            ],
+            [
+              2969,
+              128
+            ],
+            [
+              3541,
+              160
+            ],
+            [
+              4112,
+              192
+            ],
+            [
+              4186,
+              195
+            ]
+          ],
+          "promptTokens": 177
+        },
+        {
+          "taskId": "CODEWRITE_TASK_12",
+          "latencyMs": 4110,
+          "accuracy": 1,
+          "score": 4.866,
+          "output": "```python\ndef merge_intervals(intervals):\n    if not intervals:\n        return []\n\n    # Sort the intervals by their start times\n    intervals.sort(key=lambda x: x[0])\n\n    merged_intervals = [intervals[0]]  # Initialize with the first interval\n    for i in range(1, len(intervals)):\n        current_interval = intervals[i]\n        last_merged_interval = merged_intervals[-1]\n\n        if current_interval[0] <= last_merged_interval[1]:\n            # Overlap detected; merge the two intervals\n            merged_intervals[-1][1] = max(last_merged_interval[1], current_interval[1])\n        else:\n            # No overlap, add the new interval to the list\n            merged_intervals.append(current_interval)\n\n    return sorted(merged_intervals, key=lambda x: x[0])  # Sort by start time again\n```",
+          "ttftMs": 298,
+          "completionTokens": 213,
+          "tokensPerSec": 55.6,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "def merge_intervals(intervals):\n    if not intervals:\n        return []\n\n    # Sort the intervals by their start times\n    intervals.sort(key=lambda x: x[0])\n\n    merged_intervals = [intervals[0]]  # Initialize with the first interval\n    for i in range(1, len(intervals)):\n        current_interval = intervals[i]\n        last_merged_interval = merged_intervals[-1]\n\n        if current_interval[0] <= last_merged_interval[1]:\n            # Overlap detected; merge the two intervals\n            merged_intervals[-1][1] = max(last_merged_interval[1], current_interval[1])\n        else:\n            # No overlap, add the new interval to the list\n            merged_intervals.append(current_interval)\n\n    return sorted(merged_intervals, key=lambda x: x[0])  # Sort by start time again\n",
+          "extraction": "fenced",
+          "testsPassed": 8,
+          "testsTotal": 8,
+          "sandboxStatus": "ok",
+          "streamMarks": [
+            [
+              862,
+              32
+            ],
+            [
+              1452,
+              64
+            ],
+            [
+              2024,
+              96
+            ],
+            [
+              2598,
+              128
+            ],
+            [
+              3164,
+              160
+            ],
+            [
+              3737,
+              192
+            ],
+            [
+              4110,
+              212
+            ]
+          ],
+          "promptTokens": 246
+        }
+      ],
+      "runtime": {
+        "modelId": "vikhr-gemma-2b-instruct",
+        "format": "gguf",
+        "quantization": "Q8_0",
+        "arch": "gemma2"
+      },
+      "pedigree": null
+    },
+    {
+      "position": 4,
+      "horseId": "gemma2_2b_q5",
+      "name": "Gemma 2 2B Q5",
+      "accuracy": 0.42,
+      "clears": 5,
+      "fences": 12,
+      "faults": 28,
+      "partial": 8.25,
+      "tokens": 1347,
+      "avgLatencyMs": 2574,
+      "judgeScore": 34.793,
+      "finalTimeSeconds": 30.88,
+      "tasks": [
+        {
+          "taskId": "CODEWRITE_TASK_1",
+          "latencyMs": 3054,
+          "accuracy": 1,
+          "score": 6.549,
+          "output": "```python\ndef run_length(s):\n    if not s:\n        return \"\"\n    run = 1\n    result = []\n    prev = s[0]\n    for i in range(1, len(s)):\n        if s[i] == prev:\n            run += 1\n        else:\n            result.append(prev + (str(run) if run > 1 else \"\"))\n            prev = s[i]\n            run = 1\n    result.append(prev + (str(run) if run > 1 else \"\"))\n    return \"\".join(result)\n```",
+          "ttftMs": 272,
+          "completionTokens": 137,
+          "tokensPerSec": 48.9,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "def run_length(s):\n    if not s:\n        return \"\"\n    run = 1\n    result = []\n    prev = s[0]\n    for i in range(1, len(s)):\n        if s[i] == prev:\n            run += 1\n        else:\n            result.append(prev + (str(run) if run > 1 else \"\"))\n            prev = s[i]\n            run = 1\n    result.append(prev + (str(run) if run > 1 else \"\"))\n    return \"\".join(result)\n",
+          "extraction": "fenced",
+          "testsPassed": 8,
+          "testsTotal": 8,
+          "sandboxStatus": "ok",
+          "streamMarks": [
+            [
+              941,
+              32
+            ],
+            [
+              1611,
+              64
+            ],
+            [
+              2232,
+              96
+            ],
+            [
+              2898,
+              128
+            ],
+            [
+              3054,
+              136
+            ]
+          ],
+          "promptTokens": 152
+        },
+        {
+          "taskId": "CODEWRITE_TASK_2",
+          "latencyMs": 1717,
+          "accuracy": 0,
+          "score": 0,
+          "output": "```python\ndef dedupe(xs):\n    seen = set()\n    result = []\n    for x in xs:\n        if x not in seen:\n            seen.add(x)\n            result.append(x)\n    return result\n``` \n",
+          "ttftMs": 269,
+          "completionTokens": 60,
+          "tokensPerSec": 40.7,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "def dedupe(xs):\n    seen = set()\n    result = []\n    for x in xs:\n        if x not in seen:\n            seen.add(x)\n            result.append(x)\n    return result\n",
+          "extraction": "fenced",
+          "testsPassed": 4,
+          "testsTotal": 8,
+          "sandboxStatus": "ok",
+          "firstFailure": {
+            "args": [
+              [
+                3,
+                1,
+                3,
+                2,
+                1
+              ]
+            ],
+            "expected": [
+              3,
+              2,
+              1
+            ],
+            "got": [
+              3,
+              1,
+              2
+            ]
+          },
+          "streamMarks": [
+            [
+              995,
+              32
+            ],
+            [
+              1717,
+              59
+            ]
+          ],
+          "promptTokens": 149
+        },
+        {
+          "taskId": "CODEWRITE_TASK_3",
+          "latencyMs": 1840,
+          "accuracy": 0,
+          "score": 0,
+          "output": "```python\ndef extreme_sum(xs, k):\n  if k == 0:\n    return 0\n  if len(xs) < k:\n    return sum(xs)\n  sorted_xs = sorted(xs)\n  return sum(sorted_xs[-k:]) \n```",
+          "ttftMs": 271,
+          "completionTokens": 67,
+          "tokensPerSec": 42.1,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "def extreme_sum(xs, k):\n  if k == 0:\n    return 0\n  if len(xs) < k:\n    return sum(xs)\n  sorted_xs = sorted(xs)\n  return sum(sorted_xs[-k:]) \n",
+          "extraction": "fenced",
+          "testsPassed": 3,
+          "testsTotal": 8,
+          "sandboxStatus": "ok",
+          "firstFailure": {
+            "args": [
+              [
+                -6,
+                36,
+                27,
+                29
+              ],
+              2
+            ],
+            "expected": 21,
+            "got": 65
+          },
+          "streamMarks": [
+            [
+              1008,
+              32
+            ],
+            [
+              1787,
+              64
+            ],
+            [
+              1840,
+              66
+            ]
+          ],
+          "promptTokens": 159
+        },
+        {
+          "taskId": "CODEWRITE_TASK_4",
+          "latencyMs": 2987,
+          "accuracy": 0,
+          "score": 0,
+          "output": "```python\ndef run_length(s):\n    if not s:\n        return \"\"\n    run = 1\n    result = []\n    prev = s[0]\n    for i in range(1, len(s)):\n        if s[i] == prev:\n            run += 1\n        else:\n            result.append(prev + (str(run) if run > 1 else \"\"))\n            prev = s[i]\n            run = 1\n    result.append(prev + (str(run) if run > 1 else \"\"))\n    return \"\".join(result)\n```",
+          "ttftMs": 273,
+          "completionTokens": 137,
+          "tokensPerSec": 50.1,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "def run_length(s):\n    if not s:\n        return \"\"\n    run = 1\n    result = []\n    prev = s[0]\n    for i in range(1, len(s)):\n        if s[i] == prev:\n            run += 1\n        else:\n            result.append(prev + (str(run) if run > 1 else \"\"))\n            prev = s[i]\n            run = 1\n    result.append(prev + (str(run) if run > 1 else \"\"))\n    return \"\".join(result)\n",
+          "extraction": "fenced",
+          "testsPassed": 1,
+          "testsTotal": 8,
+          "sandboxStatus": "ok",
+          "firstFailure": {
+            "args": [
+              "a"
+            ],
+            "expected": "a1",
+            "got": "a"
+          },
+          "streamMarks": [
+            [
+              939,
+              32
+            ],
+            [
+              1671,
+              64
+            ],
+            [
+              2273,
+              96
+            ],
+            [
+              2831,
+              128
+            ],
+            [
+              2987,
+              136
+            ]
+          ],
+          "promptTokens": 150
+        },
+        {
+          "taskId": "CODEWRITE_TASK_5",
+          "latencyMs": 2138,
+          "accuracy": 1,
+          "score": 9.355,
+          "output": "```python\ndef balanced(s):\n    stack = []\n    bracket_pairs = {')': '(', '}': '{', ']': '['}\n    for char in s:\n        if char in bracket_pairs.values():  # Opening brackets\n            stack.append(char)\n        elif char in bracket_pairs.keys():  # Closing brackets\n            if not stack or stack.pop() != bracket_pairs[char]:\n                return False\n    return len(stack) == 0\n```",
+          "ttftMs": 198,
+          "completionTokens": 111,
+          "tokensPerSec": 56.7,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "def balanced(s):\n    stack = []\n    bracket_pairs = {')': '(', '}': '{', ']': '['}\n    for char in s:\n        if char in bracket_pairs.values():  # Opening brackets\n            stack.append(char)\n        elif char in bracket_pairs.keys():  # Closing brackets\n            if not stack or stack.pop() != bracket_pairs[char]:\n                return False\n    return len(stack) == 0\n",
+          "extraction": "fenced",
+          "testsPassed": 11,
+          "testsTotal": 11,
+          "sandboxStatus": "ok",
+          "streamMarks": [
+            [
+              745,
+              32
+            ],
+            [
+              1310,
+              64
+            ],
+            [
+              1870,
+              96
+            ],
+            [
+              2138,
+              110
+            ]
+          ],
+          "promptTokens": 127
+        },
+        {
+          "taskId": "CODEWRITE_TASK_6",
+          "latencyMs": 1187,
+          "accuracy": 0,
+          "score": 0,
+          "output": "```python\ndef second_largest(xs):\n  if len(set(xs)) < 2:\n    return None\n  else:\n    sorted_xs = sorted(xs)\n    return sorted_xs[-2] \n```",
+          "ttftMs": 250,
+          "completionTokens": 54,
+          "tokensPerSec": 56.6,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "def second_largest(xs):\n  if len(set(xs)) < 2:\n    return None\n  else:\n    sorted_xs = sorted(xs)\n    return sorted_xs[-2] \n",
+          "extraction": "fenced",
+          "testsPassed": 6,
+          "testsTotal": 8,
+          "sandboxStatus": "ok",
+          "firstFailure": {
+            "args": [
+              [
+                5,
+                5,
+                3
+              ]
+            ],
+            "expected": 3,
+            "got": 5
+          },
+          "streamMarks": [
+            [
+              799,
+              32
+            ],
+            [
+              1187,
+              53
+            ]
+          ],
+          "promptTokens": 138
+        },
+        {
+          "taskId": "CODEWRITE_TASK_7",
+          "latencyMs": 1189,
+          "accuracy": 0,
+          "score": 0,
+          "output": "```python\ndef second_largest(xs):\n  if len(set(xs)) < 2:\n    return None\n  else:\n    sorted_xs = sorted(xs)\n    return sorted_xs[-2] \n```",
+          "ttftMs": 208,
+          "completionTokens": 54,
+          "tokensPerSec": 54,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "def second_largest(xs):\n  if len(set(xs)) < 2:\n    return None\n  else:\n    sorted_xs = sorted(xs)\n    return sorted_xs[-2] \n",
+          "extraction": "fenced",
+          "testsPassed": 5,
+          "testsTotal": 8,
+          "sandboxStatus": "ok",
+          "firstFailure": {
+            "args": [
+              [
+                5,
+                5,
+                3
+              ]
+            ],
+            "expected": 3,
+            "got": 5
+          },
+          "streamMarks": [
+            [
+              756,
+              32
+            ],
+            [
+              1189,
+              53
+            ]
+          ],
+          "promptTokens": 132
+        },
+        {
+          "taskId": "CODEWRITE_TASK_8",
+          "latencyMs": 2589,
+          "accuracy": 1,
+          "score": 7.725,
+          "output": "```python\ndef balanced(s):\n    stack = []\n    bracket_pairs = {')': '(', '}': '{', ']': '['}\n    for char in s:\n        if char in bracket_pairs.values():  # Opening brackets\n            stack.append(char)\n        elif char in bracket_pairs.keys():  # Closing brackets\n            if not stack or stack.pop() != bracket_pairs[char]:\n                return False\n    return len(stack) == 0\n```",
+          "ttftMs": 236,
+          "completionTokens": 111,
+          "tokensPerSec": 46.7,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "def balanced(s):\n    stack = []\n    bracket_pairs = {')': '(', '}': '{', ']': '['}\n    for char in s:\n        if char in bracket_pairs.values():  # Opening brackets\n            stack.append(char)\n        elif char in bracket_pairs.keys():  # Closing brackets\n            if not stack or stack.pop() != bracket_pairs[char]:\n                return False\n    return len(stack) == 0\n",
+          "extraction": "fenced",
+          "testsPassed": 11,
+          "testsTotal": 11,
+          "sandboxStatus": "ok",
+          "streamMarks": [
+            [
+              898,
+              32
+            ],
+            [
+              1602,
+              64
+            ],
+            [
+              2301,
+              96
+            ],
+            [
+              2589,
+              110
+            ]
+          ],
+          "promptTokens": 127
+        },
+        {
+          "taskId": "CODEWRITE_TASK_9",
+          "latencyMs": 3917,
+          "accuracy": 0,
+          "score": 0,
+          "output": "```python\ndef merge_intervals(intervals):\n    if not intervals:\n        return []\n\n    sorted_intervals = sorted(intervals, key=lambda x: x[0])  \n    merged_intervals = [sorted_intervals[0]] \n    for i in range(1, len(sorted_intervals)):\n        current_interval = sorted_intervals[i]\n        last_interval = merged_intervals[-1]\n\n        if current_interval[0] <= last_interval[1]:  # Overlap or touch\n            merged_intervals[-1][1] = max(last_interval[1], current_interval[1]) \n        else:\n            merged_intervals.append(current_interval)\n\n    return merged_intervals\n```",
+          "ttftMs": 379,
+          "completionTokens": 166,
+          "tokensPerSec": 46.6,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "def merge_intervals(intervals):\n    if not intervals:\n        return []\n\n    sorted_intervals = sorted(intervals, key=lambda x: x[0])  \n    merged_intervals = [sorted_intervals[0]] \n    for i in range(1, len(sorted_intervals)):\n        current_interval = sorted_intervals[i]\n        last_interval = merged_intervals[-1]\n\n        if current_interval[0] <= last_interval[1]:  # Overlap or touch\n            merged_intervals[-1][1] = max(last_interval[1], current_interval[1]) \n        else:\n            merged_intervals.append(current_interval)\n\n    return merged_intervals\n",
+          "extraction": "fenced",
+          "testsPassed": 5,
+          "testsTotal": 8,
+          "sandboxStatus": "ok",
+          "firstFailure": {
+            "args": [
+              [
+                [
+                  5,
+                  8
+                ],
+                [
+                  1,
+                  3
+                ],
+                [
+                  2,
+                  4
+                ]
+              ]
+            ],
+            "expected": [
+              [
+                1,
+                8
+              ]
+            ],
+            "got": [
+              [
+                1,
+                4
+              ],
+              [
+                5,
+                8
+              ]
+            ]
+          },
+          "streamMarks": [
+            [
+              1127,
+              32
+            ],
+            [
+              1768,
+              64
+            ],
+            [
+              2457,
+              96
+            ],
+            [
+              3038,
+              128
+            ],
+            [
+              3807,
+              160
+            ],
+            [
+              3917,
+              165
+            ]
+          ],
+          "promptTokens": 230
+        },
+        {
+          "taskId": "CODEWRITE_TASK_10",
+          "latencyMs": 3980,
+          "accuracy": 1,
+          "score": 5.025,
+          "output": "```python\ndef merge_intervals(intervals):\n    if not intervals:\n        return []\n\n    sorted_intervals = sorted(intervals, key=lambda x: x[0])  \n    merged_intervals = [sorted_intervals[0]] \n    for i in range(1, len(sorted_intervals)):\n        current_interval = sorted_intervals[i]\n        last_merged_interval = merged_intervals[-1]\n\n        if current_interval[0] <= last_merged_interval[1]:\n            merged_intervals[-1][1] = max(last_merged_interval[1], current_interval[1])\n        else:\n            merged_intervals.append(current_interval)\n\n    return merged_intervals \n```",
+          "ttftMs": 399,
+          "completionTokens": 166,
+          "tokensPerSec": 46.1,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "def merge_intervals(intervals):\n    if not intervals:\n        return []\n\n    sorted_intervals = sorted(intervals, key=lambda x: x[0])  \n    merged_intervals = [sorted_intervals[0]] \n    for i in range(1, len(sorted_intervals)):\n        current_interval = sorted_intervals[i]\n        last_merged_interval = merged_intervals[-1]\n\n        if current_interval[0] <= last_merged_interval[1]:\n            merged_intervals[-1][1] = max(last_merged_interval[1], current_interval[1])\n        else:\n            merged_intervals.append(current_interval)\n\n    return merged_intervals \n",
+          "extraction": "fenced",
+          "testsPassed": 8,
+          "testsTotal": 8,
+          "sandboxStatus": "ok",
+          "streamMarks": [
+            [
+              1074,
+              32
+            ],
+            [
+              1715,
+              64
+            ],
+            [
+              2450,
+              96
+            ],
+            [
+              3178,
+              128
+            ],
+            [
+              3870,
+              160
+            ],
+            [
+              3980,
+              165
+            ]
+          ],
+          "promptTokens": 242
+        },
+        {
+          "taskId": "CODEWRITE_TASK_11",
+          "latencyMs": 3027,
+          "accuracy": 0,
+          "score": 0,
+          "output": "```python\ndef top_words(text, k):\n    words = text.lower().split()\n    word_counts = {}\n    for word in words:\n        if word in word_counts:\n            word_counts[word] += 1\n        else:\n            word_counts[word] = 1\n\n    sorted_items = sorted(word_counts.items(), key=lambda item: (item[1], item[0]))\n    return [word for word, count in sorted_items[:k]]\n```",
+          "ttftMs": 330,
+          "completionTokens": 118,
+          "tokensPerSec": 43.4,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "def top_words(text, k):\n    words = text.lower().split()\n    word_counts = {}\n    for word in words:\n        if word in word_counts:\n            word_counts[word] += 1\n        else:\n            word_counts[word] = 1\n\n    sorted_items = sorted(word_counts.items(), key=lambda item: (item[1], item[0]))\n    return [word for word, count in sorted_items[:k]]\n",
+          "extraction": "fenced",
+          "testsPassed": 2,
+          "testsTotal": 8,
+          "sandboxStatus": "ok",
+          "firstFailure": {
+            "args": [
+              "Elm ash, elm! ASH bay.",
+              1
+            ],
+            "expected": [
+              "elm"
+            ],
+            "got": [
+              "ash"
+            ]
+          },
+          "streamMarks": [
+            [
+              1017,
+              32
+            ],
+            [
+              1806,
+              64
+            ],
+            [
+              2473,
+              96
+            ],
+            [
+              3027,
+              117
+            ]
+          ],
+          "promptTokens": 177
+        },
+        {
+          "taskId": "CODEWRITE_TASK_12",
+          "latencyMs": 3258,
+          "accuracy": 1,
+          "score": 6.139,
+          "output": "```python\ndef merge_intervals(intervals):\n    if not intervals:\n        return []\n\n    sorted_intervals = sorted(intervals, key=lambda x: x[0])  \n    merged_intervals = [sorted_intervals[0]] \n    for i in range(1, len(sorted_intervals)):\n        current_interval = sorted_intervals[i]\n        last_merged_interval = merged_intervals[-1]\n\n        if current_interval[0] <= last_merged_interval[1]:\n            merged_intervals[-1][1] = max(last_merged_interval[1], current_interval[1])\n        else:\n            merged_intervals.append(current_interval)\n\n    return merged_intervals \n```",
+          "ttftMs": 364,
+          "completionTokens": 166,
+          "tokensPerSec": 57,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "def merge_intervals(intervals):\n    if not intervals:\n        return []\n\n    sorted_intervals = sorted(intervals, key=lambda x: x[0])  \n    merged_intervals = [sorted_intervals[0]] \n    for i in range(1, len(sorted_intervals)):\n        current_interval = sorted_intervals[i]\n        last_merged_interval = merged_intervals[-1]\n\n        if current_interval[0] <= last_merged_interval[1]:\n            merged_intervals[-1][1] = max(last_merged_interval[1], current_interval[1])\n        else:\n            merged_intervals.append(current_interval)\n\n    return merged_intervals \n",
+          "extraction": "fenced",
+          "testsPassed": 8,
+          "testsTotal": 8,
+          "sandboxStatus": "ok",
+          "streamMarks": [
+            [
+              913,
+              32
+            ],
+            [
+              1472,
+              64
+            ],
+            [
+              2035,
+              96
+            ],
+            [
+              2594,
+              128
+            ],
+            [
+              3153,
+              160
+            ],
+            [
+              3258,
+              165
+            ]
+          ],
+          "promptTokens": 246
+        }
+      ],
+      "runtime": {
+        "modelId": "gemma-2-2b-it@q5_k_m",
+        "format": "gguf",
+        "quantization": "Q5_K_M",
+        "arch": "gemma2"
+      },
+      "pedigree": null
+    },
+    {
+      "position": 5,
+      "horseId": "qwen25_15b",
+      "name": "Qwen 2.5 1.5B",
+      "accuracy": 0.42,
+      "clears": 5,
+      "fences": 12,
+      "faults": 28,
+      "partial": 7.5,
+      "tokens": 1449,
+      "avgLatencyMs": 1728,
+      "judgeScore": 63.11,
+      "finalTimeSeconds": 20.73,
+      "tasks": [
+        {
+          "taskId": "CODEWRITE_TASK_1",
+          "latencyMs": 1655,
+          "accuracy": 0,
+          "score": 0,
+          "output": "```python\nimport collections\n\ndef run_length(s):\n    if not s:\n        return \"\"\n    \n    result = []\n    count = 1\n    \n    for i in range(1, len(s)):\n        if s[i] == s[i-1]:\n            count += 1\n        else:\n            result.append((s[i-1], count))\n            count = 1\n            \n    result.append((s[-1], count))\n    \n    return ''.join(f\"{char}{count}\" for char, count in result)\n```",
+          "ttftMs": 124,
+          "completionTokens": 108,
+          "tokensPerSec": 69.9,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "import collections\n\ndef run_length(s):\n    if not s:\n        return \"\"\n    \n    result = []\n    count = 1\n    \n    for i in range(1, len(s)):\n        if s[i] == s[i-1]:\n            count += 1\n        else:\n            result.append((s[i-1], count))\n            count = 1\n            \n    result.append((s[-1], count))\n    \n    return ''.join(f\"{char}{count}\" for char, count in result)\n",
+          "extraction": "fenced",
+          "testsPassed": 2,
+          "testsTotal": 8,
+          "sandboxStatus": "ok",
+          "firstFailure": {
+            "args": [
+              "a"
+            ],
+            "expected": "a",
+            "got": "a1"
+          },
+          "streamMarks": [
+            [
+              641,
+              32
+            ],
+            [
+              1070,
+              64
+            ],
+            [
+              1495,
+              96
+            ],
+            [
+              1655,
+              107
+            ]
+          ],
+          "promptTokens": 162
+        },
+        {
+          "taskId": "CODEWRITE_TASK_2",
+          "latencyMs": 1306,
+          "accuracy": 0,
+          "score": 0,
+          "output": "```python\nfrom collections import deque\n\ndef dedupe(xs):\n    if not xs:\n        return []\n    \n    last_occurrence = {}\n    result = []\n    \n    for i, x in enumerate(xs):\n        if x not in last_occurrence or i > last_occurrence[x]:\n            result.append(x)\n            last_occurrence[x] = i\n    \n    return result\n```",
+          "ttftMs": 119,
+          "completionTokens": 78,
+          "tokensPerSec": 64.9,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "from collections import deque\n\ndef dedupe(xs):\n    if not xs:\n        return []\n    \n    last_occurrence = {}\n    result = []\n    \n    for i, x in enumerate(xs):\n        if x not in last_occurrence or i > last_occurrence[x]:\n            result.append(x)\n            last_occurrence[x] = i\n    \n    return result\n",
+          "extraction": "fenced",
+          "testsPassed": 2,
+          "testsTotal": 8,
+          "sandboxStatus": "ok",
+          "firstFailure": {
+            "args": [
+              [
+                3,
+                1,
+                3,
+                2,
+                1
+              ]
+            ],
+            "expected": [
+              3,
+              2,
+              1
+            ],
+            "got": [
+              3,
+              1,
+              3,
+              2,
+              1
+            ]
+          },
+          "streamMarks": [
+            [
+              582,
+              32
+            ],
+            [
+              1070,
+              64
+            ],
+            [
+              1306,
+              77
+            ]
+          ],
+          "promptTokens": 163
+        },
+        {
+          "taskId": "CODEWRITE_TASK_3",
+          "latencyMs": 1706,
+          "accuracy": 0,
+          "score": 0,
+          "output": "```python\nimport math\nfrom collections import deque\n\ndef extreme_sum(xs, k):\n    if not xs:\n        return 0\n    \n    # Use a min heap to efficiently get the smallest elements\n    pq = []\n    for x in xs:\n        heapq.heappush(pq, -x)\n    \n    result = 0\n    for _ in range(k):\n        result -= heapq.heappop(pq)  # Negate because Python's min-heap is a max-heap\n    \n    return result\n```",
+          "ttftMs": 146,
+          "completionTokens": 108,
+          "tokensPerSec": 68.6,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "import math\nfrom collections import deque\n\ndef extreme_sum(xs, k):\n    if not xs:\n        return 0\n    \n    # Use a min heap to efficiently get the smallest elements\n    pq = []\n    for x in xs:\n        heapq.heappush(pq, -x)\n    \n    result = 0\n    for _ in range(k):\n        result -= heapq.heappop(pq)  # Negate because Python's min-heap is a max-heap\n    \n    return result\n",
+          "extraction": "fenced",
+          "testsPassed": 1,
+          "testsTotal": 8,
+          "sandboxStatus": "ok",
+          "firstFailure": {
+            "args": [
+              [
+                4,
+                9,
+                1
+              ],
+              0
+            ],
+            "expected": 0,
+            "error": "NameError: name 'heapq' is not defined"
+          },
+          "streamMarks": [
+            [
+              644,
+              32
+            ],
+            [
+              1066,
+              64
+            ],
+            [
+              1546,
+              96
+            ],
+            [
+              1706,
+              107
+            ]
+          ],
+          "promptTokens": 172
+        },
+        {
+          "taskId": "CODEWRITE_TASK_4",
+          "latencyMs": 1532,
+          "accuracy": 1,
+          "score": 13.055,
+          "output": "```python\nimport collections\n\ndef run_length(s):\n    if not s:\n        return \"\"\n    \n    char_count = 1\n    result = []\n    \n    for i in range(1, len(s)):\n        if s[i] == s[i-1]:\n            char_count += 1\n        else:\n            result.append(f\"{s[i-1]}{char_count}\")\n            char_count = 1\n    \n    # Append the last character and its count\n    result.append(f\"{s[-1]}{char_count}\")\n    \n    return \"\".join(result)\n```",
+          "ttftMs": 105,
+          "completionTokens": 117,
+          "tokensPerSec": 81.3,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "import collections\n\ndef run_length(s):\n    if not s:\n        return \"\"\n    \n    char_count = 1\n    result = []\n    \n    for i in range(1, len(s)):\n        if s[i] == s[i-1]:\n            char_count += 1\n        else:\n            result.append(f\"{s[i-1]}{char_count}\")\n            char_count = 1\n    \n    # Append the last character and its count\n    result.append(f\"{s[-1]}{char_count}\")\n    \n    return \"\".join(result)\n",
+          "extraction": "fenced",
+          "testsPassed": 8,
+          "testsTotal": 8,
+          "sandboxStatus": "ok",
+          "streamMarks": [
+            [
+              484,
+              32
+            ],
+            [
+              879,
+              64
+            ],
+            [
+              1276,
+              96
+            ],
+            [
+              1532,
+              116
+            ]
+          ],
+          "promptTokens": 161
+        },
+        {
+          "taskId": "CODEWRITE_TASK_5",
+          "latencyMs": 1192,
+          "accuracy": 1,
+          "score": 16.779,
+          "output": "```python\nimport re\n\ndef balanced(s):\n    stack = []\n    pairs = {')': '(', ']': '[', '}': '{'}\n    \n    for char in s:\n        if char in pairs.values():\n            stack.append(char)\n        elif char in pairs.keys():\n            if not stack or stack.pop() != pairs[char]:\n                return False\n        else:\n            continue\n    \n    return len(stack) == 0\n```",
+          "ttftMs": 105,
+          "completionTokens": 89,
+          "tokensPerSec": 81,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "import re\n\ndef balanced(s):\n    stack = []\n    pairs = {')': '(', ']': '[', '}': '{'}\n    \n    for char in s:\n        if char in pairs.values():\n            stack.append(char)\n        elif char in pairs.keys():\n            if not stack or stack.pop() != pairs[char]:\n                return False\n        else:\n            continue\n    \n    return len(stack) == 0\n",
+          "extraction": "fenced",
+          "testsPassed": 11,
+          "testsTotal": 11,
+          "sandboxStatus": "ok",
+          "streamMarks": [
+            [
+              489,
+              32
+            ],
+            [
+              887,
+              64
+            ],
+            [
+              1192,
+              88
+            ]
+          ],
+          "promptTokens": 143
+        },
+        {
+          "taskId": "CODEWRITE_TASK_6",
+          "latencyMs": 1080,
+          "accuracy": 0,
+          "score": 0,
+          "output": "```python\nfrom collections import Counter\n\ndef second_largest(xs):\n    # Count distinct values and sort them in descending order\n    counts = sorted(Counter(xs).values(), reverse=True)\n    \n    # Check if there are at least two distinct values\n    if len(counts) < 2:\n        return None\n    \n    # Return the second largest value\n    return counts[1]\n```",
+          "ttftMs": 97,
+          "completionTokens": 82,
+          "tokensPerSec": 82.4,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "from collections import Counter\n\ndef second_largest(xs):\n    # Count distinct values and sort them in descending order\n    counts = sorted(Counter(xs).values(), reverse=True)\n    \n    # Check if there are at least two distinct values\n    if len(counts) < 2:\n        return None\n    \n    # Return the second largest value\n    return counts[1]\n",
+          "extraction": "fenced",
+          "testsPassed": 4,
+          "testsTotal": 8,
+          "sandboxStatus": "ok",
+          "firstFailure": {
+            "args": [
+              [
+                5,
+                5,
+                3
+              ]
+            ],
+            "expected": 3,
+            "got": 1
+          },
+          "streamMarks": [
+            [
+              471,
+              32
+            ],
+            [
+              859,
+              64
+            ],
+            [
+              1080,
+              81
+            ]
+          ],
+          "promptTokens": 154
+        },
+        {
+          "taskId": "CODEWRITE_TASK_7",
+          "latencyMs": 2122,
+          "accuracy": 0,
+          "score": 0,
+          "output": "```python\nfrom collections import Counter\n\ndef second_largest(xs):\n    # Count the frequency of each element in xs\n    freq = Counter(xs)\n    \n    # Filter out elements that appear only once and find the maximum frequency\n    max_freq = max(freq.values())\n    \n    # Find all elements with the maximum frequency\n    max_elements = [x for x, count in freq.items() if count == max_freq]\n    \n    # If there are fewer than two distinct values, return None\n    if len(max_elements) < 2:\n        return None\n    \n    # Return the second largest element from the list of elements with maximum frequency\n    return max_elements[1] if max_elements else None\n```",
+          "ttftMs": 109,
+          "completionTokens": 146,
+          "tokensPerSec": 72,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "from collections import Counter\n\ndef second_largest(xs):\n    # Count the frequency of each element in xs\n    freq = Counter(xs)\n    \n    # Filter out elements that appear only once and find the maximum frequency\n    max_freq = max(freq.values())\n    \n    # Find all elements with the maximum frequency\n    max_elements = [x for x, count in freq.items() if count == max_freq]\n    \n    # If there are fewer than two distinct values, return None\n    if len(max_elements) < 2:\n        return None\n    \n    # Return the second largest element from the list of elements with maximum frequency\n    return max_elements[1] if max_elements else None\n",
+          "extraction": "fenced",
+          "testsPassed": 2,
+          "testsTotal": 8,
+          "sandboxStatus": "ok",
+          "firstFailure": {
+            "args": [
+              []
+            ],
+            "expected": null,
+            "error": "ValueError: max() iterable argument is empty"
+          },
+          "streamMarks": [
+            [
+              621,
+              32
+            ],
+            [
+              1046,
+              64
+            ],
+            [
+              1470,
+              96
+            ],
+            [
+              1896,
+              128
+            ],
+            [
+              2122,
+              145
+            ]
+          ],
+          "promptTokens": 148
+        },
+        {
+          "taskId": "CODEWRITE_TASK_8",
+          "latencyMs": 1166,
+          "accuracy": 1,
+          "score": 17.153,
+          "output": "```python\nimport re\n\ndef balanced(s):\n    stack = []\n    pairs = {')': '(', ']': '[', '}': '{'}\n    \n    for char in s:\n        if char in pairs.values():\n            stack.append(char)\n        elif char in pairs.keys():\n            if not stack or stack.pop() != pairs[char]:\n                return False\n        else:\n            continue\n    \n    return len(stack) == 0\n```",
+          "ttftMs": 85,
+          "completionTokens": 89,
+          "tokensPerSec": 81.4,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "import re\n\ndef balanced(s):\n    stack = []\n    pairs = {')': '(', ']': '[', '}': '{'}\n    \n    for char in s:\n        if char in pairs.values():\n            stack.append(char)\n        elif char in pairs.keys():\n            if not stack or stack.pop() != pairs[char]:\n                return False\n        else:\n            continue\n    \n    return len(stack) == 0\n",
+          "extraction": "fenced",
+          "testsPassed": 11,
+          "testsTotal": 11,
+          "sandboxStatus": "ok",
+          "streamMarks": [
+            [
+              461,
+              32
+            ],
+            [
+              860,
+              64
+            ],
+            [
+              1166,
+              88
+            ]
+          ],
+          "promptTokens": 143
+        },
+        {
+          "taskId": "CODEWRITE_TASK_9",
+          "latencyMs": 2075,
+          "accuracy": 0,
+          "score": 0,
+          "output": "```python\nfrom typing import List\n\ndef merge_intervals(intervals: List[List[int]]) -> List[List[int]]:\n    if not intervals:\n        return []\n    \n    # Sort by start time\n    intervals.sort(key=lambda x: x[0])\n    \n    merged = [intervals[0]]\n    \n    for current in intervals[1:]:\n        last_merged = merged[-1]\n        \n        # Check if the current interval overlaps with the last merged interval\n        if current[0] <= last_merged[1]:\n            # Merge the intervals if they overlap\n            merged[-1][1] = max(last_merged[1], current[1])\n        else:\n            # Add the current interval to the list of merged intervals\n            merged.append(current)\n    \n    return merged\n```",
+          "ttftMs": 165,
+          "completionTokens": 159,
+          "tokensPerSec": 82.7,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "from typing import List\n\ndef merge_intervals(intervals: List[List[int]]) -> List[List[int]]:\n    if not intervals:\n        return []\n    \n    # Sort by start time\n    intervals.sort(key=lambda x: x[0])\n    \n    merged = [intervals[0]]\n    \n    for current in intervals[1:]:\n        last_merged = merged[-1]\n        \n        # Check if the current interval overlaps with the last merged interval\n        if current[0] <= last_merged[1]:\n            # Merge the intervals if they overlap\n            merged[-1][1] = max(last_merged[1], current[1])\n        else:\n            # Add the current interval to the list of merged intervals\n            merged.append(current)\n    \n    return merged\n",
+          "extraction": "fenced",
+          "testsPassed": 5,
+          "testsTotal": 8,
+          "sandboxStatus": "ok",
+          "firstFailure": {
+            "args": [
+              [
+                [
+                  5,
+                  8
+                ],
+                [
+                  1,
+                  3
+                ],
+                [
+                  2,
+                  4
+                ]
+              ]
+            ],
+            "expected": [
+              [
+                1,
+                8
+              ]
+            ],
+            "got": [
+              [
+                1,
+                4
+              ],
+              [
+                5,
+                8
+              ]
+            ]
+          },
+          "streamMarks": [
+            [
+              548,
+              32
+            ],
+            [
+              935,
+              64
+            ],
+            [
+              1318,
+              96
+            ],
+            [
+              1703,
+              128
+            ],
+            [
+              2075,
+              158
+            ]
+          ],
+          "promptTokens": 243
+        },
+        {
+          "taskId": "CODEWRITE_TASK_10",
+          "latencyMs": 2486,
+          "accuracy": 1,
+          "score": 8.045,
+          "output": "```python\nfrom typing import List\n\ndef merge_intervals(intervals: List[List[int]]) -> List[List[int]]:\n    if not intervals:\n        return []\n    \n    # Sort intervals based on start time\n    intervals.sort(key=lambda x: x[0])\n    \n    merged = [intervals[0]]\n    \n    for current in intervals[1:]:\n        last_merged = merged[-1]\n        \n        # Check if the current interval overlaps with the last merged interval\n        if current[0] <= last_merged[1]:\n            # Merge the intervals by updating the end time of the last merged interval\n            last_merged[1] = max(last_merged[1], current[1])\n        else:\n            # If no overlap, add the current interval to the list of merged intervals\n            merged.append(current)\n    \n    return merged\n```",
+          "ttftMs": 152,
+          "completionTokens": 171,
+          "tokensPerSec": 72.8,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "from typing import List\n\ndef merge_intervals(intervals: List[List[int]]) -> List[List[int]]:\n    if not intervals:\n        return []\n    \n    # Sort intervals based on start time\n    intervals.sort(key=lambda x: x[0])\n    \n    merged = [intervals[0]]\n    \n    for current in intervals[1:]:\n        last_merged = merged[-1]\n        \n        # Check if the current interval overlaps with the last merged interval\n        if current[0] <= last_merged[1]:\n            # Merge the intervals by updating the end time of the last merged interval\n            last_merged[1] = max(last_merged[1], current[1])\n        else:\n            # If no overlap, add the current interval to the list of merged intervals\n            merged.append(current)\n    \n    return merged\n",
+          "extraction": "fenced",
+          "testsPassed": 8,
+          "testsTotal": 8,
+          "sandboxStatus": "ok",
+          "streamMarks": [
+            [
+              537,
+              32
+            ],
+            [
+              941,
+              64
+            ],
+            [
+              1395,
+              96
+            ],
+            [
+              1897,
+              128
+            ],
+            [
+              2330,
+              160
+            ],
+            [
+              2486,
+              170
+            ]
+          ],
+          "promptTokens": 255
+        },
+        {
+          "taskId": "CODEWRITE_TASK_11",
+          "latencyMs": 1939,
+          "accuracy": 0,
+          "score": 0,
+          "output": "```python\nimport re\nfrom collections import Counter\n\ndef top_words(text, k):\n    # Extract words using regex and convert to lowercase\n    words = [word.lower() for word in re.findall(r'\\b[a-z]+\\b', text)]\n    \n    # Count the frequency of each word\n    word_counts = Counter(words)\n    \n    # Sort words by frequency (descending) and then alphabetically\n    sorted_words = sorted(word_counts.items(), key=lambda x: (-x[1], x[0]))\n    \n    # Return the k most frequent words\n    return [word for word, count in sorted_words[:k]]\n```",
+          "ttftMs": 137,
+          "completionTokens": 131,
+          "tokensPerSec": 72.1,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "import re\nfrom collections import Counter\n\ndef top_words(text, k):\n    # Extract words using regex and convert to lowercase\n    words = [word.lower() for word in re.findall(r'\\b[a-z]+\\b', text)]\n    \n    # Count the frequency of each word\n    word_counts = Counter(words)\n    \n    # Sort words by frequency (descending) and then alphabetically\n    sorted_words = sorted(word_counts.items(), key=lambda x: (-x[1], x[0]))\n    \n    # Return the k most frequent words\n    return [word for word, count in sorted_words[:k]]\n",
+          "extraction": "fenced",
+          "testsPassed": 4,
+          "testsTotal": 8,
+          "sandboxStatus": "ok",
+          "firstFailure": {
+            "args": [
+              "Elm ash, elm! ASH bay.",
+              1
+            ],
+            "expected": [
+              "elm"
+            ],
+            "got": [
+              "ash"
+            ]
+          },
+          "streamMarks": [
+            [
+              566,
+              32
+            ],
+            [
+              1017,
+              64
+            ],
+            [
+              1459,
+              96
+            ],
+            [
+              1898,
+              128
+            ],
+            [
+              1939,
+              130
+            ]
+          ],
+          "promptTokens": 186
+        },
+        {
+          "taskId": "CODEWRITE_TASK_12",
+          "latencyMs": 2476,
+          "accuracy": 1,
+          "score": 8.078,
+          "output": "```python\nfrom typing import List\n\ndef merge_intervals(intervals: List[List[int]]) -> List[List[int]]:\n    if not intervals:\n        return []\n    \n    # Sort intervals based on start time\n    intervals.sort(key=lambda x: x[0])\n    \n    merged = [intervals[0]]\n    \n    for current in intervals[1:]:\n        last_merged = merged[-1]\n        \n        # Check if the current interval overlaps with the last merged interval\n        if current[0] <= last_merged[1]:\n            # Merge the intervals by updating the end time of the last merged interval\n            last_merged[1] = max(last_merged[1], current[1])\n        else:\n            # If no overlap, add the current interval to the list of merged intervals\n            merged.append(current)\n    \n    return merged\n```",
+          "ttftMs": 121,
+          "completionTokens": 171,
+          "tokensPerSec": 72.2,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "from typing import List\n\ndef merge_intervals(intervals: List[List[int]]) -> List[List[int]]:\n    if not intervals:\n        return []\n    \n    # Sort intervals based on start time\n    intervals.sort(key=lambda x: x[0])\n    \n    merged = [intervals[0]]\n    \n    for current in intervals[1:]:\n        last_merged = merged[-1]\n        \n        # Check if the current interval overlaps with the last merged interval\n        if current[0] <= last_merged[1]:\n            # Merge the intervals by updating the end time of the last merged interval\n            last_merged[1] = max(last_merged[1], current[1])\n        else:\n            # If no overlap, add the current interval to the list of merged intervals\n            merged.append(current)\n    \n    return merged\n",
+          "extraction": "fenced",
+          "testsPassed": 8,
+          "testsTotal": 8,
+          "sandboxStatus": "ok",
+          "streamMarks": [
+            [
+              556,
+              32
+            ],
+            [
+              990,
+              64
+            ],
+            [
+              1424,
+              96
+            ],
+            [
+              1860,
+              128
+            ],
+            [
+              2313,
+              160
+            ],
+            [
+              2476,
+              170
+            ]
+          ],
+          "promptTokens": 259
+        }
+      ],
+      "runtime": {
+        "modelId": "qwen2.5-1.5b-instruct",
+        "format": "gguf",
+        "quantization": "Q8_0",
+        "arch": "qwen2"
+      },
+      "pedigree": {
+        "bloodline": "Qwen",
+        "stable": "Alibaba Qwen",
+        "silks": {
+          "primary": "#ff6a00",
+          "secondary": "#615ced"
+        }
+      }
+    },
+    {
+      "position": 6,
+      "horseId": "llama32_1b",
+      "name": "Llama 3.2 1B",
+      "accuracy": 0,
+      "clears": 0,
+      "fences": 12,
+      "faults": 48,
+      "partial": 0,
+      "tokens": 1547,
+      "avgLatencyMs": 1750,
+      "judgeScore": 0,
+      "finalTimeSeconds": 20.99,
+      "tasks": [
+        {
+          "taskId": "CODEWRITE_TASK_1",
+          "latencyMs": 1448,
+          "accuracy": 0,
+          "score": 0,
+          "output": "def run_length(s):\n    if not s:\n        return \"\"\n    \n    result = []\n    current_char = s[0]\n    current_count = 1\n    \n    for char in s[1:]:\n        if char == current_char:\n            current_count += 1\n        else:\n            result.append(current_char + str(current_count))\n            current_char = char\n            current_count = 1\n            \n    result.append(current_char + str(current_count))\n    \n    return \"\".join(result)",
+          "ttftMs": 84,
+          "completionTokens": 99,
+          "tokensPerSec": 71.8,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": null,
+          "extraction": "none",
+          "testsPassed": 0,
+          "testsTotal": 8,
+          "streamMarks": [
+            [
+              657,
+              32
+            ],
+            [
+              1019,
+              64
+            ],
+            [
+              1414,
+              96
+            ],
+            [
+              1448,
+              98
+            ]
+          ],
+          "promptTokens": 143
+        },
+        {
+          "taskId": "CODEWRITE_TASK_2",
+          "latencyMs": 590,
+          "accuracy": 0,
+          "score": 0,
+          "output": "def dedupe(xs):\n    seen = set()\n    result = []\n    for x in xs:\n        if x not in seen:\n            result.append(x)\n            seen.add(x)\n    return result",
+          "ttftMs": 80,
+          "completionTokens": 41,
+          "tokensPerSec": 78.4,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": null,
+          "extraction": "none",
+          "testsPassed": 0,
+          "testsTotal": 8,
+          "streamMarks": [
+            [
+              493,
+              32
+            ],
+            [
+              590,
+              40
+            ]
+          ],
+          "promptTokens": 144
+        },
+        {
+          "taskId": "CODEWRITE_TASK_3",
+          "latencyMs": 569,
+          "accuracy": 0,
+          "score": 0,
+          "output": "def extreme_sum(xs, k):\n    if not xs:\n        return 0\n    if k > len(xs):\n        k = len(xs)\n    return sum(sorted(xs)[:k])",
+          "ttftMs": 84,
+          "completionTokens": 39,
+          "tokensPerSec": 78.4,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": null,
+          "extraction": "none",
+          "testsPassed": 0,
+          "testsTotal": 8,
+          "streamMarks": [
+            [
+              496,
+              32
+            ],
+            [
+              569,
+              38
+            ]
+          ],
+          "promptTokens": 150
+        },
+        {
+          "taskId": "CODEWRITE_TASK_4",
+          "latencyMs": 1124,
+          "accuracy": 0,
+          "score": 0,
+          "output": "def run_length(s):\n    if not s:\n        return \"\"\n    \n    result = []\n    current_char = s[0]\n    current_count = 1\n    \n    for char in s[1:]:\n        if char == current_char:\n            current_count += 1\n        else:\n            result.append(current_char + str(current_count))\n            current_char = char\n            current_count = 1\n            \n    result.append(current_char + str(current_count))\n    \n    return \"\".join(result)",
+          "ttftMs": 70,
+          "completionTokens": 99,
+          "tokensPerSec": 93,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": null,
+          "extraction": "none",
+          "testsPassed": 0,
+          "testsTotal": 8,
+          "streamMarks": [
+            [
+              431,
+              32
+            ],
+            [
+              738,
+              64
+            ],
+            [
+              1092,
+              96
+            ],
+            [
+              1124,
+              98
+            ]
+          ],
+          "promptTokens": 142
+        },
+        {
+          "taskId": "CODEWRITE_TASK_5",
+          "latencyMs": 978,
+          "accuracy": 0,
+          "score": 0,
+          "output": "def balanced(s):\n    stack = []\n    bracket_map = {')': '(', '}': '{', ']': '['}\n    \n    for char in s:\n        if char in bracket_map.values():\n            stack.append(char)\n        elif char in bracket_map.keys():\n            if not stack or stack.pop() != bracket_map[char]:\n                return False\n    \n    return not stack",
+          "ttftMs": 77,
+          "completionTokens": 75,
+          "tokensPerSec": 82.1,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": null,
+          "extraction": "none",
+          "testsPassed": 0,
+          "testsTotal": 11,
+          "streamMarks": [
+            [
+              454,
+              32
+            ],
+            [
+              844,
+              64
+            ],
+            [
+              978,
+              74
+            ]
+          ],
+          "promptTokens": 124
+        },
+        {
+          "taskId": "CODEWRITE_TASK_6",
+          "latencyMs": 699,
+          "accuracy": 0,
+          "score": 0,
+          "output": "def second_largest(xs):\n    if len(xs) < 2:\n        return None\n    xs = list(set(xs))  # remove duplicates\n    if not xs:\n        return None\n    return max(xs) if xs else None",
+          "ttftMs": 91,
+          "completionTokens": 50,
+          "tokensPerSec": 80.6,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": null,
+          "extraction": "none",
+          "testsPassed": 0,
+          "testsTotal": 8,
+          "streamMarks": [
+            [
+              460,
+              32
+            ],
+            [
+              699,
+              49
+            ]
+          ],
+          "promptTokens": 135
+        },
+        {
+          "taskId": "CODEWRITE_TASK_7",
+          "latencyMs": 623,
+          "accuracy": 0,
+          "score": 0,
+          "output": "def second_largest(xs):\n    if len(xs) < 2:\n        return None\n    xs = list(set(xs))  # remove duplicates\n    if not xs:\n        return None\n    return max(xs) if xs else float('-inf')",
+          "ttftMs": 64,
+          "completionTokens": 53,
+          "tokensPerSec": 93,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": null,
+          "extraction": "none",
+          "testsPassed": 0,
+          "testsTotal": 8,
+          "streamMarks": [
+            [
+              383,
+              32
+            ],
+            [
+              623,
+              52
+            ]
+          ],
+          "promptTokens": 129
+        },
+        {
+          "taskId": "CODEWRITE_TASK_8",
+          "latencyMs": 922,
+          "accuracy": 0,
+          "score": 0,
+          "output": "def balanced(s):\n    stack = []\n    bracket_map = {')': '(', '}': '{', ']': '['}\n    \n    for char in s:\n        if char in bracket_map.values():\n            stack.append(char)\n        elif char in bracket_map.keys():\n            if not stack or stack.pop() != bracket_map[char]:\n                return False\n    \n    return not stack",
+          "ttftMs": 95,
+          "completionTokens": 75,
+          "tokensPerSec": 89.5,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": null,
+          "extraction": "none",
+          "testsPassed": 0,
+          "testsTotal": 11,
+          "streamMarks": [
+            [
+              459,
+              32
+            ],
+            [
+              795,
+              64
+            ],
+            [
+              922,
+              74
+            ]
+          ],
+          "promptTokens": 124
+        },
+        {
+          "taskId": "CODEWRITE_TASK_9",
+          "latencyMs": 4617,
+          "accuracy": 0,
+          "score": 0,
+          "output": "import heapq\nfrom typing import List, Tuple\n\ndef merge_intervals(intervals: List[Tuple[int, int]]) -> List[List[int]]:\n    \"\"\"\n    Merge every pair of intervals that overlap or touch.\n\n    Args:\n        intervals (List[Tuple[int, int]]): A list of [start, end] pairs of integers.\n            Start <= end, inclusive. In any order.\n\n    Returns:\n        List[List[int]]: The merged intervals as a list of [start, end] lists sorted by start.\n    \"\"\"\n    \n    # If the input list is empty, return an empty list\n    if not intervals:\n        return []\n\n    # Use a heap to store the current interval and its index in the list\n    heap = [(intervals[i][0], i) for i in range(len(intervals))]\n    heapq.heapify(heap)\n\n    # Initialize the result with the first interval\n    merged_intervals = [heapq.heappop(heap)]\n\n    # While there are still intervals in the heap\n    while heap:\n        # Get the current and next interval from the heap\n        current_start, current_index = heapq.heappop(heap)\n        next_start, next_index = heapq.heappop(heap)\n\n        # If this is not the first pair of overlapping or touching intervals\n        if current_start < next_start:\n            # Merge them by updating the end value and adding it to the result\n            merged_intervals.append([current_start, max(current_start, next_start)])\n        \n        # Add the next interval back into the heap\n        heapq.heappush(heap, (next_start, next_index))\n\n    # Convert the list of [start, end] pairs to a list of lists and sort it by start\n    return [[start, end] for _, end in sorted(merged_intervals)]",
+          "ttftMs": 123,
+          "completionTokens": 367,
+          "tokensPerSec": 81.4,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": null,
+          "extraction": "none",
+          "testsPassed": 0,
+          "testsTotal": 8,
+          "streamMarks": [
+            [
+              472,
+              32
+            ],
+            [
+              824,
+              64
+            ],
+            [
+              1189,
+              96
+            ],
+            [
+              1574,
+              128
+            ],
+            [
+              1940,
+              160
+            ],
+            [
+              2307,
+              192
+            ],
+            [
+              2734,
+              224
+            ],
+            [
+              3264,
+              256
+            ],
+            [
+              3625,
+              288
+            ],
+            [
+              4058,
+              320
+            ],
+            [
+              4424,
+              352
+            ],
+            [
+              4617,
+              366
+            ]
+          ],
+          "promptTokens": 212
+        },
+        {
+          "taskId": "CODEWRITE_TASK_10",
+          "latencyMs": 3078,
+          "accuracy": 0,
+          "score": 0,
+          "output": "import heapq\nfrom typing import List\n\ndef merge_intervals(intervals: List[List[int]]) -> List[List[int]]:\n    \"\"\"\n    Merge every pair of intervals that overlap and return the merged intervals as a list of [start, end] lists sorted by start.\n\n    Args:\n        intervals (List[List[int]]): A list of [start, end] pairs of integers (start <= end, inclusive).\n\n    Returns:\n        List[List[int]]: The merged intervals as a list of [start, end] lists sorted by start.\n    \"\"\"\n    \n    # If the input list is empty, return an empty list\n    if not intervals:\n        return []\n\n    # Use heapq.merge to merge all intervals into one sorted interval\n    merged = list(heapq.merge(*intervals))\n\n    # Sort the merged intervals by their start value\n    merged.sort(key=lambda x: x[0])\n\n    # Return the merged intervals as a list of [start, end] lists\n    return [list(interval) for interval in merged]",
+          "ttftMs": 122,
+          "completionTokens": 208,
+          "tokensPerSec": 70,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": null,
+          "extraction": "none",
+          "testsPassed": 0,
+          "testsTotal": 8,
+          "streamMarks": [
+            [
+              458,
+              32
+            ],
+            [
+              816,
+              64
+            ],
+            [
+              1181,
+              96
+            ],
+            [
+              1601,
+              128
+            ],
+            [
+              2129,
+              160
+            ],
+            [
+              2752,
+              192
+            ],
+            [
+              3078,
+              207
+            ]
+          ],
+          "promptTokens": 228
+        },
+        {
+          "taskId": "CODEWRITE_TASK_11",
+          "latencyMs": 1295,
+          "accuracy": 0,
+          "score": 0,
+          "output": "def top_words(text, k):\n    words = text.split()\n    word_freq = {}\n    for word in words:\n        if word in word_freq:\n            word_freq[word] += 1\n        else:\n            word_freq[word] = 1\n    \n    sorted_word_freq = sorted(word_freq.items(), key=lambda x: (-x[1], -words.index(x[0])))\n    \n    return [word for word, freq in sorted_word_freq[:k]]",
+          "ttftMs": 145,
+          "completionTokens": 95,
+          "tokensPerSec": 81.7,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": null,
+          "extraction": "none",
+          "testsPassed": 0,
+          "testsTotal": 8,
+          "streamMarks": [
+            [
+              490,
+              32
+            ],
+            [
+              883,
+              64
+            ],
+            [
+              1295,
+              94
+            ]
+          ],
+          "promptTokens": 167
+        },
+        {
+          "taskId": "CODEWRITE_TASK_12",
+          "latencyMs": 5051,
+          "accuracy": 0,
+          "score": 0,
+          "output": "import heapq\nfrom typing import List\n\ndef merge_intervals(intervals: List[List[int]]) -> List[List[int]]:\n    \"\"\"\n    Merge every pair of intervals that overlap.\n\n    Args:\n        intervals (List[List[int]]): A list of [start, end] pairs of integers.\n            Start <= end, inclusive.\n\n    Returns:\n        List[List[int]]: The merged intervals as a list of [start, end] lists sorted by start.\n    \"\"\"\n    \n    # If the input list is empty, return an empty list\n    if not intervals:\n        return []\n\n    # Use a heap to store the current interval and its index in the list\n    heap = [(intervals[i][0], i) for i in range(len(intervals))]\n    heapq.heapify(heap)\n\n    # Initialize the result with the first interval\n    merged = [heapq.heappop(heap)]\n\n    # While there are still intervals in the heap\n    while heap:\n        # Get the current and next interval from the heap\n        curr_start, curr_idx = heapq.heappop(heap)\n        next_start, next_idx = heapq.heappop(heap)\n\n        # If this is not the first pair of overlapping intervals\n        if curr_start < next_start:\n            # Merge them by updating the start value and adding it to the result\n            merged.append([curr_start, min(curr_start, next_start)])\n        \n        # Add the current interval back into the heap with its index\n        heapq.heappush(heap, (min(curr_start, next_start), curr_idx))\n\n    # Convert the list of intervals in the heap to a sorted list and return it\n    return [sorted(interval) for interval in merged]",
+          "ttftMs": 87,
+          "completionTokens": 346,
+          "tokensPerSec": 69.5,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": null,
+          "extraction": "none",
+          "testsPassed": 0,
+          "testsTotal": 8,
+          "streamMarks": [
+            [
+              466,
+              32
+            ],
+            [
+              847,
+              64
+            ],
+            [
+              1231,
+              96
+            ],
+            [
+              1781,
+              128
+            ],
+            [
+              2349,
+              160
+            ],
+            [
+              2723,
+              192
+            ],
+            [
+              3162,
+              224
+            ],
+            [
+              3828,
+              256
+            ],
+            [
+              4222,
+              288
+            ],
+            [
+              4591,
+              320
+            ],
+            [
+              5051,
+              345
+            ]
+          ],
+          "promptTokens": 228
+        }
+      ],
+      "runtime": {
+        "modelId": "llama-3.2-1b-instruct",
+        "format": "gguf",
+        "quantization": "Q8_0",
+        "arch": "llama"
+      },
+      "pedigree": {
+        "bloodline": "Llama",
+        "stable": "Meta AI",
+        "silks": {
+          "primary": "#0064e0",
+          "secondary": "#ffffff"
+        }
+      }
+    }
+  ],
+  "verificationProof": {
+    "seedHash": "46cc13b3261e9d52f34a5b2b28afb66507825c023a4db935d908ee2ddceb15fa",
+    "commitmentHash": null,
+    "revealedSeed": "codewrite_20261123",
+    "revealedSalt": null,
+    "manifestHash": "08e8d03f87a8f3e6331caeb0f5ba275c5ff0d5737a102de04c72ee93523dc5bf",
+    "manifest": {
+      "scheme": "hr-manifest-v1",
+      "trackType": "codewrite",
+      "raceClass": "local",
+      "provider": "lmstudio",
+      "endpoint": "http://Mac-mini.local:1234",
+      "grade": "standard",
+      "generatorVersion": 3,
+      "distance": "mile",
+      "fences": 12,
+      "raceConditions": {
+        "scoringVersion": 3,
+        "order": [
+          "clears",
+          "partial",
+          "tokens",
+          "seconds"
+        ],
+        "faultsPerKnock": 4,
+        "partial": "each clear counts 1; a knocked fence counts constraintsEarned/constraintsEarnable (rules a blank reply would fail) or testsPassed/testsTotal",
+        "tokensBasis": "completion tokens over every fence; a failed call or a missing count is charged the token cap",
+        "unraced": "a horse with no judged fences places behind every horse that ran",
+        "voidRule": "no horse clears a fence or earns partial credit: the race is void",
+        "formAffectsTime": false
+      },
+      "inference": {
+        "temperature": 0,
+        "maxTokens": 2048,
+        "timeoutMs": 300000
+      },
+      "codeVersion": "e6709f12c365168938cb99d53c89dc02b297d137-dirty-7744eea862899bd8",
+      "field": [
+        {
+          "horseId": "gemma2_2b",
+          "name": "Gemma 2 2B",
+          "modelId": "gemma-2-2b-it@q8_0",
+          "format": "gguf",
+          "quantization": "Q8_0",
+          "arch": "gemma2"
+        },
+        {
+          "horseId": "gemma2_2b_q5",
+          "name": "Gemma 2 2B Q5",
+          "modelId": "gemma-2-2b-it@q5_k_m",
+          "format": "gguf",
+          "quantization": "Q5_K_M",
+          "arch": "gemma2"
+        },
+        {
+          "horseId": "llama32_1b",
+          "name": "Llama 3.2 1B",
+          "modelId": "llama-3.2-1b-instruct",
+          "format": "gguf",
+          "quantization": "Q8_0",
+          "arch": "llama"
+        },
+        {
+          "horseId": "qwen25_15b",
+          "name": "Qwen 2.5 1.5B",
+          "modelId": "qwen2.5-1.5b-instruct",
+          "format": "gguf",
+          "quantization": "Q8_0",
+          "arch": "qwen2"
+        },
+        {
+          "horseId": "qwen25_coder_15b",
+          "name": "Qwen 2.5 Coder 1.5B",
+          "modelId": "qwen2.5-coder-1.5b-instruct",
+          "format": "gguf",
+          "quantization": "Q8_0",
+          "arch": "qwen2"
+        },
+        {
+          "horseId": "vikhr_gemma_2b",
+          "name": "Vikhr Gemma 2B",
+          "modelId": "vikhr-gemma-2b-instruct",
+          "format": "gguf",
+          "quantization": "Q8_0",
+          "arch": "gemma2"
+        }
+      ]
+    },
+    "reproducible": false,
+    "tasks": [
+      {
+        "id": "CODEWRITE_TASK_1",
+        "kind": "codewrite",
+        "prompt": "[CODEWRITE_TASK] Write this Python function.\n\ndef run_length(s):\n\nRun-length encode s: each run of the same character becomes the character followed by the run length, but a run of length 1 is just the character. \"aaab\" becomes \"a3b\".\n\nExamples:\nrun_length(\"mnnnnnnm\") == \"mn6m\"\nrun_length(\"\") == \"\"\n\nIt will be run against hidden tests. Use only the standard library modules math, collections, itertools, functools, heapq, bisect, re; no other imports, no file or network access, no input(). Reply with the complete function in one ```python code block.",
+        "judging": {
+          "type": "program",
+          "entry": "run_length",
+          "cases": [
+            {
+              "args": [
+                ""
+              ]
+            },
+            {
+              "args": [
+                "a"
+              ]
+            },
+            {
+              "args": [
+                "aaab"
+              ]
+            },
+            {
+              "args": [
+                "abab"
+              ]
+            },
+            {
+              "args": [
+                "nnmmnnmnmm"
+              ]
+            },
+            {
+              "args": [
+                "mnnmnmnnmn"
+              ]
+            },
+            {
+              "args": [
+                "mmnnmmmnnmm"
+              ]
+            },
+            {
+              "args": [
+                "mnnnnnnm"
+              ]
+            }
+          ],
+          "expected": [
+            "",
+            "a",
+            "a3b",
+            "abab",
+            "n2m2n2mnm2",
+            "mn2mnmn2mn",
+            "m2n2m3n2m2",
+            "mn6m"
+          ]
+        },
+        "reference": "def run_length(s):\n    out = []\n    i = 0\n    while i < len(s):\n        j = i\n        while j < len(s) and s[j] == s[i]:\n            j += 1\n        n = j - i\n        out.append(s[i] + (str(n) if n > 1 else ''))\n        i = j\n    return ''.join(out)\n",
+        "buggy": "def run_length(s):\n    out = []\n    for c in dict.fromkeys(s):\n        n = s.count(c)\n        out.append(c + (str(n) if n > 1 else ''))\n    return ''.join(out)\n",
+        "simAnswer": "```python\ndef run_length(s):\n    out = []\n    i = 0\n    while i < len(s):\n        j = i\n        while j < len(s) and s[j] == s[i]:\n            j += 1\n        n = j - i\n        out.append(s[i] + (str(n) if n > 1 else ''))\n        i = j\n    return ''.join(out)\n```",
+        "simWrongAnswer": "```python\ndef run_length(s):\n    out = []\n    for c in dict.fromkeys(s):\n        n = s.count(c)\n        out.append(c + (str(n) if n > 1 else ''))\n    return ''.join(out)\n```",
+        "weight": 2,
+        "generatorVersion": 3,
+        "rung": "easy"
+      },
+      {
+        "id": "CODEWRITE_TASK_2",
+        "kind": "codewrite",
+        "prompt": "[CODEWRITE_TASK] Write this Python function.\n\ndef dedupe(xs):\n\nReturn a new list with duplicates removed, keeping the LAST occurrence of each value. The result keeps those last occurrences in the order they appear in xs.\n\nExamples:\ndedupe([5, 2, 6, 5, 2]) == [6, 5, 2]\ndedupe([]) == []\n\nIt will be run against hidden tests. Use only the standard library modules math, collections, itertools, functools, heapq, bisect, re; no other imports, no file or network access, no input(). Reply with the complete function in one ```python code block.",
+        "judging": {
+          "type": "program",
+          "entry": "dedupe",
+          "cases": [
+            {
+              "args": [
+                []
+              ]
+            },
+            {
+              "args": [
+                [
+                  5
+                ]
+              ]
+            },
+            {
+              "args": [
+                [
+                  3,
+                  1,
+                  3,
+                  2,
+                  1
+                ]
+              ]
+            },
+            {
+              "args": [
+                [
+                  4,
+                  4,
+                  4
+                ]
+              ]
+            },
+            {
+              "args": [
+                [
+                  3,
+                  6,
+                  2,
+                  3,
+                  4
+                ]
+              ]
+            },
+            {
+              "args": [
+                [
+                  4,
+                  3,
+                  4,
+                  5,
+                  6,
+                  5,
+                  2,
+                  3
+                ]
+              ]
+            },
+            {
+              "args": [
+                [
+                  4,
+                  1,
+                  3,
+                  6,
+                  6
+                ]
+              ]
+            },
+            {
+              "args": [
+                [
+                  5,
+                  2,
+                  6,
+                  5,
+                  2
+                ]
+              ]
+            }
+          ],
+          "expected": [
+            [],
+            [
+              5
+            ],
+            [
+              3,
+              2,
+              1
+            ],
+            [
+              4
+            ],
+            [
+              6,
+              2,
+              3,
+              4
+            ],
+            [
+              4,
+              6,
+              5,
+              2,
+              3
+            ],
+            [
+              4,
+              1,
+              3,
+              6
+            ],
+            [
+              6,
+              5,
+              2
+            ]
+          ]
+        },
+        "reference": "def dedupe(xs):\n    seen = set()\n    out = []\n    for x in reversed(xs):\n        if x not in seen:\n            seen.add(x)\n            out.append(x)\n    return out[::-1]\n",
+        "buggy": "def dedupe(xs):\n    return sorted(set(xs))\n",
+        "simAnswer": "```python\ndef dedupe(xs):\n    seen = set()\n    out = []\n    for x in reversed(xs):\n        if x not in seen:\n            seen.add(x)\n            out.append(x)\n    return out[::-1]\n```",
+        "simWrongAnswer": "```python\ndef dedupe(xs):\n    return sorted(set(xs))\n```",
+        "weight": 2,
+        "generatorVersion": 3,
+        "rung": "easy"
+      },
+      {
+        "id": "CODEWRITE_TASK_3",
+        "kind": "codewrite",
+        "prompt": "[CODEWRITE_TASK] Write this Python function.\n\ndef extreme_sum(xs, k):\n\nReturn the sum of the k smallest values in xs. If k is larger than len(xs), sum all of them. If k is 0, return 0.\n\nExamples:\nextreme_sum([40, -9, 25, 31], 1) == -9\nextreme_sum([], 2) == 0\n\nIt will be run against hidden tests. Use only the standard library modules math, collections, itertools, functools, heapq, bisect, re; no other imports, no file or network access, no input(). Reply with the complete function in one ```python code block.",
+        "judging": {
+          "type": "program",
+          "entry": "extreme_sum",
+          "cases": [
+            {
+              "args": [
+                [],
+                2
+              ]
+            },
+            {
+              "args": [
+                [
+                  4,
+                  9,
+                  1
+                ],
+                0
+              ]
+            },
+            {
+              "args": [
+                [
+                  4,
+                  9,
+                  1
+                ],
+                5
+              ]
+            },
+            {
+              "args": [
+                [
+                  -6,
+                  36,
+                  27,
+                  29
+                ],
+                2
+              ]
+            },
+            {
+              "args": [
+                [
+                  -14,
+                  0,
+                  39,
+                  -11,
+                  7
+                ],
+                4
+              ]
+            },
+            {
+              "args": [
+                [
+                  40,
+                  -8,
+                  23,
+                  0,
+                  -6,
+                  16
+                ],
+                3
+              ]
+            },
+            {
+              "args": [
+                [
+                  -1,
+                  -12,
+                  25,
+                  -16,
+                  36,
+                  -8,
+                  38
+                ],
+                2
+              ]
+            },
+            {
+              "args": [
+                [
+                  40,
+                  -9,
+                  25,
+                  31
+                ],
+                1
+              ]
+            }
+          ],
+          "expected": [
+            0,
+            0,
+            14,
+            21,
+            -18,
+            -14,
+            -28,
+            -9
+          ]
+        },
+        "reference": "def extreme_sum(xs, k):\n    return sum(sorted(xs)[:k])\n",
+        "buggy": "def extreme_sum(xs, k):\n    return sum(sorted(xs, reverse=True)[-k:])\n",
+        "simAnswer": "```python\ndef extreme_sum(xs, k):\n    return sum(sorted(xs)[:k])\n```",
+        "simWrongAnswer": "```python\ndef extreme_sum(xs, k):\n    return sum(sorted(xs, reverse=True)[-k:])\n```",
+        "weight": 2,
+        "generatorVersion": 3,
+        "rung": "easy"
+      },
+      {
+        "id": "CODEWRITE_TASK_4",
+        "kind": "codewrite",
+        "prompt": "[CODEWRITE_TASK] Write this Python function.\n\ndef run_length(s):\n\nRun-length encode s: each run of the same character becomes the character followed by the run length. \"aaab\" becomes \"a3b1\".\n\nExamples:\nrun_length(\"aaabbaaaabab\") == \"a3b2a4b1a1b1\"\nrun_length(\"\") == \"\"\n\nIt will be run against hidden tests. Use only the standard library modules math, collections, itertools, functools, heapq, bisect, re; no other imports, no file or network access, no input(). Reply with the complete function in one ```python code block.",
+        "judging": {
+          "type": "program",
+          "entry": "run_length",
+          "cases": [
+            {
+              "args": [
+                ""
+              ]
+            },
+            {
+              "args": [
+                "a"
+              ]
+            },
+            {
+              "args": [
+                "aaab"
+              ]
+            },
+            {
+              "args": [
+                "abab"
+              ]
+            },
+            {
+              "args": [
+                "abaaabb"
+              ]
+            },
+            {
+              "args": [
+                "baabaaaab"
+              ]
+            },
+            {
+              "args": [
+                "babbaba"
+              ]
+            },
+            {
+              "args": [
+                "aaabbaaaabab"
+              ]
+            }
+          ],
+          "expected": [
+            "",
+            "a1",
+            "a3b1",
+            "a1b1a1b1",
+            "a1b1a3b2",
+            "b1a2b1a4b1",
+            "b1a1b2a1b1a1",
+            "a3b2a4b1a1b1"
+          ]
+        },
+        "reference": "def run_length(s):\n    out = []\n    i = 0\n    while i < len(s):\n        j = i\n        while j < len(s) and s[j] == s[i]:\n            j += 1\n        n = j - i\n        out.append(s[i] + (str(n) if True else ''))\n        i = j\n    return ''.join(out)\n",
+        "buggy": "def run_length(s):\n    out = []\n    for c in dict.fromkeys(s):\n        n = s.count(c)\n        out.append(c + (str(n) if True else ''))\n    return ''.join(out)\n",
+        "simAnswer": "```python\ndef run_length(s):\n    out = []\n    i = 0\n    while i < len(s):\n        j = i\n        while j < len(s) and s[j] == s[i]:\n            j += 1\n        n = j - i\n        out.append(s[i] + (str(n) if True else ''))\n        i = j\n    return ''.join(out)\n```",
+        "simWrongAnswer": "```python\ndef run_length(s):\n    out = []\n    for c in dict.fromkeys(s):\n        n = s.count(c)\n        out.append(c + (str(n) if True else ''))\n    return ''.join(out)\n```",
+        "weight": 2,
+        "generatorVersion": 3,
+        "rung": "easy"
+      },
+      {
+        "id": "CODEWRITE_TASK_5",
+        "kind": "codewrite",
+        "prompt": "[CODEWRITE_TASK] Write this Python function.\n\ndef balanced(s):\n\nReturn True if the brackets ( ) [ ] { } in s are balanced and properly nested, otherwise False. Ignore every other character.\n\nExamples:\nbalanced(\"(b]{{(]ab\") == False\nbalanced(\"\") == True\n\nIt will be run against hidden tests. Use only the standard library modules math, collections, itertools, functools, heapq, bisect, re; no other imports, no file or network access, no input(). Reply with the complete function in one ```python code block.",
+        "judging": {
+          "type": "program",
+          "entry": "balanced",
+          "cases": [
+            {
+              "args": [
+                ""
+              ]
+            },
+            {
+              "args": [
+                "()"
+              ]
+            },
+            {
+              "args": [
+                "([)]"
+              ]
+            },
+            {
+              "args": [
+                "(("
+              ]
+            },
+            {
+              "args": [
+                "a(b[c]d)e"
+              ]
+            },
+            {
+              "args": [
+                ")("
+              ]
+            },
+            {
+              "args": [
+                "([{}])"
+              ]
+            },
+            {
+              "args": [
+                "a}([(]]ab"
+              ]
+            },
+            {
+              "args": [
+                "a}}])"
+              ]
+            },
+            {
+              "args": [
+                "}]}["
+              ]
+            },
+            {
+              "args": [
+                "(b]{{(]ab"
+              ]
+            }
+          ],
+          "expected": [
+            true,
+            true,
+            false,
+            false,
+            true,
+            false,
+            true,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        "reference": "def balanced(s):\n    pairs = \"()[]{}\"\n    stack = []\n    for c in s:\n        i = pairs.find(c)\n        if i < 0:\n            continue\n        if i % 2 == 0:\n            stack.append(c)\n        elif not stack or stack.pop() != pairs[i - 1]:\n            return False\n    return not stack\n",
+        "buggy": "def balanced(s):\n    pairs = \"()[]{}\"\n    return all(s.count(pairs[i]) == s.count(pairs[i + 1]) for i in range(0, len(pairs), 2))\n",
+        "simAnswer": "```python\ndef balanced(s):\n    pairs = \"()[]{}\"\n    stack = []\n    for c in s:\n        i = pairs.find(c)\n        if i < 0:\n            continue\n        if i % 2 == 0:\n            stack.append(c)\n        elif not stack or stack.pop() != pairs[i - 1]:\n            return False\n    return not stack\n```",
+        "simWrongAnswer": "```python\ndef balanced(s):\n    pairs = \"()[]{}\"\n    return all(s.count(pairs[i]) == s.count(pairs[i + 1]) for i in range(0, len(pairs), 2))\n```",
+        "weight": 2,
+        "generatorVersion": 3,
+        "rung": "medium"
+      },
+      {
+        "id": "CODEWRITE_TASK_6",
+        "kind": "codewrite",
+        "prompt": "[CODEWRITE_TASK] Write this Python function.\n\ndef second_largest(xs):\n\nReturn the second largest DISTINCT value in xs, or None if xs has fewer than two distinct values.\n\nExamples:\nsecond_largest([5, 1, 4, -3, 4, 3]) == 4\nsecond_largest([]) == None\n\nIt will be run against hidden tests. Use only the standard library modules math, collections, itertools, functools, heapq, bisect, re; no other imports, no file or network access, no input(). Reply with the complete function in one ```python code block.",
+        "judging": {
+          "type": "program",
+          "entry": "second_largest",
+          "cases": [
+            {
+              "args": [
+                []
+              ]
+            },
+            {
+              "args": [
+                [
+                  7
+                ]
+              ]
+            },
+            {
+              "args": [
+                [
+                  5,
+                  5
+                ]
+              ]
+            },
+            {
+              "args": [
+                [
+                  5,
+                  5,
+                  3
+                ]
+              ]
+            },
+            {
+              "args": [
+                [
+                  1,
+                  3,
+                  3
+                ]
+              ]
+            },
+            {
+              "args": [
+                [
+                  6,
+                  -2,
+                  -4,
+                  3,
+                  -2
+                ]
+              ]
+            },
+            {
+              "args": [
+                [
+                  -2,
+                  1,
+                  8,
+                  -4,
+                  9,
+                  7
+                ]
+              ]
+            },
+            {
+              "args": [
+                [
+                  5,
+                  1,
+                  4,
+                  -3,
+                  4,
+                  3
+                ]
+              ]
+            }
+          ],
+          "expected": [
+            null,
+            null,
+            null,
+            3,
+            1,
+            3,
+            8,
+            4
+          ]
+        },
+        "reference": "def second_largest(xs):\n    d = sorted(set(xs), reverse=True)\n    return d[1] if len(d) >= 2 else None\n",
+        "buggy": "def second_largest(xs):\n    if len(xs) < 2:\n        return None\n    return sorted(xs, reverse=True)[1]\n",
+        "simAnswer": "```python\ndef second_largest(xs):\n    d = sorted(set(xs), reverse=True)\n    return d[1] if len(d) >= 2 else None\n```",
+        "simWrongAnswer": "```python\ndef second_largest(xs):\n    if len(xs) < 2:\n        return None\n    return sorted(xs, reverse=True)[1]\n```",
+        "weight": 2,
+        "generatorVersion": 3,
+        "rung": "medium"
+      },
+      {
+        "id": "CODEWRITE_TASK_7",
+        "kind": "codewrite",
+        "prompt": "[CODEWRITE_TASK] Write this Python function.\n\ndef second_largest(xs):\n\nReturn the second largest DISTINCT value in xs, or None if xs has fewer than two distinct values.\n\nExamples:\nsecond_largest([4, -4, 8, -4]) == 4\nsecond_largest([]) == None\n\nIt will be run against hidden tests. Use only the standard library modules math, collections, itertools, functools, heapq, bisect, re; no other imports, no file or network access, no input(). Reply with the complete function in one ```python code block.",
+        "judging": {
+          "type": "program",
+          "entry": "second_largest",
+          "cases": [
+            {
+              "args": [
+                []
+              ]
+            },
+            {
+              "args": [
+                [
+                  7
+                ]
+              ]
+            },
+            {
+              "args": [
+                [
+                  5,
+                  5
+                ]
+              ]
+            },
+            {
+              "args": [
+                [
+                  5,
+                  5,
+                  3
+                ]
+              ]
+            },
+            {
+              "args": [
+                [
+                  1,
+                  3,
+                  3
+                ]
+              ]
+            },
+            {
+              "args": [
+                [
+                  -3,
+                  1,
+                  -2,
+                  8,
+                  -3,
+                  3,
+                  6
+                ]
+              ]
+            },
+            {
+              "args": [
+                [
+                  1,
+                  8,
+                  6,
+                  6,
+                  -4,
+                  9,
+                  9,
+                  3
+                ]
+              ]
+            },
+            {
+              "args": [
+                [
+                  4,
+                  -4,
+                  8,
+                  -4
+                ]
+              ]
+            }
+          ],
+          "expected": [
+            null,
+            null,
+            null,
+            3,
+            1,
+            6,
+            8,
+            4
+          ]
+        },
+        "reference": "def second_largest(xs):\n    d = sorted(set(xs), reverse=True)\n    return d[1] if len(d) >= 2 else None\n",
+        "buggy": "def second_largest(xs):\n    if len(xs) < 2:\n        return None\n    return sorted(xs, reverse=True)[1]\n",
+        "simAnswer": "```python\ndef second_largest(xs):\n    d = sorted(set(xs), reverse=True)\n    return d[1] if len(d) >= 2 else None\n```",
+        "simWrongAnswer": "```python\ndef second_largest(xs):\n    if len(xs) < 2:\n        return None\n    return sorted(xs, reverse=True)[1]\n```",
+        "weight": 2,
+        "generatorVersion": 3,
+        "rung": "medium"
+      },
+      {
+        "id": "CODEWRITE_TASK_8",
+        "kind": "codewrite",
+        "prompt": "[CODEWRITE_TASK] Write this Python function.\n\ndef balanced(s):\n\nReturn True if the brackets ( ) [ ] { } in s are balanced and properly nested, otherwise False. Ignore every other character.\n\nExamples:\nbalanced(\"b)]}a}{{\") == False\nbalanced(\"\") == True\n\nIt will be run against hidden tests. Use only the standard library modules math, collections, itertools, functools, heapq, bisect, re; no other imports, no file or network access, no input(). Reply with the complete function in one ```python code block.",
+        "judging": {
+          "type": "program",
+          "entry": "balanced",
+          "cases": [
+            {
+              "args": [
+                ""
+              ]
+            },
+            {
+              "args": [
+                "()"
+              ]
+            },
+            {
+              "args": [
+                "([)]"
+              ]
+            },
+            {
+              "args": [
+                "(("
+              ]
+            },
+            {
+              "args": [
+                "a(b[c]d)e"
+              ]
+            },
+            {
+              "args": [
+                ")("
+              ]
+            },
+            {
+              "args": [
+                "([{}])"
+              ]
+            },
+            {
+              "args": [
+                "}[b[["
+              ]
+            },
+            {
+              "args": [
+                "}}[["
+              ]
+            },
+            {
+              "args": [
+                "}{)}["
+              ]
+            },
+            {
+              "args": [
+                "b)]}a}{{"
+              ]
+            }
+          ],
+          "expected": [
+            true,
+            true,
+            false,
+            false,
+            true,
+            false,
+            true,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        "reference": "def balanced(s):\n    pairs = \"()[]{}\"\n    stack = []\n    for c in s:\n        i = pairs.find(c)\n        if i < 0:\n            continue\n        if i % 2 == 0:\n            stack.append(c)\n        elif not stack or stack.pop() != pairs[i - 1]:\n            return False\n    return not stack\n",
+        "buggy": "def balanced(s):\n    pairs = \"()[]{}\"\n    return all(s.count(pairs[i]) == s.count(pairs[i + 1]) for i in range(0, len(pairs), 2))\n",
+        "simAnswer": "```python\ndef balanced(s):\n    pairs = \"()[]{}\"\n    stack = []\n    for c in s:\n        i = pairs.find(c)\n        if i < 0:\n            continue\n        if i % 2 == 0:\n            stack.append(c)\n        elif not stack or stack.pop() != pairs[i - 1]:\n            return False\n    return not stack\n```",
+        "simWrongAnswer": "```python\ndef balanced(s):\n    pairs = \"()[]{}\"\n    return all(s.count(pairs[i]) == s.count(pairs[i + 1]) for i in range(0, len(pairs), 2))\n```",
+        "weight": 2,
+        "generatorVersion": 3,
+        "rung": "medium"
+      },
+      {
+        "id": "CODEWRITE_TASK_9",
+        "kind": "codewrite",
+        "prompt": "[CODEWRITE_TASK] Write this Python function.\n\ndef merge_intervals(intervals):\n\nintervals is a list of [start, end] pairs of integers (start <= end, inclusive), in any order. Merge every pair of intervals that overlap or touch (end + 1 == start counts as touching, so [1, 3] and [4, 6] merge). Return the merged intervals as a list of [start, end] lists sorted by start.\n\nExamples:\nmerge_intervals([[7, 11], [27, 28], [20, 25], [19, 21]]) == [[7, 11], [19, 25], [27, 28]]\nmerge_intervals([]) == []\n\nIt will be run against hidden tests. Use only the standard library modules math, collections, itertools, functools, heapq, bisect, re; no other imports, no file or network access, no input(). Reply with the complete function in one ```python code block.",
+        "judging": {
+          "type": "program",
+          "entry": "merge_intervals",
+          "cases": [
+            {
+              "args": [
+                []
+              ]
+            },
+            {
+              "args": [
+                [
+                  [
+                    5,
+                    8
+                  ],
+                  [
+                    1,
+                    3
+                  ],
+                  [
+                    2,
+                    4
+                  ]
+                ]
+              ]
+            },
+            {
+              "args": [
+                [
+                  [
+                    1,
+                    3
+                  ],
+                  [
+                    4,
+                    6
+                  ]
+                ]
+              ]
+            },
+            {
+              "args": [
+                [
+                  [
+                    1,
+                    10
+                  ],
+                  [
+                    2,
+                    3
+                  ]
+                ]
+              ]
+            },
+            {
+              "args": [
+                [
+                  [
+                    13,
+                    13
+                  ],
+                  [
+                    21,
+                    22
+                  ],
+                  [
+                    29,
+                    31
+                  ],
+                  [
+                    26,
+                    31
+                  ]
+                ]
+              ]
+            },
+            {
+              "args": [
+                [
+                  [
+                    2,
+                    8
+                  ],
+                  [
+                    1,
+                    1
+                  ],
+                  [
+                    25,
+                    26
+                  ],
+                  [
+                    29,
+                    34
+                  ]
+                ]
+              ]
+            },
+            {
+              "args": [
+                [
+                  [
+                    23,
+                    24
+                  ],
+                  [
+                    2,
+                    5
+                  ],
+                  [
+                    24,
+                    29
+                  ]
+                ]
+              ]
+            },
+            {
+              "args": [
+                [
+                  [
+                    7,
+                    11
+                  ],
+                  [
+                    27,
+                    28
+                  ],
+                  [
+                    20,
+                    25
+                  ],
+                  [
+                    19,
+                    21
+                  ]
+                ]
+              ]
+            }
+          ],
+          "expected": [
+            [],
+            [
+              [
+                1,
+                8
+              ]
+            ],
+            [
+              [
+                1,
+                6
+              ]
+            ],
+            [
+              [
+                1,
+                10
+              ]
+            ],
+            [
+              [
+                13,
+                13
+              ],
+              [
+                21,
+                22
+              ],
+              [
+                26,
+                31
+              ]
+            ],
+            [
+              [
+                1,
+                8
+              ],
+              [
+                25,
+                26
+              ],
+              [
+                29,
+                34
+              ]
+            ],
+            [
+              [
+                2,
+                5
+              ],
+              [
+                23,
+                29
+              ]
+            ],
+            [
+              [
+                7,
+                11
+              ],
+              [
+                19,
+                25
+              ],
+              [
+                27,
+                28
+              ]
+            ]
+          ]
+        },
+        "reference": "def merge_intervals(intervals):\n    out = []\n    for a, b in sorted(intervals):\n        if out and a <= out[-1][1] + 1:\n            out[-1][1] = max(out[-1][1], b)\n        else:\n            out.append([a, b])\n    return out\n",
+        "buggy": "def merge_intervals(intervals):\n    out = []\n    for a, b in intervals:\n        if out and a <= out[-1][1] + 1:\n            out[-1][1] = max(out[-1][1], b)\n        else:\n            out.append([a, b])\n    return out\n",
+        "simAnswer": "```python\ndef merge_intervals(intervals):\n    out = []\n    for a, b in sorted(intervals):\n        if out and a <= out[-1][1] + 1:\n            out[-1][1] = max(out[-1][1], b)\n        else:\n            out.append([a, b])\n    return out\n```",
+        "simWrongAnswer": "```python\ndef merge_intervals(intervals):\n    out = []\n    for a, b in intervals:\n        if out and a <= out[-1][1] + 1:\n            out[-1][1] = max(out[-1][1], b)\n        else:\n            out.append([a, b])\n    return out\n```",
+        "weight": 2,
+        "generatorVersion": 3,
+        "rung": "hard"
+      },
+      {
+        "id": "CODEWRITE_TASK_10",
+        "kind": "codewrite",
+        "prompt": "[CODEWRITE_TASK] Write this Python function.\n\ndef merge_intervals(intervals):\n\nintervals is a list of [start, end] pairs of integers (start <= end, inclusive), in any order. Merge every pair of intervals that overlap, meaning they share at least one integer ([1, 3] and [3, 5] merge; [1, 3] and [4, 6] do not). Return the merged intervals as a list of [start, end] lists sorted by start.\n\nExamples:\nmerge_intervals([[26, 29], [18, 21], [2, 2], [4, 5]]) == [[2, 2], [4, 5], [18, 21], [26, 29]]\nmerge_intervals([]) == []\n\nIt will be run against hidden tests. Use only the standard library modules math, collections, itertools, functools, heapq, bisect, re; no other imports, no file or network access, no input(). Reply with the complete function in one ```python code block.",
+        "judging": {
+          "type": "program",
+          "entry": "merge_intervals",
+          "cases": [
+            {
+              "args": [
+                []
+              ]
+            },
+            {
+              "args": [
+                [
+                  [
+                    5,
+                    8
+                  ],
+                  [
+                    1,
+                    3
+                  ],
+                  [
+                    2,
+                    4
+                  ]
+                ]
+              ]
+            },
+            {
+              "args": [
+                [
+                  [
+                    1,
+                    3
+                  ],
+                  [
+                    4,
+                    6
+                  ]
+                ]
+              ]
+            },
+            {
+              "args": [
+                [
+                  [
+                    1,
+                    10
+                  ],
+                  [
+                    2,
+                    3
+                  ]
+                ]
+              ]
+            },
+            {
+              "args": [
+                [
+                  [
+                    15,
+                    16
+                  ],
+                  [
+                    0,
+                    5
+                  ],
+                  [
+                    1,
+                    4
+                  ],
+                  [
+                    26,
+                    27
+                  ],
+                  [
+                    26,
+                    26
+                  ]
+                ]
+              ]
+            },
+            {
+              "args": [
+                [
+                  [
+                    13,
+                    19
+                  ],
+                  [
+                    10,
+                    12
+                  ],
+                  [
+                    13,
+                    19
+                  ],
+                  [
+                    18,
+                    20
+                  ],
+                  [
+                    9,
+                    11
+                  ]
+                ]
+              ]
+            },
+            {
+              "args": [
+                [
+                  [
+                    24,
+                    26
+                  ],
+                  [
+                    14,
+                    16
+                  ],
+                  [
+                    27,
+                    30
+                  ],
+                  [
+                    24,
+                    27
+                  ],
+                  [
+                    13,
+                    15
+                  ]
+                ]
+              ]
+            },
+            {
+              "args": [
+                [
+                  [
+                    26,
+                    29
+                  ],
+                  [
+                    18,
+                    21
+                  ],
+                  [
+                    2,
+                    2
+                  ],
+                  [
+                    4,
+                    5
+                  ]
+                ]
+              ]
+            }
+          ],
+          "expected": [
+            [],
+            [
+              [
+                1,
+                4
+              ],
+              [
+                5,
+                8
+              ]
+            ],
+            [
+              [
+                1,
+                3
+              ],
+              [
+                4,
+                6
+              ]
+            ],
+            [
+              [
+                1,
+                10
+              ]
+            ],
+            [
+              [
+                0,
+                5
+              ],
+              [
+                15,
+                16
+              ],
+              [
+                26,
+                27
+              ]
+            ],
+            [
+              [
+                9,
+                12
+              ],
+              [
+                13,
+                20
+              ]
+            ],
+            [
+              [
+                13,
+                16
+              ],
+              [
+                24,
+                30
+              ]
+            ],
+            [
+              [
+                2,
+                2
+              ],
+              [
+                4,
+                5
+              ],
+              [
+                18,
+                21
+              ],
+              [
+                26,
+                29
+              ]
+            ]
+          ]
+        },
+        "reference": "def merge_intervals(intervals):\n    out = []\n    for a, b in sorted(intervals):\n        if out and a <= out[-1][1] + 0:\n            out[-1][1] = max(out[-1][1], b)\n        else:\n            out.append([a, b])\n    return out\n",
+        "buggy": "def merge_intervals(intervals):\n    out = []\n    for a, b in intervals:\n        if out and a <= out[-1][1] + 0:\n            out[-1][1] = max(out[-1][1], b)\n        else:\n            out.append([a, b])\n    return out\n",
+        "simAnswer": "```python\ndef merge_intervals(intervals):\n    out = []\n    for a, b in sorted(intervals):\n        if out and a <= out[-1][1] + 0:\n            out[-1][1] = max(out[-1][1], b)\n        else:\n            out.append([a, b])\n    return out\n```",
+        "simWrongAnswer": "```python\ndef merge_intervals(intervals):\n    out = []\n    for a, b in intervals:\n        if out and a <= out[-1][1] + 0:\n            out[-1][1] = max(out[-1][1], b)\n        else:\n            out.append([a, b])\n    return out\n```",
+        "weight": 2,
+        "generatorVersion": 3,
+        "rung": "hard"
+      },
+      {
+        "id": "CODEWRITE_TASK_11",
+        "kind": "codewrite",
+        "prompt": "[CODEWRITE_TASK] Write this Python function.\n\ndef top_words(text, k):\n\nWords are runs of letters a-z, compared in lowercase. Return the k most frequent words as a list, most frequent first. Break ties by which word appears first in text. If there are fewer than k distinct words, return them all.\n\nExamples:\ntop_words(\"Ash ash fen bay Elm cob bay fen Bay elm.\", 3) == [\"bay\", \"ash\", \"fen\"]\ntop_words(\"\", 2) == []\n\nIt will be run against hidden tests. Use only the standard library modules math, collections, itertools, functools, heapq, bisect, re; no other imports, no file or network access, no input(). Reply with the complete function in one ```python code block.",
+        "judging": {
+          "type": "program",
+          "entry": "top_words",
+          "cases": [
+            {
+              "args": [
+                "",
+                2
+              ]
+            },
+            {
+              "args": [
+                "Elm ash, elm! ASH bay.",
+                1
+              ]
+            },
+            {
+              "args": [
+                "cob dun cob dun bay",
+                2
+              ]
+            },
+            {
+              "args": [
+                "fen gale hay",
+                5
+              ]
+            },
+            {
+              "args": [
+                "Cob cob fen ash Ash dun bay elm Fen elm dun fen.",
+                1
+              ]
+            },
+            {
+              "args": [
+                "Bay, dun, cob, cob, Ash, ash, elm, elm, Cob, ash, dun.",
+                3
+              ]
+            },
+            {
+              "args": [
+                "Ash fen ash elm Dun cob elm fen Elm dun bay fen.",
+                3
+              ]
+            },
+            {
+              "args": [
+                "Ash ash fen bay Elm cob bay fen Bay elm.",
+                3
+              ]
+            }
+          ],
+          "expected": [
+            [],
+            [
+              "elm"
+            ],
+            [
+              "cob",
+              "dun"
+            ],
+            [
+              "fen",
+              "gale",
+              "hay"
+            ],
+            [
+              "fen"
+            ],
+            [
+              "cob",
+              "ash",
+              "dun"
+            ],
+            [
+              "fen",
+              "elm",
+              "ash"
+            ],
+            [
+              "bay",
+              "ash",
+              "fen"
+            ]
+          ]
+        },
+        "reference": "import re\nfrom collections import Counter\n\ndef top_words(text, k):\n    counts = Counter(re.findall(r\"[a-z]+\", text.lower()))\n    return [w for w, _ in counts.most_common(k)]\n",
+        "buggy": "import re\nfrom collections import Counter\n\ndef top_words(text, k):\n    counts = Counter(re.findall(r\"[a-z]+\", text.lower()))\n    return [w for w, _ in sorted(counts.items(), key=lambda p: (-p[1], p[0]))[:k]]\n",
+        "simAnswer": "```python\nimport re\nfrom collections import Counter\n\ndef top_words(text, k):\n    counts = Counter(re.findall(r\"[a-z]+\", text.lower()))\n    return [w for w, _ in counts.most_common(k)]\n```",
+        "simWrongAnswer": "```python\nimport re\nfrom collections import Counter\n\ndef top_words(text, k):\n    counts = Counter(re.findall(r\"[a-z]+\", text.lower()))\n    return [w for w, _ in sorted(counts.items(), key=lambda p: (-p[1], p[0]))[:k]]\n```",
+        "weight": 2,
+        "generatorVersion": 3,
+        "rung": "hard"
+      },
+      {
+        "id": "CODEWRITE_TASK_12",
+        "kind": "codewrite",
+        "prompt": "[CODEWRITE_TASK] Write this Python function.\n\ndef merge_intervals(intervals):\n\nintervals is a list of [start, end] pairs of integers (start <= end, inclusive), in any order. Merge every pair of intervals that overlap, meaning they share at least one integer ([1, 3] and [3, 5] merge; [1, 3] and [4, 6] do not). Return the merged intervals as a list of [start, end] lists sorted by start.\n\nExamples:\nmerge_intervals([[27, 27], [6, 7], [18, 18], [28, 28]]) == [[6, 7], [18, 18], [27, 27], [28, 28]]\nmerge_intervals([]) == []\n\nIt will be run against hidden tests. Use only the standard library modules math, collections, itertools, functools, heapq, bisect, re; no other imports, no file or network access, no input(). Reply with the complete function in one ```python code block.",
+        "judging": {
+          "type": "program",
+          "entry": "merge_intervals",
+          "cases": [
+            {
+              "args": [
+                []
+              ]
+            },
+            {
+              "args": [
+                [
+                  [
+                    5,
+                    8
+                  ],
+                  [
+                    1,
+                    3
+                  ],
+                  [
+                    2,
+                    4
+                  ]
+                ]
+              ]
+            },
+            {
+              "args": [
+                [
+                  [
+                    1,
+                    3
+                  ],
+                  [
+                    4,
+                    6
+                  ]
+                ]
+              ]
+            },
+            {
+              "args": [
+                [
+                  [
+                    1,
+                    10
+                  ],
+                  [
+                    2,
+                    3
+                  ]
+                ]
+              ]
+            },
+            {
+              "args": [
+                [
+                  [
+                    25,
+                    29
+                  ],
+                  [
+                    29,
+                    32
+                  ],
+                  [
+                    23,
+                    28
+                  ],
+                  [
+                    15,
+                    17
+                  ],
+                  [
+                    7,
+                    10
+                  ]
+                ]
+              ]
+            },
+            {
+              "args": [
+                [
+                  [
+                    27,
+                    30
+                  ],
+                  [
+                    23,
+                    24
+                  ],
+                  [
+                    11,
+                    11
+                  ],
+                  [
+                    1,
+                    2
+                  ],
+                  [
+                    5,
+                    10
+                  ],
+                  [
+                    22,
+                    27
+                  ]
+                ]
+              ]
+            },
+            {
+              "args": [
+                [
+                  [
+                    4,
+                    5
+                  ],
+                  [
+                    7,
+                    10
+                  ],
+                  [
+                    23,
+                    24
+                  ],
+                  [
+                    27,
+                    30
+                  ],
+                  [
+                    10,
+                    14
+                  ],
+                  [
+                    10,
+                    16
+                  ]
+                ]
+              ]
+            },
+            {
+              "args": [
+                [
+                  [
+                    27,
+                    27
+                  ],
+                  [
+                    6,
+                    7
+                  ],
+                  [
+                    18,
+                    18
+                  ],
+                  [
+                    28,
+                    28
+                  ]
+                ]
+              ]
+            }
+          ],
+          "expected": [
+            [],
+            [
+              [
+                1,
+                4
+              ],
+              [
+                5,
+                8
+              ]
+            ],
+            [
+              [
+                1,
+                3
+              ],
+              [
+                4,
+                6
+              ]
+            ],
+            [
+              [
+                1,
+                10
+              ]
+            ],
+            [
+              [
+                7,
+                10
+              ],
+              [
+                15,
+                17
+              ],
+              [
+                23,
+                32
+              ]
+            ],
+            [
+              [
+                1,
+                2
+              ],
+              [
+                5,
+                10
+              ],
+              [
+                11,
+                11
+              ],
+              [
+                22,
+                30
+              ]
+            ],
+            [
+              [
+                4,
+                5
+              ],
+              [
+                7,
+                16
+              ],
+              [
+                23,
+                24
+              ],
+              [
+                27,
+                30
+              ]
+            ],
+            [
+              [
+                6,
+                7
+              ],
+              [
+                18,
+                18
+              ],
+              [
+                27,
+                27
+              ],
+              [
+                28,
+                28
+              ]
+            ]
+          ]
+        },
+        "reference": "def merge_intervals(intervals):\n    out = []\n    for a, b in sorted(intervals):\n        if out and a <= out[-1][1] + 0:\n            out[-1][1] = max(out[-1][1], b)\n        else:\n            out.append([a, b])\n    return out\n",
+        "buggy": "def merge_intervals(intervals):\n    out = []\n    for a, b in intervals:\n        if out and a <= out[-1][1] + 0:\n            out[-1][1] = max(out[-1][1], b)\n        else:\n            out.append([a, b])\n    return out\n",
+        "simAnswer": "```python\ndef merge_intervals(intervals):\n    out = []\n    for a, b in sorted(intervals):\n        if out and a <= out[-1][1] + 0:\n            out[-1][1] = max(out[-1][1], b)\n        else:\n            out.append([a, b])\n    return out\n```",
+        "simWrongAnswer": "```python\ndef merge_intervals(intervals):\n    out = []\n    for a, b in intervals:\n        if out and a <= out[-1][1] + 0:\n            out[-1][1] = max(out[-1][1], b)\n        else:\n            out.append([a, b])\n    return out\n```",
+        "weight": 2,
+        "generatorVersion": 3,
+        "rung": "hard"
+      }
+    ]
+  }
+}

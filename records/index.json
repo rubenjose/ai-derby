@@ -38,5 +38,37 @@
     "file": "records/goldcup.json",
     "sha256": "8da62e99f2e2d42c5e37fca4ef269304233e81f3352279dd7f655e6a499d9374",
     "bytes": 587872
+  },
+  {
+    "race": "code",
+    "title": "The Stack Trace Chase",
+    "date": "2026-11-19",
+    "file": "records/code.json",
+    "sha256": "f87f6fca2b6e1bb29be421b1d27ee737ebd32fb9012d1dd15ac0defe6766f3e6",
+    "bytes": 204205
+  },
+  {
+    "race": "codewrite",
+    "title": "The Patchwork Handicap",
+    "date": "2026-11-19",
+    "file": "records/codewrite.json",
+    "sha256": "7ebcee07a4a18f0c87dfaeea3d157df2e333d327a1b958b0f623390801f9b73c",
+    "bytes": 180802
+  },
+  {
+    "race": "retrieval2",
+    "title": "The Archive Stakes",
+    "date": "2026-11-19",
+    "file": "records/retrieval2.json",
+    "sha256": "f5866b648d35f649f808f202a4a9d3f317a27ef4a0d6ded7c7a58f550a4415aa",
+    "bytes": 71478
+  },
+  {
+    "race": "json3",
+    "title": "The Bracket Chase",
+    "date": "2026-11-19",
+    "file": "records/json3.json",
+    "sha256": "07e5158e8fe2dfe0c323fa6c4b819dd3846e0606349cd9c506ed880565604753",
+    "bytes": 122773
   }
 ]

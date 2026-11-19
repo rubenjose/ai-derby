@@ -1,0 +1,3457 @@
+{
+  "raceId": "race-5e03c4ccf49eb9685efee06d8c0e972c",
+  "seed": "json_20261125",
+  "trackType": "json",
+  "grade": "scale",
+  "levels": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "distance": "mile",
+  "fences": 12,
+  "raceClass": "local",
+  "provider": "lmstudio",
+  "timestamp": "2026-11-19T15:41:45.521Z",
+  "raceConditions": {
+    "scoringVersion": 3,
+    "order": [
+      "clears",
+      "partial",
+      "tokens",
+      "seconds"
+    ],
+    "faultsPerKnock": 4,
+    "partial": "each clear counts 1; a knocked fence counts constraintsEarned/constraintsEarnable (rules a blank reply would fail) or testsPassed/testsTotal",
+    "tokensBasis": "completion tokens over every fence; a failed call or a missing count is charged the token cap",
+    "unraced": "a horse with no judged fences places behind every horse that ran",
+    "voidRule": "no horse clears a fence or earns partial credit: the race is void",
+    "formAffectsTime": false
+  },
+  "entrants": [
+    {
+      "position": 1,
+      "horseId": "gemma2_2b",
+      "name": "Gemma 2 2B",
+      "accuracy": 0.83,
+      "clears": 10,
+      "fences": 12,
+      "faults": 8,
+      "partial": 11.489,
+      "tokens": 975,
+      "avgLatencyMs": 1975,
+      "judgeScore": 72.107,
+      "finalTimeSeconds": 23.7,
+      "tasks": [
+        {
+          "taskId": "JSON_L1_1",
+          "latencyMs": 1249,
+          "accuracy": 1,
+          "score": 9.608,
+          "output": "```json\n{\n  \"customer\": {\n    \"name\": \"Anouk Pell\",\n    \"town\": \"Thorngate\"\n  },\n  \"delivery_date\": \"2026-11-06\" \n}\n```",
+          "ttftMs": 199,
+          "completionTokens": 58,
+          "tokensPerSec": 54.3,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "{\"customer\":{\"name\":\"Anouk Pell\",\"town\":\"Thorngate\"},\"delivery_date\":\"2026-11-06\"}",
+          "extraction": "fenced",
+          "constraintsMet": 3,
+          "constraintsTotal": 3,
+          "constraintsEarned": 3,
+          "constraintsEarnable": 3,
+          "streamMarks": [
+            [
+              768,
+              32
+            ],
+            [
+              1248,
+              57
+            ]
+          ],
+          "promptTokens": 155
+        },
+        {
+          "taskId": "JSON_L1_2",
+          "latencyMs": 1208,
+          "accuracy": 1,
+          "score": 9.934,
+          "output": "```json\n{\n  \"customer\": {\n    \"name\": \"Lark Rook\",\n    \"town\": \"Langstead\"\n  },\n  \"delivery_date\": \"2027-05-20\" \n}\n```",
+          "ttftMs": 185,
+          "completionTokens": 57,
+          "tokensPerSec": 54.7,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "{\"customer\":{\"name\":\"Lark Rook\",\"town\":\"Langstead\"},\"delivery_date\":\"2027-05-20\"}",
+          "extraction": "fenced",
+          "constraintsMet": 3,
+          "constraintsTotal": 3,
+          "constraintsEarned": 3,
+          "constraintsEarnable": 3,
+          "streamMarks": [
+            [
+              753,
+              32
+            ],
+            [
+              1208,
+              56
+            ]
+          ],
+          "promptTokens": 148
+        },
+        {
+          "taskId": "JSON_L2_1",
+          "latencyMs": 1218,
+          "accuracy": 1,
+          "score": 9.852,
+          "output": "```json\n{\n  \"customer\": {\n    \"name\": \"Vance Marsh\",\n    \"town\": \"Hartmere\"\n  },\n  \"delivery_date\": \"2026-09-12\"\n}\n```",
+          "ttftMs": 213,
+          "completionTokens": 56,
+          "tokensPerSec": 54.7,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "{\"customer\":{\"name\":\"Vance Marsh\",\"town\":\"Hartmere\"},\"delivery_date\":\"2026-09-12\"}",
+          "extraction": "fenced",
+          "constraintsMet": 3,
+          "constraintsTotal": 3,
+          "constraintsEarned": 3,
+          "constraintsEarnable": 3,
+          "streamMarks": [
+            [
+              781,
+              32
+            ],
+            [
+              1218,
+              55
+            ]
+          ],
+          "promptTokens": 173
+        },
+        {
+          "taskId": "JSON_L2_2",
+          "latencyMs": 1212,
+          "accuracy": 1,
+          "score": 9.901,
+          "output": "```json\n{\n  \"customer\": {\n    \"name\": \"Quill Winter\",\n    \"town\": \"Langby\"\n  },\n  \"delivery_date\": \"2026-10-15\" \n}\n```",
+          "ttftMs": 189,
+          "completionTokens": 57,
+          "tokensPerSec": 54.7,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "{\"customer\":{\"name\":\"Quill Winter\",\"town\":\"Langby\"},\"delivery_date\":\"2026-10-15\"}",
+          "extraction": "fenced",
+          "constraintsMet": 3,
+          "constraintsTotal": 3,
+          "constraintsEarned": 3,
+          "constraintsEarnable": 3,
+          "streamMarks": [
+            [
+              757,
+              32
+            ],
+            [
+              1212,
+              56
+            ]
+          ],
+          "promptTokens": 163
+        },
+        {
+          "taskId": "JSON_L3_1",
+          "latencyMs": 1681,
+          "accuracy": 1,
+          "score": 7.139,
+          "output": "```json\n{\n  \"customer\": {\n    \"name\": \"Milo Tanner\",\n    \"town\": \"Dunstead\"\n  },\n  \"delivery_date\": \"2027-08-01\",\n  \"items\": [\n    {\"item\": \"sacks\", \"quantity\": 14}\n  ]\n}\n```",
+          "ttftMs": 244,
+          "completionTokens": 80,
+          "tokensPerSec": 55,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "{\"customer\":{\"name\":\"Milo Tanner\",\"town\":\"Dunstead\"},\"delivery_date\":\"2027-08-01\",\"items\":[{\"item\":\"sacks\",\"quantity\":14}]}",
+          "extraction": "fenced",
+          "constraintsMet": 5,
+          "constraintsTotal": 5,
+          "constraintsEarned": 5,
+          "constraintsEarnable": 5,
+          "streamMarks": [
+            [
+              807,
+              32
+            ],
+            [
+              1396,
+              64
+            ],
+            [
+              1681,
+              79
+            ]
+          ],
+          "promptTokens": 224
+        },
+        {
+          "taskId": "JSON_L3_2",
+          "latencyMs": 2172,
+          "accuracy": 1,
+          "score": 5.525,
+          "output": "```json\n{\n  \"customer\": {\n    \"name\": \"Barnaby Harrow\",\n    \"town\": \"Langton\"\n  },\n  \"delivery_date\": \"2027-11-03\",\n  \"items\": [\n    {\"item\": \"baskets\", \"quantity\": 22}\n  ]\n}\n```",
+          "ttftMs": 304,
+          "completionTokens": 80,
+          "tokensPerSec": 42.3,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "{\"customer\":{\"name\":\"Barnaby Harrow\",\"town\":\"Langton\"},\"delivery_date\":\"2027-11-03\",\"items\":[{\"item\":\"baskets\",\"quantity\":22}]}",
+          "extraction": "fenced",
+          "constraintsMet": 5,
+          "constraintsTotal": 5,
+          "constraintsEarned": 5,
+          "constraintsEarnable": 5,
+          "streamMarks": [
+            [
+              1028,
+              32
+            ],
+            [
+              1781,
+              64
+            ],
+            [
+              2172,
+              79
+            ]
+          ],
+          "promptTokens": 233
+        },
+        {
+          "taskId": "JSON_L4_1",
+          "latencyMs": 2400,
+          "accuracy": 0,
+          "score": 0,
+          "output": "```json\n{\n  \"customer\": {\n    \"name\": \"Barnaby Whitlow\",\n    \"town\": \"Langwick\"\n  },\n  \"delivery_date\": \"2027-01-01\",\n  \"items\": [\n    {\"item\": \"candles\", \"quantity\": 2},\n    {\"item\": null, \"quantity\": null}\n  ]\n}\n```",
+          "ttftMs": 296,
+          "completionTokens": 92,
+          "tokensPerSec": 43.3,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "{\"customer\":{\"name\":\"Barnaby Whitlow\",\"town\":\"Langwick\"},\"delivery_date\":\"2027-01-01\",\"items\":[{\"item\":\"candles\",\"quantity\":2},{\"item\":null,\"quantity\":null}]}",
+          "extraction": "fenced",
+          "constraintsMet": 5,
+          "constraintsTotal": 5,
+          "constraintsEarned": 3,
+          "constraintsEarnable": 5,
+          "streamMarks": [
+            [
+              1128,
+              32
+            ],
+            [
+              1765,
+              64
+            ],
+            [
+              2400,
+              91
+            ]
+          ],
+          "fieldsWrong": [
+            "+items[1].item",
+            "+items[1].quantity"
+          ],
+          "promptTokens": 240
+        },
+        {
+          "taskId": "JSON_L4_2",
+          "latencyMs": 2024,
+          "accuracy": 1,
+          "score": 5.929,
+          "output": "```json\n{\n  \"customer\": {\n    \"name\": \"Cleo Pell\",\n    \"town\": \"Ashfield\"\n  },\n  \"delivery_date\": \"2026-03-14\",\n  \"items\": [\n    {\"item\": \"shovels\", \"quantity\": 5}\n  ]\n}\n```",
+          "ttftMs": 286,
+          "completionTokens": 80,
+          "tokensPerSec": 45.5,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "{\"customer\":{\"name\":\"Cleo Pell\",\"town\":\"Ashfield\"},\"delivery_date\":\"2026-03-14\",\"items\":[{\"item\":\"shovels\",\"quantity\":5}]}",
+          "extraction": "fenced",
+          "constraintsMet": 5,
+          "constraintsTotal": 5,
+          "constraintsEarned": 5,
+          "constraintsEarnable": 5,
+          "streamMarks": [
+            [
+              951,
+              32
+            ],
+            [
+              1679,
+              64
+            ],
+            [
+              2024,
+              79
+            ]
+          ],
+          "promptTokens": 238
+        },
+        {
+          "taskId": "JSON_L5_1",
+          "latencyMs": 2282,
+          "accuracy": 1,
+          "score": 5.259,
+          "output": "```json\n{\n  \"customer\": {\n    \"name\": \"Rafe Fellow\",\n    \"town\": \"Carton\"\n  },\n  \"delivery_date\": \"2026-12-04\",\n  \"items\": [\n    {\"item\": \"hinges\", \"quantity\": 2},\n    {\"item\": \"chisels\", \"quantity\": 24}\n  ]\n}\n```",
+          "ttftMs": 280,
+          "completionTokens": 96,
+          "tokensPerSec": 47.5,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "{\"customer\":{\"name\":\"Rafe Fellow\",\"town\":\"Carton\"},\"delivery_date\":\"2026-12-04\",\"items\":[{\"item\":\"hinges\",\"quantity\":2},{\"item\":\"chisels\",\"quantity\":24}]}",
+          "extraction": "fenced",
+          "constraintsMet": 7,
+          "constraintsTotal": 7,
+          "constraintsEarned": 7,
+          "constraintsEarnable": 7,
+          "streamMarks": [
+            [
+              889,
+              32
+            ],
+            [
+              1564,
+              64
+            ],
+            [
+              2282,
+              95
+            ]
+          ],
+          "promptTokens": 248
+        },
+        {
+          "taskId": "JSON_L5_2",
+          "latencyMs": 2450,
+          "accuracy": 1,
+          "score": 4.898,
+          "output": "```json\n{\n  \"customer\": {\n    \"name\": \"Ulla Marsh\",\n    \"town\": \"Thornmere\"\n  },\n  \"delivery_date\": \"2027-07-10\",\n  \"items\": [\n    {\"item\": \"barrels\", \"quantity\": 10},\n    {\"item\": \"hammers\", \"quantity\": 5}\n  ]\n}\n```",
+          "ttftMs": 280,
+          "completionTokens": 96,
+          "tokensPerSec": 43.8,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "{\"customer\":{\"name\":\"Ulla Marsh\",\"town\":\"Thornmere\"},\"delivery_date\":\"2027-07-10\",\"items\":[{\"item\":\"barrels\",\"quantity\":10},{\"item\":\"hammers\",\"quantity\":5}]}",
+          "extraction": "fenced",
+          "constraintsMet": 7,
+          "constraintsTotal": 7,
+          "constraintsEarned": 7,
+          "constraintsEarnable": 7,
+          "streamMarks": [
+            [
+              987,
+              32
+            ],
+            [
+              1727,
+              64
+            ],
+            [
+              2450,
+              95
+            ]
+          ],
+          "promptTokens": 246
+        },
+        {
+          "taskId": "JSON_L6_1",
+          "latencyMs": 2847,
+          "accuracy": 0,
+          "score": 0,
+          "output": "```json\n{\n  \"customer\": {\n    \"name\": \"Hester Marsh\",\n    \"town\": \"Glenstead\"\n  },\n  \"delivery_date\": \"2027-10-10\",\n  \"items\": [\n    {\"item\": \"lamps\", \"quantity\": 12},\n    {\"item\": \"candles\", \"quantity\": 8},\n    {\"item\": \"hinges\", \"quantity\": 4}\n  ]\n}\n```",
+          "ttftMs": 299,
+          "completionTokens": 110,
+          "tokensPerSec": 42.8,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "{\"customer\":{\"name\":\"Hester Marsh\",\"town\":\"Glenstead\"},\"delivery_date\":\"2027-10-10\",\"items\":[{\"item\":\"lamps\",\"quantity\":12},{\"item\":\"candles\",\"quantity\":8},{\"item\":\"hinges\",\"quantity\":4}]}",
+          "extraction": "fenced",
+          "constraintsMet": 8,
+          "constraintsTotal": 9,
+          "constraintsEarned": 8,
+          "constraintsEarnable": 9,
+          "streamMarks": [
+            [
+              969,
+              32
+            ],
+            [
+              1707,
+              64
+            ],
+            [
+              2515,
+              96
+            ],
+            [
+              2847,
+              109
+            ]
+          ],
+          "fieldsWrong": [
+            "items[0].quantity"
+          ],
+          "promptTokens": 252
+        },
+        {
+          "taskId": "JSON_L6_2",
+          "latencyMs": 2954,
+          "accuracy": 1,
+          "score": 4.062,
+          "output": "```json\n{\n  \"customer\": {\n    \"name\": \"Vance Crane\",\n    \"town\": \"Ashgate\"\n  },\n  \"delivery_date\": \"2026-04-01\",\n  \"items\": [\n    {\"item\": \"jugs\", \"quantity\": 10},\n    {\"item\": \"sacks\", \"quantity\": 48},\n    {\"item\": \"lanterns\", \"quantity\": 18}\n  ]\n}\n```",
+          "ttftMs": 302,
+          "completionTokens": 113,
+          "tokensPerSec": 42.2,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "{\"customer\":{\"name\":\"Vance Crane\",\"town\":\"Ashgate\"},\"delivery_date\":\"2026-04-01\",\"items\":[{\"item\":\"jugs\",\"quantity\":10},{\"item\":\"sacks\",\"quantity\":48},{\"item\":\"lanterns\",\"quantity\":18}]}",
+          "extraction": "fenced",
+          "constraintsMet": 9,
+          "constraintsTotal": 9,
+          "constraintsEarned": 9,
+          "constraintsEarnable": 9,
+          "streamMarks": [
+            [
+              1028,
+              32
+            ],
+            [
+              1874,
+              64
+            ],
+            [
+              2623,
+              96
+            ],
+            [
+              2954,
+              112
+            ]
+          ],
+          "promptTokens": 249
+        }
+      ],
+      "runtime": {
+        "modelId": "gemma-2-2b-it@q8_0",
+        "format": "gguf",
+        "quantization": "Q8_0",
+        "arch": "gemma2"
+      },
+      "pedigree": {
+        "bloodline": "Gemma",
+        "stable": "Google DeepMind",
+        "silks": {
+          "primary": "#4285f4",
+          "secondary": "#ea4335"
+        }
+      }
+    },
+    {
+      "position": 2,
+      "horseId": "gemma2_2b_q5",
+      "name": "Gemma 2 2B Q5",
+      "accuracy": 0.83,
+      "clears": 10,
+      "fences": 12,
+      "faults": 8,
+      "partial": 11.489,
+      "tokens": 975,
+      "avgLatencyMs": 2021,
+      "judgeScore": 65.289,
+      "finalTimeSeconds": 24.25,
+      "tasks": [
+        {
+          "taskId": "JSON_L1_1",
+          "latencyMs": 1434,
+          "accuracy": 1,
+          "score": 8.368,
+          "output": "```json\n{\n  \"customer\": {\n    \"name\": \"Anouk Pell\",\n    \"town\": \"Thorngate\"\n  },\n  \"delivery_date\": \"2026-11-06\" \n}\n```",
+          "ttftMs": 259,
+          "completionTokens": 58,
+          "tokensPerSec": 48.5,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "{\"customer\":{\"name\":\"Anouk Pell\",\"town\":\"Thorngate\"},\"delivery_date\":\"2026-11-06\"}",
+          "extraction": "fenced",
+          "constraintsMet": 3,
+          "constraintsTotal": 3,
+          "constraintsEarned": 3,
+          "constraintsEarnable": 3,
+          "streamMarks": [
+            [
+              924,
+              32
+            ],
+            [
+              1434,
+              57
+            ]
+          ],
+          "promptTokens": 155
+        },
+        {
+          "taskId": "JSON_L1_2",
+          "latencyMs": 1523,
+          "accuracy": 1,
+          "score": 7.879,
+          "output": "```json\n{\n  \"customer\": {\n    \"name\": \"Lark Rook\",\n    \"town\": \"Langstead\"\n  },\n  \"delivery_date\": \"2027-05-20\" \n}\n```",
+          "ttftMs": 244,
+          "completionTokens": 57,
+          "tokensPerSec": 43.8,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "{\"customer\":{\"name\":\"Lark Rook\",\"town\":\"Langstead\"},\"delivery_date\":\"2027-05-20\"}",
+          "extraction": "fenced",
+          "constraintsMet": 3,
+          "constraintsTotal": 3,
+          "constraintsEarned": 3,
+          "constraintsEarnable": 3,
+          "streamMarks": [
+            [
+              880,
+              32
+            ],
+            [
+              1523,
+              56
+            ]
+          ],
+          "promptTokens": 148
+        },
+        {
+          "taskId": "JSON_L2_1",
+          "latencyMs": 1491,
+          "accuracy": 1,
+          "score": 8.048,
+          "output": "```json\n{\n  \"customer\": {\n    \"name\": \"Vance Marsh\",\n    \"town\": \"Hartmere\"\n  },\n  \"delivery_date\": \"2026-09-12\"\n}\n```",
+          "ttftMs": 288,
+          "completionTokens": 56,
+          "tokensPerSec": 45.7,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "{\"customer\":{\"name\":\"Vance Marsh\",\"town\":\"Hartmere\"},\"delivery_date\":\"2026-09-12\"}",
+          "extraction": "fenced",
+          "constraintsMet": 3,
+          "constraintsTotal": 3,
+          "constraintsEarned": 3,
+          "constraintsEarnable": 3,
+          "streamMarks": [
+            [
+              974,
+              32
+            ],
+            [
+              1491,
+              55
+            ]
+          ],
+          "promptTokens": 173
+        },
+        {
+          "taskId": "JSON_L2_2",
+          "latencyMs": 1388,
+          "accuracy": 1,
+          "score": 8.646,
+          "output": "```json\n{\n  \"customer\": {\n    \"name\": \"Quill Winter\",\n    \"town\": \"Langby\"\n  },\n  \"delivery_date\": \"2026-10-15\" \n}\n```",
+          "ttftMs": 251,
+          "completionTokens": 57,
+          "tokensPerSec": 49.3,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "{\"customer\":{\"name\":\"Quill Winter\",\"town\":\"Langby\"},\"delivery_date\":\"2026-10-15\"}",
+          "extraction": "fenced",
+          "constraintsMet": 3,
+          "constraintsTotal": 3,
+          "constraintsEarned": 3,
+          "constraintsEarnable": 3,
+          "streamMarks": [
+            [
+              917,
+              32
+            ],
+            [
+              1388,
+              56
+            ]
+          ],
+          "promptTokens": 163
+        },
+        {
+          "taskId": "JSON_L3_1",
+          "latencyMs": 2111,
+          "accuracy": 1,
+          "score": 5.685,
+          "output": "```json\n{\n  \"customer\": {\n    \"name\": \"Milo Tanner\",\n    \"town\": \"Dunstead\"\n  },\n  \"delivery_date\": \"2027-08-01\",\n  \"items\": [\n    {\"item\": \"sacks\", \"quantity\": 14}\n  ]\n}\n```",
+          "ttftMs": 341,
+          "completionTokens": 80,
+          "tokensPerSec": 44.6,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "{\"customer\":{\"name\":\"Milo Tanner\",\"town\":\"Dunstead\"},\"delivery_date\":\"2027-08-01\",\"items\":[{\"item\":\"sacks\",\"quantity\":14}]}",
+          "extraction": "fenced",
+          "constraintsMet": 5,
+          "constraintsTotal": 5,
+          "constraintsEarned": 5,
+          "constraintsEarnable": 5,
+          "streamMarks": [
+            [
+              1052,
+              32
+            ],
+            [
+              1763,
+              64
+            ],
+            [
+              2111,
+              79
+            ]
+          ],
+          "promptTokens": 224
+        },
+        {
+          "taskId": "JSON_L3_2",
+          "latencyMs": 2167,
+          "accuracy": 1,
+          "score": 5.538,
+          "output": "```json\n{\n  \"customer\": {\n    \"name\": \"Barnaby Harrow\",\n    \"town\": \"Langton\"\n  },\n  \"delivery_date\": \"2027-11-03\",\n  \"items\": [\n    {\"item\": \"baskets\", \"quantity\": 22}\n  ]\n}\n```",
+          "ttftMs": 367,
+          "completionTokens": 80,
+          "tokensPerSec": 43.9,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "{\"customer\":{\"name\":\"Barnaby Harrow\",\"town\":\"Langton\"},\"delivery_date\":\"2027-11-03\",\"items\":[{\"item\":\"baskets\",\"quantity\":22}]}",
+          "extraction": "fenced",
+          "constraintsMet": 5,
+          "constraintsTotal": 5,
+          "constraintsEarned": 5,
+          "constraintsEarnable": 5,
+          "streamMarks": [
+            [
+              1106,
+              32
+            ],
+            [
+              1685,
+              64
+            ],
+            [
+              2167,
+              79
+            ]
+          ],
+          "promptTokens": 233
+        },
+        {
+          "taskId": "JSON_L4_1",
+          "latencyMs": 2313,
+          "accuracy": 0,
+          "score": 0,
+          "output": "```json\n{\n  \"customer\": {\n    \"name\": \"Barnaby Whitlow\",\n    \"town\": \"Langwick\"\n  },\n  \"delivery_date\": \"2027-01-01\",\n  \"items\": [\n    {\"item\": \"candles\", \"quantity\": 2},\n    {\"item\": null, \"quantity\": null}\n  ]\n}\n```",
+          "ttftMs": 359,
+          "completionTokens": 92,
+          "tokensPerSec": 46.6,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "{\"customer\":{\"name\":\"Barnaby Whitlow\",\"town\":\"Langwick\"},\"delivery_date\":\"2027-01-01\",\"items\":[{\"item\":\"candles\",\"quantity\":2},{\"item\":null,\"quantity\":null}]}",
+          "extraction": "fenced",
+          "constraintsMet": 5,
+          "constraintsTotal": 5,
+          "constraintsEarned": 3,
+          "constraintsEarnable": 5,
+          "streamMarks": [
+            [
+              1048,
+              32
+            ],
+            [
+              1694,
+              64
+            ],
+            [
+              2313,
+              91
+            ]
+          ],
+          "fieldsWrong": [
+            "+items[1].item",
+            "+items[1].quantity"
+          ],
+          "promptTokens": 240
+        },
+        {
+          "taskId": "JSON_L4_2",
+          "latencyMs": 2001,
+          "accuracy": 1,
+          "score": 5.997,
+          "output": "```json\n{\n  \"customer\": {\n    \"name\": \"Cleo Pell\",\n    \"town\": \"Ashfield\"\n  },\n  \"delivery_date\": \"2026-03-14\",\n  \"items\": [\n    {\"item\": \"shovels\", \"quantity\": 5}\n  ]\n}\n```",
+          "ttftMs": 342,
+          "completionTokens": 80,
+          "tokensPerSec": 47.6,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "{\"customer\":{\"name\":\"Cleo Pell\",\"town\":\"Ashfield\"},\"delivery_date\":\"2026-03-14\",\"items\":[{\"item\":\"shovels\",\"quantity\":5}]}",
+          "extraction": "fenced",
+          "constraintsMet": 5,
+          "constraintsTotal": 5,
+          "constraintsEarned": 5,
+          "constraintsEarnable": 5,
+          "streamMarks": [
+            [
+              948,
+              32
+            ],
+            [
+              1604,
+              64
+            ],
+            [
+              2001,
+              79
+            ]
+          ],
+          "promptTokens": 238
+        },
+        {
+          "taskId": "JSON_L5_1",
+          "latencyMs": 2348,
+          "accuracy": 1,
+          "score": 5.111,
+          "output": "```json\n{\n  \"customer\": {\n    \"name\": \"Rafe Fellow\",\n    \"town\": \"Carton\"\n  },\n  \"delivery_date\": \"2026-12-04\",\n  \"items\": [\n    {\"item\": \"hinges\", \"quantity\": 2},\n    {\"item\": \"chisels\", \"quantity\": 24}\n  ]\n}\n```",
+          "ttftMs": 347,
+          "completionTokens": 96,
+          "tokensPerSec": 47.5,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "{\"customer\":{\"name\":\"Rafe Fellow\",\"town\":\"Carton\"},\"delivery_date\":\"2026-12-04\",\"items\":[{\"item\":\"hinges\",\"quantity\":2},{\"item\":\"chisels\",\"quantity\":24}]}",
+          "extraction": "fenced",
+          "constraintsMet": 7,
+          "constraintsTotal": 7,
+          "constraintsEarned": 7,
+          "constraintsEarnable": 7,
+          "streamMarks": [
+            [
+              1117,
+              32
+            ],
+            [
+              1717,
+              64
+            ],
+            [
+              2348,
+              95
+            ]
+          ],
+          "promptTokens": 248
+        },
+        {
+          "taskId": "JSON_L5_2",
+          "latencyMs": 2335,
+          "accuracy": 1,
+          "score": 5.139,
+          "output": "```json\n{\n  \"customer\": {\n    \"name\": \"Ulla Marsh\",\n    \"town\": \"Thornmere\"\n  },\n  \"delivery_date\": \"2027-07-10\",\n  \"items\": [\n    {\"item\": \"barrels\", \"quantity\": 10},\n    {\"item\": \"hammers\", \"quantity\": 5}\n  ]\n}\n```",
+          "ttftMs": 370,
+          "completionTokens": 96,
+          "tokensPerSec": 48.3,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "{\"customer\":{\"name\":\"Ulla Marsh\",\"town\":\"Thornmere\"},\"delivery_date\":\"2027-07-10\",\"items\":[{\"item\":\"barrels\",\"quantity\":10},{\"item\":\"hammers\",\"quantity\":5}]}",
+          "extraction": "fenced",
+          "constraintsMet": 7,
+          "constraintsTotal": 7,
+          "constraintsEarned": 7,
+          "constraintsEarnable": 7,
+          "streamMarks": [
+            [
+              1015,
+              32
+            ],
+            [
+              1652,
+              64
+            ],
+            [
+              2335,
+              95
+            ]
+          ],
+          "promptTokens": 246
+        },
+        {
+          "taskId": "JSON_L6_1",
+          "latencyMs": 2684,
+          "accuracy": 0,
+          "score": 0,
+          "output": "```json\n{\n  \"customer\": {\n    \"name\": \"Hester Marsh\",\n    \"town\": \"Glenstead\"\n  },\n  \"delivery_date\": \"2027-10-10\",\n  \"items\": [\n    {\"item\": \"lamps\", \"quantity\": 12},\n    {\"item\": \"candles\", \"quantity\": 8},\n    {\"item\": \"hinges\", \"quantity\": 4}\n  ]\n}\n```",
+          "ttftMs": 373,
+          "completionTokens": 110,
+          "tokensPerSec": 47.2,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "{\"customer\":{\"name\":\"Hester Marsh\",\"town\":\"Glenstead\"},\"delivery_date\":\"2027-10-10\",\"items\":[{\"item\":\"lamps\",\"quantity\":12},{\"item\":\"candles\",\"quantity\":8},{\"item\":\"hinges\",\"quantity\":4}]}",
+          "extraction": "fenced",
+          "constraintsMet": 8,
+          "constraintsTotal": 9,
+          "constraintsEarned": 8,
+          "constraintsEarnable": 9,
+          "streamMarks": [
+            [
+              1014,
+              32
+            ],
+            [
+              1832,
+              64
+            ],
+            [
+              2397,
+              96
+            ],
+            [
+              2684,
+              109
+            ]
+          ],
+          "fieldsWrong": [
+            "items[0].quantity"
+          ],
+          "promptTokens": 252
+        },
+        {
+          "taskId": "JSON_L6_2",
+          "latencyMs": 2460,
+          "accuracy": 1,
+          "score": 4.878,
+          "output": "```json\n{\n  \"customer\": {\n    \"name\": \"Vance Crane\",\n    \"town\": \"Ashgate\"\n  },\n  \"delivery_date\": \"2026-04-01\",\n  \"items\": [\n    {\"item\": \"jugs\", \"quantity\": 10},\n    {\"item\": \"sacks\", \"quantity\": 48},\n    {\"item\": \"lanterns\", \"quantity\": 18}\n  ]\n}\n```",
+          "ttftMs": 359,
+          "completionTokens": 113,
+          "tokensPerSec": 53.3,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "{\"customer\":{\"name\":\"Vance Crane\",\"town\":\"Ashgate\"},\"delivery_date\":\"2026-04-01\",\"items\":[{\"item\":\"jugs\",\"quantity\":10},{\"item\":\"sacks\",\"quantity\":48},{\"item\":\"lanterns\",\"quantity\":18}]}",
+          "extraction": "fenced",
+          "constraintsMet": 9,
+          "constraintsTotal": 9,
+          "constraintsEarned": 9,
+          "constraintsEarnable": 9,
+          "streamMarks": [
+            [
+              998,
+              32
+            ],
+            [
+              1616,
+              64
+            ],
+            [
+              2168,
+              96
+            ],
+            [
+              2460,
+              112
+            ]
+          ],
+          "promptTokens": 249
+        }
+      ],
+      "runtime": {
+        "modelId": "gemma-2-2b-it@q5_k_m",
+        "format": "gguf",
+        "quantization": "Q5_K_M",
+        "arch": "gemma2"
+      },
+      "pedigree": null
+    },
+    {
+      "position": 3,
+      "horseId": "vikhr_gemma_2b",
+      "name": "Vikhr Gemma 2B",
+      "accuracy": 0.75,
+      "clears": 9,
+      "fences": 12,
+      "faults": 12,
+      "partial": 11.089,
+      "tokens": 1036,
+      "avgLatencyMs": 1955,
+      "judgeScore": 67.246,
+      "finalTimeSeconds": 23.46,
+      "tasks": [
+        {
+          "taskId": "JSON_L1_1",
+          "latencyMs": 1228,
+          "accuracy": 1,
+          "score": 9.772,
+          "output": "```json\n{\n  \"customer\": {\n    \"name\": \"Anouk Pell\",\n    \"town\": \"Thorngate\"\n  },\n  \"delivery_date\": \"2026-11-06\"\n}\n```",
+          "ttftMs": 206,
+          "completionTokens": 57,
+          "tokensPerSec": 54.8,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "{\"customer\":{\"name\":\"Anouk Pell\",\"town\":\"Thorngate\"},\"delivery_date\":\"2026-11-06\"}",
+          "extraction": "fenced",
+          "constraintsMet": 3,
+          "constraintsTotal": 3,
+          "constraintsEarned": 3,
+          "constraintsEarnable": 3,
+          "streamMarks": [
+            [
+              775,
+              32
+            ],
+            [
+              1228,
+              56
+            ]
+          ],
+          "promptTokens": 155
+        },
+        {
+          "taskId": "JSON_L1_2",
+          "latencyMs": 1188,
+          "accuracy": 1,
+          "score": 10.101,
+          "output": "```json\n{\n  \"customer\": {\n    \"name\": \"Lark Rook\",\n    \"town\": \"Langstead\"\n  },\n  \"delivery_date\": \"2027-05-20\"\n}\n```",
+          "ttftMs": 185,
+          "completionTokens": 56,
+          "tokensPerSec": 54.8,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "{\"customer\":{\"name\":\"Lark Rook\",\"town\":\"Langstead\"},\"delivery_date\":\"2027-05-20\"}",
+          "extraction": "fenced",
+          "constraintsMet": 3,
+          "constraintsTotal": 3,
+          "constraintsEarned": 3,
+          "constraintsEarnable": 3,
+          "streamMarks": [
+            [
+              752,
+              32
+            ],
+            [
+              1188,
+              55
+            ]
+          ],
+          "promptTokens": 148
+        },
+        {
+          "taskId": "JSON_L2_1",
+          "latencyMs": 1220,
+          "accuracy": 1,
+          "score": 9.836,
+          "output": "```json\n{\n  \"customer\": {\n    \"name\": \"Vance Marsh\",\n    \"town\": \"Hartmere\"\n  },\n  \"delivery_date\": \"2026-09-12\"\n}\n```",
+          "ttftMs": 214,
+          "completionTokens": 56,
+          "tokensPerSec": 54.7,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "{\"customer\":{\"name\":\"Vance Marsh\",\"town\":\"Hartmere\"},\"delivery_date\":\"2026-09-12\"}",
+          "extraction": "fenced",
+          "constraintsMet": 3,
+          "constraintsTotal": 3,
+          "constraintsEarned": 3,
+          "constraintsEarnable": 3,
+          "streamMarks": [
+            [
+              783,
+              32
+            ],
+            [
+              1220,
+              55
+            ]
+          ],
+          "promptTokens": 173
+        },
+        {
+          "taskId": "JSON_L2_2",
+          "latencyMs": 1190,
+          "accuracy": 1,
+          "score": 10.084,
+          "output": "```json\n{\n  \"customer\": {\n    \"name\": \"Quill Winter\",\n    \"town\": \"Langby\"\n  },\n  \"delivery_date\": \"2026-10-15\"\n}\n```",
+          "ttftMs": 189,
+          "completionTokens": 56,
+          "tokensPerSec": 54.9,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "{\"customer\":{\"name\":\"Quill Winter\",\"town\":\"Langby\"},\"delivery_date\":\"2026-10-15\"}",
+          "extraction": "fenced",
+          "constraintsMet": 3,
+          "constraintsTotal": 3,
+          "constraintsEarned": 3,
+          "constraintsEarnable": 3,
+          "streamMarks": [
+            [
+              756,
+              32
+            ],
+            [
+              1190,
+              55
+            ]
+          ],
+          "promptTokens": 163
+        },
+        {
+          "taskId": "JSON_L3_1",
+          "latencyMs": 2086,
+          "accuracy": 1,
+          "score": 5.753,
+          "output": "```json\n{\n  \"customer\": {\n    \"name\": \"Milo Tanner\",\n    \"town\": \"Dunstead\"\n  },\n  \"delivery_date\": \"2027-08-01\",\n  \"items\": [\n    {\"item\": \"sacks\", \"quantity\": 14}\n  ]\n}\n```",
+          "ttftMs": 244,
+          "completionTokens": 80,
+          "tokensPerSec": 42.9,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "{\"customer\":{\"name\":\"Milo Tanner\",\"town\":\"Dunstead\"},\"delivery_date\":\"2027-08-01\",\"items\":[{\"item\":\"sacks\",\"quantity\":14}]}",
+          "extraction": "fenced",
+          "constraintsMet": 5,
+          "constraintsTotal": 5,
+          "constraintsEarned": 5,
+          "constraintsEarnable": 5,
+          "streamMarks": [
+            [
+              994,
+              32
+            ],
+            [
+              1736,
+              64
+            ],
+            [
+              2086,
+              79
+            ]
+          ],
+          "promptTokens": 224
+        },
+        {
+          "taskId": "JSON_L3_2",
+          "latencyMs": 1711,
+          "accuracy": 1,
+          "score": 7.013,
+          "output": "```json\n{\n  \"customer\": {\n    \"name\": \"Barnaby Harrow\",\n    \"town\": \"Langton\"\n  },\n  \"delivery_date\": \"2027-11-03\",\n  \"items\": [\n    {\"item\": \"baskets\", \"quantity\": 22}\n  ]\n}\n```",
+          "ttftMs": 271,
+          "completionTokens": 80,
+          "tokensPerSec": 54.9,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "{\"customer\":{\"name\":\"Barnaby Harrow\",\"town\":\"Langton\"},\"delivery_date\":\"2027-11-03\",\"items\":[{\"item\":\"baskets\",\"quantity\":22}]}",
+          "extraction": "fenced",
+          "constraintsMet": 5,
+          "constraintsTotal": 5,
+          "constraintsEarned": 5,
+          "constraintsEarnable": 5,
+          "streamMarks": [
+            [
+              840,
+              32
+            ],
+            [
+              1421,
+              64
+            ],
+            [
+              1711,
+              79
+            ]
+          ],
+          "promptTokens": 233
+        },
+        {
+          "taskId": "JSON_L4_1",
+          "latencyMs": 1980,
+          "accuracy": 0,
+          "score": 0,
+          "output": "```json\n{\n  \"customer\": {\n    \"name\": \"Barnaby Whitlow\",\n    \"town\": \"Langwick\"\n  },\n  \"delivery_date\": \"2027-01-01\",\n  \"items\": [\n    {\"item\": \"candles\", \"quantity\": 2},\n    {\"item\": \"two dozen\", \"quantity\": 24}\n  ]\n}\n```",
+          "ttftMs": 273,
+          "completionTokens": 96,
+          "tokensPerSec": 55.7,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "{\"customer\":{\"name\":\"Barnaby Whitlow\",\"town\":\"Langwick\"},\"delivery_date\":\"2027-01-01\",\"items\":[{\"item\":\"candles\",\"quantity\":2},{\"item\":\"two dozen\",\"quantity\":24}]}",
+          "extraction": "fenced",
+          "constraintsMet": 5,
+          "constraintsTotal": 5,
+          "constraintsEarned": 3,
+          "constraintsEarnable": 5,
+          "streamMarks": [
+            [
+              836,
+              32
+            ],
+            [
+              1410,
+              64
+            ],
+            [
+              1980,
+              95
+            ]
+          ],
+          "fieldsWrong": [
+            "+items[1].item",
+            "+items[1].quantity"
+          ],
+          "promptTokens": 240
+        },
+        {
+          "taskId": "JSON_L4_2",
+          "latencyMs": 1979,
+          "accuracy": 0,
+          "score": 0,
+          "output": "```json\n{\n  \"customer\": {\n    \"name\": \"Cleo Pell\",\n    \"town\": \"Ashfield\"\n  },\n  \"delivery_date\": \"2026-03-14\",\n  \"items\": [\n    {\"item\": \"shovels\", \"quantity\": 5},\n    {\"item\": \"dozens\", \"quantity\": 24}\n  ]\n}\n```",
+          "ttftMs": 275,
+          "completionTokens": 96,
+          "tokensPerSec": 55.8,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "{\"customer\":{\"name\":\"Cleo Pell\",\"town\":\"Ashfield\"},\"delivery_date\":\"2026-03-14\",\"items\":[{\"item\":\"shovels\",\"quantity\":5},{\"item\":\"dozens\",\"quantity\":24}]}",
+          "extraction": "fenced",
+          "constraintsMet": 5,
+          "constraintsTotal": 5,
+          "constraintsEarned": 3,
+          "constraintsEarnable": 5,
+          "streamMarks": [
+            [
+              833,
+              32
+            ],
+            [
+              1408,
+              64
+            ],
+            [
+              1979,
+              95
+            ]
+          ],
+          "fieldsWrong": [
+            "+items[1].item",
+            "+items[1].quantity"
+          ],
+          "promptTokens": 238
+        },
+        {
+          "taskId": "JSON_L5_1",
+          "latencyMs": 1984,
+          "accuracy": 1,
+          "score": 6.048,
+          "output": "```json\n{\n  \"customer\": {\n    \"name\": \"Rafe Fellow\",\n    \"town\": \"Carton\"\n  },\n  \"delivery_date\": \"2026-12-04\",\n  \"items\": [\n    {\"item\": \"hinges\", \"quantity\": 2},\n    {\"item\": \"chisels\", \"quantity\": 24}\n  ]\n}\n```",
+          "ttftMs": 273,
+          "completionTokens": 96,
+          "tokensPerSec": 55.5,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "{\"customer\":{\"name\":\"Rafe Fellow\",\"town\":\"Carton\"},\"delivery_date\":\"2026-12-04\",\"items\":[{\"item\":\"hinges\",\"quantity\":2},{\"item\":\"chisels\",\"quantity\":24}]}",
+          "extraction": "fenced",
+          "constraintsMet": 7,
+          "constraintsTotal": 7,
+          "constraintsEarned": 7,
+          "constraintsEarnable": 7,
+          "streamMarks": [
+            [
+              836,
+              32
+            ],
+            [
+              1411,
+              64
+            ],
+            [
+              1984,
+              95
+            ]
+          ],
+          "promptTokens": 248
+        },
+        {
+          "taskId": "JSON_L5_2",
+          "latencyMs": 2326,
+          "accuracy": 1,
+          "score": 5.159,
+          "output": "```json\n{\n  \"customer\": {\n    \"name\": \"Ulla Marsh\",\n    \"town\": \"Thornmere\"\n  },\n  \"delivery_date\": \"2027-07-10\",\n  \"items\": [\n    {\"item\": \"barrels\", \"quantity\": 10},\n    {\"item\": \"hammers\", \"quantity\": 5}\n  ]\n}\n```",
+          "ttftMs": 274,
+          "completionTokens": 96,
+          "tokensPerSec": 46.3,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "{\"customer\":{\"name\":\"Ulla Marsh\",\"town\":\"Thornmere\"},\"delivery_date\":\"2027-07-10\",\"items\":[{\"item\":\"barrels\",\"quantity\":10},{\"item\":\"hammers\",\"quantity\":5}]}",
+          "extraction": "fenced",
+          "constraintsMet": 7,
+          "constraintsTotal": 7,
+          "constraintsEarned": 7,
+          "constraintsEarnable": 7,
+          "streamMarks": [
+            [
+              834,
+              32
+            ],
+            [
+              1601,
+              64
+            ],
+            [
+              2326,
+              95
+            ]
+          ],
+          "promptTokens": 246
+        },
+        {
+          "taskId": "JSON_L6_1",
+          "latencyMs": 3116,
+          "accuracy": 0,
+          "score": 0,
+          "output": "```json\n{\n  \"customer\": {\n    \"name\": \"Hester Marsh\",\n    \"town\": \"Glenstead\"\n  },\n  \"delivery_date\": \"2027-10-10\",\n  \"items\": [\n    {\n      \"item\": \"lamps\",\n      \"quantity\": 13.5\n    },\n    {\n      \"item\": \"candles\",\n      \"quantity\": 8\n    },\n    {\n      \"item\": \"hinges\",\n      \"quantity\": 4\n    }\n  ]\n}\n```",
+          "ttftMs": 291,
+          "completionTokens": 133,
+          "tokensPerSec": 46.7,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "{\"customer\":{\"name\":\"Hester Marsh\",\"town\":\"Glenstead\"},\"delivery_date\":\"2027-10-10\",\"items\":[{\"item\":\"lamps\",\"quantity\":13.5},{\"item\":\"candles\",\"quantity\":8},{\"item\":\"hinges\",\"quantity\":4}]}",
+          "extraction": "fenced",
+          "constraintsMet": 8,
+          "constraintsTotal": 9,
+          "constraintsEarned": 8,
+          "constraintsEarnable": 9,
+          "streamMarks": [
+            [
+              889,
+              32
+            ],
+            [
+              1663,
+              64
+            ],
+            [
+              2347,
+              96
+            ],
+            [
+              3025,
+              128
+            ],
+            [
+              3116,
+              132
+            ]
+          ],
+          "fieldsWrong": [
+            "items[0].quantity"
+          ],
+          "promptTokens": 252
+        },
+        {
+          "taskId": "JSON_L6_2",
+          "latencyMs": 3448,
+          "accuracy": 1,
+          "score": 3.48,
+          "output": "```json\n{\n  \"customer\": {\n    \"name\": \"Vance Crane\",\n    \"town\": \"Ashgate\"\n  },\n  \"delivery_date\": \"2026-04-01\",\n  \"items\": [\n    {\n      \"item\": \"jugs\",\n      \"quantity\": 10\n    },\n    {\n      \"item\": \"sacks\",\n      \"quantity\": 48\n    },\n    {\n      \"item\": \"lanterns\",\n      \"quantity\": 18\n    }\n  ]\n}\n```",
+          "ttftMs": 290,
+          "completionTokens": 134,
+          "tokensPerSec": 42.1,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "{\"customer\":{\"name\":\"Vance Crane\",\"town\":\"Ashgate\"},\"delivery_date\":\"2026-04-01\",\"items\":[{\"item\":\"jugs\",\"quantity\":10},{\"item\":\"sacks\",\"quantity\":48},{\"item\":\"lanterns\",\"quantity\":18}]}",
+          "extraction": "fenced",
+          "constraintsMet": 9,
+          "constraintsTotal": 9,
+          "constraintsEarned": 9,
+          "constraintsEarnable": 9,
+          "streamMarks": [
+            [
+              979,
+              32
+            ],
+            [
+              1845,
+              64
+            ],
+            [
+              2625,
+              96
+            ],
+            [
+              3296,
+              128
+            ],
+            [
+              3448,
+              133
+            ]
+          ],
+          "promptTokens": 249
+        }
+      ],
+      "runtime": {
+        "modelId": "vikhr-gemma-2b-instruct",
+        "format": "gguf",
+        "quantization": "Q8_0",
+        "arch": "gemma2"
+      },
+      "pedigree": null
+    },
+    {
+      "position": 4,
+      "horseId": "qwen25_15b",
+      "name": "Qwen 2.5 1.5B",
+      "accuracy": 0.58,
+      "clears": 7,
+      "fences": 12,
+      "faults": 20,
+      "partial": 9.124,
+      "tokens": 809,
+      "avgLatencyMs": 1188,
+      "judgeScore": 87.865,
+      "finalTimeSeconds": 14.26,
+      "tasks": [
+        {
+          "taskId": "JSON_L1_1",
+          "latencyMs": 857,
+          "accuracy": 1,
+          "score": 14.002,
+          "output": "{\n  \"customer\": {\n    \"name\": \"Anouk Pell\",\n    \"town\": \"Thorngate\"\n  },\n  \"delivery_date\": \"2026-11-06\"\n}",
+          "ttftMs": 137,
+          "completionTokens": 46,
+          "tokensPerSec": 62.5,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "{\"customer\":{\"name\":\"Anouk Pell\",\"town\":\"Thorngate\"},\"delivery_date\":\"2026-11-06\"}",
+          "extraction": "object",
+          "constraintsMet": 3,
+          "constraintsTotal": 3,
+          "constraintsEarned": 3,
+          "constraintsEarnable": 3,
+          "streamMarks": [
+            [
+              652,
+              32
+            ],
+            [
+              857,
+              45
+            ]
+          ],
+          "promptTokens": 163
+        },
+        {
+          "taskId": "JSON_L1_2",
+          "latencyMs": 811,
+          "accuracy": 1,
+          "score": 14.797,
+          "output": "{\n  \"customer\": {\n    \"name\": \"Lark Rook\",\n    \"town\": \"Langstead\"\n  },\n  \"delivery_date\": \"2027-05-20\"\n}",
+          "ttftMs": 94,
+          "completionTokens": 45,
+          "tokensPerSec": 61.4,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "{\"customer\":{\"name\":\"Lark Rook\",\"town\":\"Langstead\"},\"delivery_date\":\"2027-05-20\"}",
+          "extraction": "object",
+          "constraintsMet": 3,
+          "constraintsTotal": 3,
+          "constraintsEarned": 3,
+          "constraintsEarnable": 3,
+          "streamMarks": [
+            [
+              631,
+              32
+            ],
+            [
+              811,
+              44
+            ]
+          ],
+          "promptTokens": 157
+        },
+        {
+          "taskId": "JSON_L2_1",
+          "latencyMs": 711,
+          "accuracy": 1,
+          "score": 16.878,
+          "output": "{\n  \"customer\": {\n    \"name\": \"Vance Marsh\",\n    \"town\": \"Hartmere\"\n  },\n  \"delivery_date\": \"2026-09-12\"\n}",
+          "ttftMs": 85,
+          "completionTokens": 45,
+          "tokensPerSec": 70.3,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "{\"customer\":{\"name\":\"Vance Marsh\",\"town\":\"Hartmere\"},\"delivery_date\":\"2026-09-12\"}",
+          "extraction": "object",
+          "constraintsMet": 3,
+          "constraintsTotal": 3,
+          "constraintsEarned": 3,
+          "constraintsEarnable": 3,
+          "streamMarks": [
+            [
+              521,
+              32
+            ],
+            [
+              711,
+              44
+            ]
+          ],
+          "promptTokens": 178
+        },
+        {
+          "taskId": "JSON_L2_2",
+          "latencyMs": 818,
+          "accuracy": 1,
+          "score": 14.67,
+          "output": "```json\n{\n  \"customer\": {\n    \"name\": \"Quill Winter\",\n    \"town\": \"Langby\"\n  },\n  \"delivery_date\": \"2026-10-15\"\n}\n```",
+          "ttftMs": 92,
+          "completionTokens": 48,
+          "tokensPerSec": 64.7,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "{\"customer\":{\"name\":\"Quill Winter\",\"town\":\"Langby\"},\"delivery_date\":\"2026-10-15\"}",
+          "extraction": "fenced",
+          "constraintsMet": 3,
+          "constraintsTotal": 3,
+          "constraintsEarned": 3,
+          "constraintsEarnable": 3,
+          "streamMarks": [
+            [
+              588,
+              32
+            ],
+            [
+              818,
+              47
+            ]
+          ],
+          "promptTokens": 168
+        },
+        {
+          "taskId": "JSON_L3_1",
+          "latencyMs": 1280,
+          "accuracy": 1,
+          "score": 9.375,
+          "output": "{\n  \"customer\": {\n    \"name\": \"Milo Tanner\",\n    \"town\": \"Dunstead\"\n  },\n  \"delivery_date\": \"2027-08-01\",\n  \"items\": [\n    {\"item\": \"sacks\", \"quantity\": 14}\n  ]\n}",
+          "ttftMs": 117,
+          "completionTokens": 67,
+          "tokensPerSec": 56.7,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "{\"customer\":{\"name\":\"Milo Tanner\",\"town\":\"Dunstead\"},\"delivery_date\":\"2027-08-01\",\"items\":[{\"item\":\"sacks\",\"quantity\":14}]}",
+          "extraction": "object",
+          "constraintsMet": 5,
+          "constraintsTotal": 5,
+          "constraintsEarned": 5,
+          "constraintsEarnable": 5,
+          "streamMarks": [
+            [
+              595,
+              32
+            ],
+            [
+              1218,
+              64
+            ],
+            [
+              1279,
+              66
+            ]
+          ],
+          "promptTokens": 227
+        },
+        {
+          "taskId": "JSON_L3_2",
+          "latencyMs": 1151,
+          "accuracy": 1,
+          "score": 10.426,
+          "output": "{\n  \"customer\": {\n    \"name\": \"Barnaby Harrow\",\n    \"town\": \"Langton\"\n  },\n  \"delivery_date\": \"2027-11-03\",\n  \"items\": [\n    {\"item\": \"baskets\", \"quantity\": 22}\n  ]\n}",
+          "ttftMs": 121,
+          "completionTokens": 68,
+          "tokensPerSec": 65,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "{\"customer\":{\"name\":\"Barnaby Harrow\",\"town\":\"Langton\"},\"delivery_date\":\"2027-11-03\",\"items\":[{\"item\":\"baskets\",\"quantity\":22}]}",
+          "extraction": "object",
+          "constraintsMet": 5,
+          "constraintsTotal": 5,
+          "constraintsEarned": 5,
+          "constraintsEarnable": 5,
+          "streamMarks": [
+            [
+              535,
+              32
+            ],
+            [
+              1062,
+              64
+            ],
+            [
+              1151,
+              67
+            ]
+          ],
+          "promptTokens": 237
+        },
+        {
+          "taskId": "JSON_L4_1",
+          "latencyMs": 1466,
+          "accuracy": 0,
+          "score": 0,
+          "output": "{\n  \"customer\": {\n    \"name\": \"Barnaby Whitlow\",\n    \"town\": \"Langwick\"\n  },\n  \"delivery_date\": \"2027-01-01\",\n  \"items\": [\n    {\"item\": \"ring\", \"quantity\": 2},\n    {\"item\": \"candles\", \"quantity\": 2}\n  ]\n}",
+          "ttftMs": 110,
+          "completionTokens": 80,
+          "tokensPerSec": 58.3,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "{\"customer\":{\"name\":\"Barnaby Whitlow\",\"town\":\"Langwick\"},\"delivery_date\":\"2027-01-01\",\"items\":[{\"item\":\"ring\",\"quantity\":2},{\"item\":\"candles\",\"quantity\":2}]}",
+          "extraction": "object",
+          "constraintsMet": 4,
+          "constraintsTotal": 5,
+          "constraintsEarned": 2,
+          "constraintsEarnable": 5,
+          "streamMarks": [
+            [
+              561,
+              32
+            ],
+            [
+              1166,
+              64
+            ],
+            [
+              1466,
+              79
+            ]
+          ],
+          "fieldsWrong": [
+            "items[0].item",
+            "+items[1].item",
+            "+items[1].quantity"
+          ],
+          "promptTokens": 243
+        },
+        {
+          "taskId": "JSON_L4_2",
+          "latencyMs": 1426,
+          "accuracy": 0,
+          "score": 0,
+          "output": "{\n  \"customer\": {\n    \"name\": \"Cleo Pell\",\n    \"town\": \"Ashfield\"\n  },\n  \"delivery_date\": \"2026-03-14\",\n  \"items\": [\n    {\"item\": \"Ring\", \"quantity\": 2},\n    {\"item\": \"side gate\", \"quantity\": 5}\n  ]\n}",
+          "ttftMs": 108,
+          "completionTokens": 78,
+          "tokensPerSec": 58.4,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "{\"customer\":{\"name\":\"Cleo Pell\",\"town\":\"Ashfield\"},\"delivery_date\":\"2026-03-14\",\"items\":[{\"item\":\"Ring\",\"quantity\":2},{\"item\":\"side gate\",\"quantity\":5}]}",
+          "extraction": "object",
+          "constraintsMet": 3,
+          "constraintsTotal": 5,
+          "constraintsEarned": 1,
+          "constraintsEarnable": 5,
+          "streamMarks": [
+            [
+              655,
+              32
+            ],
+            [
+              1175,
+              64
+            ],
+            [
+              1426,
+              77
+            ]
+          ],
+          "fieldsWrong": [
+            "items[0].item",
+            "items[0].quantity",
+            "+items[1].item",
+            "+items[1].quantity"
+          ],
+          "promptTokens": 243
+        },
+        {
+          "taskId": "JSON_L5_1",
+          "latencyMs": 1203,
+          "accuracy": 0,
+          "score": 0,
+          "output": "{\n  \"customer\": {\n    \"name\": \"Rafe Fellow of Carton\",\n    \"town\": \"Not specified\"\n  },\n  \"delivery_date\": \"2026-12-04\",\n  \"items\": [\n    {\"item\": \"chisels\", \"quantity\": 24}\n  ]\n}",
+          "ttftMs": 137,
+          "completionTokens": 70,
+          "tokensPerSec": 64.7,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "{\"customer\":{\"name\":\"Rafe Fellow of Carton\",\"town\":\"Not specified\"},\"delivery_date\":\"2026-12-04\",\"items\":[{\"item\":\"chisels\",\"quantity\":24}]}",
+          "extraction": "object",
+          "constraintsMet": 1,
+          "constraintsTotal": 7,
+          "constraintsEarned": 1,
+          "constraintsEarnable": 7,
+          "streamMarks": [
+            [
+              674,
+              32
+            ],
+            [
+              1115,
+              64
+            ],
+            [
+              1203,
+              69
+            ]
+          ],
+          "fieldsWrong": [
+            "customer.name",
+            "customer.town",
+            "items[0].item",
+            "items[0].quantity",
+            "items[1].item",
+            "items[1].quantity"
+          ],
+          "promptTokens": 252
+        },
+        {
+          "taskId": "JSON_L5_2",
+          "latencyMs": 1445,
+          "accuracy": 0,
+          "score": 0,
+          "output": "```json\n{\n  \"customer\": {\n    \"name\": \"Ulla Marsh\",\n    \"town\": \"Thornmere\"\n  },\n  \"delivery_date\": \"2027-07-10\",\n  \"items\": [\n    {\"item\": \"barrel\", \"quantity\": 10},\n    {\"item\": \"hammer\", \"quantity\": 5}\n  ]\n}\n```",
+          "ttftMs": 120,
+          "completionTokens": 84,
+          "tokensPerSec": 62.6,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "{\"customer\":{\"name\":\"Ulla Marsh\",\"town\":\"Thornmere\"},\"delivery_date\":\"2027-07-10\",\"items\":[{\"item\":\"barrel\",\"quantity\":10},{\"item\":\"hammer\",\"quantity\":5}]}",
+          "extraction": "fenced",
+          "constraintsMet": 5,
+          "constraintsTotal": 7,
+          "constraintsEarned": 5,
+          "constraintsEarnable": 7,
+          "streamMarks": [
+            [
+              658,
+              32
+            ],
+            [
+              1106,
+              64
+            ],
+            [
+              1445,
+              83
+            ]
+          ],
+          "fieldsWrong": [
+            "items[0].item",
+            "items[1].item"
+          ],
+          "promptTokens": 249
+        },
+        {
+          "taskId": "JSON_L6_1",
+          "latencyMs": 1534,
+          "accuracy": 0,
+          "score": 0,
+          "output": "{\n  \"customer\": {\n    \"name\": \"Hester Marsh\",\n    \"town\": \"Glenstead\"\n  },\n  \"delivery_date\": \"2027-10-10\",\n  \"items\": [\n    {\"item\": \"lamps\", \"quantity\": 15},\n    {\"item\": \"candles\", \"quantity\": 8}\n  ]\n}",
+          "ttftMs": 121,
+          "completionTokens": 81,
+          "tokensPerSec": 56.6,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "{\"customer\":{\"name\":\"Hester Marsh\",\"town\":\"Glenstead\"},\"delivery_date\":\"2027-10-10\",\"items\":[{\"item\":\"lamps\",\"quantity\":15},{\"item\":\"candles\",\"quantity\":8}]}",
+          "extraction": "object",
+          "constraintsMet": 6,
+          "constraintsTotal": 9,
+          "constraintsEarned": 6,
+          "constraintsEarnable": 9,
+          "streamMarks": [
+            [
+              722,
+              32
+            ],
+            [
+              1275,
+              64
+            ],
+            [
+              1534,
+              80
+            ]
+          ],
+          "fieldsWrong": [
+            "items[0].quantity",
+            "items[2].item",
+            "items[2].quantity"
+          ],
+          "promptTokens": 255
+        },
+        {
+          "taskId": "JSON_L6_2",
+          "latencyMs": 1555,
+          "accuracy": 1,
+          "score": 7.717,
+          "output": "{\n  \"customer\": {\n    \"name\": \"Vance Crane\",\n    \"town\": \"Ashgate\"\n  },\n  \"delivery_date\": \"2026-04-01\",\n  \"items\": [\n    {\"item\": \"jugs\", \"quantity\": 10},\n    {\"item\": \"sacks\", \"quantity\": 48},\n    {\"item\": \"lanterns\", \"quantity\": 18}\n  ]\n}",
+          "ttftMs": 137,
+          "completionTokens": 97,
+          "tokensPerSec": 67.7,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "{\"customer\":{\"name\":\"Vance Crane\",\"town\":\"Ashgate\"},\"delivery_date\":\"2026-04-01\",\"items\":[{\"item\":\"jugs\",\"quantity\":10},{\"item\":\"sacks\",\"quantity\":48},{\"item\":\"lanterns\",\"quantity\":18}]}",
+          "extraction": "object",
+          "constraintsMet": 9,
+          "constraintsTotal": 9,
+          "constraintsEarned": 9,
+          "constraintsEarnable": 9,
+          "streamMarks": [
+            [
+              590,
+              32
+            ],
+            [
+              1083,
+              64
+            ],
+            [
+              1541,
+              96
+            ]
+          ],
+          "promptTokens": 253
+        }
+      ],
+      "runtime": {
+        "modelId": "qwen2.5-1.5b-instruct",
+        "format": "gguf",
+        "quantization": "Q8_0",
+        "arch": "qwen2"
+      },
+      "pedigree": {
+        "bloodline": "Qwen",
+        "stable": "Alibaba Qwen",
+        "silks": {
+          "primary": "#ff6a00",
+          "secondary": "#615ced"
+        }
+      }
+    },
+    {
+      "position": 5,
+      "horseId": "llama32_1b",
+      "name": "Llama 3.2 1B",
+      "accuracy": 0.5,
+      "clears": 6,
+      "fences": 12,
+      "faults": 24,
+      "partial": 8.067,
+      "tokens": 780,
+      "avgLatencyMs": 706,
+      "judgeScore": 131.966,
+      "finalTimeSeconds": 8.47,
+      "tasks": [
+        {
+          "taskId": "JSON_L1_1",
+          "latencyMs": 522,
+          "accuracy": 1,
+          "score": 22.989,
+          "output": "Here is the order note in JSON format:\n\n{\n  \"customer\": {\n    \"name\": \"Anouk Pell\",\n    \"town\": \"Thorngate\"\n  },\n  \"delivery_date\": \"2026-11-06\"\n}",
+          "ttftMs": 93,
+          "completionTokens": 51,
+          "tokensPerSec": 116.6,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "{\"customer\":{\"name\":\"Anouk Pell\",\"town\":\"Thorngate\"},\"delivery_date\":\"2026-11-06\"}",
+          "extraction": "object",
+          "constraintsMet": 3,
+          "constraintsTotal": 3,
+          "constraintsEarned": 3,
+          "constraintsEarnable": 3,
+          "streamMarks": [
+            [
+              360,
+              32
+            ],
+            [
+              521,
+              50
+            ]
+          ],
+          "promptTokens": 140
+        },
+        {
+          "taskId": "JSON_L1_2",
+          "latencyMs": 390,
+          "accuracy": 1,
+          "score": 30.769,
+          "output": "{\n  \"customer\": {\n    \"name\": \"Lark Rook\",\n    \"town\": \"Langstead\"\n  },\n  \"delivery_date\": \"2027-05-20\"\n}",
+          "ttftMs": 52,
+          "completionTokens": 41,
+          "tokensPerSec": 118.3,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "{\"customer\":{\"name\":\"Lark Rook\",\"town\":\"Langstead\"},\"delivery_date\":\"2027-05-20\"}",
+          "extraction": "object",
+          "constraintsMet": 3,
+          "constraintsTotal": 3,
+          "constraintsEarned": 3,
+          "constraintsEarnable": 3,
+          "streamMarks": [
+            [
+              313,
+              32
+            ],
+            [
+              389,
+              40
+            ]
+          ],
+          "promptTokens": 134
+        },
+        {
+          "taskId": "JSON_L2_1",
+          "latencyMs": 494,
+          "accuracy": 1,
+          "score": 24.291,
+          "output": "Here is the order note converted to JSON:\n\n```\n{\n  \"customer\": {\n    \"name\": \"Vance Marsh\",\n    \"town\": \"Hartmere\"\n  },\n  \"delivery_date\": \"2026-09-12\"\n}\n```",
+          "ttftMs": 53,
+          "completionTokens": 53,
+          "tokensPerSec": 117.9,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "{\"customer\":{\"name\":\"Vance Marsh\",\"town\":\"Hartmere\"},\"delivery_date\":\"2026-09-12\"}",
+          "extraction": "fenced",
+          "constraintsMet": 3,
+          "constraintsTotal": 3,
+          "constraintsEarned": 3,
+          "constraintsEarnable": 3,
+          "streamMarks": [
+            [
+              317,
+              32
+            ],
+            [
+              494,
+              52
+            ]
+          ],
+          "promptTokens": 156
+        },
+        {
+          "taskId": "JSON_L2_2",
+          "latencyMs": 457,
+          "accuracy": 1,
+          "score": 26.258,
+          "output": "Here is the order note converted to JSON:\n\n{\n  \"customer\": {\n    \"name\": \"Quill Winter\",\n    \"town\": \"Langby\"\n  },\n  \"delivery_date\": \"2026-10-15\"\n}",
+          "ttftMs": 52,
+          "completionTokens": 49,
+          "tokensPerSec": 118.5,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "{\"customer\":{\"name\":\"Quill Winter\",\"town\":\"Langby\"},\"delivery_date\":\"2026-10-15\"}",
+          "extraction": "object",
+          "constraintsMet": 3,
+          "constraintsTotal": 3,
+          "constraintsEarned": 3,
+          "constraintsEarnable": 3,
+          "streamMarks": [
+            [
+              313,
+              32
+            ],
+            [
+              457,
+              48
+            ]
+          ],
+          "promptTokens": 146
+        },
+        {
+          "taskId": "JSON_L3_1",
+          "latencyMs": 672,
+          "accuracy": 0,
+          "score": 0,
+          "output": "Here is the JSON representation of the order note:\n\n```\n{\n  \"customer\": {\n    \"name\": \"Milo Tanner\",\n    \"town\": \"Dunstead\"\n  },\n  \"delivery_date\": \"2027-08-01\",\n  \"items\": [\n    \"sacks\",\n    \"14\"\n  ]\n}\n```",
+          "ttftMs": 80,
+          "completionTokens": 70,
+          "tokensPerSec": 116.6,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "{\"customer\":{\"name\":\"Milo Tanner\",\"town\":\"Dunstead\"},\"delivery_date\":\"2027-08-01\",\"items\":[\"sacks\",\"14\"]}",
+          "extraction": "fenced",
+          "constraintsMet": 3,
+          "constraintsTotal": 5,
+          "constraintsEarned": 1,
+          "constraintsEarnable": 5,
+          "streamMarks": [
+            [
+              344,
+              32
+            ],
+            [
+              619,
+              64
+            ],
+            [
+              672,
+              69
+            ]
+          ],
+          "fieldsWrong": [
+            "items[0].item",
+            "items[0].quantity",
+            "+items[0]",
+            "+items[1]"
+          ],
+          "promptTokens": 205
+        },
+        {
+          "taskId": "JSON_L3_2",
+          "latencyMs": 525,
+          "accuracy": 0,
+          "score": 0,
+          "output": "{\n  \"customer\": {\n    \"name\": \"Barnaby Harrow of Langton\",\n    \"town\": \"\"\n  },\n  \"delivery_date\": \"2027-11-03\",\n  \"items\": [\n    \"baskets\"\n  ]\n}",
+          "ttftMs": 68,
+          "completionTokens": 54,
+          "tokensPerSec": 116,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "{\"customer\":{\"name\":\"Barnaby Harrow of Langton\",\"town\":\"\"},\"delivery_date\":\"2027-11-03\",\"items\":[\"baskets\"]}",
+          "extraction": "object",
+          "constraintsMet": 1,
+          "constraintsTotal": 5,
+          "constraintsEarned": 0,
+          "constraintsEarnable": 5,
+          "streamMarks": [
+            [
+              332,
+              32
+            ],
+            [
+              525,
+              53
+            ]
+          ],
+          "fieldsWrong": [
+            "customer.name",
+            "customer.town",
+            "items[0].item",
+            "items[0].quantity",
+            "+items[0]"
+          ],
+          "promptTokens": 215
+        },
+        {
+          "taskId": "JSON_L4_1",
+          "latencyMs": 566,
+          "accuracy": 0,
+          "score": 0,
+          "output": "{\n  \"customer\": {\n    \"name\": \"Barnaby Whitlow\",\n    \"town\": \"Langwick\"\n  },\n  \"delivery_date\": \"2027-01-01\",\n  \"items\": [\n    \"candles\",\n    \"two dozen\"\n  ]\n}",
+          "ttftMs": 67,
+          "completionTokens": 59,
+          "tokensPerSec": 116.2,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "{\"customer\":{\"name\":\"Barnaby Whitlow\",\"town\":\"Langwick\"},\"delivery_date\":\"2027-01-01\",\"items\":[\"candles\",\"two dozen\"]}",
+          "extraction": "object",
+          "constraintsMet": 3,
+          "constraintsTotal": 5,
+          "constraintsEarned": 1,
+          "constraintsEarnable": 5,
+          "streamMarks": [
+            [
+              332,
+              32
+            ],
+            [
+              566,
+              58
+            ]
+          ],
+          "fieldsWrong": [
+            "items[0].item",
+            "items[0].quantity",
+            "+items[0]",
+            "+items[1]"
+          ],
+          "promptTokens": 221
+        },
+        {
+          "taskId": "JSON_L4_2",
+          "latencyMs": 707,
+          "accuracy": 1,
+          "score": 16.973,
+          "output": "Here is the JSON representation of the order note:\n\n```\n{\n  \"customer\": {\n    \"name\": \"Cleo Pell\",\n    \"town\": \"Ashfield\"\n  },\n  \"delivery_date\": \"2026-03-14\",\n  \"items\": [\n    {\"item\": \"shovels\", \"quantity\": 5}\n  ]\n}\n```",
+          "ttftMs": 69,
+          "completionTokens": 75,
+          "tokensPerSec": 116,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "{\"customer\":{\"name\":\"Cleo Pell\",\"town\":\"Ashfield\"},\"delivery_date\":\"2026-03-14\",\"items\":[{\"item\":\"shovels\",\"quantity\":5}]}",
+          "extraction": "fenced",
+          "constraintsMet": 5,
+          "constraintsTotal": 5,
+          "constraintsEarned": 5,
+          "constraintsEarnable": 5,
+          "streamMarks": [
+            [
+              334,
+              32
+            ],
+            [
+              611,
+              64
+            ],
+            [
+              707,
+              74
+            ]
+          ],
+          "promptTokens": 220
+        },
+        {
+          "taskId": "JSON_L5_1",
+          "latencyMs": 575,
+          "accuracy": 0,
+          "score": 0,
+          "output": "{\n  \"customer\": {\n    \"name\": \"\",\n    \"town\": \"\"\n  },\n  \"delivery_date\": \"2026-12-04\",\n  \"items\": [\n    \"hinges\",\n    \"chisels\"\n  ]\n}",
+          "ttftMs": 81,
+          "completionTokens": 51,
+          "tokensPerSec": 101.2,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "{\"customer\":{\"name\":\"\",\"town\":\"\"},\"delivery_date\":\"2026-12-04\",\"items\":[\"hinges\",\"chisels\"]}",
+          "extraction": "object",
+          "constraintsMet": 1,
+          "constraintsTotal": 7,
+          "constraintsEarned": 0,
+          "constraintsEarnable": 7,
+          "streamMarks": [
+            [
+              345,
+              32
+            ],
+            [
+              575,
+              50
+            ]
+          ],
+          "fieldsWrong": [
+            "customer.name",
+            "customer.town",
+            "items[0].item",
+            "items[0].quantity",
+            "items[1].item",
+            "items[1].quantity",
+            "+items[0]",
+            "+items[1]"
+          ],
+          "promptTokens": 229
+        },
+        {
+          "taskId": "JSON_L5_2",
+          "latencyMs": 1123,
+          "accuracy": 1,
+          "score": 10.686,
+          "output": "Here is the JSON representation of the order note:\n\n```\n{\n  \"customer\": {\n    \"name\": \"Ulla Marsh\",\n    \"town\": \"Thornmere\"\n  },\n  \"delivery_date\": \"2027-07-10\",\n  \"items\": [\n    {\"item\": \"barrels\", \"quantity\": 10},\n    {\"item\": \"hammers\", \"quantity\": 5}\n  ]\n}\n```",
+          "ttftMs": 115,
+          "completionTokens": 89,
+          "tokensPerSec": 87.3,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "{\"customer\":{\"name\":\"Ulla Marsh\",\"town\":\"Thornmere\"},\"delivery_date\":\"2027-07-10\",\"items\":[{\"item\":\"barrels\",\"quantity\":10},{\"item\":\"hammers\",\"quantity\":5}]}",
+          "extraction": "fenced",
+          "constraintsMet": 7,
+          "constraintsTotal": 7,
+          "constraintsEarned": 7,
+          "constraintsEarnable": 7,
+          "streamMarks": [
+            [
+              432,
+              32
+            ],
+            [
+              854,
+              64
+            ],
+            [
+              1123,
+              88
+            ]
+          ],
+          "promptTokens": 226
+        },
+        {
+          "taskId": "JSON_L6_1",
+          "latencyMs": 1238,
+          "accuracy": 0,
+          "score": 0,
+          "output": "Here is the JSON representation of the order note:\n\n```\n{\n  \"customer\": {\n    \"name\": \"Hester Marsh\",\n    \"town\": \"Glenstead\"\n  },\n  \"delivery_date\": \"2027-10-10\",\n  \"items\": [\n    {\"item\": \"lamps\", \"quantity\": 12.5},\n    {\"item\": \"candles\", \"quantity\": 8},\n    {\"item\": \"hinges\", \"quantity\": 4}\n  ]\n}\n```",
+          "ttftMs": 99,
+          "completionTokens": 105,
+          "tokensPerSec": 91.3,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "{\"customer\":{\"name\":\"Hester Marsh\",\"town\":\"Glenstead\"},\"delivery_date\":\"2027-10-10\",\"items\":[{\"item\":\"lamps\",\"quantity\":12.5},{\"item\":\"candles\",\"quantity\":8},{\"item\":\"hinges\",\"quantity\":4}]}",
+          "extraction": "fenced",
+          "constraintsMet": 8,
+          "constraintsTotal": 9,
+          "constraintsEarned": 8,
+          "constraintsEarnable": 9,
+          "streamMarks": [
+            [
+              431,
+              32
+            ],
+            [
+              769,
+              64
+            ],
+            [
+              1132,
+              96
+            ],
+            [
+              1238,
+              104
+            ]
+          ],
+          "fieldsWrong": [
+            "items[0].quantity"
+          ],
+          "promptTokens": 232
+        },
+        {
+          "taskId": "JSON_L6_2",
+          "latencyMs": 1199,
+          "accuracy": 0,
+          "score": 0,
+          "output": "{\n  \"customer\": {\n    \"name\": \"\",\n    \"town\": \"\"\n  },\n  \"delivery_date\": \"2026-04-01\",\n  \"items\": [\n    {\"item\": \"jugs\", \"quantity\": 10},\n    {\"item\": \"sacks\", \"quantity\": 48},\n    {\"item\": \"lanterns\", \"quantity\": 18}\n  ]\n}",
+          "ttftMs": 94,
+          "completionTokens": 83,
+          "tokensPerSec": 74.2,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "{\"customer\":{\"name\":\"\",\"town\":\"\"},\"delivery_date\":\"2026-04-01\",\"items\":[{\"item\":\"jugs\",\"quantity\":10},{\"item\":\"sacks\",\"quantity\":48},{\"item\":\"lanterns\",\"quantity\":18}]}",
+          "extraction": "object",
+          "constraintsMet": 7,
+          "constraintsTotal": 9,
+          "constraintsEarned": 7,
+          "constraintsEarnable": 9,
+          "streamMarks": [
+            [
+              535,
+              32
+            ],
+            [
+              952,
+              64
+            ],
+            [
+              1199,
+              82
+            ]
+          ],
+          "fieldsWrong": [
+            "customer.name",
+            "customer.town"
+          ],
+          "promptTokens": 228
+        }
+      ],
+      "runtime": {
+        "modelId": "llama-3.2-1b-instruct",
+        "format": "gguf",
+        "quantization": "Q8_0",
+        "arch": "llama"
+      },
+      "pedigree": {
+        "bloodline": "Llama",
+        "stable": "Meta AI",
+        "silks": {
+          "primary": "#0064e0",
+          "secondary": "#ffffff"
+        }
+      }
+    },
+    {
+      "position": 6,
+      "horseId": "qwen25_coder_15b",
+      "name": "Qwen 2.5 Coder 1.5B",
+      "accuracy": 0.42,
+      "clears": 5,
+      "fences": 12,
+      "faults": 28,
+      "partial": 8.898,
+      "tokens": 828,
+      "avgLatencyMs": 939,
+      "judgeScore": 81.821,
+      "finalTimeSeconds": 11.27,
+      "tasks": [
+        {
+          "taskId": "JSON_L1_1",
+          "latencyMs": 763,
+          "accuracy": 1,
+          "score": 15.727,
+          "output": "```json\n{\n  \"customer\": {\"name\": \"Anouk Pell\", \"town\": \"Thorngate\"},\n  \"delivery_date\": \"2026-11-06\"\n}\n```",
+          "ttftMs": 117,
+          "completionTokens": 45,
+          "tokensPerSec": 68.1,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "{\"customer\":{\"name\":\"Anouk Pell\",\"town\":\"Thorngate\"},\"delivery_date\":\"2026-11-06\"}",
+          "extraction": "fenced",
+          "constraintsMet": 3,
+          "constraintsTotal": 3,
+          "constraintsEarned": 3,
+          "constraintsEarnable": 3,
+          "streamMarks": [
+            [
+              580,
+              32
+            ],
+            [
+              763,
+              44
+            ]
+          ],
+          "promptTokens": 163
+        },
+        {
+          "taskId": "JSON_L1_2",
+          "latencyMs": 588,
+          "accuracy": 1,
+          "score": 20.408,
+          "output": "```json\n{\n  \"customer\": {\"name\": \"Lark Rook\", \"town\": \"Langstead\"},\n  \"delivery_date\": \"2027-05-20\"\n}\n```",
+          "ttftMs": 76,
+          "completionTokens": 44,
+          "tokensPerSec": 84,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "{\"customer\":{\"name\":\"Lark Rook\",\"town\":\"Langstead\"},\"delivery_date\":\"2027-05-20\"}",
+          "extraction": "fenced",
+          "constraintsMet": 3,
+          "constraintsTotal": 3,
+          "constraintsEarned": 3,
+          "constraintsEarnable": 3,
+          "streamMarks": [
+            [
+              446,
+              32
+            ],
+            [
+              588,
+              43
+            ]
+          ],
+          "promptTokens": 157
+        },
+        {
+          "taskId": "JSON_L2_1",
+          "latencyMs": 640,
+          "accuracy": 1,
+          "score": 18.75,
+          "output": "```json\n{\n  \"customer\": {\n    \"name\": \"Vance Marsh\",\n    \"town\": \"Hartmere\"\n  },\n  \"delivery_date\": \"2026-09-12\"\n}\n```",
+          "ttftMs": 74,
+          "completionTokens": 49,
+          "tokensPerSec": 84.8,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "{\"customer\":{\"name\":\"Vance Marsh\",\"town\":\"Hartmere\"},\"delivery_date\":\"2026-09-12\"}",
+          "extraction": "fenced",
+          "constraintsMet": 3,
+          "constraintsTotal": 3,
+          "constraintsEarned": 3,
+          "constraintsEarnable": 3,
+          "streamMarks": [
+            [
+              440,
+              32
+            ],
+            [
+              640,
+              48
+            ]
+          ],
+          "promptTokens": 178
+        },
+        {
+          "taskId": "JSON_L2_2",
+          "latencyMs": 628,
+          "accuracy": 1,
+          "score": 19.108,
+          "output": "```json\n{\n  \"customer\": {\n    \"name\": \"Quill Winter\",\n    \"town\": \"Langby\"\n  },\n  \"delivery_date\": \"2026-10-15\"\n}\n```",
+          "ttftMs": 73,
+          "completionTokens": 48,
+          "tokensPerSec": 84.7,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "{\"customer\":{\"name\":\"Quill Winter\",\"town\":\"Langby\"},\"delivery_date\":\"2026-10-15\"}",
+          "extraction": "fenced",
+          "constraintsMet": 3,
+          "constraintsTotal": 3,
+          "constraintsEarned": 3,
+          "constraintsEarnable": 3,
+          "streamMarks": [
+            [
+              439,
+              32
+            ],
+            [
+              628,
+              47
+            ]
+          ],
+          "promptTokens": 168
+        },
+        {
+          "taskId": "JSON_L3_1",
+          "latencyMs": 887,
+          "accuracy": 0,
+          "score": 0,
+          "output": "```json\n{\n  \"customer\": {\"name\": \"Milo Tanner\", \"town\": \"Dunstead\"},\n  \"delivery_date\": \"2027-08-01\",\n  \"items\": [\n    {\"item\": \"14 sacks\", \"quantity\": 1}\n  ]\n}\n```",
+          "ttftMs": 114,
+          "completionTokens": 66,
+          "tokensPerSec": 84.1,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "{\"customer\":{\"name\":\"Milo Tanner\",\"town\":\"Dunstead\"},\"delivery_date\":\"2027-08-01\",\"items\":[{\"item\":\"14 sacks\",\"quantity\":1}]}",
+          "extraction": "fenced",
+          "constraintsMet": 3,
+          "constraintsTotal": 5,
+          "constraintsEarned": 3,
+          "constraintsEarnable": 5,
+          "streamMarks": [
+            [
+              483,
+              32
+            ],
+            [
+              863,
+              64
+            ],
+            [
+              887,
+              65
+            ]
+          ],
+          "fieldsWrong": [
+            "items[0].item",
+            "items[0].quantity"
+          ],
+          "promptTokens": 227
+        },
+        {
+          "taskId": "JSON_L3_2",
+          "latencyMs": 871,
+          "accuracy": 0,
+          "score": 0,
+          "output": "```json\n{\n  \"customer\": {\"name\": \"Barnaby Harrow\", \"town\": \"Langton\"},\n  \"delivery_date\": \"2027-11-03\",\n  \"items\": [\n    {\"item\": \"22 baskets\", \"quantity\": 1}\n  ]\n}\n```",
+          "ttftMs": 91,
+          "completionTokens": 67,
+          "tokensPerSec": 84.6,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "{\"customer\":{\"name\":\"Barnaby Harrow\",\"town\":\"Langton\"},\"delivery_date\":\"2027-11-03\",\"items\":[{\"item\":\"22 baskets\",\"quantity\":1}]}",
+          "extraction": "fenced",
+          "constraintsMet": 3,
+          "constraintsTotal": 5,
+          "constraintsEarned": 3,
+          "constraintsEarnable": 5,
+          "streamMarks": [
+            [
+              458,
+              32
+            ],
+            [
+              835,
+              64
+            ],
+            [
+              871,
+              66
+            ]
+          ],
+          "fieldsWrong": [
+            "items[0].item",
+            "items[0].quantity"
+          ],
+          "promptTokens": 237
+        },
+        {
+          "taskId": "JSON_L4_1",
+          "latencyMs": 867,
+          "accuracy": 0,
+          "score": 0,
+          "output": "```json\n{\n  \"customer\": {\"name\": \"Barnaby Whitlow\", \"town\": \"Langwick\"},\n  \"delivery_date\": \"2027-01-01\",\n  \"items\": [\n    {\"item\": \"two candles\", \"quantity\": 2}\n  ]\n}\n```",
+          "ttftMs": 91,
+          "completionTokens": 66,
+          "tokensPerSec": 83.8,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "{\"customer\":{\"name\":\"Barnaby Whitlow\",\"town\":\"Langwick\"},\"delivery_date\":\"2027-01-01\",\"items\":[{\"item\":\"two candles\",\"quantity\":2}]}",
+          "extraction": "fenced",
+          "constraintsMet": 4,
+          "constraintsTotal": 5,
+          "constraintsEarned": 4,
+          "constraintsEarnable": 5,
+          "streamMarks": [
+            [
+              464,
+              32
+            ],
+            [
+              842,
+              64
+            ],
+            [
+              867,
+              65
+            ]
+          ],
+          "fieldsWrong": [
+            "items[0].item"
+          ],
+          "promptTokens": 243
+        },
+        {
+          "taskId": "JSON_L4_2",
+          "latencyMs": 1073,
+          "accuracy": 0,
+          "score": 0,
+          "output": "```json\n{\n  \"customer\": {\"name\": \"Cleo Pell\", \"town\": \"Ashfield\"},\n  \"delivery_date\": \"2026-03-14\",\n  \"items\": [\n    {\"item\": \"ring twice at the side gate\", \"quantity\": 2},\n    {\"item\": \"5 shovels\", \"quantity\": 5}\n  ]\n}\n```",
+          "ttftMs": 91,
+          "completionTokens": 84,
+          "tokensPerSec": 84.5,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "{\"customer\":{\"name\":\"Cleo Pell\",\"town\":\"Ashfield\"},\"delivery_date\":\"2026-03-14\",\"items\":[{\"item\":\"ring twice at the side gate\",\"quantity\":2},{\"item\":\"5 shovels\",\"quantity\":5}]}",
+          "extraction": "fenced",
+          "constraintsMet": 3,
+          "constraintsTotal": 5,
+          "constraintsEarned": 1,
+          "constraintsEarnable": 5,
+          "streamMarks": [
+            [
+              458,
+              32
+            ],
+            [
+              838,
+              64
+            ],
+            [
+              1073,
+              83
+            ]
+          ],
+          "fieldsWrong": [
+            "items[0].item",
+            "items[0].quantity",
+            "+items[1].item",
+            "+items[1].quantity"
+          ],
+          "promptTokens": 243
+        },
+        {
+          "taskId": "JSON_L5_1",
+          "latencyMs": 1097,
+          "accuracy": 0,
+          "score": 0,
+          "output": "```json\n{\n  \"customer\": {\"name\": \"Rafe Fellow of Carton\", \"town\": \"unknown\"},\n  \"delivery_date\": \"2026-12-04\",\n  \"items\": [\n    {\"item\": \"two hinges\", \"quantity\": 2},\n    {\"item\": \"24 chisels\", \"quantity\": 24}\n  ]\n}\n```",
+          "ttftMs": 113,
+          "completionTokens": 84,
+          "tokensPerSec": 84.3,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "{\"customer\":{\"name\":\"Rafe Fellow of Carton\",\"town\":\"unknown\"},\"delivery_date\":\"2026-12-04\",\"items\":[{\"item\":\"two hinges\",\"quantity\":2},{\"item\":\"24 chisels\",\"quantity\":24}]}",
+          "extraction": "fenced",
+          "constraintsMet": 3,
+          "constraintsTotal": 7,
+          "constraintsEarned": 3,
+          "constraintsEarnable": 7,
+          "streamMarks": [
+            [
+              486,
+              32
+            ],
+            [
+              861,
+              64
+            ],
+            [
+              1097,
+              83
+            ]
+          ],
+          "fieldsWrong": [
+            "customer.name",
+            "customer.town",
+            "items[0].item",
+            "items[1].item"
+          ],
+          "promptTokens": 252
+        },
+        {
+          "taskId": "JSON_L5_2",
+          "latencyMs": 1060,
+          "accuracy": 0,
+          "score": 0,
+          "output": "```json\n{\n  \"customer\": {\"name\": \"Ulla Marsh\", \"town\": \"Thornmere\"},\n  \"delivery_date\": \"2027-07-10\",\n  \"items\": [\n    {\"item\": \"ten barrels\", \"quantity\": 10},\n    {\"item\": \"five hammers\", \"quantity\": 5}\n  ]\n}\n```",
+          "ttftMs": 114,
+          "completionTokens": 81,
+          "tokensPerSec": 84.6,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "{\"customer\":{\"name\":\"Ulla Marsh\",\"town\":\"Thornmere\"},\"delivery_date\":\"2027-07-10\",\"items\":[{\"item\":\"ten barrels\",\"quantity\":10},{\"item\":\"five hammers\",\"quantity\":5}]}",
+          "extraction": "fenced",
+          "constraintsMet": 5,
+          "constraintsTotal": 7,
+          "constraintsEarned": 5,
+          "constraintsEarnable": 7,
+          "streamMarks": [
+            [
+              481,
+              32
+            ],
+            [
+              858,
+              64
+            ],
+            [
+              1060,
+              80
+            ]
+          ],
+          "fieldsWrong": [
+            "items[0].item",
+            "items[1].item"
+          ],
+          "promptTokens": 249
+        },
+        {
+          "taskId": "JSON_L6_1",
+          "latencyMs": 1258,
+          "accuracy": 0,
+          "score": 0,
+          "output": "```json\n{\n  \"customer\": {\"name\": \"Hester Marsh\", \"town\": \"Glenstead\"},\n  \"delivery_date\": \"2027-10-10\",\n  \"items\": [\n    {\"item\": \"dozen and a half lamps\", \"quantity\": 24},\n    {\"item\": \"8 candles\", \"quantity\": 8},\n    {\"item\": \"four hinges\", \"quantity\": 4}\n  ]\n}\n```",
+          "ttftMs": 114,
+          "completionTokens": 98,
+          "tokensPerSec": 84.8,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "{\"customer\":{\"name\":\"Hester Marsh\",\"town\":\"Glenstead\"},\"delivery_date\":\"2027-10-10\",\"items\":[{\"item\":\"dozen and a half lamps\",\"quantity\":24},{\"item\":\"8 candles\",\"quantity\":8},{\"item\":\"four hinges\",\"quantity\":4}]}",
+          "extraction": "fenced",
+          "constraintsMet": 5,
+          "constraintsTotal": 9,
+          "constraintsEarned": 5,
+          "constraintsEarnable": 9,
+          "streamMarks": [
+            [
+              481,
+              32
+            ],
+            [
+              859,
+              64
+            ],
+            [
+              1234,
+              96
+            ],
+            [
+              1258,
+              97
+            ]
+          ],
+          "fieldsWrong": [
+            "items[0].item",
+            "items[0].quantity",
+            "items[1].item",
+            "items[2].item"
+          ],
+          "promptTokens": 255
+        },
+        {
+          "taskId": "JSON_L6_2",
+          "latencyMs": 1533,
+          "accuracy": 1,
+          "score": 7.828,
+          "output": "```json\n{\n  \"customer\": {\"name\": \"Vance Crane\", \"town\": \"Ashgate\"},\n  \"delivery_date\": \"2026-04-01\",\n  \"items\": [\n    {\"item\": \"jugs\", \"quantity\": 10},\n    {\"item\": \"sacks\", \"quantity\": 48},\n    {\"item\": \"lanterns\", \"quantity\": 18}\n  ]\n}\n```",
+          "ttftMs": 124,
+          "completionTokens": 96,
+          "tokensPerSec": 67.4,
+          "finishReason": "stop",
+          "truncated": false,
+          "extracted": "{\"customer\":{\"name\":\"Vance Crane\",\"town\":\"Ashgate\"},\"delivery_date\":\"2026-04-01\",\"items\":[{\"item\":\"jugs\",\"quantity\":10},{\"item\":\"sacks\",\"quantity\":48},{\"item\":\"lanterns\",\"quantity\":18}]}",
+          "extraction": "fenced",
+          "constraintsMet": 9,
+          "constraintsTotal": 9,
+          "constraintsEarned": 9,
+          "constraintsEarnable": 9,
+          "streamMarks": [
+            [
+              657,
+              32
+            ],
+            [
+              1071,
+              64
+            ],
+            [
+              1533,
+              95
+            ]
+          ],
+          "promptTokens": 253
+        }
+      ],
+      "runtime": {
+        "modelId": "qwen2.5-coder-1.5b-instruct",
+        "format": "gguf",
+        "quantization": "Q8_0",
+        "arch": "qwen2"
+      },
+      "pedigree": {
+        "bloodline": "Qwen Coder",
+        "stable": "Alibaba Qwen",
+        "silks": {
+          "primary": "#ff6a00",
+          "secondary": "#615ced"
+        }
+      }
+    }
+  ],
+  "verificationProof": {
+    "seedHash": "a47e2070ec98d056c248fe32b296287f2cdea36a3a6988596a51fd4d83047371",
+    "commitmentHash": null,
+    "revealedSeed": "json_20261125",
+    "revealedSalt": null,
+    "manifestHash": "3d130a1159805bc4049d9952c6f5a69ed214af0084a6b3f9eb2f2e4986030b01",
+    "manifest": {
+      "scheme": "hr-manifest-v1",
+      "trackType": "json",
+      "raceClass": "local",
+      "provider": "lmstudio",
+      "endpoint": "http://Mac-mini.local:1234",
+      "grade": "standard",
+      "generatorVersion": 3,
+      "levels": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "scaleVersion": 11,
+      "distance": "mile",
+      "fences": 12,
+      "raceConditions": {
+        "scoringVersion": 3,
+        "order": [
+          "clears",
+          "partial",
+          "tokens",
+          "seconds"
+        ],
+        "faultsPerKnock": 4,
+        "partial": "each clear counts 1; a knocked fence counts constraintsEarned/constraintsEarnable (rules a blank reply would fail) or testsPassed/testsTotal",
+        "tokensBasis": "completion tokens over every fence; a failed call or a missing count is charged the token cap",
+        "unraced": "a horse with no judged fences places behind every horse that ran",
+        "voidRule": "no horse clears a fence or earns partial credit: the race is void",
+        "formAffectsTime": false
+      },
+      "inference": {
+        "temperature": 0,
+        "maxTokens": 2048,
+        "timeoutMs": 300000
+      },
+      "codeVersion": "e6709f12c365168938cb99d53c89dc02b297d137-dirty-1e37f355e824eb67",
+      "field": [
+        {
+          "horseId": "gemma2_2b",
+          "name": "Gemma 2 2B",
+          "modelId": "gemma-2-2b-it@q8_0",
+          "format": "gguf",
+          "quantization": "Q8_0",
+          "arch": "gemma2"
+        },
+        {
+          "horseId": "gemma2_2b_q5",
+          "name": "Gemma 2 2B Q5",
+          "modelId": "gemma-2-2b-it@q5_k_m",
+          "format": "gguf",
+          "quantization": "Q5_K_M",
+          "arch": "gemma2"
+        },
+        {
+          "horseId": "llama32_1b",
+          "name": "Llama 3.2 1B",
+          "modelId": "llama-3.2-1b-instruct",
+          "format": "gguf",
+          "quantization": "Q8_0",
+          "arch": "llama"
+        },
+        {
+          "horseId": "qwen25_15b",
+          "name": "Qwen 2.5 1.5B",
+          "modelId": "qwen2.5-1.5b-instruct",
+          "format": "gguf",
+          "quantization": "Q8_0",
+          "arch": "qwen2"
+        },
+        {
+          "horseId": "qwen25_coder_15b",
+          "name": "Qwen 2.5 Coder 1.5B",
+          "modelId": "qwen2.5-coder-1.5b-instruct",
+          "format": "gguf",
+          "quantization": "Q8_0",
+          "arch": "qwen2"
+        },
+        {
+          "horseId": "vikhr_gemma_2b",
+          "name": "Vikhr Gemma 2B",
+          "modelId": "vikhr-gemma-2b-instruct",
+          "format": "gguf",
+          "quantization": "Q8_0",
+          "arch": "gemma2"
+        }
+      ]
+    },
+    "reproducible": false,
+    "tasks": [
+      {
+        "id": "JSON_L1_1",
+        "kind": "json",
+        "prompt": "[JSON_SCALE] Turn this order note into JSON.\n\nSchema:\n{\n  \"customer\": {\"name\": string, \"town\": string}, who placed the order and where they are,\n  \"delivery_date\": string, the date the order is to be delivered, as YYYY-MM-DD\n}\n\nNote:\nHi, it's Anouk Pell from Thorngate. Please deliver on 2026-11-06. Thanks! Mind the dog.\n\nRules:\n- Reply with exactly one JSON object and nothing else (a ```json block is fine). It must match the schema: the same field names, the given types, no other fields.",
+        "judging": {
+          "type": "json",
+          "expected": {
+            "customer": {
+              "name": "Anouk Pell",
+              "town": "Thorngate"
+            },
+            "delivery_date": "2026-11-06"
+          }
+        },
+        "facts": {
+          "customer": {
+            "name": "Anouk Pell",
+            "town": "Thorngate"
+          },
+          "date": "2026-11-06",
+          "courier": null,
+          "deadline": null,
+          "items": [],
+          "mentionOrder": [],
+          "amendments": [],
+          "prices": false,
+          "nullable": false,
+          "spec": {
+            "items": 0,
+            "proseDate": false,
+            "wordQuantities": false,
+            "courier": false,
+            "deadline": false,
+            "amendments": [],
+            "prices": false,
+            "totalCost": false,
+            "distractors": 0
+          }
+        },
+        "simAnswer": "```json\n{\n  \"customer\": {\n    \"name\": \"Anouk Pell\",\n    \"town\": \"Thorngate\"\n  },\n  \"delivery_date\": \"2026-11-06\"\n}\n```",
+        "simWrongAnswer": "{\"customer\":{\"name\":\"Anouk Pell\",\"town\":\"Ashford\"},\"delivery_date\":\"2026-11-06\"}",
+        "weight": 1.2,
+        "scaleVersion": 1,
+        "level": 1,
+        "rung": "level 1"
+      },
+      {
+        "id": "JSON_L1_2",
+        "kind": "json",
+        "prompt": "[JSON_SCALE] Turn this order note into JSON.\n\nSchema:\n{\n  \"customer\": {\"name\": string, \"town\": string}, who placed the order and where they are,\n  \"delivery_date\": string, the date the order is to be delivered, as YYYY-MM-DD\n}\n\nNote:\nLark Rook of Langstead rang this morning. Please deliver on 2027-05-20. Thanks!\n\nRules:\n- Reply with exactly one JSON object and nothing else (a ```json block is fine). It must match the schema: the same field names, the given types, no other fields.",
+        "judging": {
+          "type": "json",
+          "expected": {
+            "customer": {
+              "name": "Lark Rook",
+              "town": "Langstead"
+            },
+            "delivery_date": "2027-05-20"
+          }
+        },
+        "facts": {
+          "customer": {
+            "name": "Lark Rook",
+            "town": "Langstead"
+          },
+          "date": "2027-05-20",
+          "courier": null,
+          "deadline": null,
+          "items": [],
+          "mentionOrder": [],
+          "amendments": [],
+          "prices": false,
+          "nullable": false,
+          "spec": {
+            "items": 0,
+            "proseDate": false,
+            "wordQuantities": false,
+            "courier": false,
+            "deadline": false,
+            "amendments": [],
+            "prices": false,
+            "totalCost": false,
+            "distractors": 0
+          }
+        },
+        "simAnswer": "```json\n{\n  \"customer\": {\n    \"name\": \"Lark Rook\",\n    \"town\": \"Langstead\"\n  },\n  \"delivery_date\": \"2027-05-20\"\n}\n```",
+        "simWrongAnswer": "{\"customer\":{\"name\":\"Lark Rook\",\"town\":\"Ashford\"},\"delivery_date\":\"2027-05-20\"}",
+        "weight": 1.2,
+        "scaleVersion": 1,
+        "level": 1,
+        "rung": "level 1"
+      },
+      {
+        "id": "JSON_L2_1",
+        "kind": "json",
+        "prompt": "[JSON_SCALE] Turn this order note into JSON.\n\nSchema:\n{\n  \"customer\": {\"name\": string, \"town\": string}, who placed the order and where they are,\n  \"delivery_date\": string, the date the order is to be delivered, as YYYY-MM-DD\n}\n\nNote:\nNote for the order desk, from Vance Marsh in Hartmere. Same address as always. The delivery date is 12 Sep 2026. Cash on delivery is fine.\n\nRules:\n- Reply with exactly one JSON object and nothing else (a ```json block is fine). It must match the schema: the same field names, the given types, no other fields.\n- Dates are strings in the form YYYY-MM-DD.",
+        "judging": {
+          "type": "json",
+          "expected": {
+            "customer": {
+              "name": "Vance Marsh",
+              "town": "Hartmere"
+            },
+            "delivery_date": "2026-09-12"
+          }
+        },
+        "facts": {
+          "customer": {
+            "name": "Vance Marsh",
+            "town": "Hartmere"
+          },
+          "date": "2026-09-12",
+          "courier": null,
+          "deadline": null,
+          "items": [],
+          "mentionOrder": [],
+          "amendments": [],
+          "prices": false,
+          "nullable": false,
+          "spec": {
+            "items": 0,
+            "proseDate": true,
+            "wordQuantities": false,
+            "courier": false,
+            "deadline": false,
+            "amendments": [],
+            "prices": false,
+            "totalCost": false,
+            "distractors": 0
+          }
+        },
+        "simAnswer": "```json\n{\n  \"customer\": {\n    \"name\": \"Vance Marsh\",\n    \"town\": \"Hartmere\"\n  },\n  \"delivery_date\": \"2026-09-12\"\n}\n```",
+        "simWrongAnswer": "{\"customer\":{\"name\":\"Vance Marsh\",\"town\":\"Ashford\"},\"delivery_date\":\"2026-09-12\"}",
+        "weight": 1.2,
+        "scaleVersion": 1,
+        "level": 2,
+        "rung": "level 2"
+      },
+      {
+        "id": "JSON_L2_2",
+        "kind": "json",
+        "prompt": "[JSON_SCALE] Turn this order note into JSON.\n\nSchema:\n{\n  \"customer\": {\"name\": string, \"town\": string}, who placed the order and where they are,\n  \"delivery_date\": string, the date the order is to be delivered, as YYYY-MM-DD\n}\n\nNote:\nHi, it's Quill Winter from Langby. Same address as always. Needed on 15 October 2026.\n\nRules:\n- Reply with exactly one JSON object and nothing else (a ```json block is fine). It must match the schema: the same field names, the given types, no other fields.\n- Dates are strings in the form YYYY-MM-DD.",
+        "judging": {
+          "type": "json",
+          "expected": {
+            "customer": {
+              "name": "Quill Winter",
+              "town": "Langby"
+            },
+            "delivery_date": "2026-10-15"
+          }
+        },
+        "facts": {
+          "customer": {
+            "name": "Quill Winter",
+            "town": "Langby"
+          },
+          "date": "2026-10-15",
+          "courier": null,
+          "deadline": null,
+          "items": [],
+          "mentionOrder": [],
+          "amendments": [],
+          "prices": false,
+          "nullable": false,
+          "spec": {
+            "items": 0,
+            "proseDate": true,
+            "wordQuantities": false,
+            "courier": false,
+            "deadline": false,
+            "amendments": [],
+            "prices": false,
+            "totalCost": false,
+            "distractors": 0
+          }
+        },
+        "simAnswer": "```json\n{\n  \"customer\": {\n    \"name\": \"Quill Winter\",\n    \"town\": \"Langby\"\n  },\n  \"delivery_date\": \"2026-10-15\"\n}\n```",
+        "simWrongAnswer": "{\"customer\":{\"name\":\"Quill Winter\",\"town\":\"Ashford\"},\"delivery_date\":\"2026-10-15\"}",
+        "weight": 1.2,
+        "scaleVersion": 1,
+        "level": 2,
+        "rung": "level 2"
+      },
+      {
+        "id": "JSON_L3_1",
+        "kind": "json",
+        "prompt": "[JSON_SCALE] Turn this order note into JSON.\n\nSchema:\n{\n  \"customer\": {\"name\": string, \"town\": string}, who placed the order and where they are,\n  \"delivery_date\": string, the date the order is to be delivered, as YYYY-MM-DD,\n  \"items\": [{\"item\": string, \"quantity\": integer}], one entry per order line: the goods as the note names them, how many\n}\n\nNote:\nMessage left by Milo Tanner (Dunstead): Add 14 sacks. Please deliver on August 1, 2027. Ring twice at the side gate.\n\nRules:\n- Reply with exactly one JSON object and nothing else (a ```json block is fine). It must match the schema: the same field names, the given types, no other fields.\n- List the items in the order they are first mentioned, leaving out any line that is cancelled.\n- Dates are strings in the form YYYY-MM-DD.",
+        "judging": {
+          "type": "json",
+          "expected": {
+            "customer": {
+              "name": "Milo Tanner",
+              "town": "Dunstead"
+            },
+            "delivery_date": "2027-08-01",
+            "items": [
+              {
+                "item": "sacks",
+                "quantity": 14
+              }
+            ]
+          }
+        },
+        "facts": {
+          "customer": {
+            "name": "Milo Tanner",
+            "town": "Dunstead"
+          },
+          "date": "2027-08-01",
+          "courier": null,
+          "deadline": null,
+          "items": [
+            {
+              "item": "sacks",
+              "quantity": 14,
+              "unitPrice": 26
+            }
+          ],
+          "mentionOrder": [
+            0
+          ],
+          "amendments": [],
+          "prices": false,
+          "nullable": false,
+          "spec": {
+            "items": 1,
+            "proseDate": true,
+            "wordQuantities": false,
+            "courier": false,
+            "deadline": false,
+            "amendments": [],
+            "prices": false,
+            "totalCost": false,
+            "distractors": 0
+          }
+        },
+        "simAnswer": "```json\n{\n  \"customer\": {\n    \"name\": \"Milo Tanner\",\n    \"town\": \"Dunstead\"\n  },\n  \"delivery_date\": \"2027-08-01\",\n  \"items\": [\n    {\n      \"item\": \"sacks\",\n      \"quantity\": 14\n    }\n  ]\n}\n```",
+        "simWrongAnswer": "{\"customer\":{\"name\":\"Milo Tanner\",\"town\":\"Dunstead\"},\"delivery_date\":\"2027-08-01\",\"items\":[{\"item\":\"sacks\",\"quantity\":15}]}",
+        "weight": 1.2,
+        "scaleVersion": 1,
+        "level": 3,
+        "rung": "level 3"
+      },
+      {
+        "id": "JSON_L3_2",
+        "kind": "json",
+        "prompt": "[JSON_SCALE] Turn this order note into JSON.\n\nSchema:\n{\n  \"customer\": {\"name\": string, \"town\": string}, who placed the order and where they are,\n  \"delivery_date\": string, the date the order is to be delivered, as YYYY-MM-DD,\n  \"items\": [{\"item\": string, \"quantity\": integer}], one entry per order line: the goods as the note names them, how many\n}\n\nNote:\nBarnaby Harrow of Langton rang this morning. The delivery date is November 3rd 2027. Put down 22 baskets. Cash on delivery is fine. Ring twice at the side gate.\n\nRules:\n- Reply with exactly one JSON object and nothing else (a ```json block is fine). It must match the schema: the same field names, the given types, no other fields.\n- List the items in the order they are first mentioned, leaving out any line that is cancelled.\n- Dates are strings in the form YYYY-MM-DD.",
+        "judging": {
+          "type": "json",
+          "expected": {
+            "customer": {
+              "name": "Barnaby Harrow",
+              "town": "Langton"
+            },
+            "delivery_date": "2027-11-03",
+            "items": [
+              {
+                "item": "baskets",
+                "quantity": 22
+              }
+            ]
+          }
+        },
+        "facts": {
+          "customer": {
+            "name": "Barnaby Harrow",
+            "town": "Langton"
+          },
+          "date": "2027-11-03",
+          "courier": null,
+          "deadline": null,
+          "items": [
+            {
+              "item": "baskets",
+              "quantity": 22,
+              "unitPrice": 26
+            }
+          ],
+          "mentionOrder": [
+            0
+          ],
+          "amendments": [],
+          "prices": false,
+          "nullable": false,
+          "spec": {
+            "items": 1,
+            "proseDate": true,
+            "wordQuantities": false,
+            "courier": false,
+            "deadline": false,
+            "amendments": [],
+            "prices": false,
+            "totalCost": false,
+            "distractors": 0
+          }
+        },
+        "simAnswer": "```json\n{\n  \"customer\": {\n    \"name\": \"Barnaby Harrow\",\n    \"town\": \"Langton\"\n  },\n  \"delivery_date\": \"2027-11-03\",\n  \"items\": [\n    {\n      \"item\": \"baskets\",\n      \"quantity\": 22\n    }\n  ]\n}\n```",
+        "simWrongAnswer": "{\"customer\":{\"name\":\"Barnaby Harrow\",\"town\":\"Langton\"},\"delivery_date\":\"2027-11-03\",\"items\":[{\"item\":\"baskets\",\"quantity\":23}]}",
+        "weight": 1.2,
+        "scaleVersion": 1,
+        "level": 3,
+        "rung": "level 3"
+      },
+      {
+        "id": "JSON_L4_1",
+        "kind": "json",
+        "prompt": "[JSON_SCALE] Turn this order note into JSON.\n\nSchema:\n{\n  \"customer\": {\"name\": string, \"town\": string}, who placed the order and where they are,\n  \"delivery_date\": string, the date the order is to be delivered, as YYYY-MM-DD,\n  \"items\": [{\"item\": string, \"quantity\": integer}], one entry per order line: the goods as the note names them, how many\n}\n\nNote:\nBarnaby Whitlow of Langwick rang this morning. Please deliver on 1 Jan 2027. Also two candles. Thanks! Ring twice at the side gate.\n\nRules:\n- Reply with exactly one JSON object and nothing else (a ```json block is fine). It must match the schema: the same field names, the given types, no other fields.\n- List the items in the order they are first mentioned, leaving out any line that is cancelled.\n- Quantities are integers: \"two dozen\" is 24.\n- Dates are strings in the form YYYY-MM-DD.",
+        "judging": {
+          "type": "json",
+          "expected": {
+            "customer": {
+              "name": "Barnaby Whitlow",
+              "town": "Langwick"
+            },
+            "delivery_date": "2027-01-01",
+            "items": [
+              {
+                "item": "candles",
+                "quantity": 2
+              }
+            ]
+          }
+        },
+        "facts": {
+          "customer": {
+            "name": "Barnaby Whitlow",
+            "town": "Langwick"
+          },
+          "date": "2027-01-01",
+          "courier": null,
+          "deadline": null,
+          "items": [
+            {
+              "item": "candles",
+              "quantity": 2,
+              "unitPrice": 26
+            }
+          ],
+          "mentionOrder": [
+            0
+          ],
+          "amendments": [],
+          "prices": false,
+          "nullable": false,
+          "spec": {
+            "items": 1,
+            "proseDate": true,
+            "wordQuantities": true,
+            "courier": false,
+            "deadline": false,
+            "amendments": [],
+            "prices": false,
+            "totalCost": false,
+            "distractors": 0
+          }
+        },
+        "simAnswer": "```json\n{\n  \"customer\": {\n    \"name\": \"Barnaby Whitlow\",\n    \"town\": \"Langwick\"\n  },\n  \"delivery_date\": \"2027-01-01\",\n  \"items\": [\n    {\n      \"item\": \"candles\",\n      \"quantity\": 2\n    }\n  ]\n}\n```",
+        "simWrongAnswer": "{\"customer\":{\"name\":\"Barnaby Whitlow\",\"town\":\"Langwick\"},\"delivery_date\":\"2027-01-01\",\"items\":[{\"item\":\"candles\",\"quantity\":3}]}",
+        "weight": 1.2,
+        "scaleVersion": 1,
+        "level": 4,
+        "rung": "level 4"
+      },
+      {
+        "id": "JSON_L4_2",
+        "kind": "json",
+        "prompt": "[JSON_SCALE] Turn this order note into JSON.\n\nSchema:\n{\n  \"customer\": {\"name\": string, \"town\": string}, who placed the order and where they are,\n  \"delivery_date\": string, the date the order is to be delivered, as YYYY-MM-DD,\n  \"items\": [{\"item\": string, \"quantity\": integer}], one entry per order line: the goods as the note names them, how many\n}\n\nNote:\nMessage left by Cleo Pell (Ashfield): Ring twice at the side gate. Also 5 shovels. Please deliver on 14 Mar 2026.\n\nRules:\n- Reply with exactly one JSON object and nothing else (a ```json block is fine). It must match the schema: the same field names, the given types, no other fields.\n- List the items in the order they are first mentioned, leaving out any line that is cancelled.\n- Quantities are integers: \"two dozen\" is 24.\n- Dates are strings in the form YYYY-MM-DD.",
+        "judging": {
+          "type": "json",
+          "expected": {
+            "customer": {
+              "name": "Cleo Pell",
+              "town": "Ashfield"
+            },
+            "delivery_date": "2026-03-14",
+            "items": [
+              {
+                "item": "shovels",
+                "quantity": 5
+              }
+            ]
+          }
+        },
+        "facts": {
+          "customer": {
+            "name": "Cleo Pell",
+            "town": "Ashfield"
+          },
+          "date": "2026-03-14",
+          "courier": null,
+          "deadline": null,
+          "items": [
+            {
+              "item": "shovels",
+              "quantity": 5,
+              "unitPrice": 22
+            }
+          ],
+          "mentionOrder": [
+            0
+          ],
+          "amendments": [],
+          "prices": false,
+          "nullable": false,
+          "spec": {
+            "items": 1,
+            "proseDate": true,
+            "wordQuantities": true,
+            "courier": false,
+            "deadline": false,
+            "amendments": [],
+            "prices": false,
+            "totalCost": false,
+            "distractors": 0
+          }
+        },
+        "simAnswer": "```json\n{\n  \"customer\": {\n    \"name\": \"Cleo Pell\",\n    \"town\": \"Ashfield\"\n  },\n  \"delivery_date\": \"2026-03-14\",\n  \"items\": [\n    {\n      \"item\": \"shovels\",\n      \"quantity\": 5\n    }\n  ]\n}\n```",
+        "simWrongAnswer": "{\"customer\":{\"name\":\"Cleo Pell\",\"town\":\"Ashfield\"},\"delivery_date\":\"2026-03-14\",\"items\":[{\"item\":\"shovels\",\"quantity\":6}]}",
+        "weight": 1.2,
+        "scaleVersion": 1,
+        "level": 4,
+        "rung": "level 4"
+      },
+      {
+        "id": "JSON_L5_1",
+        "kind": "json",
+        "prompt": "[JSON_SCALE] Turn this order note into JSON.\n\nSchema:\n{\n  \"customer\": {\"name\": string, \"town\": string}, who placed the order and where they are,\n  \"delivery_date\": string, the date the order is to be delivered, as YYYY-MM-DD,\n  \"items\": [{\"item\": string, \"quantity\": integer}], one entry per order line: the goods as the note names them, how many\n}\n\nNote:\nRafe Fellow of Carton rang this morning. Put down two hinges. We need 24 chisels. Please deliver on the 4th of December 2026. Ring twice at the side gate.\n\nRules:\n- Reply with exactly one JSON object and nothing else (a ```json block is fine). It must match the schema: the same field names, the given types, no other fields.\n- List the items in the order they are first mentioned, leaving out any line that is cancelled.\n- Quantities are integers: \"two dozen\" is 24.\n- Dates are strings in the form YYYY-MM-DD.",
+        "judging": {
+          "type": "json",
+          "expected": {
+            "customer": {
+              "name": "Rafe Fellow",
+              "town": "Carton"
+            },
+            "delivery_date": "2026-12-04",
+            "items": [
+              {
+                "item": "hinges",
+                "quantity": 2
+              },
+              {
+                "item": "chisels",
+                "quantity": 24
+              }
+            ]
+          }
+        },
+        "facts": {
+          "customer": {
+            "name": "Rafe Fellow",
+            "town": "Carton"
+          },
+          "date": "2026-12-04",
+          "courier": null,
+          "deadline": null,
+          "items": [
+            {
+              "item": "hinges",
+              "quantity": 2,
+              "unitPrice": 19
+            },
+            {
+              "item": "chisels",
+              "quantity": 24,
+              "unitPrice": 5
+            }
+          ],
+          "mentionOrder": [
+            0,
+            1
+          ],
+          "amendments": [],
+          "prices": false,
+          "nullable": false,
+          "spec": {
+            "items": 2,
+            "proseDate": true,
+            "wordQuantities": true,
+            "courier": false,
+            "deadline": false,
+            "amendments": [],
+            "prices": false,
+            "totalCost": false,
+            "distractors": 0
+          }
+        },
+        "simAnswer": "```json\n{\n  \"customer\": {\n    \"name\": \"Rafe Fellow\",\n    \"town\": \"Carton\"\n  },\n  \"delivery_date\": \"2026-12-04\",\n  \"items\": [\n    {\n      \"item\": \"hinges\",\n      \"quantity\": 2\n    },\n    {\n      \"item\": \"chisels\",\n      \"quantity\": 24\n    }\n  ]\n}\n```",
+        "simWrongAnswer": "{\"customer\":{\"name\":\"Rafe Fellow\",\"town\":\"Carton\"},\"delivery_date\":\"2026-12-04\",\"items\":[{\"item\":\"hinges\",\"quantity\":3},{\"item\":\"chisels\",\"quantity\":24}]}",
+        "weight": 1.2,
+        "scaleVersion": 1,
+        "level": 5,
+        "rung": "level 5"
+      },
+      {
+        "id": "JSON_L5_2",
+        "kind": "json",
+        "prompt": "[JSON_SCALE] Turn this order note into JSON.\n\nSchema:\n{\n  \"customer\": {\"name\": string, \"town\": string}, who placed the order and where they are,\n  \"delivery_date\": string, the date the order is to be delivered, as YYYY-MM-DD,\n  \"items\": [{\"item\": string, \"quantity\": integer}], one entry per order line: the goods as the note names them, how many\n}\n\nNote:\nUlla Marsh of Thornmere rang this morning. We need ten barrels. Needed on 10 Jul 2027. Same address as always. Add five hammers. Cash on delivery is fine.\n\nRules:\n- Reply with exactly one JSON object and nothing else (a ```json block is fine). It must match the schema: the same field names, the given types, no other fields.\n- List the items in the order they are first mentioned, leaving out any line that is cancelled.\n- Quantities are integers: \"two dozen\" is 24.\n- Dates are strings in the form YYYY-MM-DD.",
+        "judging": {
+          "type": "json",
+          "expected": {
+            "customer": {
+              "name": "Ulla Marsh",
+              "town": "Thornmere"
+            },
+            "delivery_date": "2027-07-10",
+            "items": [
+              {
+                "item": "barrels",
+                "quantity": 10
+              },
+              {
+                "item": "hammers",
+                "quantity": 5
+              }
+            ]
+          }
+        },
+        "facts": {
+          "customer": {
+            "name": "Ulla Marsh",
+            "town": "Thornmere"
+          },
+          "date": "2027-07-10",
+          "courier": null,
+          "deadline": null,
+          "items": [
+            {
+              "item": "hammers",
+              "quantity": 5,
+              "unitPrice": 2
+            },
+            {
+              "item": "barrels",
+              "quantity": 10,
+              "unitPrice": 29
+            }
+          ],
+          "mentionOrder": [
+            1,
+            0
+          ],
+          "amendments": [],
+          "prices": false,
+          "nullable": false,
+          "spec": {
+            "items": 2,
+            "proseDate": true,
+            "wordQuantities": true,
+            "courier": false,
+            "deadline": false,
+            "amendments": [],
+            "prices": false,
+            "totalCost": false,
+            "distractors": 0
+          }
+        },
+        "simAnswer": "```json\n{\n  \"customer\": {\n    \"name\": \"Ulla Marsh\",\n    \"town\": \"Thornmere\"\n  },\n  \"delivery_date\": \"2027-07-10\",\n  \"items\": [\n    {\n      \"item\": \"barrels\",\n      \"quantity\": 10\n    },\n    {\n      \"item\": \"hammers\",\n      \"quantity\": 5\n    }\n  ]\n}\n```",
+        "simWrongAnswer": "{\"customer\":{\"name\":\"Ulla Marsh\",\"town\":\"Thornmere\"},\"delivery_date\":\"2027-07-10\",\"items\":[{\"item\":\"barrels\",\"quantity\":11},{\"item\":\"hammers\",\"quantity\":5}]}",
+        "weight": 1.2,
+        "scaleVersion": 1,
+        "level": 5,
+        "rung": "level 5"
+      },
+      {
+        "id": "JSON_L6_1",
+        "kind": "json",
+        "prompt": "[JSON_SCALE] Turn this order note into JSON.\n\nSchema:\n{\n  \"customer\": {\"name\": string, \"town\": string}, who placed the order and where they are,\n  \"delivery_date\": string, the date the order is to be delivered, as YYYY-MM-DD,\n  \"items\": [{\"item\": string, \"quantity\": integer}], one entry per order line: the goods as the note names them, how many\n}\n\nNote:\nMessage left by Hester Marsh (Glenstead): Cash on delivery is fine. We need a dozen and a half lamps. Add 8 candles. Put down four hinges. Needed on October 10th 2027.\n\nRules:\n- Reply with exactly one JSON object and nothing else (a ```json block is fine). It must match the schema: the same field names, the given types, no other fields.\n- List the items in the order they are first mentioned, leaving out any line that is cancelled.\n- Quantities are integers: \"two dozen\" is 24.\n- Dates are strings in the form YYYY-MM-DD.",
+        "judging": {
+          "type": "json",
+          "expected": {
+            "customer": {
+              "name": "Hester Marsh",
+              "town": "Glenstead"
+            },
+            "delivery_date": "2027-10-10",
+            "items": [
+              {
+                "item": "lamps",
+                "quantity": 18
+              },
+              {
+                "item": "candles",
+                "quantity": 8
+              },
+              {
+                "item": "hinges",
+                "quantity": 4
+              }
+            ]
+          }
+        },
+        "facts": {
+          "customer": {
+            "name": "Hester Marsh",
+            "town": "Glenstead"
+          },
+          "date": "2027-10-10",
+          "courier": null,
+          "deadline": null,
+          "items": [
+            {
+              "item": "candles",
+              "quantity": 8,
+              "unitPrice": 25
+            },
+            {
+              "item": "lamps",
+              "quantity": 18,
+              "unitPrice": 22
+            },
+            {
+              "item": "hinges",
+              "quantity": 4,
+              "unitPrice": 12
+            }
+          ],
+          "mentionOrder": [
+            1,
+            0,
+            2
+          ],
+          "amendments": [],
+          "prices": false,
+          "nullable": false,
+          "spec": {
+            "items": 3,
+            "proseDate": true,
+            "wordQuantities": true,
+            "courier": false,
+            "deadline": false,
+            "amendments": [],
+            "prices": false,
+            "totalCost": false,
+            "distractors": 0
+          }
+        },
+        "simAnswer": "```json\n{\n  \"customer\": {\n    \"name\": \"Hester Marsh\",\n    \"town\": \"Glenstead\"\n  },\n  \"delivery_date\": \"2027-10-10\",\n  \"items\": [\n    {\n      \"item\": \"lamps\",\n      \"quantity\": 18\n    },\n    {\n      \"item\": \"candles\",\n      \"quantity\": 8\n    },\n    {\n      \"item\": \"hinges\",\n      \"quantity\": 4\n    }\n  ]\n}\n```",
+        "simWrongAnswer": "{\"customer\":{\"name\":\"Hester Marsh\",\"town\":\"Glenstead\"},\"delivery_date\":\"2027-10-10\",\"items\":[{\"item\":\"lamps\",\"quantity\":19},{\"item\":\"candles\",\"quantity\":8},{\"item\":\"hinges\",\"quantity\":4}]}",
+        "weight": 1.2,
+        "scaleVersion": 1,
+        "level": 6,
+        "rung": "level 6"
+      },
+      {
+        "id": "JSON_L6_2",
+        "kind": "json",
+        "prompt": "[JSON_SCALE] Turn this order note into JSON.\n\nSchema:\n{\n  \"customer\": {\"name\": string, \"town\": string}, who placed the order and where they are,\n  \"delivery_date\": string, the date the order is to be delivered, as YYYY-MM-DD,\n  \"items\": [{\"item\": string, \"quantity\": integer}], one entry per order line: the goods as the note names them, how many\n}\n\nNote:\nVance Crane of Ashgate rang this morning. Add 10 jugs. Please deliver on April 1st 2026. Put down 48 sacks. Thanks! Put down 18 lanterns.\n\nRules:\n- Reply with exactly one JSON object and nothing else (a ```json block is fine). It must match the schema: the same field names, the given types, no other fields.\n- List the items in the order they are first mentioned, leaving out any line that is cancelled.\n- Quantities are integers: \"two dozen\" is 24.\n- Dates are strings in the form YYYY-MM-DD.",
+        "judging": {
+          "type": "json",
+          "expected": {
+            "customer": {
+              "name": "Vance Crane",
+              "town": "Ashgate"
+            },
+            "delivery_date": "2026-04-01",
+            "items": [
+              {
+                "item": "jugs",
+                "quantity": 10
+              },
+              {
+                "item": "sacks",
+                "quantity": 48
+              },
+              {
+                "item": "lanterns",
+                "quantity": 18
+              }
+            ]
+          }
+        },
+        "facts": {
+          "customer": {
+            "name": "Vance Crane",
+            "town": "Ashgate"
+          },
+          "date": "2026-04-01",
+          "courier": null,
+          "deadline": null,
+          "items": [
+            {
+              "item": "lanterns",
+              "quantity": 18,
+              "unitPrice": 21
+            },
+            {
+              "item": "sacks",
+              "quantity": 48,
+              "unitPrice": 27
+            },
+            {
+              "item": "jugs",
+              "quantity": 10,
+              "unitPrice": 14
+            }
+          ],
+          "mentionOrder": [
+            2,
+            1,
+            0
+          ],
+          "amendments": [],
+          "prices": false,
+          "nullable": false,
+          "spec": {
+            "items": 3,
+            "proseDate": true,
+            "wordQuantities": true,
+            "courier": false,
+            "deadline": false,
+            "amendments": [],
+            "prices": false,
+            "totalCost": false,
+            "distractors": 0
+          }
+        },
+        "simAnswer": "```json\n{\n  \"customer\": {\n    \"name\": \"Vance Crane\",\n    \"town\": \"Ashgate\"\n  },\n  \"delivery_date\": \"2026-04-01\",\n  \"items\": [\n    {\n      \"item\": \"jugs\",\n      \"quantity\": 10\n    },\n    {\n      \"item\": \"sacks\",\n      \"quantity\": 48\n    },\n    {\n      \"item\": \"lanterns\",\n      \"quantity\": 18\n    }\n  ]\n}\n```",
+        "simWrongAnswer": "{\"customer\":{\"name\":\"Vance Crane\",\"town\":\"Ashgate\"},\"delivery_date\":\"2026-04-01\",\"items\":[{\"item\":\"jugs\",\"quantity\":11},{\"item\":\"sacks\",\"quantity\":48},{\"item\":\"lanterns\",\"quantity\":18}]}",
+        "weight": 1.2,
+        "scaleVersion": 1,
+        "level": 6,
+        "rung": "level 6"
+      }
+    ]
+  }
+}
