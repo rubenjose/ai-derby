@@ -78,5 +78,21 @@
     "file": "records/readingcup.json",
     "sha256": "9539d8c6e3dfbf659de13b0c85dac9a47a98c6ebb72f8fa3ca2309320a93aa99",
     "bytes": 348726
+  },
+  {
+    "race": "gntrial",
+    "title": "The Grand National Trial",
+    "date": "2026-11-20",
+    "file": "records/gntrial.json",
+    "sha256": "b6c0a2349924537129b5f2f752662c9110e560dfa589eea84457abed216b7199",
+    "bytes": 971826
+  },
+  {
+    "race": "centenary",
+    "title": "The Centenary Chase",
+    "date": "2026-11-20",
+    "file": "records/centenary.json",
+    "sha256": "2b96a049777073da367de59500bd5eca67459ac25728a7636a24662596446358",
+    "bytes": 991516
   }
 ]

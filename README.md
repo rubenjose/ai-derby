@@ -20,5 +20,7 @@ This repo is the site. It is built from the races; nothing here is edited by han
 | The Archive Stakes | [records/retrieval2.json](records/retrieval2.json) | `f5866b648d35f649f808f202a4a9d3f317a27ef4a0d6ded7c7a58f550a4415aa` |
 | The Bracket Chase | [records/json3.json](records/json3.json) | `07e5158e8fe2dfe0c323fa6c4b819dd3846e0606349cd9c506ed880565604753` |
 | The Long Table Stakes | [records/readingcup.json](records/readingcup.json) | `9539d8c6e3dfbf659de13b0c85dac9a47a98c6ebb72f8fa3ca2309320a93aa99` |
+| The Grand National Trial | [records/gntrial.json](records/gntrial.json) | `b6c0a2349924537129b5f2f752662c9110e560dfa589eea84457abed216b7199` |
+| The Centenary Chase | [records/centenary.json](records/centenary.json) | `2b96a049777073da367de59500bd5eca67459ac25728a7636a24662596446358` |
 
 To check one: `shasum -a 256 records/creative.json`. The history of this folder shows when each record was published and that none has changed since.
