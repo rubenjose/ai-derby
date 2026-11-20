@@ -19,5 +19,6 @@ This repo is the site. It is built from the races; nothing here is edited by han
 | The Patchwork Handicap | [records/codewrite.json](records/codewrite.json) | `7ebcee07a4a18f0c87dfaeea3d157df2e333d327a1b958b0f623390801f9b73c` |
 | The Archive Stakes | [records/retrieval2.json](records/retrieval2.json) | `f5866b648d35f649f808f202a4a9d3f317a27ef4a0d6ded7c7a58f550a4415aa` |
 | The Bracket Chase | [records/json3.json](records/json3.json) | `07e5158e8fe2dfe0c323fa6c4b819dd3846e0606349cd9c506ed880565604753` |
+| The Long Table Stakes | [records/readingcup.json](records/readingcup.json) | `9539d8c6e3dfbf659de13b0c85dac9a47a98c6ebb72f8fa3ca2309320a93aa99` |
 
 To check one: `shasum -a 256 records/creative.json`. The history of this folder shows when each record was published and that none has changed since.

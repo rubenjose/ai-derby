@@ -70,5 +70,13 @@
     "file": "records/json3.json",
     "sha256": "07e5158e8fe2dfe0c323fa6c4b819dd3846e0606349cd9c506ed880565604753",
     "bytes": 122773
+  },
+  {
+    "race": "readingcup",
+    "title": "The Long Table Stakes",
+    "date": "2026-11-11",
+    "file": "records/readingcup.json",
+    "sha256": "9539d8c6e3dfbf659de13b0c85dac9a47a98c6ebb72f8fa3ca2309320a93aa99",
+    "bytes": 348726
   }
 ]
